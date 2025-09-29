@@ -1,0 +1,38 @@
+# Temporary files
+*.tmp
+*.bak
+*.backup
+*~
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# LaTeX intermediate files (keep only final PDF)
+*.aux
+*.log
+*.toc
+*.out
+*.idx
+*.ind
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Development files
+test_*.html
+*.test.js
+
+# System files
+.DS_Store
+core
+debug.txt

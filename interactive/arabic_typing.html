@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-content="pageTitle">Virtual Arabic Keyboard - Arabic OS</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #388E3C;
+            --accent-color: #FFC107;
+            --text-color: #212121;
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+            --key-bg: #FFFFFF;
+            --key-hover: #F0F0F0;
+            --key-active: #E0E0E0;
+            --arabic-color: #E91E63;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .demo-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .text-area {
+            width: 100%;
+            min-height: 150px;
+            padding: 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1.5rem;
+            font-family: 'Arial Unicode MS', 'Tahoma', sans-serif;
+            direction: rtl;
+            text-align: right;
+            resize: vertical;
+            margin-bottom: 1rem;
+        }
+
+        .text-area:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .keyboard {
+            background: #F8F9FA;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .keyboard-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            gap: 0.3rem;
+        }
+
+        .key {
+            background: var(--key-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.8rem;
+            min-width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-family: 'Arial Unicode MS', 'Tahoma', sans-serif;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .key:hover {
+            background: var(--key-hover);
+            transform: translateY(-1px);
+        }
+
+        .key:active, .key.pressed {
+            background: var(--key-active);
+            transform: translateY(0);
+        }
+
+        .key.arabic {
+            color: var(--arabic-color);
+            font-weight: bold;
+        }
+
+        .key.space {
+            min-width: 200px;
+        }
+
+        .key.backspace {
+            min-width: 80px;
+            background: #FFF3E0;
+            color: #F57C00;
+        }
+
+        .key.enter {
+            min-width: 80px;
+            background: #E8F5E8;
+            color: var(--primary-color);
+        }
+
+        .key.shift {
+            min-width: 70px;
+            background: #F3E5F5;
+            color: #7B1FA2;
+        }
+
+        .key.mixed {
+            flex-direction: column;
+            gap: 2px;
+            padding: 0.4rem;
+            height: 50px;
+        }
+
+        .mixed-char {
+            font-size: 0.9rem;
+            line-height: 1;
+        }
+
+        .mixed-arabic {
+            color: var(--arabic-color);
+            font-weight: bold;
+        }
+
+        .mixed-english {
+            color: #333;
+        }
+
+        .keyboard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .layout-selector {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .layout-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 6px;
+            background: white;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .layout-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .typing-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-card {
+            background: #F8F9FA;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .stat-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .sample-texts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sample-btn {
+            background: var(--accent-color);
+            color: #333;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .sample-btn:hover {
+            background: #FFB300;
+        }
+
+        .utf8-info {
+            background: #E8F5E8;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .utf8-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .key {
+                min-width: 35px;
+                height: 35px;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .key.space {
+                min-width: 150px;
+            }
+
+            .typing-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <script src="js/language-switcher.js"></script>
+    <div class="header">
+        <h1 data-content="headerTitle">⌨️ Virtual Arabic Keyboard</h1>
+        <p data-content="headerDescription">Practice typing Arabic text with UTF-8 support and real-time analysis</p>
+    </div>
+
+    <div class="container">
+        <div class="utf8-info">
+            <h3 data-content="utf8Support.title">🎉 UTF-8 Arabic Support Enabled!</h3>
+            <p data-content="utf8Support.description">This keyboard demonstrates the Arabic OS UTF-8 breakthrough. Type Arabic characters and see them processed with perfect right-to-left display and Unicode compliance.</p>
+        </div>
+
+        <div class="demo-section">
+            <h2 data-content="sections.textInputArea">Arabic Text Input Area</h2>
+            <textarea id="textArea" class="text-area" data-content="placeholders.textArea" placeholder="ابدأ بالكتابة هنا... Start typing here..."></textarea>
+
+            <div class="typing-stats">
+                <div class="stat-card">
+                    <h4 data-content="statistics.characters">Characters</h4>
+                    <div class="stat-value" id="charCount">0</div>
+                </div>
+                <div class="stat-card">
+                    <h4 data-content="statistics.arabicCharacters">Arabic Characters</h4>
+                    <div class="stat-value" id="arabicCount">0</div>
+                </div>
+                <div class="stat-card">
+                    <h4 data-content="statistics.utf8Bytes">UTF-8 Bytes</h4>
+                    <div class="stat-value" id="byteCount">0</div>
+                </div>
+                <div class="stat-card">
+                    <h4 data-content="statistics.words">Words</h4>
+                    <div class="stat-value" id="wordCount">0</div>
+                </div>
+            </div>
+
+            <div class="sample-texts">
+                <button class="sample-btn" onclick="insertText('مرحبا بكم في نظام التشغيل العربي')" data-content="samples.welcomeMessage">Sample: Welcome Message</button>
+                <button class="sample-btn" onclick="insertText('UTF-8 يدعم النصوص العربية')" data-content="samples.utf8Support">Sample: UTF-8 Support</button>
+                <button class="sample-btn" onclick="insertText('Hello مرحبا World عالم')" data-content="samples.mixedText">Sample: Mixed Text</button>
+                <button class="sample-btn" onclick="insertText('البرمجة Programming')" data-content="samples.technical">Sample: Technical</button>
+                <button class="sample-btn" onclick="clearText()" data-content="samples.clearAll">Clear All</button>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2 data-content="sections.virtualKeyboard">Virtual Keyboard</h2>
+
+            <div class="keyboard-controls">
+                <div class="layout-selector">
+                    <button class="layout-btn active" onclick="setLayout('arabic')" data-content="controls.arabicLayout">Arabic Layout</button>
+                    <button class="layout-btn" onclick="setLayout('english')" data-content="controls.englishLayout">English Layout</button>
+                    <button class="layout-btn" onclick="setLayout('mixed')" data-content="controls.mixedLayout">Mixed Layout</button>
+                </div>
+                <div>
+                    <label><input type="checkbox" id="shiftMode"> <span data-content="controls.shiftMode">Shift Mode</span></label>
+                    <label><input type="checkbox" id="capsLock"> <span data-content="controls.capsLock">Caps Lock</span></label>
+                    <label id="langToggleLabel" style="display: none;"><input type="checkbox" id="arabicMode" checked> <span data-content="controls.arabicMode">Arabic Mode</span></label>
+                </div>
+            </div>
+
+            <div class="keyboard" id="keyboard">
+                <!-- Keyboard will be generated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2 data-content="sections.textProcessingAnalysis">Text Processing Analysis</h2>
+            <div id="textAnalysis"></div>
+        </div>
+
+        <a href="index.html" class="back-link" data-content="navigation.backToLearning">← Back to Interactive Learning Platform</a>
+    </div>
+
+    <script>
+        // Keyboard layouts
+        const layouts = {
+            arabic: [
+                ['ذ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='],
+                ['ق', 'و', 'ع', 'ر', 'ت', 'ى', 'ء', 'ي', 'ث', 'ب', 'ل', 'ا', '\\'],
+                ['ا', 'س', 'د', 'ف', 'غ', 'ه', 'ج', 'ك', 'ل', ';', '\''],
+                ['ز', 'خ', 'ص', 'ض', 'ط', 'ك', 'م', 'ن', 'ت', 'ا', '.']
+            ],
+            english: [
+                ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='],
+                ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\'],
+                ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\''],
+                ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/']
+            ],
+            mixed: [
+                [['ذ', '`'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['0', '0'], ['-', '-'], ['=', '=']],
+                [['ض', 'q'], ['ص', 'w'], ['ث', 'e'], ['ق', 'r'], ['ف', 't'], ['غ', 'y'], ['ع', 'u'], ['ه', 'i'], ['خ', 'o'], ['ح', 'p'], ['ج', '['], ['د', ']'], ['\\', '\\']],
+                [['ش', 'a'], ['س', 's'], ['ي', 'd'], ['ب', 'f'], ['ل', 'g'], ['ا', 'h'], ['ت', 'j'], ['ن', 'k'], ['م', 'l'], ['ك', ';'], ['ط', '\'']],
+                [['ئ', 'z'], ['ء', 'x'], ['ؤ', 'c'], ['ر', 'v'], ['لا', 'b'], ['ى', 'n'], ['ة', 'm'], ['و', ','], ['ز', '.'], ['ظ', '/']]
+            ]
+        };
+
+        let currentLayout = 'arabic';
+        let shiftMode = false;
+        let capsLock = false;
+        let arabicMode = true; // For mixed layout: true = Arabic, false = English
+
+        // Arabic character ranges
+        const arabicRanges = [
+            [0x0600, 0x06FF], // Arabic
+            [0x0750, 0x077F], // Arabic Supplement
+            [0x08A0, 0x08FF], // Arabic Extended-A
+            [0xFB50, 0xFDFF], // Arabic Presentation Forms-A
+            [0xFE70, 0xFEFF]  // Arabic Presentation Forms-B
+        ];
+
+        function isArabic(char) {
+            const code = char.codePointAt(0);
+            return arabicRanges.some(([start, end]) => code >= start && code <= end);
+        }
+
+        function getUTF8ByteLength(str) {
+            return new Blob([str]).size;
+        }
+
+        function setLayout(layout) {
+            currentLayout = layout;
+            document.querySelectorAll('.layout-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Show/hide language toggle for mixed layout
+            const langToggle = document.getElementById('langToggleLabel');
+            if (layout === 'mixed') {
+                langToggle.style.display = 'inline-block';
+            } else {
+                langToggle.style.display = 'none';
+            }
+
+            generateKeyboard();
+        }
+
+        function generateKeyboard() {
+            const keyboard = document.getElementById('keyboard');
+            keyboard.innerHTML = '';
+
+            const layout = layouts[currentLayout];
+
+            layout.forEach((row, rowIndex) => {
+                const rowDiv = document.createElement('div');
+                rowDiv.className = 'keyboard-row';
+
+                // Add special keys for some rows
+                if (rowIndex === 1) {
+                    const tabKey = createKey('Tab', 'tab', 'key');
+                    rowDiv.appendChild(tabKey);
+                }
+
+                if (rowIndex === 2) {
+                    const capsKey = createKey('Caps', 'capslock', 'key shift');
+                    rowDiv.appendChild(capsKey);
+                }
+
+                if (rowIndex === 3) {
+                    const shiftKey = createKey('Shift', 'shift', 'key shift');
+                    rowDiv.appendChild(shiftKey);
+                }
+
+                row.forEach(char => {
+                    if (currentLayout === 'mixed' && Array.isArray(char)) {
+                        // Mixed layout with dual characters [arabic, english]
+                        const key = createMixedKey(char[0], char[1]);
+                        rowDiv.appendChild(key);
+                    } else {
+                        const key = createKey(char, char, isArabic(char) ? 'key arabic' : 'key');
+                        rowDiv.appendChild(key);
+                    }
+                });
+
+                // Add special keys at end of rows
+                if (rowIndex === 0) {
+                    const backspaceKey = createKey('⌫', 'backspace', 'key backspace');
+                    rowDiv.appendChild(backspaceKey);
+                }
+
+                if (rowIndex === 1) {
+                    const enterKey = createKey('↵', 'enter', 'key enter');
+                    rowDiv.appendChild(enterKey);
+                }
+
+                keyboard.appendChild(rowDiv);
+            });
+
+            // Add spacebar row
+            const spaceRow = document.createElement('div');
+            spaceRow.className = 'keyboard-row';
+
+            const ctrlKey = createKey('Ctrl', 'ctrl', 'key');
+            const altKey = createKey('Alt', 'alt', 'key');
+            const spaceKey = createKey('Space', 'space', 'key space');
+
+            spaceRow.appendChild(ctrlKey);
+            spaceRow.appendChild(altKey);
+            spaceRow.appendChild(spaceKey);
+
+            keyboard.appendChild(spaceRow);
+        }
+
+        function createKey(display, value, className) {
+            const key = document.createElement('div');
+            key.className = className;
+            key.textContent = display;
+            key.setAttribute('data-key', value);
+
+            key.addEventListener('click', () => handleKeyPress(value));
+            key.addEventListener('mousedown', () => key.classList.add('pressed'));
+            key.addEventListener('mouseup', () => key.classList.remove('pressed'));
+            key.addEventListener('mouseleave', () => key.classList.remove('pressed'));
+
+            return key;
+        }
+
+        function createMixedKey(arabicChar, englishChar) {
+            const key = document.createElement('div');
+            key.className = 'key mixed';
+
+            const arabicDiv = document.createElement('div');
+            arabicDiv.className = 'mixed-char mixed-arabic';
+            arabicDiv.textContent = arabicChar;
+
+            const englishDiv = document.createElement('div');
+            englishDiv.className = 'mixed-char mixed-english';
+            englishDiv.textContent = englishChar;
+
+            key.appendChild(arabicDiv);
+            key.appendChild(englishDiv);
+
+            // Store both characters as data attributes
+            key.setAttribute('data-arabic', arabicChar);
+            key.setAttribute('data-english', englishChar);
+
+            key.addEventListener('click', () => handleMixedKeyPress(arabicChar, englishChar));
+            key.addEventListener('mousedown', () => key.classList.add('pressed'));
+            key.addEventListener('mouseup', () => key.classList.remove('pressed'));
+            key.addEventListener('mouseleave', () => key.classList.remove('pressed'));
+
+            return key;
+        }
+
+        function handleMixedKeyPress(arabicChar, englishChar) {
+            const charToInsert = arabicMode ? arabicChar : englishChar;
+            insertCharacter(charToInsert);
+        }
+
+        function insertCharacter(char) {
+            const textArea = document.getElementById('textArea');
+            const currentPos = textArea.selectionStart;
+
+            let charToInsert = char;
+            if (capsLock || shiftMode) {
+                charToInsert = charToInsert.toUpperCase();
+            }
+
+            textArea.value = textArea.value.slice(0, currentPos) + charToInsert + textArea.value.slice(currentPos);
+            textArea.selectionStart = textArea.selectionEnd = currentPos + 1;
+
+            if (shiftMode) {
+                shiftMode = false;
+                document.getElementById('shiftMode').checked = false;
+            }
+
+            textArea.focus();
+            updateStats();
+        }
+
+        function handleKeyPress(key) {
+            const textArea = document.getElementById('textArea');
+            const currentPos = textArea.selectionStart;
+
+            switch(key) {
+                case 'backspace':
+                    if (textArea.value && currentPos > 0) {
+                        textArea.value = textArea.value.slice(0, currentPos - 1) + textArea.value.slice(currentPos);
+                        textArea.selectionStart = textArea.selectionEnd = currentPos - 1;
+                    }
+                    break;
+                case 'enter':
+                    textArea.value = textArea.value.slice(0, currentPos) + '\n' + textArea.value.slice(currentPos);
+                    textArea.selectionStart = textArea.selectionEnd = currentPos + 1;
+                    break;
+                case 'space':
+                    textArea.value = textArea.value.slice(0, currentPos) + ' ' + textArea.value.slice(currentPos);
+                    textArea.selectionStart = textArea.selectionEnd = currentPos + 1;
+                    break;
+                case 'shift':
+                    shiftMode = !shiftMode;
+                    document.getElementById('shiftMode').checked = shiftMode;
+                    break;
+                case 'capslock':
+                    capsLock = !capsLock;
+                    document.getElementById('capsLock').checked = capsLock;
+                    break;
+                case 'tab':
+                    textArea.value = textArea.value.slice(0, currentPos) + '\t' + textArea.value.slice(currentPos);
+                    textArea.selectionStart = textArea.selectionEnd = currentPos + 1;
+                    break;
+                default:
+                    if (key.length === 1) {
+                        let charToInsert = key;
+                        if (capsLock || shiftMode) {
+                            charToInsert = charToInsert.toUpperCase();
+                        }
+                        textArea.value = textArea.value.slice(0, currentPos) + charToInsert + textArea.value.slice(currentPos);
+                        textArea.selectionStart = textArea.selectionEnd = currentPos + 1;
+                        if (shiftMode) {
+                            shiftMode = false;
+                            document.getElementById('shiftMode').checked = false;
+                        }
+                    }
+                    break;
+            }
+
+            textArea.focus();
+            updateStats();
+        }
+
+        function insertText(text) {
+            const textArea = document.getElementById('textArea');
+            const currentPos = textArea.selectionStart;
+            textArea.value = textArea.value.slice(0, currentPos) + text + textArea.value.slice(currentPos);
+            textArea.selectionStart = textArea.selectionEnd = currentPos + text.length;
+            textArea.focus();
+            updateStats();
+        }
+
+        function clearText() {
+            document.getElementById('textArea').value = '';
+            updateStats();
+        }
+
+        function updateStats() {
+            const text = document.getElementById('textArea').value;
+            const charCount = text.length;
+            const arabicCount = [...text].filter(char => isArabic(char)).length;
+            const byteCount = getUTF8ByteLength(text);
+            const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
+
+            document.getElementById('charCount').textContent = charCount;
+            document.getElementById('arabicCount').textContent = arabicCount;
+            document.getElementById('byteCount').textContent = byteCount;
+            document.getElementById('wordCount').textContent = wordCount;
+
+            updateTextAnalysis(text, charCount, arabicCount, byteCount);
+        }
+
+        function updateTextAnalysis(text, charCount, arabicCount, byteCount) {
+            const analysisDiv = document.getElementById('textAnalysis');
+
+            if (!text) {
+                analysisDiv.innerHTML = '<p>Type some text to see analysis...</p>';
+                return;
+            }
+
+            const latinCount = [...text].filter(char => /[a-zA-Z]/.test(char)).length;
+            const digitCount = [...text].filter(char => /[0-9]/.test(char)).length;
+            const spaceCount = [...text].filter(char => char === ' ').length;
+            const avgBytesPerChar = charCount > 0 ? (byteCount / charCount).toFixed(2) : 0;
+
+            analysisDiv.innerHTML = `
+                <div class="typing-stats">
+                    <div class="stat-card">
+                        <h4>Text Direction</h4>
+                        <div class="stat-value">${arabicCount > latinCount ? 'RTL' : 'LTR'}</div>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Arabic %</h4>
+                        <div class="stat-value">${charCount > 0 ? Math.round((arabicCount / charCount) * 100) : 0}%</div>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Latin Characters</h4>
+                        <div class="stat-value">${latinCount}</div>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Avg Bytes/Char</h4>
+                        <div class="stat-value">${avgBytesPerChar}</div>
+                    </div>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <h4>Character Breakdown:</h4>
+                    <p>Arabic: ${arabicCount} | Latin: ${latinCount} | Digits: ${digitCount} | Spaces: ${spaceCount}</p>
+                    <p>UTF-8 Encoding: ${byteCount} bytes for ${charCount} characters</p>
+                    <p>Compression Ratio: ${charCount > 0 ? (byteCount / charCount > 1 ? 'Extended' : 'Optimal') : 'N/A'}</p>
+                </div>
+            `;
+        }
+
+        // Event listeners
+        document.getElementById('textArea').addEventListener('input', updateStats);
+        document.getElementById('shiftMode').addEventListener('change', (e) => {
+            shiftMode = e.target.checked;
+        });
+        document.getElementById('capsLock').addEventListener('change', (e) => {
+            capsLock = e.target.checked;
+        });
+        document.getElementById('arabicMode').addEventListener('change', (e) => {
+            arabicMode = e.target.checked;
+        });
+
+        // Physical keyboard support
+        document.addEventListener('keydown', (e) => {
+            if (document.activeElement === document.getElementById('textArea')) {
+                updateStats();
+            }
+        });
+
+        // Initialize
+        generateKeyboard();
+        updateStats();
+    </script>
+
+    <!-- Content Loading System -->
+    <script src="js/content-loader.js"></script>
+    <script>
+        // Initialize content loading
+        async function initializePageContent() {
+            const toolName = 'arabic_typing';
+            const currentLanguage = languageSwitcher.getCurrentLanguage();
+
+            try {
+                await contentLoader.loadContent(toolName, currentLanguage);
+                contentLoader.applyContent();
+                console.log('✅ Arabic Typing content loaded successfully');
+
+                // Register with language switcher for future changes
+                languageSwitcher.onLanguageChange(async (newLang) => {
+                    try {
+                        await contentLoader.loadContent(toolName, newLang);
+                        contentLoader.applyContent();
+                        console.log(`✅ Arabic Typing switched to ${newLang} content successfully`);
+                    } catch (error) {
+                        console.error(`❌ Failed to switch Arabic Typing to ${newLang}:`, error);
+                    }
+                });
+            } catch (error) {
+                console.error('❌ Failed to initialize Arabic Typing content:', error);
+            }
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePageContent);
+        } else {
+            initializePageContent();
+        }
+    </script>
+</body>
+</html>

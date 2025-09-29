@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-content="pageTitle">Memory Layout Visualizer - Arabic OS</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #388E3C;
+            --accent-color: #FFC107;
+            --text-color: #212121;
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+            --error-color: #F44336;
+            --success-color: #4CAF50;
+            --kernel-color: #E91E63;
+            --user-color: #2196F3;
+            --free-color: #4CAF50;
+            --allocated-color: #FF9800;
+            --reserved-color: #9C27B0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .controls-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .control-group label {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .control-input {
+            padding: 0.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .control-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .preset-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .preset-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .preset-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        .visualization-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .memory-container {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .memory-map {
+            flex: 2;
+            background: #f8f9fa;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            min-height: 600px;
+            position: relative;
+            overflow-y: auto;
+        }
+
+        .memory-region {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            border-radius: 4px;
+            padding: 0.5rem;
+            margin: 1px 0;
+            font-size: 0.85rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .memory-region:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .region-kernel { background: var(--kernel-color); }
+        .region-user { background: var(--user-color); }
+        .region-free { background: var(--free-color); }
+        .region-allocated { background: var(--allocated-color); }
+        .region-reserved { background: var(--reserved-color); }
+        .region-vga { background: #795548; }
+        .region-low { background: #607D8B; }
+
+        .memory-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .info-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+        }
+
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.3rem;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.5);
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .allocation-sim {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .sim-controls {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .sim-btn {
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .sim-btn:hover {
+            background: #FFB300;
+        }
+
+        .address-ruler {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            background: rgba(0,0,0,0.05);
+            border-right: 1px solid var(--border-color);
+            padding: 0.5rem 0.25rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.7rem;
+            color: #666;
+        }
+
+        .address-mark {
+            position: absolute;
+            font-size: 0.6rem;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .memory-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(46, 125, 50, 0.1);
+            border-radius: 8px;
+            border: 1px solid var(--primary-color);
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            pointer-events: none;
+            z-index: 1000;
+            max-width: 250px;
+            display: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--secondary-color);
+        }
+
+        @media (max-width: 1024px) {
+            .memory-container {
+                flex-direction: column;
+            }
+
+            .memory-map {
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .controls-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 data-content="headerTitle">🧠 Memory Layout Visualizer</h1>
+        <p data-content="headerDescription">Interactive Arabic OS memory map with real-time allocation simulation</p>
+    </div>
+
+    <div class="container">
+        <div class="controls-section">
+            <h2 data-content="memoryConfiguration">Memory Configuration</h2>
+            <div class="controls-grid">
+                <div class="control-group">
+                    <label for="totalMemory" data-content="controls.totalMemoryLabel">Total Memory (KB)</label>
+                    <input type="number" id="totalMemory" class="control-input" value="65536" min="1024" max="1048576">
+                </div>
+                <div class="control-group">
+                    <label for="kernelSize" data-content="controls.kernelSizeLabel">Kernel Size (KB)</label>
+                    <input type="number" id="kernelSize" class="control-input" value="1024" min="256" max="4096">
+                </div>
+                <div class="control-group">
+                    <label for="pageSize" data-content="controls.pageSizeLabel">Page Size (bytes)</label>
+                    <select id="pageSize" class="control-input">
+                        <option value="4096" selected>4KB (4096 bytes)</option>
+                        <option value="8192">8KB (8192 bytes)</option>
+                        <option value="16384">16KB (16384 bytes)</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="allocStrategy" data-content="controls.allocationStrategyLabel">Allocation Strategy</label>
+                    <select id="allocStrategy" class="control-input">
+                        <option value="stack" selected>Stack-based (Arabic OS)</option>
+                        <option value="bitmap">Bitmap allocation</option>
+                        <option value="buddy">Buddy system</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="preset-buttons">
+                <button class="preset-btn" onclick="loadPreset('default')" data-content="presets.defaultArabicOS">Default Arabic OS</button>
+                <button class="preset-btn" onclick="loadPreset('minimal')" data-content="presets.minimal">Minimal (1MB)</button>
+                <button class="preset-btn" onclick="loadPreset('desktop')" data-content="presets.desktop">Desktop (16MB)</button>
+                <button class="preset-btn" onclick="loadPreset('server')" data-content="presets.server">Server (64MB)</button>
+                <button class="preset-btn" onclick="loadPreset('embedded')" data-content="presets.embedded">Embedded (512KB)</button>
+            </div>
+        </div>
+
+        <div class="visualization-section">
+            <h2 data-content="arabicOsMemoryMap">Arabic OS Memory Map</h2>
+            <div class="memory-container">
+                <div class="memory-map" id="memoryMap">
+                    <div class="address-ruler" id="addressRuler"></div>
+                </div>
+
+                <div class="memory-info">
+                    <div class="info-card">
+                        <h4 data-content="regions.memoryRegionsTitle">Memory Regions</h4>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-color region-kernel"></div>
+                                <span data-content="regions.kernelSpace">Kernel Space</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color region-user"></div>
+                                <span data-content="regions.userSpace">User Space</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color region-free"></div>
+                                <span data-content="regions.freeMemory">Free Memory</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color region-allocated"></div>
+                                <span data-content="regions.allocated">Allocated</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color region-reserved"></div>
+                                <span data-content="regions.reserved">Reserved</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color region-vga"></div>
+                                <span data-content="regions.vgaMemory">VGA Memory</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color region-low"></div>
+                                <span data-content="regions.lowMemory">Low Memory</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4 data-content="selection.currentSelectionTitle">Current Selection</h4>
+                        <div id="selectionInfo">
+                            <div class="info-row">
+                                <span data-content="selection.regionLabel">Region:</span>
+                                <span id="selectedRegion" data-content="selection.noneSelected">None</span>
+                            </div>
+                            <div class="info-row">
+                                <span data-content="selection.startLabel">Start:</span>
+                                <span id="selectedStart" data-content="selection.noSelection">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span data-content="selection.endLabel">End:</span>
+                                <span id="selectedEnd" data-content="selection.noSelection">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span data-content="selection.sizeLabel">Size:</span>
+                                <span id="selectedSize" data-content="selection.noSelection">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span data-content="selection.pagesLabel">Pages:</span>
+                                <span id="selectedPages" data-content="selection.noSelection">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4 data-content="simulation.memorySimulationTitle">Allocation Simulator</h4>
+                        <div class="allocation-sim">
+                            <div class="sim-controls">
+                                <button class="sim-btn" onclick="allocateMemory(1)" data-content="simulation.alloc1Page">Alloc 1 Page</button>
+                                <button class="sim-btn" onclick="allocateMemory(4)" data-content="simulation.alloc4Pages">Alloc 4 Pages</button>
+                                <button class="sim-btn" onclick="allocateMemory(16)" data-content="simulation.alloc16Pages">Alloc 16 Pages</button>
+                                <button class="sim-btn" onclick="deallocateRandom()" data-content="simulation.freeRandom">Free Random</button>
+                                <button class="sim-btn" onclick="resetAllocations()" data-content="simulation.resetAll">Reset All</button>
+                            </div>
+                            <div id="allocStatus" data-content="simulation.readyStatus">Ready for allocation simulation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="visualization-section">
+            <h2 data-content="memoryStatistics">Memory Statistics</h2>
+            <div class="memory-stats">
+                <div class="stat-box">
+                    <div class="stat-value" id="totalMemStat">64MB</div>
+                    <div class="stat-label" data-content="statistics.totalMemory">Total Memory</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="kernelMemStat">1MB</div>
+                    <div class="stat-label" data-content="statistics.kernelMemory">Kernel Space</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="userMemStat">63MB</div>
+                    <div class="stat-label" data-content="statistics.userMemory">User Space</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="freeMemStat">62MB</div>
+                    <div class="stat-label" data-content="statistics.freeMemoryStats">Free Memory</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="totalPagesStat">16384</div>
+                    <div class="stat-label" data-content="statistics.totalPages">Total Pages</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="freePagesStat">15872</div>
+                    <div class="stat-label" data-content="statistics.freePages">Free Pages</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link" data-content="navigation.backToLearning">← Back to Interactive Learning Platform</a>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // Memory configuration and state
+        let memoryConfig = {
+            totalMemory: 65536 * 1024, // 64MB in bytes
+            kernelSize: 1024 * 1024,   // 1MB in bytes
+            pageSize: 4096,            // 4KB pages
+            allocStrategy: 'stack'
+        };
+
+        let memoryRegions = [];
+        let allocatedBlocks = [];
+        let freePages = [];
+
+        // Arabic OS specific memory layout constants
+        const MEMORY_LAYOUT = {
+            LOW_MEMORY_START: 0x0000,
+            LOW_MEMORY_END: 0x9FFFF,
+            VGA_START: 0xA0000,
+            VGA_END: 0xBFFFF,
+            KERNEL_START: 0x100000,
+            PAGE_SIZE: 4096,
+            START_PAGE: 0x1000,
+            START_VGA: 0xA0000
+        };
+
+        function formatBytes(bytes) {
+            if (bytes >= 1024 * 1024 * 1024) return (bytes / (1024 * 1024 * 1024)).toFixed(1) + 'GB';
+            if (bytes >= 1024 * 1024) return (bytes / (1024 * 1024)).toFixed(1) + 'MB';
+            if (bytes >= 1024) return (bytes / 1024).toFixed(1) + 'KB';
+            return bytes + 'B';
+        }
+
+        function formatAddress(addr) {
+            return '0x' + addr.toString(16).toUpperCase().padStart(8, '0');
+        }
+
+        function loadPreset(preset) {
+            switch(preset) {
+                case 'default':
+                    document.getElementById('totalMemory').value = 65536;
+                    document.getElementById('kernelSize').value = 1024;
+                    break;
+                case 'minimal':
+                    document.getElementById('totalMemory').value = 1024;
+                    document.getElementById('kernelSize').value = 256;
+                    break;
+                case 'desktop':
+                    document.getElementById('totalMemory').value = 16384;
+                    document.getElementById('kernelSize').value = 2048;
+                    break;
+                case 'server':
+                    document.getElementById('totalMemory').value = 65536;
+                    document.getElementById('kernelSize').value = 4096;
+                    break;
+                case 'embedded':
+                    document.getElementById('totalMemory').value = 512;
+                    document.getElementById('kernelSize').value = 128;
+                    break;
+            }
+            updateMemoryConfig();
+        }
+
+        function updateMemoryConfig() {
+            memoryConfig.totalMemory = parseInt(document.getElementById('totalMemory').value) * 1024;
+            memoryConfig.kernelSize = parseInt(document.getElementById('kernelSize').value) * 1024;
+            memoryConfig.pageSize = parseInt(document.getElementById('pageSize').value);
+            memoryConfig.allocStrategy = document.getElementById('allocStrategy').value;
+
+            calculateMemoryLayout();
+            renderMemoryMap();
+            updateStatistics();
+        }
+
+        function calculateMemoryLayout() {
+            memoryRegions = [];
+            allocatedBlocks = [];
+            freePages = [];
+
+            // Low memory (0x0000 - 0x9FFFF)
+            memoryRegions.push({
+                name: 'Low Memory (DOS/BIOS)',
+                start: 0x0000,
+                end: 0x9FFFF,
+                size: 0xA0000,
+                type: 'low',
+                description: 'Real mode memory area, BIOS data'
+            });
+
+            // VGA Memory (0xA0000 - 0xBFFFF)
+            memoryRegions.push({
+                name: 'VGA Memory',
+                start: 0xA0000,
+                end: 0xBFFFF,
+                size: 0x20000,
+                type: 'vga',
+                description: 'Video graphics adapter memory'
+            });
+
+            // Reserved area (0xC0000 - 0xFFFFF)
+            memoryRegions.push({
+                name: 'Reserved (BIOS/ROM)',
+                start: 0xC0000,
+                end: 0xFFFFF,
+                size: 0x40000,
+                type: 'reserved',
+                description: 'BIOS ROM and system reserved area'
+            });
+
+            // Kernel space (starts at 1MB)
+            const kernelStart = MEMORY_LAYOUT.KERNEL_START;
+            const kernelEnd = kernelStart + memoryConfig.kernelSize;
+
+            memoryRegions.push({
+                name: 'Arabic OS Kernel',
+                start: kernelStart,
+                end: kernelEnd,
+                size: memoryConfig.kernelSize,
+                type: 'kernel',
+                description: 'Arabic OS kernel code and data'
+            });
+
+            // User space (after kernel)
+            const userStart = kernelEnd;
+            const userEnd = memoryConfig.totalMemory;
+
+            if (userEnd > userStart) {
+                memoryRegions.push({
+                    name: 'User Space',
+                    start: userStart,
+                    end: userEnd,
+                    size: userEnd - userStart,
+                    type: 'user',
+                    description: 'Available for user programs and data'
+                });
+
+                // Initialize free pages in user space
+                for (let addr = userStart; addr < userEnd; addr += memoryConfig.pageSize) {
+                    freePages.push(addr);
+                }
+            }
+
+            // Sort regions by start address
+            memoryRegions.sort((a, b) => a.start - b.start);
+        }
+
+        function renderMemoryMap() {
+            const memoryMap = document.getElementById('memoryMap');
+            const mapHeight = 600;
+            const rulerWidth = 80;
+
+            // Clear previous content (except ruler)
+            const regions = memoryMap.querySelectorAll('.memory-region');
+            regions.forEach(r => r.remove());
+
+            // Calculate scale
+            const totalMemory = memoryConfig.totalMemory;
+            const scale = mapHeight / totalMemory;
+
+            // Render address ruler
+            renderAddressRuler(totalMemory, mapHeight);
+
+            // Render memory regions
+            memoryRegions.forEach(region => {
+                const regionElement = document.createElement('div');
+                regionElement.className = `memory-region region-${region.type}`;
+
+                const top = mapHeight - (region.end * scale);
+                const height = region.size * scale;
+
+                regionElement.style.top = `${top}px`;
+                regionElement.style.height = `${Math.max(height, 2)}px`;
+                regionElement.style.left = `${rulerWidth + 10}px`;
+                regionElement.style.right = '10px';
+
+                regionElement.innerHTML = `
+                    <div style="font-weight: bold;">${region.name}</div>
+                    <div style="font-size: 0.75em; opacity: 0.9;">
+                        ${formatAddress(region.start)} - ${formatAddress(region.end)}
+                        (${formatBytes(region.size)})
+                    </div>
+                `;
+
+                regionElement.addEventListener('click', () => selectRegion(region));
+                regionElement.addEventListener('mouseenter', (e) => showTooltip(e, region));
+                regionElement.addEventListener('mouseleave', hideTooltip);
+
+                memoryMap.appendChild(regionElement);
+            });
+
+            // Render allocated blocks
+            renderAllocatedBlocks(scale, mapHeight, rulerWidth);
+        }
+
+        function renderAddressRuler(totalMemory, mapHeight) {
+            const ruler = document.getElementById('addressRuler');
+            ruler.innerHTML = '';
+
+            const steps = 8;
+            for (let i = 0; i <= steps; i++) {
+                const addr = (totalMemory * i) / steps;
+                const y = mapHeight - (mapHeight * i) / steps;
+
+                const mark = document.createElement('div');
+                mark.className = 'address-mark';
+                mark.style.top = `${y - 8}px`;
+                mark.textContent = formatAddress(Math.floor(addr));
+
+                ruler.appendChild(mark);
+            }
+        }
+
+        function renderAllocatedBlocks(scale, mapHeight, rulerWidth) {
+            allocatedBlocks.forEach(block => {
+                const blockElement = document.createElement('div');
+                blockElement.className = 'memory-region region-allocated';
+
+                const top = mapHeight - ((block.start + block.size) * scale);
+                const height = block.size * scale;
+
+                blockElement.style.top = `${top}px`;
+                blockElement.style.height = `${Math.max(height, 1)}px`;
+                blockElement.style.left = `${rulerWidth + 15}px`;
+                blockElement.style.right = '15px';
+                blockElement.style.opacity = '0.8';
+
+                blockElement.innerHTML = `
+                    <div style="font-size: 0.7em;">Allocated</div>
+                    <div style="font-size: 0.6em;">${formatBytes(block.size)}</div>
+                `;
+
+                document.getElementById('memoryMap').appendChild(blockElement);
+            });
+        }
+
+        function selectRegion(region) {
+            document.getElementById('selectedRegion').textContent = region.name;
+            document.getElementById('selectedStart').textContent = formatAddress(region.start);
+            document.getElementById('selectedEnd').textContent = formatAddress(region.end);
+            document.getElementById('selectedSize').textContent = formatBytes(region.size);
+            document.getElementById('selectedPages').textContent = Math.floor(region.size / memoryConfig.pageSize);
+        }
+
+        function showTooltip(event, region) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'block';
+            tooltip.style.left = event.pageX + 10 + 'px';
+            tooltip.style.top = event.pageY + 10 + 'px';
+
+            tooltip.innerHTML = `
+                <strong>${region.name}</strong><br>
+                ${region.description}<br>
+                Range: ${formatAddress(region.start)} - ${formatAddress(region.end)}<br>
+                Size: ${formatBytes(region.size)}<br>
+                Pages: ${Math.floor(region.size / memoryConfig.pageSize)}
+            `;
+        }
+
+        function hideTooltip() {
+            document.getElementById('tooltip').style.display = 'none';
+        }
+
+        function allocateMemory(pages) {
+            if (freePages.length < pages) {
+                document.getElementById('allocStatus').textContent = 'Allocation failed: Not enough free pages';
+                return;
+            }
+
+            const startPage = freePages.splice(0, pages)[0];
+            const block = {
+                start: startPage,
+                size: pages * memoryConfig.pageSize,
+                pages: pages
+            };
+
+            allocatedBlocks.push(block);
+            renderMemoryMap();
+            updateStatistics();
+
+            document.getElementById('allocStatus').textContent =
+                `Allocated ${pages} pages (${formatBytes(block.size)}) at ${formatAddress(startPage)}`;
+        }
+
+        function deallocateRandom() {
+            if (allocatedBlocks.length === 0) {
+                document.getElementById('allocStatus').textContent = 'No allocated blocks to free';
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * allocatedBlocks.length);
+            const block = allocatedBlocks.splice(randomIndex, 1)[0];
+
+            // Add pages back to free list
+            for (let i = 0; i < block.pages; i++) {
+                freePages.push(block.start + (i * memoryConfig.pageSize));
+            }
+
+            renderMemoryMap();
+            updateStatistics();
+
+            document.getElementById('allocStatus').textContent =
+                `Freed ${block.pages} pages (${formatBytes(block.size)}) at ${formatAddress(block.start)}`;
+        }
+
+        function resetAllocations() {
+            allocatedBlocks = [];
+            calculateMemoryLayout();
+            renderMemoryMap();
+            updateStatistics();
+            document.getElementById('allocStatus').textContent = 'All allocations reset';
+        }
+
+        function updateStatistics() {
+            const userRegion = memoryRegions.find(r => r.type === 'user');
+            const kernelRegion = memoryRegions.find(r => r.type === 'kernel');
+            const totalAllocated = allocatedBlocks.reduce((sum, block) => sum + block.size, 0);
+            const freeMemory = userRegion ? userRegion.size - totalAllocated : 0;
+            const totalPages = Math.floor(memoryConfig.totalMemory / memoryConfig.pageSize);
+            const freePagesCount = freePages.length;
+
+            document.getElementById('totalMemStat').textContent = formatBytes(memoryConfig.totalMemory);
+            document.getElementById('kernelMemStat').textContent = formatBytes(kernelRegion ? kernelRegion.size : 0);
+            document.getElementById('userMemStat').textContent = formatBytes(userRegion ? userRegion.size : 0);
+            document.getElementById('freeMemStat').textContent = formatBytes(freeMemory);
+            document.getElementById('totalPagesStat').textContent = totalPages.toLocaleString();
+            document.getElementById('freePagesStat').textContent = freePagesCount.toLocaleString();
+        }
+
+        // Event listeners
+        document.getElementById('totalMemory').addEventListener('input', updateMemoryConfig);
+        document.getElementById('kernelSize').addEventListener('input', updateMemoryConfig);
+        document.getElementById('pageSize').addEventListener('change', updateMemoryConfig);
+        document.getElementById('allocStrategy').addEventListener('change', updateMemoryConfig);
+
+        // Initialize
+        updateMemoryConfig();
+    </script>
+
+    <!-- Content Loading System -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script>
+        // Initialize content loading
+        async function initializePage() {
+            const toolName = 'memory_layout';
+            const currentLanguage = languageSwitcher.getCurrentLanguage();
+
+            try {
+                await contentLoader.loadContent(toolName, currentLanguage);
+                contentLoader.applyContent();
+                console.log('✅ Page content loaded successfully');
+
+                // Register with language switcher for future changes
+                languageSwitcher.onLanguageChange(async (newLang) => {
+                    console.log(`🔄 Language change requested: ${newLang}`);
+                    try {
+                        await contentLoader.loadContent(toolName, newLang);
+                        contentLoader.applyContent();
+                        console.log(`✅ Switched to ${newLang} content successfully`);
+                    } catch (error) {
+                        console.error(`❌ Failed to switch to ${newLang}:`, error);
+                    }
+                });
+            } catch (error) {
+                console.error('❌ Failed to initialize page content:', error);
+            }
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePage);
+        } else {
+            initializePage();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic OS Interactive Learning Platform</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #388E3C;
+            --accent-color: #FFC107;
+            --text-color: #212121;
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bg-color) 0%, #E8F5E8 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            backdrop-filter: blur(10px);
+        }
+
+        .navigation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .nav-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-color: var(--primary-color);
+        }
+
+        .nav-card h2 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-card .icon {
+            font-size: 1.8em;
+        }
+
+        .nav-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .nav-link::before {
+            content: "→";
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::before {
+            transform: translateX(3px);
+        }
+
+        .quick-start {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .quick-start h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .quick-start-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .quick-option {
+            padding: 20px;
+            background: #F8F9FA;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .quick-option h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .quick-option code {
+            background: #E9ECEF;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-top: 40px;
+        }
+
+        .repository-info {
+            background: linear-gradient(135deg, #E3F2FD 0%, #E8F5E8 100%);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .navigation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .badges {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="language-toggle" onclick="window.location.href='./documentation/html-ar/index.html'">العربية</button>
+
+    <div class="container">
+        <header>
+            <h1>🌟 Arabic OS Interactive Learning Platform</h1>
+            <p class="subtitle">Educational platform for Arabic computing and operating system development</p>
+            <div class="badges">
+                <span class="badge">📚 Educational</span>
+                <span class="badge">🌐 Bilingual (Arabic + English)</span>
+                <span class="badge">🎮 Interactive Tools</span>
+                <span class="badge">💻 OS Development</span>
+            </div>
+        </header>
+
+        <div class="quick-start">
+            <h2>🚀 Quick Start Options</h2>
+            <div class="quick-start-options">
+                <div class="quick-option">
+                    <h3>🎮 Try Interactive Tools</h3>
+                    <p>Start learning immediately with web-based tools</p>
+                    <code>Open: interactive/index.html</code>
+                </div>
+                <div class="quick-option">
+                    <h3>📖 Read Documentation</h3>
+                    <p>Comprehensive guides and tutorials</p>
+                    <code>Open: documentation/html-en/index.html</code>
+                </div>
+                <div class="quick-option">
+                    <h3>💾 Boot OS Image</h3>
+                    <p>Run the Arabic OS in QEMU/VirtualBox</p>
+                    <code>qemu-system-i386 -fda images/floppy.flp</code>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-grid">
+            <div class="nav-card">
+                <h2><span class="icon">🎮</span>Interactive Learning Tools</h2>
+                <p>9 comprehensive web-based educational tools for hands-on learning of Arabic computing concepts, encoding systems, and OS development.</p>
+                <div class="nav-links">
+                    <a href="./interactive/index.html" class="nav-link">Main Interactive Hub</a>
+                    <a href="./interactive/cp1256_explorer.html" class="nav-link">CP1256 Encoding Explorer</a>
+                    <a href="./interactive/utf8_visualizer.html" class="nav-link">UTF-8 Visualizer</a>
+                    <a href="./interactive/arabic_typing.html" class="nav-link">Arabic Virtual Keyboard</a>
+                    <a href="./interactive/assembly_simulator.html" class="nav-link">Assembly Simulator</a>
+                </div>
+            </div>
+
+            <div class="nav-card">
+                <h2><span class="icon">📚</span>Documentation</h2>
+                <p>Comprehensive documentation including user guides, developer references, and educational materials in both English and Arabic.</p>
+                <div class="nav-links">
+                    <a href="./documentation/html-en/index.html" class="nav-link">English Documentation</a>
+                    <a href="./documentation/html-ar/index.html" class="nav-link">Arabic Documentation (العربية)</a>
+                    <a href="./documentation/source/" class="nav-link">Sphinx Source Files</a>
+                </div>
+            </div>
+
+            <div class="nav-card">
+                <h2><span class="icon">💾</span>OS Development</h2>
+                <p>Bootable operating system image and development resources for hands-on OS programming with Arabic language support.</p>
+                <div class="nav-links">
+                    <a href="./images/" class="nav-link">Bootable Floppy Image</a>
+                    <a href="./documentation/html-en/developer-guide/index.html" class="nav-link">Developer Guide</a>
+                    <a href="./documentation/html-en/user-guide/index.html" class="nav-link">Usage Instructions</a>
+                </div>
+            </div>
+
+            <div class="nav-card">
+                <h2><span class="icon">🌍</span>Educational Resources</h2>
+                <p>Complete educational package including curriculum materials, assessment tools, and multilingual learning resources.</p>
+                <div class="nav-links">
+                    <a href="./documentation/html-en/educator-guide/index.html" class="nav-link">Educator Guide</a>
+                    <a href="./documentation/html-en/user-guide/tools/index.html" class="nav-link">Tool Documentation</a>
+                    <a href="./interactive/index.html" class="nav-link">Hands-on Exercises</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="repository-info">
+            <h2>📋 Repository Contents</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li><strong>📱 interactive/</strong> - Web-based educational tools (9 interactive applications)</li>
+                <li><strong>📚 documentation/</strong> - Comprehensive documentation (English + Arabic HTML builds, Sphinx source)</li>
+                <li><strong>💾 images/</strong> - Bootable OS floppy image (1.47 MB)</li>
+                <li><strong>📖 README.md</strong> - Detailed project information and setup instructions</li>
+            </ul>
+        </div>
+
+        <footer>
+            <h3>🎯 Learning Objectives</h3>
+            <p>Master Arabic computing fundamentals • Understand OS development concepts • Learn assembly programming • Explore typography and internationalization</p>
+
+            <div style="margin-top: 20px;">
+                <strong>🏆 Perfect for:</strong> Computer Science Students • Arabic Language Technology Researchers • International Developers • Educators
+            </div>
+
+            <div style="margin-top: 20px; font-size: 0.9em; color: #666;">
+                <p>📞 <strong>Need Help?</strong> Check the comprehensive documentation or explore the interactive tutorials</p>
+                <p>🌟 <strong>Start Learning:</strong> Click any link above to begin your journey into Arabic computing!</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

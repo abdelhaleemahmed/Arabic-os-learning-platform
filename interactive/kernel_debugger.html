@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-content="pageTitle">Kernel Debugger - Arabic OS</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #388E3C;
+            --accent-color: #FFC107;
+            --text-color: #212121;
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+            --error-color: #F44336;
+            --success-color: #4CAF50;
+            --warning-color: #FF9800;
+            --debug-color: #9C27B0;
+            --register-color: #E91E63;
+            --memory-color: #2196F3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .debugger-controls {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .control-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .debug-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .debug-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .debug-btn:active {
+            transform: translateY(0);
+        }
+
+        .debug-btn.running {
+            background: var(--success-color);
+            animation: pulse 2s infinite;
+        }
+
+        .debug-btn.error {
+            background: var(--error-color);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .system-status {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .status-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .status-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .status-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .status-running { color: var(--success-color); }
+        .status-error { color: var(--error-color); }
+        .status-warning { color: var(--warning-color); }
+
+        .debug-panels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .debug-panel {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .panel-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .refresh-btn {
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .registers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .register-item {
+            background: #f8f9fa;
+            padding: 0.75rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--register-color);
+            font-family: 'Courier New', monospace;
+        }
+
+        .register-name {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: var(--register-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .register-value {
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        .memory-viewer {
+            font-family: 'Courier New', monospace;
+            background: #f8f9fa;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1rem;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .memory-line {
+            margin-bottom: 0.25rem;
+            padding: 0.25rem;
+            border-radius: 3px;
+            transition: background 0.3s ease;
+        }
+
+        .memory-line:hover {
+            background: rgba(33, 150, 243, 0.1);
+        }
+
+        .memory-address {
+            color: var(--memory-color);
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .memory-bytes {
+            color: var(--text-color);
+            margin-right: 1rem;
+        }
+
+        .memory-ascii {
+            color: #666;
+            font-style: italic;
+        }
+
+        .interrupt-table {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .interrupt-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.3s ease;
+        }
+
+        .interrupt-item:hover {
+            background: rgba(46, 125, 50, 0.1);
+        }
+
+        .interrupt-vector {
+            font-weight: bold;
+            color: var(--debug-color);
+            min-width: 3rem;
+        }
+
+        .interrupt-name {
+            flex: 1;
+            margin-left: 1rem;
+        }
+
+        .interrupt-status {
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .status-active {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .status-inactive {
+            background: var(--border-color);
+            color: #666;
+        }
+
+        .exception-log {
+            background: #f8f9fa;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1rem;
+            max-height: 250px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .log-entry {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .log-info {
+            border-left: 4px solid var(--primary-color);
+            background: rgba(46, 125, 50, 0.1);
+        }
+
+        .log-warning {
+            border-left: 4px solid var(--warning-color);
+            background: rgba(255, 152, 0, 0.1);
+        }
+
+        .log-error {
+            border-left: 4px solid var(--error-color);
+            background: rgba(244, 67, 54, 0.1);
+        }
+
+        .breakpoints-section {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .breakpoint-controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .address-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 0.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .breakpoint-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .breakpoint-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid var(--debug-color);
+        }
+
+        .breakpoint-address {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: var(--debug-color);
+        }
+
+        .remove-btn {
+            background: var(--error-color);
+            color: white;
+            border: none;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--secondary-color);
+        }
+
+        @media (max-width: 1200px) {
+            .debug-panels {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .system-status {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .control-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 data-content="headerTitle">🔧 Kernel Debugger</h1>
+        <p data-content="headerDescription">Visual state explorer for Arabic OS kernel debugging and system analysis</p>
+    </div>
+
+    <div class="container">
+        <div class="debugger-controls">
+            <div class="control-buttons">
+                <button class="debug-btn" onclick="startKernel()" id="startBtn" data-content="controls.startKernel">
+                    ▶️ Start Kernel
+                </button>
+                <button class="debug-btn" onclick="pauseKernel()" id="pauseBtn" data-content="controls.pause">
+                    ⏸️ Pause
+                </button>
+                <button class="debug-btn" onclick="stepExecution()" id="stepBtn" data-content="controls.step">
+                    👣 Step
+                </button>
+                <button class="debug-btn" onclick="resetKernel()" id="resetBtn" data-content="controls.reset">
+                    🔄 Reset
+                </button>
+                <button class="debug-btn" onclick="triggerInterrupt()" id="interruptBtn" data-content="controls.triggerIRQ">
+                    ⚡ Trigger IRQ
+                </button>
+                <button class="debug-btn" onclick="simulateException()" id="exceptionBtn" data-content="controls.simulateException">
+                    💥 Simulate Exception
+                </button>
+            </div>
+        </div>
+
+        <div class="system-status">
+            <div class="status-card">
+                <div class="status-value status-running" id="kernelStatus">RUNNING</div>
+                <div class="status-label" data-content="status.kernelState">Kernel State</div>
+            </div>
+            <div class="status-card">
+                <div class="status-value" id="uptimeValue">00:05:23</div>
+                <div class="status-label" data-content="status.uptime">Uptime</div>
+            </div>
+            <div class="status-card">
+                <div class="status-value" id="interruptCount">1,247</div>
+                <div class="status-label" data-content="status.interrupts">Interrupts</div>
+            </div>
+            <div class="status-card">
+                <div class="status-value" id="memoryUsage">42%</div>
+                <div class="status-label" data-content="status.memoryUsage">Memory Usage</div>
+            </div>
+            <div class="status-card">
+                <div class="status-value" id="pageAllocations">156</div>
+                <div class="status-label" data-content="status.pageAllocations">Page Allocations</div>
+            </div>
+            <div class="status-card">
+                <div class="status-value status-running" id="utfSupport">ACTIVE</div>
+                <div class="status-label" data-content="status.utf8Support">UTF-8 Support</div>
+            </div>
+        </div>
+
+        <div class="debug-panels">
+            <div class="debug-panel">
+                <div class="panel-header">
+                    <div class="panel-title" data-content="panels.cpuRegisters">CPU Registers</div>
+                    <button class="refresh-btn" onclick="refreshRegisters()" data-content="actions.refresh">🔄 Refresh</button>
+                </div>
+                <div class="registers-grid" id="registersGrid">
+                    <!-- Registers will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="debug-panel">
+                <div class="panel-header">
+                    <div class="panel-title" data-content="panels.memoryViewer">Memory Viewer</div>
+                    <div>
+                        <input type="text" placeholder="0x00100000" id="memoryAddress" style="width: 120px; margin-right: 0.5rem;">
+                        <button class="refresh-btn" onclick="refreshMemory()" data-content="actions.view">🔍 View</button>
+                    </div>
+                </div>
+                <div class="memory-viewer" id="memoryViewer">
+                    <!-- Memory content will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="debug-panel">
+                <div class="panel-header">
+                    <div class="panel-title" data-content="panels.interruptTable">Interrupt Table</div>
+                    <button class="refresh-btn" onclick="refreshInterrupts()">🔄 Refresh</button>
+                </div>
+                <div class="interrupt-table" id="interruptTable">
+                    <!-- Interrupt table will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="debug-panel">
+                <div class="panel-header">
+                    <div class="panel-title" data-content="panels.exceptionLog">Exception Log</div>
+                    <button class="refresh-btn" onclick="clearLog()" data-content="actions.clear">🗑️ Clear</button>
+                </div>
+                <div class="exception-log" id="exceptionLog">
+                    <!-- Exception log will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="breakpoints-section">
+            <div class="panel-header">
+                <div class="panel-title" data-content="panels.breakpointsManager">Breakpoints Manager</div>
+            </div>
+            <div class="breakpoint-controls">
+                <input type="text" class="address-input" id="breakpointAddress" data-content="breakpoints.addressPlaceholder" placeholder="Enter address (e.g., 0x00100000)">
+                <button class="debug-btn" onclick="addBreakpoint()" data-content="breakpoints.addBreakpoint">➕ Add Breakpoint</button>
+                <button class="debug-btn" onclick="clearAllBreakpoints()" data-content="breakpoints.clearAll">🗑️ Clear All</button>
+            </div>
+            <div class="breakpoint-list" id="breakpointList">
+                <!-- Breakpoints will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link" data-content="navigation.backToLearning">← Back to Interactive Learning Platform</a>
+    </div>
+
+    <script>
+        // Kernel state simulation
+        let kernelState = {
+            running: true,
+            paused: false,
+            uptime: 0,
+            interruptCount: 1247,
+            memoryUsage: 42,
+            pageAllocations: 156,
+            registers: {
+                eax: 0x12345678,
+                ebx: 0x9ABCDEF0,
+                ecx: 0x11111111,
+                edx: 0x22222222,
+                esi: 0x33333333,
+                edi: 0x44444444,
+                ebp: 0x55555555,
+                esp: 0x00100000,
+                eip: 0x001000A0,
+                eflags: 0x00000202,
+                cs: 0x0008,
+                ds: 0x0010,
+                es: 0x0010,
+                fs: 0x0010,
+                gs: 0x0010,
+                ss: 0x0010
+            },
+            interrupts: [
+                { vector: 0, name: 'Division By Zero', status: 'active', handler: '0x00101000' },
+                { vector: 1, name: 'Debug', status: 'active', handler: '0x00101010' },
+                { vector: 2, name: 'NMI', status: 'active', handler: '0x00101020' },
+                { vector: 3, name: 'Breakpoint', status: 'active', handler: '0x00101030' },
+                { vector: 13, name: 'General Protection Fault', status: 'active', handler: '0x001010D0' },
+                { vector: 14, name: 'Page Fault', status: 'active', handler: '0x001010E0' },
+                { vector: 32, name: 'Timer Interrupt', status: 'active', handler: '0x00101200' },
+                { vector: 33, name: 'Keyboard Interrupt', status: 'inactive', handler: '0x00101210' }
+            ],
+            breakpoints: [],
+            exceptionLog: []
+        };
+
+        function formatHex(value, digits = 8) {
+            return '0x' + value.toString(16).toUpperCase().padStart(digits, '0');
+        }
+
+        function startKernel() {
+            kernelState.running = true;
+            kernelState.paused = false;
+            updateKernelStatus();
+            document.getElementById('startBtn').classList.add('running');
+            log('info', 'Kernel started successfully');
+
+            // Simulate uptime counter
+            if (!kernelState.uptimeInterval) {
+                kernelState.uptimeInterval = setInterval(() => {
+                    if (kernelState.running && !kernelState.paused) {
+                        kernelState.uptime++;
+                        updateUptime();
+
+                        // Simulate random register changes
+                        if (Math.random() < 0.3) {
+                            simulateRegisterChanges();
+                        }
+
+                        // Simulate interrupts
+                        if (Math.random() < 0.1) {
+                            kernelState.interruptCount++;
+                            document.getElementById('interruptCount').textContent = kernelState.interruptCount.toLocaleString();
+                        }
+                    }
+                }, 1000);
+            }
+        }
+
+        function pauseKernel() {
+            kernelState.paused = !kernelState.paused;
+            updateKernelStatus();
+            log('warning', kernelState.paused ? 'Kernel paused for debugging' : 'Kernel resumed');
+        }
+
+        function stepExecution() {
+            if (kernelState.paused) {
+                simulateRegisterChanges();
+                kernelState.interruptCount++;
+                document.getElementById('interruptCount').textContent = kernelState.interruptCount.toLocaleString();
+                log('info', 'Single step executed');
+                refreshRegisters();
+            } else {
+                log('warning', 'Kernel must be paused to step through execution');
+            }
+        }
+
+        function resetKernel() {
+            kernelState.running = false;
+            kernelState.paused = false;
+            kernelState.uptime = 0;
+            kernelState.interruptCount = 0;
+            kernelState.memoryUsage = 15;
+            kernelState.pageAllocations = 0;
+
+            // Reset registers to initial state
+            kernelState.registers.eax = 0x00000000;
+            kernelState.registers.ebx = 0x00000000;
+            kernelState.registers.ecx = 0x00000000;
+            kernelState.registers.edx = 0x00000000;
+            kernelState.registers.esp = 0x00100000;
+            kernelState.registers.eip = 0x00100000;
+
+            updateKernelStatus();
+            updateUptime();
+            refreshRegisters();
+            document.getElementById('startBtn').classList.remove('running');
+
+            if (kernelState.uptimeInterval) {
+                clearInterval(kernelState.uptimeInterval);
+                kernelState.uptimeInterval = null;
+            }
+
+            log('info', 'Kernel reset to initial state');
+        }
+
+        function triggerInterrupt() {
+            const randomInterrupt = kernelState.interrupts[Math.floor(Math.random() * kernelState.interrupts.length)];
+            kernelState.interruptCount++;
+            document.getElementById('interruptCount').textContent = kernelState.interruptCount.toLocaleString();
+            log('info', `Triggered interrupt ${randomInterrupt.vector}: ${randomInterrupt.name}`);
+            simulateRegisterChanges();
+        }
+
+        function simulateException() {
+            const exceptions = [
+                'Division By Zero Exception',
+                'General Protection Fault',
+                'Page Fault',
+                'Stack Fault',
+                'Segment Not Present'
+            ];
+            const exception = exceptions[Math.floor(Math.random() * exceptions.length)];
+            log('error', `Exception: ${exception} at ${formatHex(kernelState.registers.eip)}`);
+            kernelState.paused = true;
+            updateKernelStatus();
+        }
+
+        function simulateRegisterChanges() {
+            // Simulate realistic register changes
+            kernelState.registers.eax = Math.floor(Math.random() * 0xFFFFFFFF);
+            kernelState.registers.ebx += Math.floor(Math.random() * 0x1000) - 0x800;
+            kernelState.registers.ecx = Math.floor(Math.random() * 0xFFFFFFFF);
+            kernelState.registers.eip += 4; // Simulate instruction progression
+
+            if (kernelState.registers.eip > 0x00200000) {
+                kernelState.registers.eip = 0x00100000; // Wrap around
+            }
+        }
+
+        function updateKernelStatus() {
+            const statusElement = document.getElementById('kernelStatus');
+            if (!kernelState.running) {
+                statusElement.textContent = 'STOPPED';
+                statusElement.className = 'status-value status-error';
+            } else if (kernelState.paused) {
+                statusElement.textContent = 'PAUSED';
+                statusElement.className = 'status-value status-warning';
+            } else {
+                statusElement.textContent = 'RUNNING';
+                statusElement.className = 'status-value status-running';
+            }
+        }
+
+        function updateUptime() {
+            const hours = Math.floor(kernelState.uptime / 3600);
+            const minutes = Math.floor((kernelState.uptime % 3600) / 60);
+            const seconds = kernelState.uptime % 60;
+
+            const timeStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('uptimeValue').textContent = timeStr;
+        }
+
+        function refreshRegisters() {
+            const grid = document.getElementById('registersGrid');
+            grid.innerHTML = '';
+
+            Object.entries(kernelState.registers).forEach(([name, value]) => {
+                const item = document.createElement('div');
+                item.className = 'register-item';
+                item.innerHTML = `
+                    <div class="register-name">${name.toUpperCase()}</div>
+                    <div class="register-value">${formatHex(value)}</div>
+                `;
+                grid.appendChild(item);
+            });
+        }
+
+        function refreshMemory() {
+            const viewer = document.getElementById('memoryViewer');
+            const addressInput = document.getElementById('memoryAddress');
+            let baseAddress = 0x00100000;
+
+            if (addressInput.value) {
+                baseAddress = parseInt(addressInput.value, 16) || 0x00100000;
+            }
+
+            viewer.innerHTML = '';
+
+            // Generate simulated memory content
+            for (let i = 0; i < 16; i++) {
+                const address = baseAddress + (i * 16);
+                const line = document.createElement('div');
+                line.className = 'memory-line';
+
+                // Generate random but consistent bytes
+                const bytes = [];
+                const ascii = [];
+                for (let j = 0; j < 16; j++) {
+                    const byte = ((address + j) * 123) % 256; // Deterministic "random"
+                    bytes.push(byte.toString(16).padStart(2, '0').toUpperCase());
+                    ascii.push(byte >= 32 && byte <= 126 ? String.fromCharCode(byte) : '.');
+                }
+
+                line.innerHTML = `
+                    <span class="memory-address">${formatHex(address)}:</span>
+                    <span class="memory-bytes">${bytes.join(' ')}</span>
+                    <span class="memory-ascii">${ascii.join('')}</span>
+                `;
+
+                viewer.appendChild(line);
+            }
+        }
+
+        function refreshInterrupts() {
+            const table = document.getElementById('interruptTable');
+            table.innerHTML = '';
+
+            kernelState.interrupts.forEach(interrupt => {
+                const item = document.createElement('div');
+                item.className = 'interrupt-item';
+                item.innerHTML = `
+                    <span class="interrupt-vector">${interrupt.vector}</span>
+                    <span class="interrupt-name">${interrupt.name}</span>
+                    <span class="interrupt-status status-${interrupt.status}">${interrupt.status.toUpperCase()}</span>
+                `;
+                table.appendChild(item);
+            });
+        }
+
+        function log(type, message) {
+            const logElement = document.getElementById('exceptionLog');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+
+            const timestamp = new Date().toLocaleTimeString();
+            entry.innerHTML = `[${timestamp}] ${message}`;
+
+            logElement.appendChild(entry);
+            logElement.scrollTop = logElement.scrollHeight;
+
+            kernelState.exceptionLog.push({ type, message, timestamp });
+
+            // Keep only last 50 entries
+            if (kernelState.exceptionLog.length > 50) {
+                kernelState.exceptionLog.shift();
+                logElement.removeChild(logElement.firstChild);
+            }
+        }
+
+        function clearLog() {
+            document.getElementById('exceptionLog').innerHTML = '';
+            kernelState.exceptionLog = [];
+            log('info', 'Exception log cleared');
+        }
+
+        function addBreakpoint() {
+            const addressInput = document.getElementById('breakpointAddress');
+            const address = addressInput.value.trim();
+
+            if (!address) {
+                log('warning', 'Please enter a valid address for the breakpoint');
+                return;
+            }
+
+            let parsedAddress;
+            try {
+                parsedAddress = parseInt(address, 16);
+            } catch (e) {
+                log('error', 'Invalid address format. Use hexadecimal format (e.g., 0x00100000)');
+                return;
+            }
+
+            if (kernelState.breakpoints.find(bp => bp.address === parsedAddress)) {
+                log('warning', 'Breakpoint already exists at this address');
+                return;
+            }
+
+            kernelState.breakpoints.push({
+                address: parsedAddress,
+                enabled: true
+            });
+
+            updateBreakpointList();
+            addressInput.value = '';
+            log('info', `Breakpoint added at ${formatHex(parsedAddress)}`);
+        }
+
+        function removeBreakpoint(address) {
+            kernelState.breakpoints = kernelState.breakpoints.filter(bp => bp.address !== address);
+            updateBreakpointList();
+            log('info', `Breakpoint removed from ${formatHex(address)}`);
+        }
+
+        function clearAllBreakpoints() {
+            kernelState.breakpoints = [];
+            updateBreakpointList();
+            log('info', 'All breakpoints cleared');
+        }
+
+        function updateBreakpointList() {
+            const list = document.getElementById('breakpointList');
+            list.innerHTML = '';
+
+            kernelState.breakpoints.forEach(breakpoint => {
+                const item = document.createElement('div');
+                item.className = 'breakpoint-item';
+                item.innerHTML = `
+                    <span class="breakpoint-address">${formatHex(breakpoint.address)}</span>
+                    <button class="remove-btn" onclick="removeBreakpoint(${breakpoint.address})">Remove</button>
+                `;
+                list.appendChild(item);
+            });
+        }
+
+        // Initialize the debugger
+        function initialize() {
+            updateKernelStatus();
+            updateUptime();
+            refreshRegisters();
+            refreshMemory();
+            refreshInterrupts();
+            updateBreakpointList();
+
+            // Add some initial log entries
+            log('info', 'Arabic OS Kernel Debugger initialized');
+            log('info', 'UTF-8 Arabic text support: ACTIVE');
+            log('info', 'Physical memory manager: READY');
+            log('info', 'Interrupt handlers: LOADED');
+
+            // Start with a running kernel
+            startKernel();
+        }
+
+        // Initialize when page loads
+        window.addEventListener('load', initialize);
+
+        // Handle memory address input
+        document.getElementById('memoryAddress').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                refreshMemory();
+            }
+        });
+
+        // Handle breakpoint address input
+        document.getElementById('breakpointAddress').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                addBreakpoint();
+            }
+        });
+    </script>
+
+    <!-- Content Loading System -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script>
+        // Initialize content loading
+        async function initializePage() {
+            const toolName = 'kernel_debugger';
+            const currentLanguage = languageSwitcher.getCurrentLanguage();
+
+            try {
+                await contentLoader.loadContent(toolName, currentLanguage);
+                contentLoader.applyContent();
+                console.log('✅ kernel_debugger content loaded successfully');
+
+                // Register with language switcher for future changes
+                languageSwitcher.onLanguageChange(async (newLang) => {
+                    try {
+                        await contentLoader.loadContent(toolName, newLang);
+                        contentLoader.applyContent();
+                        console.log(`✅ kernel_debugger switched to ${newLang} content successfully`);
+                    } catch (error) {
+                        console.error(`❌ Failed to switch kernel_debugger to ${newLang}:`, error);
+                    }
+                });
+            } catch (error) {
+                console.error('❌ Failed to initialize kernel_debugger content:', error);
+            }
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePage);
+        } else {
+            initializePage();
+        }
+    </script>
+</body>
+</html>

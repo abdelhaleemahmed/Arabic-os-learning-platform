@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-content="pageTitle">UTF-8 Byte Visualizer - Arabic OS</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #388E3C;
+            --accent-color: #FFC107;
+            --text-color: #212121;
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+            --error-color: #F44336;
+            --success-color: #4CAF50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .input-section {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-input {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-family: 'Arial Unicode MS', 'Tahoma', sans-serif;
+            resize: vertical;
+        }
+
+        .text-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .examples {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .example-btn {
+            padding: 0.5rem 1rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .example-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        .visualization {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .char-analysis, .byte-breakdown {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .char-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: var(--bg-color);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .char-display {
+            font-size: 2rem;
+            min-width: 50px;
+            text-align: center;
+            font-family: 'Arial Unicode MS', 'Tahoma', sans-serif;
+        }
+
+        .char-info {
+            flex: 1;
+        }
+
+        .char-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .char-info p {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .bytes-display {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .byte-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem;
+            background: var(--bg-color);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            min-width: 60px;
+        }
+
+        .byte-hex {
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            color: var(--primary-color);
+        }
+
+        .byte-binary {
+            font-size: 0.8rem;
+            font-family: 'Courier New', monospace;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        .byte-type {
+            font-size: 0.7rem;
+            background: var(--accent-color);
+            color: var(--text-color);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            margin-top: 0.25rem;
+        }
+
+        .stats {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg-color);
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        .validation {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .validation.valid {
+            border-left: 4px solid var(--success-color);
+        }
+
+        .validation.invalid {
+            border-left: 4px solid var(--error-color);
+        }
+
+        .validation-icon {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+
+        .valid .validation-icon {
+            color: var(--success-color);
+        }
+
+        .invalid .validation-icon {
+            color: var(--error-color);
+        }
+
+        @media (max-width: 768px) {
+            .visualization {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .bytes-display {
+                justify-content: center;
+            }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 data-content="headerTitle">🌐 UTF-8 Byte Visualizer</h1>
+        <p data-content="headerDescription">See how UTF-8 encodes characters into bytes</p>
+    </header>
+
+    <div class="container">
+        <div class="input-section">
+            <h3 data-content="input.title">Enter Text to Analyze</h3>
+            <textarea
+                id="textInput"
+                class="text-input"
+                data-content="input.placeholder"
+                placeholder="Type or paste text here... Try Arabic characters like: مرحبا بالعالم"
+                dir="auto">مرحبا Hello 123 ١٢٣</textarea>
+
+            <div class="examples">
+                <button class="example-btn" onclick="setExample('Hello World')" data-content="examples.english">English</button>
+                <button class="example-btn" onclick="setExample('مرحبا بالعالم')" data-content="examples.arabic">Arabic</button>
+                <button class="example-btn" onclick="setExample('Hello مرحبا 123 ١٢٣')" data-content="examples.mixed">Mixed</button>
+                <button class="example-btn" onclick="setExample('🌍🚀💻')" data-content="examples.emojis">Emojis</button>
+                <button class="example-btn" onclick="setExample('Ñoël 中文')" data-content="examples.international">International</button>
+            </div>
+        </div>
+
+        <div class="validation" id="validationStatus">
+            <h3><span class="validation-icon">✓</span><span data-content="validation.title">UTF-8 Validation</span></h3>
+            <p id="validationMessage" data-content="validation.enterText">Enter text to validate UTF-8 encoding</p>
+        </div>
+
+        <div class="stats">
+            <h3 data-content="statistics.title">Text Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number" id="charCount">0</div>
+                    <div class="stat-label" data-content="statistics.characters">Characters</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="byteCount">0</div>
+                    <div class="stat-label" data-content="statistics.utf8Bytes">UTF-8 Bytes</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="arabicCount">0</div>
+                    <div class="stat-label" data-content="statistics.arabicChars">Arabic Chars</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="efficiency">0%</div>
+                    <div class="stat-label" data-content="statistics.efficiency">Efficiency*</div>
+                </div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.8rem; color: #666;" data-content="statistics.efficiencyNote">
+                *Efficiency = (Character Count / Byte Count) × 100. Higher is more efficient.
+            </p>
+        </div>
+
+        <div class="visualization">
+            <div class="char-analysis">
+                <h3 data-content="analysis.characterAnalysis">Character Analysis</h3>
+                <div id="characterBreakdown">
+                    <p data-content="analysis.enterTextPrompt">Enter text to see character-by-character analysis</p>
+                </div>
+            </div>
+
+            <div class="byte-breakdown">
+                <h3 data-content="analysis.utf8ByteEncoding">UTF-8 Byte Encoding</h3>
+                <div id="byteVisualization">
+                    <p data-content="analysis.bytesPrompt">UTF-8 bytes will appear here</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link" data-content="navigation.backToLearning">← Back to Interactive Learning Platform</a>
+    </div>
+
+    <script>
+        function setExample(text) {
+            document.getElementById('textInput').value = text;
+            analyzeText();
+        }
+
+        function getByteType(byte) {
+            if ((byte & 0x80) === 0x00) return 'ASCII';
+            if ((byte & 0xE0) === 0xC0) return '2-byte start';
+            if ((byte & 0xF0) === 0xE0) return '3-byte start';
+            if ((byte & 0xF8) === 0xF0) return '4-byte start';
+            if ((byte & 0xC0) === 0x80) return 'continuation';
+            return 'invalid';
+        }
+
+        function isArabicCharacter(codePoint) {
+            return (codePoint >= 0x0600 && codePoint <= 0x06FF) ||
+                   (codePoint >= 0xFB50 && codePoint <= 0xFDFF) ||
+                   (codePoint >= 0xFE70 && codePoint <= 0xFEFF);
+        }
+
+        function getCharacterName(codePoint) {
+            // Basic character name mapping for common characters
+            const names = {
+                0x0627: 'Arabic Letter Alef',
+                0x0628: 'Arabic Letter Beh',
+                0x062D: 'Arabic Letter Hah',
+                0x0631: 'Arabic Letter Reh',
+                0x0644: 'Arabic Letter Lam',
+                0x0645: 'Arabic Letter Meem',
+                0x0646: 'Arabic Letter Noon',
+                0x0647: 'Arabic Letter Heh',
+                0x0648: 'Arabic Letter Waw',
+                0x0649: 'Arabic Letter Alef Maksura',
+                0x064A: 'Arabic Letter Yeh',
+                0x0020: 'Space',
+                0x0661: 'Arabic-Indic Digit One',
+                0x0662: 'Arabic-Indic Digit Two',
+                0x0663: 'Arabic-Indic Digit Three'
+            };
+
+            if (names[codePoint]) return names[codePoint];
+            if (codePoint >= 0x0600 && codePoint <= 0x06FF) return 'Arabic Character';
+            if (codePoint >= 0x0041 && codePoint <= 0x005A) return 'Latin Capital Letter';
+            if (codePoint >= 0x0061 && codePoint <= 0x007A) return 'Latin Small Letter';
+            if (codePoint >= 0x0030 && codePoint <= 0x0039) return 'Digit';
+            if (codePoint >= 0x1F600) return 'Emoji';
+            return 'Unicode Character';
+        }
+
+        function validateUTF8(text) {
+            try {
+                // Try to encode and decode - if it works, it's valid UTF-8
+                const encoder = new TextEncoder();
+                const decoder = new TextDecoder('utf-8', { fatal: true });
+                const bytes = encoder.encode(text);
+                decoder.decode(bytes);
+                return { valid: true, message: 'Valid UTF-8 encoding' };
+            } catch (e) {
+                return { valid: false, message: `Invalid UTF-8: ${e.message}` };
+            }
+        }
+
+        function analyzeText() {
+            const text = document.getElementById('textInput').value;
+
+            if (!text) {
+                // Clear all displays
+                document.getElementById('characterBreakdown').innerHTML = '<p>Enter text to see character-by-character analysis</p>';
+                document.getElementById('byteVisualization').innerHTML = '<p>UTF-8 bytes will appear here</p>';
+                document.getElementById('charCount').textContent = '0';
+                document.getElementById('byteCount').textContent = '0';
+                document.getElementById('arabicCount').textContent = '0';
+                document.getElementById('efficiency').textContent = '0%';
+
+                const validation = document.getElementById('validationStatus');
+                validation.className = 'validation';
+                validation.querySelector('.validation-icon').textContent = '?';
+                document.getElementById('validationMessage').textContent = 'Enter text to validate UTF-8 encoding';
+                return;
+            }
+
+            // Validate UTF-8
+            const validation = validateUTF8(text);
+            const validationElement = document.getElementById('validationStatus');
+            validationElement.className = validation.valid ? 'validation valid' : 'validation invalid';
+            validationElement.querySelector('.validation-icon').textContent = validation.valid ? '✓' : '✗';
+            document.getElementById('validationMessage').textContent = validation.message;
+
+            // Get UTF-8 bytes
+            const encoder = new TextEncoder();
+            const bytes = encoder.encode(text);
+
+            // Character analysis
+            let characterHTML = '';
+            let arabicCount = 0;
+
+            for (const char of text) {
+                const codePoint = char.codePointAt(0);
+                const isArabic = isArabicCharacter(codePoint);
+                if (isArabic) arabicCount++;
+
+                const charBytes = encoder.encode(char);
+                const bytesHex = Array.from(charBytes).map(b => `0x${b.toString(16).toUpperCase().padStart(2, '0')}`).join(' ');
+
+                characterHTML += `
+                    <div class="char-box">
+                        <div class="char-display">${char}</div>
+                        <div class="char-info">
+                            <h4>${getCharacterName(codePoint)}</h4>
+                            <p>Unicode: U+${codePoint.toString(16).toUpperCase().padStart(4, '0')}</p>
+                            <p>UTF-8: ${bytesHex} (${charBytes.length} byte${charBytes.length > 1 ? 's' : ''})</p>
+                            <p>Script: ${isArabic ? 'Arabic' : (codePoint <= 0x7F ? 'Latin/ASCII' : 'Other')}</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            document.getElementById('characterBreakdown').innerHTML = characterHTML;
+
+            // Byte visualization
+            let byteHTML = '<div class="bytes-display">';
+            for (const byte of bytes) {
+                const binary = byte.toString(2).padStart(8, '0');
+                const type = getByteType(byte);
+
+                byteHTML += `
+                    <div class="byte-box">
+                        <div class="byte-hex">0x${byte.toString(16).toUpperCase().padStart(2, '0')}</div>
+                        <div class="byte-binary">${binary}</div>
+                        <div class="byte-type">${type}</div>
+                    </div>
+                `;
+            }
+            byteHTML += '</div>';
+
+            document.getElementById('byteVisualization').innerHTML = byteHTML;
+
+            // Statistics
+            const charCount = Array.from(text).length; // Proper Unicode character count
+            const byteCount = bytes.length;
+            const efficiency = charCount > 0 ? Math.round((charCount / byteCount) * 100) : 0;
+
+            document.getElementById('charCount').textContent = charCount;
+            document.getElementById('byteCount').textContent = byteCount;
+            document.getElementById('arabicCount').textContent = arabicCount;
+            document.getElementById('efficiency').textContent = efficiency + '%';
+        }
+
+        // Event listeners
+        document.getElementById('textInput').addEventListener('input', analyzeText);
+
+        // Initialize with default text
+        analyzeText();
+    </script>
+
+    <!-- Content Loading System -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script>
+        // Initialize content loading
+        async function initializePage() {
+            const toolName = 'utf8_visualizer';
+            const currentLanguage = languageSwitcher.getCurrentLanguage();
+
+            try {
+                await contentLoader.loadContent(toolName, currentLanguage);
+                contentLoader.applyContent();
+                console.log('✅ utf8_visualizer content loaded successfully');
+
+                // Register with language switcher for future changes
+                languageSwitcher.onLanguageChange(async (newLang) => {
+                    try {
+                        await contentLoader.loadContent(toolName, newLang);
+                        contentLoader.applyContent();
+                        console.log(`✅ utf8_visualizer switched to ${newLang} content successfully`);
+                    } catch (error) {
+                        console.error(`❌ Failed to switch utf8_visualizer to ${newLang}:`, error);
+                    }
+                });
+            } catch (error) {
+                console.error('❌ Failed to initialize utf8_visualizer content:', error);
+            }
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePage);
+        } else {
+            initializePage();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-content="pageTitle">Arabic OS Interactive Learning Platform</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #388E3C;
+            --accent-color: #FFC107;
+            --text-color: #212121;
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .arabic-text {
+            font-family: 'Arial Unicode MS', 'Tahoma', sans-serif;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .demo-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .demo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .demo-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .demo-card p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .demo-link {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .demo-link:hover {
+            background: var(--secondary-color);
+        }
+
+        .feature-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--text-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin: 0.25rem;
+        }
+
+        .intro-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .learning-path {
+            background: linear-gradient(45deg, #E8F5E8, #F1F8E9);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .progress-indicator {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .progress-step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .progress-arrow {
+            color: var(--primary-color);
+            margin: 0 0.5rem;
+        }
+
+        .language-switcher {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            display: flex;
+            gap: 0.5rem;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .lang-btn.active {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--primary-color);
+            border-color: white;
+        }
+
+        .rtl-mode {
+            direction: rtl;
+        }
+
+        /* Keep center alignment for header and main content areas */
+        .rtl-mode .header {
+            text-align: center;
+        }
+
+        .rtl-mode .intro-section {
+            text-align: center;
+        }
+
+        .rtl-mode .demo-card {
+            text-align: center;
+        }
+
+        .rtl-mode .language-switcher {
+            right: auto;
+            left: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .language-switcher {
+                position: relative;
+                top: auto;
+                right: auto;
+                left: auto;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="language-switcher">
+            <button class="lang-btn active" onclick="languageSwitcher.switchLanguage('en')" id="langEn" data-content="languageSwitcher.english">🇺🇸 English</button>
+            <button class="lang-btn" onclick="languageSwitcher.switchLanguage('ar')" id="langAr" data-content="languageSwitcher.arabic">🇸🇦 العربية</button>
+        </div>
+        <h1 id="mainTitle" data-content="mainTitle">🔤 Arabic OS Interactive Learning Platform</h1>
+        <p id="arabicSubtitle" data-content="arabicSubtitle">منصة التعلم التفاعلية لنظام التشغيل العربي</p>
+        <p id="englishSubtitle" data-content="englishSubtitle">Hands-on exploration of Arabic text processing and operating system concepts</p>
+    </header>
+
+    <div class="container">
+        <section class="intro-section">
+            <h2 data-content="welcome.title">🚀 Welcome to Interactive Learning</h2>
+            <p data-content="welcome.description">Explore Arabic OS concepts through interactive demonstrations, visualizations, and hands-on exercises. Each demo provides immediate feedback and helps you understand complex concepts through visual and interactive learning.</p>
+
+            <div class="learning-path">
+                <h3 data-content="learningPath.title">📖 Recommended Learning Path</h3>
+                <div class="progress-indicator">
+                    <div class="progress-step">1</div>
+                    <span data-content="learningPath.step1">Character Encoding</span>
+                    <span class="progress-arrow">→</span>
+                    <div class="progress-step">2</div>
+                    <span data-content="learningPath.step2">Text Processing</span>
+                    <span class="progress-arrow">→</span>
+                    <div class="progress-step">3</div>
+                    <span data-content="learningPath.step3">System Architecture</span>
+                    <span class="progress-arrow">→</span>
+                    <div class="progress-step">4</div>
+                    <span data-content="learningPath.step4">Advanced Topics</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="demo-grid">
+            <div class="demo-card">
+                <h3 data-content="tools.cp1256Explorer.title">🔤 CP1256 Character Explorer</h3>
+                <p data-content="tools.cp1256Explorer.description">Interactive exploration of CP1256 character encoding with hover details, character properties, and visual mapping to Arabic letters.</p>
+                <div>
+                    <span class="feature-badge" data-content="features.interactiveMap">Interactive Map</span>
+                    <span class="feature-badge" data-content="features.characterDetails">Character Details</span>
+                    <span class="feature-badge" data-content="features.arabicFocus">Arabic Focus</span>
+                </div>
+                <br><br>
+                <a href="cp1256_explorer.html" class="demo-link" data-content="actions.exploreCp1256">Explore CP1256 →</a>
+            </div>
+
+            <div class="demo-card">
+                <h3 data-content="tools.utf8Visualizer.title">🌐 UTF-8 Byte Visualizer</h3>
+                <p data-content="tools.utf8Visualizer.description">See how UTF-8 encodes Arabic characters into bytes with live encoding/decoding, visual byte patterns, and validation.</p>
+                <div>
+                    <span class="feature-badge" data-content="features.liveEncoding">Live Encoding</span>
+                    <span class="feature-badge" data-content="features.bytePatterns">Byte Patterns</span>
+                    <span class="feature-badge" data-content="features.validation">Validation</span>
+                </div>
+                <br><br>
+                <a href="utf8_visualizer.html" class="demo-link" data-content="actions.visualizeUtf8">Visualize UTF-8 →</a>
+            </div>
+
+            <div class="demo-card">
+                <h3 data-content="tools.biDiDemo.title">↔️ Bidirectional Text Demo</h3>
+                <p data-content="tools.biDiDemo.description">Experience how Arabic and Latin text interact in bidirectional processing with live text reordering and direction analysis.</p>
+                <div>
+                    <span class="feature-badge" data-content="features.liveBiDi">Live BiDi</span>
+                    <span class="feature-badge" data-content="features.mixedText">Mixed Text</span>
+                    <span class="feature-badge" data-content="features.rtlLtr">RTL/LTR</span>
+                </div>
+                <br><br>
+                <a href="bidi_demo.html" class="demo-link" data-content="actions.tryBiDi">Try BiDi Text →</a>
+            </div>
+
+            <div class="demo-card">
+                <h3 data-content="tools.arabicTyping.title">⌨️ Virtual Arabic Keyboard</h3>
+                <p data-content="tools.arabicTyping.description">Practice typing Arabic text with visual keyboard layout, character input testing, and text processing pipeline visualization.</p>
+                <div>
+                    <span class="feature-badge" data-content="features.virtualKeyboard">Virtual Keyboard</span>
+                    <span class="feature-badge" data-content="features.layoutOptions">Layout Options</span>
+                    <span class="feature-badge" data-content="features.inputPractice">Input Practice</span>
+                </div>
+                <br><br>
+                <a href="arabic_typing.html" class="demo-link" data-content="actions.typeArabic">Type Arabic →</a>
+            </div>
+
+            <div class="demo-card">
+                <h3 data-content="tools.memoryLayout.title">🧠 Memory Layout Visualizer</h3>
+                <p data-content="tools.memoryLayout.description">Explore Arabic OS memory organization with interactive memory map, allocation visualization, and kernel/user space separation.</p>
+                <div>
+                    <span class="feature-badge" data-content="features.memoryMap">Memory Map</span>
+                    <span class="feature-badge" data-content="features.allocation">Allocation</span>
+                    <span class="feature-badge" data-content="features.kernelSpace">Kernel Space</span>
+                </div>
+                <br><br>
+                <a href="memory_layout.html" class="demo-link" data-content="actions.exploreMemory">Explore Memory →</a>
+            </div>
+
+            <div class="demo-card">
+                <h3 data-content="tools.kernelDebugger.title">🔍 Kernel Debugger Interface</h3>
+                <p data-content="tools.kernelDebugger.description">Visual kernel state exploration with register values, memory contents, and step-by-step execution simulation.</p>
+                <div>
+                    <span class="feature-badge" data-content="features.stateInspection">State Inspection</span>
+                    <span class="feature-badge" data-content="features.stepDebugging">Step Debugging</span>
+                    <span class="feature-badge" data-content="features.registers">Registers</span>
+                </div>
+                <br><br>
+                <a href="kernel_debugger.html" class="demo-link" data-content="actions.debugKernel">Debug Kernel →</a>
+            </div>
+
+            <div class="demo-card">
+                <h3 data-content="tools.fontRenderer.title">🎨 Font Rendering Demo</h3>
+                <p data-content="tools.fontRenderer.description">See how Arabic characters are rendered with contextual forms, character shaping, and glyph substitution in real-time.</p>
+                <div>
+                    <span class="feature-badge" data-content="features.contextualForms">Contextual Forms</span>
+                    <span class="feature-badge" data-content="features.glyphShaping">Glyph Shaping</span>
+                    <span class="feature-badge" data-content="features.liveRendering">Live Rendering</span>
+                </div>
+                <br><br>
+                <a href="font_renderer.html" class="demo-link" data-content="actions.renderFonts">Render Fonts →</a>
+            </div>
+
+            <div class="demo-card">
+                <h3 data-content="tools.assemblySimulator.title">⚙️ Assembly Simulator</h3>
+                <p data-content="tools.assemblySimulator.description">Learn x86 assembly with interactive instruction execution, register manipulation, and memory operations simulation.</p>
+                <div>
+                    <span class="feature-badge" data-content="features.x86Simulation">x86 Simulation</span>
+                    <span class="feature-badge" data-content="features.stepExecution">Step Execution</span>
+                    <span class="feature-badge" data-content="features.educational">Educational</span>
+                </div>
+                <br><br>
+                <a href="assembly_simulator.html" class="demo-link" data-content="actions.simulateAsm">Simulate ASM →</a>
+            </div>
+        </div>
+
+        <section class="intro-section" style="margin-top: 3rem;">
+            <h2>🎯 Learning Objectives</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div>
+                    <h4>🔤 Character Encoding Mastery</h4>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Understand CP1256 and UTF-8 encoding</li>
+                        <li>Visualize byte sequences and patterns</li>
+                        <li>Master Arabic character properties</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>🌐 Text Processing Skills</h4>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Bidirectional text algorithms</li>
+                        <li>Arabic text shaping and rendering</li>
+                        <li>Mixed-script text handling</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>⚙️ System Programming</h4>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Memory management concepts</li>
+                        <li>Kernel architecture understanding</li>
+                        <li>Assembly language basics</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>🚀 Practical Application</h4>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Real-world Arabic computing</li>
+                        <li>Debugging and troubleshooting</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro-section" style="margin-top: 2rem;">
+            <h2>📺 Companion Video Series</h2>
+            <p>These interactive demos are designed to complement our comprehensive video tutorial series on YouTube. Each demo reinforces concepts explained in the videos with hands-on exploration.</p>
+
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="https://youtube.com/@ArabicOS" class="demo-link" style="background: #FF0000;">
+                    📺 Watch on YouTube →
+                </a>
+                <a href="https://github.com/ArabicOS/interactive-learning" class="demo-link" style="background: #333; margin-left: 1rem;">
+                    💻 View Source Code →
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer style="background: var(--primary-color); color: white; text-align: center; padding: 2rem; margin-top: 3rem;">
+        <p>🔤 Arabic OS Interactive Learning Platform</p>
+        <p style="opacity: 0.8; margin-top: 0.5rem;">Building the future of Arabic computing education • Open Source • Community Driven</p>
+        <div style="margin-top: 1rem;">
+            <a href="https://github.com/ArabicOS" style="color: white; margin: 0 1rem;">GitHub</a>
+            <a href="https://youtube.com/@ArabicOS" style="color: white; margin: 0 1rem;">YouTube</a>
+            <a href="../doc/README.md" style="color: white; margin: 0 1rem;">Documentation</a>
+        </div>
+    </footer>
+
+    <!-- Content Loading System -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script>
+        // Language content definitions
+        const languageContent = {
+            en: {
+                mainTitle: "🔤 Arabic OS Interactive Learning Platform",
+                arabicSubtitle: "منصة التعلم التفاعلية لنظام التشغيل العربي",
+                englishSubtitle: "Hands-on exploration of Arabic text processing and operating system concepts",
+                welcomeTitle: "🚀 Welcome to Interactive Learning",
+                welcomeText: "Explore Arabic OS concepts through interactive demonstrations, visualizations, and hands-on exercises. Each demo provides immediate feedback and helps you understand complex concepts through visual and interactive learning.",
+                learningPathTitle: "📖 Recommended Learning Path",
+                learningObjectivesTitle: "🎯 Learning Objectives",
+                videoSeriesTitle: "📺 Companion Video Series",
+                videoSeriesText: "These interactive demos are designed to complement our comprehensive video tutorial series on YouTube. Each demo reinforces concepts explained in the videos with hands-on exploration.",
+                rtlMode: false
+            },
+            ar: {
+                mainTitle: "🔤 منصة التعلم التفاعلية لنظام التشغيل العربي",
+                arabicSubtitle: "منصة التعلم التفاعلية لنظام التشغيل العربي",
+                englishSubtitle: "استكشاف عملي لمعالجة النصوص العربية ومفاهيم أنظمة التشغيل",
+                welcomeTitle: "🚀 مرحباً بك في التعلم التفاعلي",
+                welcomeText: "استكشف مفاهيم نظام التشغيل العربي من خلال العروض التفاعلية والمرئيات والتمارين العملية. كل عرض يوفر تغذية راجعة فورية ويساعدك على فهم المفاهيم المعقدة من خلال التعلم المرئي والتفاعلي.",
+                learningPathTitle: "📖 مسار التعلم الموصى به",
+                learningObjectivesTitle: "🎯 أهداف التعلم",
+                videoSeriesTitle: "📺 سلسلة الفيديو المصاحبة",
+                videoSeriesText: "هذه العروض التفاعلية مصممة لتكمل سلسلة البرامج التعليمية الشاملة على يوتيوب. كل عرض يعزز المفاهيم المشروحة في الفيديوهات من خلال الاستكشاف العملي.",
+                rtlMode: true
+            }
+        };
+
+        // Current language state
+        let currentLanguage = 'en';
+
+        // Language switching function
+        function switchLanguage(lang) {
+            if (lang === currentLanguage) return;
+
+            currentLanguage = lang;
+            const content = languageContent[lang];
+
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`lang${lang.charAt(0).toUpperCase() + lang.slice(1)}`).classList.add('active');
+
+            // Update content
+            document.getElementById('mainTitle').textContent = content.mainTitle;
+            document.getElementById('englishSubtitle').textContent = content.englishSubtitle;
+
+            // Update major section titles
+            const welcomeTitle = document.querySelector('.intro-section h2');
+            if (welcomeTitle) welcomeTitle.textContent = content.welcomeTitle;
+
+            const welcomeText = document.querySelector('.intro-section p');
+            if (welcomeText) welcomeText.textContent = content.welcomeText;
+
+            // Apply RTL mode if Arabic
+            if (content.rtlMode) {
+                document.body.classList.add('rtl-mode');
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+            } else {
+                document.body.classList.remove('rtl-mode');
+                document.documentElement.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', 'en');
+            }
+
+            // Save language preference
+            localStorage.setItem('arabicOSLanguage', lang);
+
+            // Show language change notification
+            showLanguageNotification(lang);
+        }
+
+        // Show language change notification
+        function showLanguageNotification(lang) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--success-color);
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                z-index: 1000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            `;
+
+            notification.textContent = lang === 'ar' ?
+                'تم تغيير اللغة إلى العربية' :
+                'Language changed to English';
+
+            document.body.appendChild(notification);
+
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Initialize language from localStorage or default to English
+        function initializeLanguage() {
+            const savedLanguage = localStorage.getItem('arabicOSLanguage') || 'en';
+            if (savedLanguage !== 'en') {
+                switchLanguage(savedLanguage);
+            }
+        }
+
+        // Add link modification for tool pages
+        function updateToolLinks() {
+            const toolLinks = document.querySelectorAll('a[href$=".html"]');
+            toolLinks.forEach(link => {
+                const originalHref = link.getAttribute('href');
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    // Construct URL with language parameter
+                    const url = new URL(originalHref, window.location.href);
+                    url.searchParams.set('lang', currentLanguage);
+
+                    window.location.href = url.toString();
+                });
+            });
+        }
+
+        // Initialize content loading using the SAME working pattern as other pages
+        async function initializePageContent() {
+            const toolName = 'index';
+
+            // Ensure language switcher is ready
+            if (!window.languageSwitcher) {
+                console.error('❌ Language switcher not available for index page');
+                return;
+            }
+
+            const currentLanguage = languageSwitcher.getCurrentLanguage();
+            console.log(`🔄 Index page initializing with language: ${currentLanguage}`);
+
+            try {
+                console.log(`🔄 Loading content for: ${toolName}, language: ${currentLanguage}`);
+                await contentLoader.loadContent(toolName, currentLanguage);
+
+                console.log(`🔄 Applying content for: ${toolName}`);
+                const success = await contentLoader.applyContent();
+
+                if (success) {
+                    console.log('✅ Index page content loaded and applied successfully');
+                } else {
+                    console.error('❌ Index page content application failed');
+                }
+
+                // Register with language switcher for future changes
+                languageSwitcher.onLanguageChange(async (newLang) => {
+                    console.log(`🔄 [CALLBACK] Index page language change requested: ${newLang}`);
+                    try {
+                        console.log(`🔄 [CALLBACK] Loading new content for: ${toolName}, language: ${newLang}`);
+                        await contentLoader.loadContent(toolName, newLang);
+
+                        console.log(`🔄 [CALLBACK] Applying new content for: ${toolName}`);
+                        const switchSuccess = await contentLoader.applyContent();
+
+                        if (switchSuccess) {
+                            updateToolLinks(); // Update tool links after language change
+                            console.log(`✅ [CALLBACK] Index page switched to ${newLang} content successfully`);
+                        } else {
+                            console.error(`❌ [CALLBACK] Failed to apply ${newLang} content for index page`);
+                        }
+                    } catch (error) {
+                        console.error(`❌ [CALLBACK] Failed to switch Index page to ${newLang}:`, error);
+                    }
+                });
+
+                console.log(`✅ Index page callback registered with language switcher`);
+            } catch (error) {
+                console.error('❌ Failed to initialize Index page content:', error);
+            }
+        }
+
+        // Enhanced debug function for troubleshooting
+        window.debugIndexContent = function() {
+            console.log('🔍 Index page content debug:');
+            console.log('- Content loader exists:', !!window.contentLoader);
+            console.log('- Language switcher exists:', !!window.languageSwitcher);
+            console.log('- Current language:', window.languageSwitcher?.getCurrentLanguage());
+            console.log('- Current content exists:', !!window.contentLoader?.getCurrentContent());
+            console.log('- Data-content elements:', document.querySelectorAll('[data-content]').length);
+
+            // Check specific card content
+            const cardElements = document.querySelectorAll('[data-content^="tools."]');
+            console.log('- Card elements with tools data-content:', cardElements.length);
+
+            // Show current content structure
+            if (window.contentLoader?.getCurrentContent()) {
+                const content = window.contentLoader.getCurrentContent();
+                console.log('- Content has tools section:', !!content.tools);
+                if (content.tools) {
+                    console.log('- Available tools:', Object.keys(content.tools));
+                }
+            }
+
+            // Test a specific card element
+            const firstCard = document.querySelector('[data-content="tools.cp1256Explorer.title"]');
+            if (firstCard) {
+                console.log('- First card element:', firstCard.tagName, firstCard.textContent);
+                console.log('- First card data-content:', firstCard.getAttribute('data-content'));
+            }
+
+            // Test content loading manually
+            if (window.contentLoader) {
+                console.log('🧪 Testing manual Arabic content load...');
+                window.contentLoader.loadContent('index', 'ar').then(() => {
+                    console.log('✅ Manual Arabic content load successful');
+                    const content = window.contentLoader.getCurrentContent();
+                    console.log('📄 Loaded content structure:', {
+                        hasTools: !!content.tools,
+                        hasMainTitle: !!content.mainTitle,
+                        toolsKeys: content.tools ? Object.keys(content.tools) : []
+                    });
+                    return window.contentLoader.applyContent();
+                }).then((success) => {
+                    console.log('✅ Manual content application result:', success);
+
+                    // Check if cards were updated
+                    const firstCardAfter = document.querySelector('[data-content="tools.cp1256Explorer.title"]');
+                    if (firstCardAfter) {
+                        console.log('🔍 First card after application:', firstCardAfter.textContent);
+                    }
+                }).catch(err => {
+                    console.error('❌ Manual content loading failed:', err);
+                });
+            }
+        };
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', async () => {
+            console.log('🚀 Index page DOM loaded, starting initialization...');
+
+            // Wait a bit to ensure all scripts are loaded
+            await new Promise(resolve => setTimeout(resolve, 100));
+
+            initializeLanguage();
+            updateToolLinks();
+
+            // Initialize content loading after everything else
+            await initializePageContent();
+
+            console.log('✅ Index page initialization complete');
+            console.log('💡 Use debugIndexContent() in console for troubleshooting');
+            console.log('🔍 To test language switching, use: switchLanguage("ar") or switchLanguage("en")');
+
+
+            // Test that callbacks are actually working
+            console.log('🧪 Testing callback registration...');
+            setTimeout(() => {
+                const callbackCount = languageSwitcher.callbacks ? languageSwitcher.callbacks.length : 0;
+                console.log(`📊 Language switcher has ${callbackCount} registered callbacks`);
+            }, 500);
+        });
+    </script>
+</body>
+</html>

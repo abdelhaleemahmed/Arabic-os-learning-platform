@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-content="pageTitle">Arabic Font Renderer Demo - Arabic OS</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #388E3C;
+            --accent-color: #FFC107;
+            --text-color: #212121;
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+            --font-color: #9C27B0;
+            --glyph-color: #FF5722;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .demo-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .font-preview {
+            background: #F8F9FA;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .preview-text {
+            font-size: 3rem;
+            direction: rtl;
+            text-align: center;
+            font-family: 'Arial Unicode MS', 'Tahoma', sans-serif;
+            line-height: 1.5;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .control-group {
+            background: #F8F9FA;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .control-group h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .control-input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .text-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-family: 'Arial Unicode MS', 'Tahoma', sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin-bottom: 1rem;
+        }
+
+        .sample-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sample-btn {
+            background: var(--accent-color);
+            color: #333;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .sample-btn:hover {
+            background: #FFB300;
+        }
+
+        .glyph-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .glyph-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .glyph-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--glyph-color);
+        }
+
+        .glyph-char {
+            font-size: 2rem;
+            font-family: 'Arial Unicode MS', 'Tahoma', sans-serif;
+            color: var(--glyph-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .glyph-info {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .feature-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .feature-card {
+            background: #F8F9FA;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-card h4 {
+            color: var(--font-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-demo {
+            font-size: 1.5rem;
+            font-family: 'Arial Unicode MS', 'Tahoma', sans-serif;
+            direction: rtl;
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+
+        .processing-steps {
+            background: #E8F5E8;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .processing-steps h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .preview-text {
+                font-size: 2rem;
+            }
+
+            .controls-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .glyph-breakdown {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 data-content="headerTitle">🎨 Arabic Font Renderer Demo</h1>
+        <p data-content="headerDescription">Experience real-time Arabic character rendering with contextual forms and UTF-8 support</p>
+    </div>
+
+    <div class="container">
+        <div class="processing-steps">
+            <h3 data-content="pipeline.title">🎉 Arabic OS Font Processing Pipeline</h3>
+            <div class="step">
+                <div class="step-number">1</div>
+                <span data-content="pipeline.step1">UTF-8 input detection and validation</span>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <span data-content="pipeline.step2">Unicode to CP1256 conversion (if needed)</span>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <span data-content="pipeline.step3">Arabic character contextual analysis</span>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <span data-content="pipeline.step4">Glyph selection and shaping</span>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <span data-content="pipeline.step5">Right-to-left rendering and display</span>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2 data-content="preview.title">Live Font Rendering Preview</h2>
+            <p data-content="preview.description">Type Arabic text below to see real-time font rendering with contextual forms:</p>
+
+            <input type="text" id="textInput" class="text-input"
+                   data-content="preview.placeholder"
+                   placeholder="اكتب النص العربي هنا..."
+                   value="مرحبا بكم في العالم العربي">
+
+            <div class="sample-buttons">
+                <button class="sample-btn" onclick="setText('مرحبا بكم')" data-content="samples.welcome">Sample: Welcome</button>
+                <button class="sample-btn" onclick="setText('البرمجة الحديثة')" data-content="samples.programming">Sample: Modern Programming</button>
+                <button class="sample-btn" onclick="setText('نظام التشغيل العربي')" data-content="samples.arabicOS">Sample: Arabic OS</button>
+                <button class="sample-btn" onclick="setText('UTF-8 دعم كامل')" data-content="samples.utf8Support">Sample: UTF-8 Support</button>
+                <button class="sample-btn" onclick="setText('الخط العربي الجميل')" data-content="samples.beautifulFont">Sample: Beautiful Arabic Font</button>
+            </div>
+
+            <div class="font-preview">
+                <div class="preview-text" id="previewText">مرحبا بكم في العالم العربي</div>
+                <div style="font-size: 1rem; color: #666;">Font: Arabic OS Default | Size: 48px | Direction: RTL</div>
+            </div>
+
+            <div class="controls-grid">
+                <div class="control-group">
+                    <h4 data-content="controls.fontSize">Font Size</h4>
+                    <input type="range" id="fontSize" class="control-input"
+                           min="12" max="72" value="48" oninput="updatePreview()">
+                    <div><span data-content="controls.size">Size:</span> <span id="fontSizeValue">48</span>px</div>
+                </div>
+
+                <div class="control-group">
+                    <h4 data-content="controls.letterSpacing">Letter Spacing</h4>
+                    <input type="range" id="letterSpacing" class="control-input"
+                           min="-2" max="10" value="0" step="0.5" oninput="updatePreview()">
+                    <div><span data-content="controls.spacing">Spacing:</span> <span id="letterSpacingValue">0</span>px</div>
+                </div>
+
+                <div class="control-group">
+                    <h4 data-content="controls.lineHeight">Line Height</h4>
+                    <input type="range" id="lineHeight" class="control-input"
+                           min="1" max="3" value="1.5" step="0.1" oninput="updatePreview()">
+                    <div><span data-content="controls.height">Height:</span> <span id="lineHeightValue">1.5</span></div>
+                </div>
+
+                <div class="control-group">
+                    <h4 data-content="controls.textColor">Text Color</h4>
+                    <input type="color" id="textColor" class="control-input"
+                           value="#212121" oninput="updatePreview()">
+                    <div><span data-content="controls.color">Color:</span> <span id="textColorValue">#212121</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2 data-content="glyph.title">Character Glyph Breakdown</h2>
+            <p data-content="glyph.description">Individual character analysis with Unicode and glyph information:</p>
+            <div class="glyph-breakdown" id="glyphBreakdown"></div>
+        </div>
+
+        <div class="demo-section">
+            <h2 data-content="features.title">Arabic Font Features Showcase</h2>
+            <div class="feature-showcase">
+                <div class="feature-card">
+                    <h4 data-content="features.contextual">Contextual Forms</h4>
+                    <div class="feature-demo">بب ببب بببب</div>
+                    <p>Arabic letter 'beh' (ب) changes form based on position in word: isolated, initial, medial, final</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4 data-content="features.joining">Character Joining</h4>
+                    <div class="feature-demo">س + ل + ا + م = سلام</div>
+                    <p>Individual letters connect to form words with proper joining behavior</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4 data-content="features.diacritics">Diacritical Marks</h4>
+                    <div class="feature-demo">مَرْحَبًا بِكُمْ</div>
+                    <p>Vowel marks (diacritics) properly positioned above and below letters</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4 data-content="features.ligatures">Ligatures</h4>
+                    <div class="feature-demo">لا لام ألف</div>
+                    <p>Special character combinations like 'lam-alef' (لا) render as single glyph</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4 data-content="features.numbers">Number Display</h4>
+                    <div class="feature-demo">العدد ١٢٣٤٥</div>
+                    <p>Arabic-Indic numerals (١٢٣٤٥) or Western numerals (12345) in RTL text</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4 data-content="features.mixedScript">Mixed Script</h4>
+                    <div class="feature-demo">UTF-8 النص العربي</div>
+                    <p>Seamless integration of Arabic and Latin text with proper direction handling</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2 data-content="statistics.title">Font Rendering Statistics</h2>
+            <div id="renderingStats"></div>
+        </div>
+
+        <a href="index.html" class="back-link" data-content="navigation.backToLearning">← Back to Interactive Learning Platform</a>
+    </div>
+
+    <script>
+        // Arabic character data with contextual forms
+        const arabicCharacters = {
+            'ا': { name: 'Alef', isolated: 'ا', initial: '', medial: '', final: 'ـا' },
+            'ب': { name: 'Beh', isolated: 'ب', initial: 'بـ', medial: 'ـبـ', final: 'ـب' },
+            'ت': { name: 'Teh', isolated: 'ت', initial: 'تـ', medial: 'ـتـ', final: 'ـت' },
+            'ث': { name: 'Theh', isolated: 'ث', initial: 'ثـ', medial: 'ـثـ', final: 'ـث' },
+            'ج': { name: 'Jeem', isolated: 'ج', initial: 'جـ', medial: 'ـجـ', final: 'ـج' },
+            'ح': { name: 'Hah', isolated: 'ح', initial: 'حـ', medial: 'ـحـ', final: 'ـح' },
+            'خ': { name: 'Khah', isolated: 'خ', initial: 'خـ', medial: 'ـخـ', final: 'ـخ' },
+            'د': { name: 'Dal', isolated: 'د', initial: '', medial: '', final: 'ـد' },
+            'ذ': { name: 'Thal', isolated: 'ذ', initial: '', medial: '', final: 'ـذ' },
+            'ر': { name: 'Reh', isolated: 'ر', initial: '', medial: '', final: 'ـر' },
+            'ز': { name: 'Zain', isolated: 'ز', initial: '', medial: '', final: 'ـز' },
+            'س': { name: 'Seen', isolated: 'س', initial: 'سـ', medial: 'ـسـ', final: 'ـس' },
+            'ش': { name: 'Sheen', isolated: 'ش', initial: 'شـ', medial: 'ـشـ', final: 'ـش' },
+            'ص': { name: 'Sad', isolated: 'ص', initial: 'صـ', medial: 'ـصـ', final: 'ـص' },
+            'ض': { name: 'Dad', isolated: 'ض', initial: 'ضـ', medial: 'ـضـ', final: 'ـض' },
+            'ط': { name: 'Tah', isolated: 'ط', initial: 'طـ', medial: 'ـطـ', final: 'ـط' },
+            'ظ': { name: 'Zah', isolated: 'ظ', initial: 'ظـ', medial: 'ـظـ', final: 'ـظ' },
+            'ع': { name: 'Ain', isolated: 'ع', initial: 'عـ', medial: 'ـعـ', final: 'ـع' },
+            'غ': { name: 'Ghain', isolated: 'غ', initial: 'غـ', medial: 'ـغـ', final: 'ـغ' },
+            'ف': { name: 'Feh', isolated: 'ف', initial: 'فـ', medial: 'ـفـ', final: 'ـف' },
+            'ق': { name: 'Qaf', isolated: 'ق', initial: 'قـ', medial: 'ـقـ', final: 'ـق' },
+            'ك': { name: 'Kaf', isolated: 'ك', initial: 'كـ', medial: 'ـكـ', final: 'ـك' },
+            'ل': { name: 'Lam', isolated: 'ل', initial: 'لـ', medial: 'ـلـ', final: 'ـل' },
+            'م': { name: 'Meem', isolated: 'م', initial: 'مـ', medial: 'ـمـ', final: 'ـم' },
+            'ن': { name: 'Noon', isolated: 'ن', initial: 'نـ', medial: 'ـنـ', final: 'ـن' },
+            'ه': { name: 'Heh', isolated: 'ه', initial: 'هـ', medial: 'ـهـ', final: 'ـه' },
+            'و': { name: 'Waw', isolated: 'و', initial: '', medial: '', final: 'ـو' },
+            'ي': { name: 'Yeh', isolated: 'ي', initial: 'يـ', medial: 'ـيـ', final: 'ـي' }
+        };
+
+        function isArabic(char) {
+            const code = char.codePointAt(0);
+            return (code >= 0x0600 && code <= 0x06FF) || // Arabic
+                   (code >= 0x0750 && code <= 0x077F) || // Arabic Supplement
+                   (code >= 0xFB50 && code <= 0xFDFF) || // Arabic Presentation Forms-A
+                   (code >= 0xFE70 && code <= 0xFEFF);   // Arabic Presentation Forms-B
+        }
+
+        function getUTF8ByteLength(str) {
+            return new Blob([str]).size;
+        }
+
+        function setText(text) {
+            document.getElementById('textInput').value = text;
+            updatePreview();
+        }
+
+        function updatePreview() {
+            const text = document.getElementById('textInput').value;
+            const preview = document.getElementById('previewText');
+            const fontSize = document.getElementById('fontSize').value;
+            const letterSpacing = document.getElementById('letterSpacing').value;
+            const lineHeight = document.getElementById('lineHeight').value;
+            const textColor = document.getElementById('textColor').value;
+
+            // Update preview text
+            preview.textContent = text;
+            preview.style.fontSize = fontSize + 'px';
+            preview.style.letterSpacing = letterSpacing + 'px';
+            preview.style.lineHeight = lineHeight;
+            preview.style.color = textColor;
+
+            // Update control value displays
+            document.getElementById('fontSizeValue').textContent = fontSize;
+            document.getElementById('letterSpacingValue').textContent = letterSpacing;
+            document.getElementById('lineHeightValue').textContent = lineHeight;
+            document.getElementById('textColorValue').textContent = textColor;
+
+            // Update glyph breakdown
+            updateGlyphBreakdown(text);
+
+            // Update rendering statistics
+            updateRenderingStats(text);
+        }
+
+        function updateGlyphBreakdown(text) {
+            const container = document.getElementById('glyphBreakdown');
+            container.innerHTML = '';
+
+            if (!text) {
+                container.innerHTML = '<p>Enter text to see character breakdown...</p>';
+                return;
+            }
+
+            [...text].forEach((char, index) => {
+                if (char === ' ') return; // Skip spaces
+
+                const glyphCard = document.createElement('div');
+                glyphCard.className = 'glyph-card';
+
+                const unicode = char.codePointAt(0);
+                const isArabicChar = isArabic(char);
+                const charInfo = arabicCharacters[char];
+
+                glyphCard.innerHTML = `
+                    <div class="glyph-char">${char}</div>
+                    <div class="glyph-info">
+                        <div><strong>${charInfo ? charInfo.name : (isArabicChar ? 'Arabic' : 'Other')}</strong></div>
+                        <div>U+${unicode.toString(16).toUpperCase().padStart(4, '0')}</div>
+                        <div>${isArabicChar ? 'Arabic' : 'Latin'}</div>
+                    </div>
+                `;
+
+                container.appendChild(glyphCard);
+            });
+        }
+
+        function updateRenderingStats(text) {
+            const container = document.getElementById('renderingStats');
+
+            if (!text) {
+                container.innerHTML = '<p>Enter text to see rendering statistics...</p>';
+                return;
+            }
+
+            const charCount = text.length;
+            const arabicCount = [...text].filter(char => isArabic(char)).length;
+            const latinCount = [...text].filter(char => /[a-zA-Z]/.test(char)).length;
+            const digitCount = [...text].filter(char => /[0-9]/.test(char)).length;
+            const spaceCount = [...text].filter(char => char === ' ').length;
+            const byteCount = getUTF8ByteLength(text);
+
+            container.innerHTML = `
+                <div class="controls-grid">
+                    <div class="control-group">
+                        <h4>Character Statistics</h4>
+                        <div>Total Characters: <strong>${charCount}</strong></div>
+                        <div>Arabic Characters: <strong>${arabicCount}</strong></div>
+                        <div>Latin Characters: <strong>${latinCount}</strong></div>
+                        <div>Digits: <strong>${digitCount}</strong></div>
+                        <div>Spaces: <strong>${spaceCount}</strong></div>
+                    </div>
+
+                    <div class="control-group">
+                        <h4>Encoding Information</h4>
+                        <div>UTF-8 Bytes: <strong>${byteCount}</strong></div>
+                        <div>Bytes per Character: <strong>${(byteCount / charCount).toFixed(2)}</strong></div>
+                        <div>Primary Direction: <strong>${arabicCount > latinCount ? 'RTL' : 'LTR'}</strong></div>
+                        <div>Mixed Script: <strong>${arabicCount > 0 && latinCount > 0 ? 'Yes' : 'No'}</strong></div>
+                    </div>
+
+                    <div class="control-group">
+                        <h4>Rendering Complexity</h4>
+                        <div>Contextual Forms: <strong>${arabicCount > 0 ? 'Required' : 'Not Needed'}</strong></div>
+                        <div>BiDi Processing: <strong>${arabicCount > 0 && latinCount > 0 ? 'Complex' : 'Simple'}</strong></div>
+                        <div>Glyph Substitution: <strong>${arabicCount > 0 ? 'Active' : 'Inactive'}</strong></div>
+                        <div>Font Features: <strong>${arabicCount > 0 ? 'Advanced' : 'Basic'}</strong></div>
+                    </div>
+
+                    <div class="control-group">
+                        <h4>Arabic OS Processing</h4>
+                        <div>UTF-8 Support: <strong>✅ Active</strong></div>
+                        <div>CP1256 Conversion: <strong>${arabicCount > 0 ? '✅ Available' : '➖ Not Needed'}</strong></div>
+                        <div>RTL Rendering: <strong>${arabicCount > 0 ? '✅ Enabled' : '➖ Disabled'}</strong></div>
+                        <div>Character Shaping: <strong>${arabicCount > 0 ? '✅ Applied' : '➖ Not Applied'}</strong></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Event listeners
+        document.getElementById('textInput').addEventListener('input', updatePreview);
+
+        // Initialize
+        updatePreview();
+    </script>
+
+    <!-- Content Loading System -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script>
+        // Initialize content loading
+        async function initializePage() {
+            const toolName = 'font_renderer';
+            const currentLanguage = languageSwitcher.getCurrentLanguage();
+
+            try {
+                await contentLoader.loadContent(toolName, currentLanguage);
+                contentLoader.applyContent();
+                console.log('✅ font_renderer content loaded successfully');
+
+                // Register with language switcher for future changes
+                languageSwitcher.onLanguageChange(async (newLang) => {
+                    try {
+                        await contentLoader.loadContent(toolName, newLang);
+                        contentLoader.applyContent();
+                        console.log(`✅ font_renderer switched to ${newLang} content successfully`);
+                    } catch (error) {
+                        console.error(`❌ Failed to switch font_renderer to ${newLang}:`, error);
+                    }
+                });
+            } catch (error) {
+                console.error('❌ Failed to initialize font_renderer content:', error);
+            }
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePage);
+        } else {
+            initializePage();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-content="pageTitle">Bidirectional Text Demo - Arabic OS</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #388E3C;
+            --accent-color: #FFC107;
+            --text-color: #212121;
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+            --error-color: #F44336;
+            --success-color: #4CAF50;
+            --rtl-color: #E91E63;
+            --ltr-color: #2196F3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .demo-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .text-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-family: 'Arial Unicode MS', 'Tahoma', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .text-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .output-area {
+            background: #F8F9FA;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            min-height: 100px;
+            font-family: 'Arial Unicode MS', 'Tahoma', monospace;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .rtl-text {
+            direction: rtl;
+            text-align: right;
+            border-left: 4px solid var(--rtl-color);
+            padding-left: 1rem;
+        }
+
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            border-left: 4px solid var(--ltr-color);
+            padding-left: 1rem;
+        }
+
+        .mixed-text {
+            direction: rtl;
+            text-align: right;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .analysis-card {
+            background: #F8F9FA;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .analysis-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .char-breakdown {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .char-box {
+            display: inline-block;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .char-arabic {
+            background: #FFE5E5;
+            border-color: var(--rtl-color);
+            color: var(--rtl-color);
+        }
+
+        .char-latin {
+            background: #E5F3FF;
+            border-color: var(--ltr-color);
+            color: var(--ltr-color);
+        }
+
+        .char-neutral {
+            background: #F0F0F0;
+            border-color: #999;
+            color: #666;
+        }
+
+        .preset-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .preset-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .preset-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        .success-highlight {
+            background: #E8F5E8;
+            border: 2px solid var(--success-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .success-highlight h3 {
+            color: var(--success-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 data-content="headerTitle">↔️ Bidirectional Text Demo</h1>
+        <p data-content="headerDescription">Experience Arabic OS UTF-8 breakthrough with live RTL/LTR text processing</p>
+    </div>
+
+    <div class="container">
+        <div class="success-highlight">
+            <h3 data-content="breakthrough.title">🎉 UTF-8 Breakthrough Achievement!</h3>
+            <p data-content="breakthrough.description">This demo showcases the recently implemented UTF-8 Arabic text support with perfect right-to-left display, demonstrating how Arabic and Latin text can coexist in the same system with proper bidirectional text processing.</p>
+        </div>
+
+        <div class="demo-section">
+            <h2 data-content="processor.title">Live Bidirectional Text Processor</h2>
+            <p data-content="processor.description">Type or select text below to see how Arabic OS handles bidirectional text with UTF-8 encoding:</p>
+
+            <div class="preset-buttons">
+                <button class="preset-btn" onclick="loadPreset('مرحبا Hello')" data-content="presets.arabicEnglish">Arabic + English</button>
+                <button class="preset-btn" onclick="loadPreset('Arabic OS نظام تشغيل عربي')" data-content="presets.mixedTechnical">Mixed Technical</button>
+                <button class="preset-btn" onclick="loadPreset('Version 2.0 الإصدار الثاني')" data-content="presets.versioning">Versioning</button>
+                <button class="preset-btn" onclick="loadPreset('مرحبا')" data-content="presets.pureArabic">Pure Arabic</button>
+                <button class="preset-btn" onclick="loadPreset('Hello World')" data-content="presets.pureEnglish">Pure English</button>
+                <button class="preset-btn" onclick="loadPreset('UTF-8 يدعم العربية')" data-content="presets.utf8Demo">UTF-8 Demo</button>
+            </div>
+
+            <div class="input-group">
+                <label for="textInput" data-content="processor.inputLabel">Enter your text:</label>
+                <input type="text" id="textInput" class="text-input"
+                       data-content="processor.placeholder"
+                       placeholder="Type Arabic, English, or mixed text..."
+                       oninput="processText()" value="مرحبا Hello World">
+            </div>
+
+            <div class="output-area rtl-text" id="rtlOutput"></div>
+            <div class="output-area ltr-text" id="ltrOutput"></div>
+            <div class="output-area mixed-text" id="mixedOutput"></div>
+
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h4 data-content="analysis.characterAnalysis">Character Analysis</h4>
+                    <div id="charBreakdown" class="char-breakdown"></div>
+                </div>
+
+                <div class="analysis-card">
+                    <h4 data-content="analysis.directionStatistics">Direction Statistics</h4>
+                    <div id="directionStats"></div>
+                </div>
+
+                <div class="analysis-card">
+                    <h4 data-content="analysis.encodingInformation">Encoding Information</h4>
+                    <div id="encodingInfo"></div>
+                </div>
+
+                <div class="analysis-card">
+                    <h4 data-content="analysis.utf8ByteCount">UTF-8 Byte Count</h4>
+                    <div id="byteInfo"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2 data-content="pipeline.title">Arabic OS Text Processing Pipeline</h2>
+            <p data-content="pipeline.description">This visualization shows how the Arabic OS kernel processes bidirectional text:</p>
+
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h4 data-content="pipeline.inputDetection">1. Input Detection</h4>
+                    <div id="inputDetection" data-content="pipelineStatus.analyzingInput">Analyzing input encoding...</div>
+                </div>
+
+                <div class="analysis-card">
+                    <h4 data-content="pipeline.charClassification">2. Character Classification</h4>
+                    <div id="charClassification" data-content="pipelineStatus.classifyingChars">Classifying character types...</div>
+                </div>
+
+                <div class="analysis-card">
+                    <h4 data-content="pipeline.directionResolution">3. Direction Resolution</h4>
+                    <div id="directionResolution" data-content="pipelineStatus.resolvingDirection">Resolving text direction...</div>
+                </div>
+
+                <div class="analysis-card">
+                    <h4 data-content="pipeline.displayOutput">4. Display Output</h4>
+                    <div id="displayOutput" data-content="pipelineStatus.renderingOutput">Rendering final output...</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link" data-content="navigation.backToLearning">← Back to Interactive Learning Platform</a>
+    </div>
+
+    <script>
+        // Arabic character ranges and classifications
+        const arabicRanges = [
+            [0x0600, 0x06FF], // Arabic
+            [0x0750, 0x077F], // Arabic Supplement
+            [0x08A0, 0x08FF], // Arabic Extended-A
+            [0xFB50, 0xFDFF], // Arabic Presentation Forms-A
+            [0xFE70, 0xFEFF]  // Arabic Presentation Forms-B
+        ];
+
+        const latinRanges = [
+            [0x0020, 0x007F], // Basic Latin
+            [0x00A0, 0x00FF], // Latin-1 Supplement
+            [0x0100, 0x017F], // Latin Extended-A
+            [0x0180, 0x024F]  // Latin Extended-B
+        ];
+
+        function isArabic(char) {
+            const code = char.codePointAt(0);
+            return arabicRanges.some(([start, end]) => code >= start && code <= end);
+        }
+
+        function isLatin(char) {
+            const code = char.codePointAt(0);
+            return latinRanges.some(([start, end]) => code >= start && code <= end);
+        }
+
+        function classifyChar(char) {
+            if (isArabic(char)) return 'arabic';
+            if (isLatin(char)) return 'latin';
+            return 'neutral';
+        }
+
+        function getUTF8ByteLength(str) {
+            return new Blob([str]).size;
+        }
+
+        function loadPreset(text) {
+            document.getElementById('textInput').value = text;
+            processText();
+        }
+
+        function processText() {
+            const input = document.getElementById('textInput').value;
+            if (!input) {
+                clearOutputs();
+                return;
+            }
+
+            // Update output displays
+            document.getElementById('rtlOutput').textContent = input;
+            document.getElementById('ltrOutput').textContent = input;
+            document.getElementById('mixedOutput').textContent = input;
+
+            // Character breakdown
+            const charBreakdown = document.getElementById('charBreakdown');
+            charBreakdown.innerHTML = '';
+
+            let arabicCount = 0, latinCount = 0, neutralCount = 0;
+
+            for (const char of input) {
+                const classification = classifyChar(char);
+                const charBox = document.createElement('span');
+                charBox.className = `char-box char-${classification}`;
+                charBox.textContent = char === ' ' ? '␣' : char;
+                charBox.title = `Character: ${char}\nUnicode: U+${char.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')}\nType: ${classification}`;
+                charBreakdown.appendChild(charBox);
+
+                if (classification === 'arabic') arabicCount++;
+                else if (classification === 'latin') latinCount++;
+                else neutralCount++;
+            }
+
+            // Direction statistics
+            document.getElementById('directionStats').innerHTML = `
+                <div>Arabic characters: <strong>${arabicCount}</strong></div>
+                <div>Latin characters: <strong>${latinCount}</strong></div>
+                <div>Neutral characters: <strong>${neutralCount}</strong></div>
+                <div>Primary direction: <strong>${arabicCount > latinCount ? 'RTL' : 'LTR'}</strong></div>
+            `;
+
+            // Encoding information
+            const utf8Bytes = getUTF8ByteLength(input);
+            document.getElementById('encodingInfo').innerHTML = `
+                <div>Characters: <strong>${input.length}</strong></div>
+                <div>Code points: <strong>${[...input].length}</strong></div>
+                <div>Encoding: <strong>UTF-8</strong></div>
+                <div>BiDi algorithm: <strong>Unicode BiDi</strong></div>
+            `;
+
+            // Byte information
+            document.getElementById('byteInfo').innerHTML = `
+                <div>UTF-8 bytes: <strong>${utf8Bytes}</strong></div>
+                <div>Bytes per char: <strong>${(utf8Bytes / input.length).toFixed(1)}</strong></div>
+                <div>Compression: <strong>${utf8Bytes <= input.length ? 'Optimal' : 'Extended'}</strong></div>
+            `;
+
+            // Processing pipeline
+            updateProcessingPipeline(input, arabicCount, latinCount);
+        }
+
+        function updateProcessingPipeline(input, arabicCount, latinCount) {
+            document.getElementById('inputDetection').innerHTML = `
+                <div>✅ Input received: ${input.length} characters</div>
+                <div>✅ Encoding: UTF-8 detected</div>
+                <div>✅ Arabic OS compatibility: Confirmed</div>
+            `;
+
+            document.getElementById('charClassification').innerHTML = `
+                <div>✅ Arabic chars: ${arabicCount}</div>
+                <div>✅ Latin chars: ${latinCount}</div>
+                <div>✅ Character mapping: Complete</div>
+            `;
+
+            const primaryDir = arabicCount > latinCount ? 'RTL' : 'LTR';
+            document.getElementById('directionResolution').innerHTML = `
+                <div>✅ Primary direction: ${primaryDir}</div>
+                <div>✅ BiDi algorithm: Applied</div>
+                <div>✅ Character reordering: ${arabicCount > 0 && latinCount > 0 ? 'Required' : 'Not needed'}</div>
+            `;
+
+            document.getElementById('displayOutput').innerHTML = `
+                <div>✅ RTL display: ${arabicCount > 0 ? 'Active' : 'Inactive'}</div>
+                <div>✅ LTR display: ${latinCount > 0 ? 'Active' : 'Inactive'}</div>
+                <div>✅ UTF-8 rendering: Successful</div>
+            `;
+        }
+
+        function clearOutputs() {
+            document.getElementById('rtlOutput').textContent = '';
+            document.getElementById('ltrOutput').textContent = '';
+            document.getElementById('mixedOutput').textContent = '';
+            document.getElementById('charBreakdown').innerHTML = '';
+            document.getElementById('directionStats').innerHTML = '';
+            document.getElementById('encodingInfo').innerHTML = '';
+            document.getElementById('byteInfo').innerHTML = '';
+            document.getElementById('inputDetection').innerHTML = 'Waiting for input...';
+            document.getElementById('charClassification').innerHTML = 'Waiting for input...';
+            document.getElementById('directionResolution').innerHTML = 'Waiting for input...';
+            document.getElementById('displayOutput').innerHTML = 'Waiting for input...';
+        }
+
+        // Initialize with default text
+        processText();
+    </script>
+
+    <!-- Content Loading System -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script>
+        // Initialize content loading
+        async function initializePage() {
+            const toolName = 'bidi_demo';
+            const currentLanguage = languageSwitcher.getCurrentLanguage();
+
+            try {
+                await contentLoader.loadContent(toolName, currentLanguage);
+                contentLoader.applyContent();
+                console.log('✅ bidi_demo content loaded successfully');
+
+                // Register with language switcher for future changes
+                languageSwitcher.onLanguageChange(async (newLang) => {
+                    try {
+                        await contentLoader.loadContent(toolName, newLang);
+                        contentLoader.applyContent();
+                        console.log(`✅ bidi_demo switched to ${newLang} content successfully`);
+                    } catch (error) {
+                        console.error(`❌ Failed to switch bidi_demo to ${newLang}:`, error);
+                    }
+                });
+            } catch (error) {
+                console.error('❌ Failed to initialize bidi_demo content:', error);
+            }
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePage);
+        } else {
+            initializePage();
+        }
+    </script>
+</body>
+</html>

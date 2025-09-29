@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-content="pageTitle">x86 Assembly Simulator - Arabic OS</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #388E3C;
+            --accent-color: #FFC107;
+            --text-color: #212121;
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+            --error-color: #F44336;
+            --success-color: #4CAF50;
+            --warning-color: #FF9800;
+            --instruction-color: #2196F3;
+            --register-color: #E91E63;
+            --memory-color: #9C27B0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .simulator-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .code-editor-section {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .editor-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .editor-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .control-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .control-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .control-btn.step {
+            background: var(--accent-color);
+            color: var(--text-color);
+        }
+
+        .control-btn.reset {
+            background: var(--warning-color);
+        }
+
+        .code-editor {
+            width: 100%;
+            height: 400px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1rem;
+            background: #f8f9fa;
+            resize: vertical;
+            line-height: 1.4;
+        }
+
+        .code-editor:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .execution-info {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f0f8ff;
+            border-radius: 6px;
+            border-left: 4px solid var(--instruction-color);
+        }
+
+        .current-instruction {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: var(--instruction-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .instruction-explanation {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .state-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .state-section {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .registers-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .register-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.4rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 3px solid var(--register-color);
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+        }
+
+        .register-name {
+            font-weight: bold;
+            color: var(--register-color);
+        }
+
+        .register-value {
+            color: var(--text-color);
+        }
+
+        .flags-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.3rem;
+        }
+
+        .flag-item {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.8rem;
+        }
+
+        .flag-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+        }
+
+        .flag-set {
+            background: var(--success-color);
+        }
+
+        .flag-clear {
+            background: #f0f0f0;
+        }
+
+        .memory-viewer {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .memory-line {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.2rem;
+            border-radius: 2px;
+            transition: background 0.3s ease;
+        }
+
+        .memory-line:hover {
+            background: rgba(156, 39, 176, 0.1);
+        }
+
+        .memory-address {
+            color: var(--memory-color);
+            font-weight: bold;
+            min-width: 80px;
+        }
+
+        .memory-value {
+            color: var(--text-color);
+            min-width: 80px;
+        }
+
+        .memory-ascii {
+            color: #666;
+            font-style: italic;
+        }
+
+        .stack-viewer {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+        }
+
+        .stack-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.3rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stack-item.top {
+            background: rgba(46, 125, 50, 0.1);
+            border-left: 3px solid var(--success-color);
+        }
+
+        .preset-programs {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .preset-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .preset-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .preset-btn:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .preset-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .preset-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .status-bar {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .status-running { background: var(--success-color); }
+        .status-paused { background: var(--warning-color); }
+        .status-error { background: var(--error-color); }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--secondary-color);
+        }
+
+        @media (max-width: 1200px) {
+            .simulator-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .state-panel {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                display: grid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .preset-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 data-content="headerTitle">🔧 x86 Assembly Simulator</h1>
+        <p data-content="headerDescription">Interactive Arabic OS assembly instruction simulator with real-time execution</p>
+    </div>
+
+    <div class="container">
+        <div class="status-bar">
+            <div class="status-item">
+                <div class="status-indicator status-paused" id="statusIndicator"></div>
+                <span id="statusText" data-content="status.readyToExecute">Ready to Execute</span>
+            </div>
+            <div class="status-item">
+                <span><span data-content="status.instructions">Instructions:</span> <strong id="instructionCount">0</strong></span>
+            </div>
+            <div class="status-item">
+                <span><span data-content="status.cycles">Cycles:</span> <strong id="cycleCount">0</strong></span>
+            </div>
+            <div class="status-item">
+                <span><span data-content="status.currentLine">Current Line:</span> <strong id="currentLine">-</strong></span>
+            </div>
+        </div>
+
+        <div class="preset-programs">
+            <h2 data-content="samplePrograms">Sample Programs</h2>
+            <div class="preset-buttons">
+                <button class="preset-btn" onclick="loadProgram('basic')">
+                    <div class="preset-title" data-content="programs.basicTitle">Basic Operations</div>
+                    <div class="preset-description" data-content="programs.basicDescription">MOV, ADD, SUB instructions with registers</div>
+                </button>
+                <button class="preset-btn" onclick="loadProgram('loop')">
+                    <div class="preset-title" data-content="programs.loopTitle">Loop Example</div>
+                    <div class="preset-description" data-content="programs.loopDescription">Simple counting loop with JMP and CMP</div>
+                </button>
+                <button class="preset-btn" onclick="loadProgram('arabic_os')">
+                    <div class="preset-title" data-content="programs.arabicOsTitle">Arabic OS Boot</div>
+                    <div class="preset-description" data-content="programs.arabicOsDescription">Simplified kernel entry point code</div>
+                </button>
+                <button class="preset-btn" onclick="loadProgram('stack')">
+                    <div class="preset-title" data-content="programs.stackTitle">Stack Operations</div>
+                    <div class="preset-description" data-content="programs.stackDescription">PUSH, POP, and stack manipulation</div>
+                </button>
+                <button class="preset-btn" onclick="loadProgram('interrupts')">
+                    <div class="preset-title" data-content="programs.interruptsTitle">Interrupt Handling</div>
+                    <div class="preset-description" data-content="programs.interruptsDescription">INT instruction and interrupt simulation</div>
+                </button>
+                <button class="preset-btn" onclick="loadProgram('utf8')">
+                    <div class="preset-title" data-content="programs.utf8Title">UTF-8 Processing</div>
+                    <div class="preset-description" data-content="programs.utf8Description">Arabic text processing simulation</div>
+                </button>
+            </div>
+        </div>
+
+        <div class="simulator-layout">
+            <div class="code-editor-section">
+                <div class="editor-header">
+                    <div class="editor-title" data-content="editor.title">Assembly Code Editor</div>
+                    <div class="editor-controls">
+                        <button class="control-btn" onclick="runProgram()" id="runBtn" data-content="controls.runButton">▶️ Run</button>
+                        <button class="control-btn step" onclick="stepInstruction()" id="stepBtn" data-content="controls.stepButton">👣 Step</button>
+                        <button class="control-btn" onclick="pauseProgram()" id="pauseBtn" data-content="controls.pauseButton">⏸️ Pause</button>
+                        <button class="control-btn reset" onclick="resetProgram()" id="resetBtn" data-content="controls.resetButton">🔄 Reset</button>
+                    </div>
+                </div>
+                <textarea class="code-editor" id="codeEditor" data-content="editor.placeholder" placeholder="Enter your x86 assembly code here...
+
+Example:
+mov eax, 100
+mov ebx, 200
+add eax, ebx
+mov ecx, eax"></textarea>
+                <div class="execution-info" id="executionInfo">
+                    <div class="current-instruction" id="currentInstruction" data-content="editor.noInstruction">No instruction selected</div>
+                    <div class="instruction-explanation" id="instructionExplanation" data-content="editor.loadProgramPrompt">Load a program or write assembly code to begin</div>
+                </div>
+            </div>
+
+            <div class="state-panel">
+                <div class="state-section">
+                    <div class="section-header" data-content="cpuState.registers">CPU Registers</div>
+                    <div class="registers-grid" id="registersGrid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="state-section">
+                    <div class="section-header" data-content="cpuState.flags">CPU Flags</div>
+                    <div class="flags-grid" id="flagsGrid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="state-section">
+                    <div class="section-header" data-content="cpuState.memory">Memory View</div>
+                    <div class="memory-viewer" id="memoryViewer">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="state-section">
+                    <div class="section-header" data-content="cpuState.stack">Stack</div>
+                    <div class="stack-viewer" id="stackViewer">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link" data-content="navigation.backToLearning">← Back to Interactive Learning Platform</a>
+    </div>
+
+    <script>
+        // CPU State Simulation
+        class CPUSimulator {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.registers = {
+                    eax: 0, ebx: 0, ecx: 0, edx: 0,
+                    esi: 0, edi: 0, ebp: 0, esp: 0x7C00,
+                    eip: 0
+                };
+
+                this.flags = {
+                    CF: false, // Carry Flag
+                    ZF: false, // Zero Flag
+                    SF: false, // Sign Flag
+                    OF: false, // Overflow Flag
+                    PF: false, // Parity Flag
+                    AF: false  // Auxiliary Flag
+                };
+
+                this.memory = new Array(0x10000).fill(0); // 64KB memory
+                this.stack = [];
+                this.instructions = [];
+                this.currentInstruction = 0;
+                this.cycles = 0;
+                this.running = false;
+                this.paused = false;
+            }
+
+            loadProgram(code) {
+                this.reset();
+                this.instructions = this.parseCode(code);
+                this.updateDisplay();
+            }
+
+            parseCode(code) {
+                const lines = code.split('\n').map(line => line.trim()).filter(line => line && !line.startsWith(';'));
+                return lines.map((line, index) => ({
+                    line: index,
+                    instruction: line,
+                    parsed: this.parseInstruction(line)
+                }));
+            }
+
+            parseInstruction(instruction) {
+                const parts = instruction.toLowerCase().split(/[\s,]+/).filter(p => p);
+                if (parts.length === 0) return null;
+
+                const opcode = parts[0];
+                const operands = parts.slice(1);
+
+                return { opcode, operands };
+            }
+
+            executeInstruction() {
+                if (this.currentInstruction >= this.instructions.length) {
+                    this.running = false;
+                    this.updateStatus('Execution completed');
+                    return false;
+                }
+
+                const instruction = this.instructions[this.currentInstruction];
+                const parsed = instruction.parsed;
+
+                if (!parsed) {
+                    this.currentInstruction++;
+                    return true;
+                }
+
+                try {
+                    this.executeOpcode(parsed.opcode, parsed.operands);
+                    this.cycles++;
+                    this.currentInstruction++;
+                    return true;
+                } catch (error) {
+                    this.running = false;
+                    this.updateStatus(`Error: ${error.message}`);
+                    return false;
+                }
+            }
+
+            executeOpcode(opcode, operands) {
+                switch (opcode) {
+                    case 'mov':
+                        this.executeMov(operands);
+                        break;
+                    case 'add':
+                        this.executeAdd(operands);
+                        break;
+                    case 'sub':
+                        this.executeSub(operands);
+                        break;
+                    case 'mul':
+                        this.executeMul(operands);
+                        break;
+                    case 'inc':
+                        this.executeInc(operands);
+                        break;
+                    case 'dec':
+                        this.executeDec(operands);
+                        break;
+                    case 'push':
+                        this.executePush(operands);
+                        break;
+                    case 'pop':
+                        this.executePop(operands);
+                        break;
+                    case 'cmp':
+                        this.executeCmp(operands);
+                        break;
+                    case 'jmp':
+                        this.executeJmp(operands);
+                        break;
+                    case 'je':
+                    case 'jz':
+                        this.executeJe(operands);
+                        break;
+                    case 'jne':
+                    case 'jnz':
+                        this.executeJne(operands);
+                        break;
+                    case 'int':
+                        this.executeInt(operands);
+                        break;
+                    case 'nop':
+                        // No operation
+                        break;
+                    default:
+                        throw new Error(`Unknown instruction: ${opcode}`);
+                }
+            }
+
+            executeMov(operands) {
+                if (operands.length !== 2) throw new Error('MOV requires 2 operands');
+                const dest = operands[0];
+                const src = this.getValue(operands[1]);
+                this.setValue(dest, src);
+            }
+
+            executeAdd(operands) {
+                if (operands.length !== 2) throw new Error('ADD requires 2 operands');
+                const dest = operands[0];
+                const destValue = this.getValue(dest);
+                const srcValue = this.getValue(operands[1]);
+                const result = destValue + srcValue;
+                this.setValue(dest, result);
+                this.updateFlags(result);
+            }
+
+            executeSub(operands) {
+                if (operands.length !== 2) throw new Error('SUB requires 2 operands');
+                const dest = operands[0];
+                const destValue = this.getValue(dest);
+                const srcValue = this.getValue(operands[1]);
+                const result = destValue - srcValue;
+                this.setValue(dest, result);
+                this.updateFlags(result);
+            }
+
+            executeMul(operands) {
+                if (operands.length !== 1) throw new Error('MUL requires 1 operand');
+                const srcValue = this.getValue(operands[0]);
+                const result = this.registers.eax * srcValue;
+                this.registers.eax = result & 0xFFFFFFFF;
+                this.updateFlags(this.registers.eax);
+            }
+
+            executeInc(operands) {
+                if (operands.length !== 1) throw new Error('INC requires 1 operand');
+                const dest = operands[0];
+                const value = this.getValue(dest);
+                const result = value + 1;
+                this.setValue(dest, result);
+                this.updateFlags(result);
+            }
+
+            executeDec(operands) {
+                if (operands.length !== 1) throw new Error('DEC requires 1 operand');
+                const dest = operands[0];
+                const value = this.getValue(dest);
+                const result = value - 1;
+                this.setValue(dest, result);
+                this.updateFlags(result);
+            }
+
+            executePush(operands) {
+                if (operands.length !== 1) throw new Error('PUSH requires 1 operand');
+                const value = this.getValue(operands[0]);
+                this.stack.push(value);
+                this.registers.esp -= 4;
+            }
+
+            executePop(operands) {
+                if (operands.length !== 1) throw new Error('POP requires 1 operand');
+                if (this.stack.length === 0) throw new Error('Stack underflow');
+                const value = this.stack.pop();
+                this.setValue(operands[0], value);
+                this.registers.esp += 4;
+            }
+
+            executeCmp(operands) {
+                if (operands.length !== 2) throw new Error('CMP requires 2 operands');
+                const value1 = this.getValue(operands[0]);
+                const value2 = this.getValue(operands[1]);
+                const result = value1 - value2;
+                this.updateFlags(result);
+            }
+
+            executeJmp(operands) {
+                if (operands.length !== 1) throw new Error('JMP requires 1 operand');
+                const target = this.getValue(operands[0]);
+                this.currentInstruction = target - 1; // -1 because it will be incremented
+            }
+
+            executeJe(operands) {
+                if (this.flags.ZF) {
+                    this.executeJmp(operands);
+                }
+            }
+
+            executeJne(operands) {
+                if (!this.flags.ZF) {
+                    this.executeJmp(operands);
+                }
+            }
+
+            executeInt(operands) {
+                if (operands.length !== 1) throw new Error('INT requires 1 operand');
+                const interrupt = this.getValue(operands[0]);
+                // Simulate interrupt handling
+                this.updateStatus(`Interrupt ${interrupt} triggered`);
+            }
+
+            getValue(operand) {
+                if (operand.startsWith('0x')) {
+                    return parseInt(operand, 16);
+                } else if (!isNaN(operand)) {
+                    return parseInt(operand, 10);
+                } else if (this.registers.hasOwnProperty(operand)) {
+                    return this.registers[operand];
+                } else {
+                    throw new Error(`Unknown operand: ${operand}`);
+                }
+            }
+
+            setValue(operand, value) {
+                if (this.registers.hasOwnProperty(operand)) {
+                    this.registers[operand] = value & 0xFFFFFFFF; // Keep 32-bit
+                } else {
+                    throw new Error(`Cannot set value for: ${operand}`);
+                }
+            }
+
+            updateFlags(value) {
+                this.flags.ZF = (value === 0);
+                this.flags.SF = (value < 0);
+                this.flags.CF = (value > 0xFFFFFFFF || value < 0);
+                this.flags.OF = false; // Simplified
+                this.flags.PF = (this.countBits(value & 0xFF) % 2 === 0);
+            }
+
+            countBits(value) {
+                let count = 0;
+                while (value) {
+                    count += value & 1;
+                    value >>= 1;
+                }
+                return count;
+            }
+
+            updateStatus(message) {
+                document.getElementById('statusText').textContent = message;
+            }
+
+            updateDisplay() {
+                this.updateRegisters();
+                this.updateFlags();
+                this.updateMemory();
+                this.updateStack();
+                this.updateCurrentInstruction();
+                this.updateCounters();
+            }
+
+            updateRegisters() {
+                const grid = document.getElementById('registersGrid');
+                grid.innerHTML = '';
+
+                Object.entries(this.registers).forEach(([name, value]) => {
+                    const item = document.createElement('div');
+                    item.className = 'register-item';
+                    item.innerHTML = `
+                        <span class="register-name">${name.toUpperCase()}</span>
+                        <span class="register-value">0x${value.toString(16).padStart(8, '0').toUpperCase()}</span>
+                    `;
+                    grid.appendChild(item);
+                });
+            }
+
+            updateFlags() {
+                const grid = document.getElementById('flagsGrid');
+                grid.innerHTML = '';
+
+                Object.entries(this.flags).forEach(([name, value]) => {
+                    const item = document.createElement('div');
+                    item.className = 'flag-item';
+                    item.innerHTML = `
+                        <div class="flag-indicator ${value ? 'flag-set' : 'flag-clear'}"></div>
+                        <span>${name}</span>
+                    `;
+                    grid.appendChild(item);
+                });
+            }
+
+            updateMemory() {
+                const viewer = document.getElementById('memoryViewer');
+                viewer.innerHTML = '';
+
+                // Show memory around ESP
+                const baseAddr = Math.max(0, this.registers.esp - 32);
+                for (let i = 0; i < 16; i++) {
+                    const addr = baseAddr + (i * 4);
+                    const value = this.memory[addr] || 0;
+
+                    const line = document.createElement('div');
+                    line.className = 'memory-line';
+                    line.innerHTML = `
+                        <span class="memory-address">0x${addr.toString(16).padStart(4, '0').toUpperCase()}</span>
+                        <span class="memory-value">0x${value.toString(16).padStart(8, '0').toUpperCase()}</span>
+                        <span class="memory-ascii">${value >= 32 && value <= 126 ? String.fromCharCode(value) : '.'}</span>
+                    `;
+                    viewer.appendChild(line);
+                }
+            }
+
+            updateStack() {
+                const viewer = document.getElementById('stackViewer');
+                viewer.innerHTML = '';
+
+                if (this.stack.length === 0) {
+                    viewer.innerHTML = '<div style="text-align: center; color: #666;">Stack empty</div>';
+                    return;
+                }
+
+                // Show top 8 stack items
+                const stackItems = this.stack.slice(-8).reverse();
+                stackItems.forEach((value, index) => {
+                    const item = document.createElement('div');
+                    item.className = `stack-item ${index === 0 ? 'top' : ''}`;
+                    item.innerHTML = `
+                        <span>ESP${index === 0 ? ' →' : `+${(index) * 4}`}</span>
+                        <span>0x${value.toString(16).padStart(8, '0').toUpperCase()}</span>
+                    `;
+                    viewer.appendChild(item);
+                });
+            }
+
+            updateCurrentInstruction() {
+                const currentInstr = document.getElementById('currentInstruction');
+                const explanation = document.getElementById('instructionExplanation');
+
+                if (this.currentInstruction < this.instructions.length) {
+                    const instruction = this.instructions[this.currentInstruction];
+                    currentInstr.textContent = instruction.instruction;
+                    explanation.textContent = this.getInstructionExplanation(instruction.parsed);
+                } else {
+                    currentInstr.textContent = 'Program completed';
+                    explanation.textContent = 'All instructions have been executed';
+                }
+            }
+
+            updateCounters() {
+                document.getElementById('instructionCount').textContent = this.instructions.length;
+                document.getElementById('cycleCount').textContent = this.cycles;
+                document.getElementById('currentLine').textContent = this.currentInstruction + 1;
+            }
+
+            getInstructionExplanation(parsed) {
+                if (!parsed) return 'Invalid instruction';
+
+                const explanations = {
+                    'mov': 'Move data from source to destination',
+                    'add': 'Add source to destination and store result in destination',
+                    'sub': 'Subtract source from destination and store result in destination',
+                    'mul': 'Multiply EAX by source operand',
+                    'inc': 'Increment operand by 1',
+                    'dec': 'Decrement operand by 1',
+                    'push': 'Push operand onto stack',
+                    'pop': 'Pop top of stack into operand',
+                    'cmp': 'Compare two operands and set flags',
+                    'jmp': 'Unconditional jump to target',
+                    'je': 'Jump if equal (ZF=1)',
+                    'jne': 'Jump if not equal (ZF=0)',
+                    'int': 'Software interrupt',
+                    'nop': 'No operation'
+                };
+
+                return explanations[parsed.opcode] || 'Unknown instruction';
+            }
+        }
+
+        // Global CPU simulator instance
+        const cpu = new CPUSimulator();
+
+        // Sample programs
+        const samplePrograms = {
+            basic: `; Basic arithmetic operations
+mov eax, 100
+mov ebx, 50
+add eax, ebx
+sub eax, 25
+mov ecx, eax`,
+
+            loop: `; Simple counting loop
+mov eax, 0
+mov ebx, 5
+inc eax
+cmp eax, ebx
+jne 2
+mov ecx, 999`,
+
+            arabic_os: `; Arabic OS kernel entry simulation
+mov esp, 0x7C00
+push 0x2BADB002
+mov eax, 0x100000
+mov ebx, eax
+add ebx, 0x1000
+mov ecx, 0xFFFFFFFF`,
+
+            stack: `; Stack operations demonstration
+mov eax, 0x12345678
+push eax
+mov eax, 0x9ABCDEF0
+push eax
+pop ebx
+pop ecx
+add eax, ebx`,
+
+            interrupts: `; Interrupt handling simulation
+mov eax, 0x80
+push eax
+int 0x21
+pop ebx
+mov ecx, ebx`,
+
+            utf8: `; UTF-8 text processing simulation
+mov eax, 0xD985D8B1  ; Arabic "مر" in UTF-8
+mov ebx, 0xD8ADD8A8  ; Arabic "حب" in UTF-8
+mov ecx, 0xD8A7      ; Arabic "ا" in UTF-8
+push eax
+push ebx
+push ecx`
+        };
+
+        function loadProgram(programName) {
+            if (samplePrograms[programName]) {
+                document.getElementById('codeEditor').value = samplePrograms[programName];
+                cpu.loadProgram(samplePrograms[programName]);
+                updateStatusIndicator('paused');
+            }
+        }
+
+        function runProgram() {
+            const code = document.getElementById('codeEditor').value;
+            cpu.loadProgram(code);
+            cpu.running = true;
+            cpu.paused = false;
+            updateStatusIndicator('running');
+
+            // Run automatically with delay
+            const runInterval = setInterval(() => {
+                if (!cpu.running || cpu.paused) {
+                    clearInterval(runInterval);
+                    updateStatusIndicator(cpu.running ? 'paused' : 'stopped');
+                    return;
+                }
+
+                if (!cpu.executeInstruction()) {
+                    clearInterval(runInterval);
+                    updateStatusIndicator('stopped');
+                }
+                cpu.updateDisplay();
+            }, 500);
+        }
+
+        function stepInstruction() {
+            const code = document.getElementById('codeEditor').value;
+            if (cpu.instructions.length === 0) {
+                cpu.loadProgram(code);
+            }
+
+            cpu.paused = true;
+            cpu.executeInstruction();
+            cpu.updateDisplay();
+            updateStatusIndicator('paused');
+        }
+
+        function pauseProgram() {
+            cpu.paused = !cpu.paused;
+            updateStatusIndicator(cpu.paused ? 'paused' : 'running');
+        }
+
+        function resetProgram() {
+            cpu.reset();
+            cpu.updateDisplay();
+            updateStatusIndicator('paused');
+        }
+
+        function updateStatusIndicator(status) {
+            const indicator = document.getElementById('statusIndicator');
+            const statusText = document.getElementById('statusText');
+
+            indicator.className = 'status-indicator';
+
+            switch(status) {
+                case 'running':
+                    indicator.classList.add('status-running');
+                    statusText.textContent = 'Running...';
+                    break;
+                case 'paused':
+                    indicator.classList.add('status-paused');
+                    statusText.textContent = 'Paused';
+                    break;
+                case 'stopped':
+                    indicator.classList.add('status-error');
+                    statusText.textContent = 'Stopped';
+                    break;
+                default:
+                    indicator.classList.add('status-paused');
+                    statusText.textContent = 'Ready';
+            }
+        }
+
+        // Initialize the simulator
+        window.addEventListener('load', () => {
+            cpu.updateDisplay();
+            updateStatusIndicator('paused');
+
+            // Load default program
+            loadProgram('basic');
+        });
+
+        // Handle code editor changes
+        document.getElementById('codeEditor').addEventListener('input', () => {
+            if (!cpu.running) {
+                const code = document.getElementById('codeEditor').value;
+                cpu.loadProgram(code);
+            }
+        });
+    </script>
+
+    <!-- Content Loading System -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script>
+        // Initialize content loading
+        async function initializePage() {
+            const toolName = 'assembly_simulator';
+            const currentLanguage = languageSwitcher.getCurrentLanguage();
+
+            try {
+                await contentLoader.loadContent(toolName, currentLanguage);
+                contentLoader.applyContent();
+                console.log('✅ assembly_simulator content loaded successfully');
+
+                // Register with language switcher for future changes
+                languageSwitcher.onLanguageChange(async (newLang) => {
+                    try {
+                        await contentLoader.loadContent(toolName, newLang);
+                        contentLoader.applyContent();
+                        console.log(`✅ assembly_simulator switched to ${newLang} content successfully`);
+                    } catch (error) {
+                        console.error(`❌ Failed to switch assembly_simulator to ${newLang}:`, error);
+                    }
+                });
+            } catch (error) {
+                console.error('❌ Failed to initialize assembly_simulator content:', error);
+            }
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePage);
+        } else {
+            initializePage();
+        }
+    </script>
+</body>
+</html>
