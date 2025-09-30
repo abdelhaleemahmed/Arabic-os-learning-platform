@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic OS Documentation - Source Files</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .nav-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+            border-left: 4px solid #4CAF50;
+        }
+        .nav-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .nav-btn {
+            display: inline-block;
+            background: #2E7D32;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 8px 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .nav-btn:hover {
+            background: #1B5E20;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .nav-btn.arabic {
+            background: #D32F2F;
+        }
+        .nav-btn.arabic:hover {
+            background: #B71C1C;
+        }
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin: 25px 0 15px 0;
+            color: #81C784;
+        }
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .file-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #81C784;
+        }
+        .icon {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .warning {
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid #FFC107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <a href="../" class="back-link">← Back to Documentation</a>
+
+    <div class="container">
+        <div class="icon">📚</div>
+        <h1>Documentation Source Files</h1>
+        <p class="subtitle">Sphinx reStructuredText source files for the Arabic OS platform documentation</p>
+
+        <div class="warning">
+            <strong>⚠️ Developer Notice:</strong> These are source files (.rst) used to build the documentation.
+            For the rendered documentation, use the links below.
+        </div>
+
+        <div class="nav-card">
+            <h2>🌍 View Rendered Documentation</h2>
+            <p>Access the built HTML documentation in your preferred language:</p>
+
+            <a href="../html-en/" class="nav-btn">📖 English Documentation</a>
+            <a href="../html-ar/" class="nav-btn arabic">📖 الوثائق العربية</a>
+        </div>
+
+        <div class="nav-card">
+            <h2>🔧 Developer Resources</h2>
+            <p>Tools and guides for working with the documentation system:</p>
+
+            <a href="../../tools/translation/" class="nav-btn">🌍 Translation Tools</a>
+            <a href="../DOCUMENTATION_UPDATE_GUIDE.md" class="nav-btn">📋 Update Guide</a>
+            <a href="../QUICK_UPDATE_CHECKLIST.md" class="nav-btn">⚡ Quick Reference</a>
+        </div>
+
+        <div class="section-title">📁 Source Structure</div>
+        <div class="file-grid">
+            <div class="file-item">
+                <strong>📄 conf.py</strong><br>
+                Sphinx configuration with bilingual support
+            </div>
+            <div class="file-item">
+                <strong>📝 index.rst</strong><br>
+                Main documentation index page
+            </div>
+            <div class="file-item">
+                <strong>👥 user-guide/</strong><br>
+                End-user documentation and tool guides
+            </div>
+            <div class="file-item">
+                <strong>👨‍💻 developer-guide/</strong><br>
+                Development and translation guides
+            </div>
+            <div class="file-item">
+                <strong>👩‍🏫 educator-guide/</strong><br>
+                Educational resources and curriculum
+            </div>
+            <div class="file-item">
+                <strong>🎨 _static/</strong><br>
+                CSS, JavaScript, and static assets
+            </div>
+        </div>
+
+        <div class="nav-card">
+            <h2>🛠️ Building Documentation</h2>
+            <p>To build the documentation from these source files:</p>
+
+            <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <code># English version</code><br>
+                <code>sphinx-build -b html source build/html</code><br><br>
+
+                <code># Arabic version</code><br>
+                <code>sphinx-build -b html -D language=ar source build/html-ar</code>
+            </div>
+
+            <p>For detailed instructions, see the <a href="../DOCUMENTATION_UPDATE_GUIDE.md" style="color: #81C784;">Documentation Update Guide</a>.</p>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center; opacity: 0.8;">
+            <p>🔗 <a href="../../" style="color: white;">Main Platform</a> |
+               🛠️ <a href="../../interactive/" style="color: white;">Interactive Tools</a> |
+               💾 <a href="../../images/" style="color: white;">OS Images</a></p>
+        </div>
+    </div>
+</body>
+</html>
