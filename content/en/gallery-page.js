@@ -64,13 +64,33 @@ window.content = {
 
         emulators: {
             qemu: {
-                title: "QEMU Emulation",
-                description: "Arabic OS booting and running in QEMU with full Arabic text support and character rendering.",
+                title: "QEMU - Fully Booted",
+                description: "Arabic OS fully booted in QEMU showing the main system interface with Arabic text support.",
                 platform: "Cross-platform virtualization"
             },
             virtualbox: {
-                title: "VirtualBox",
-                description: "Demonstration of Arabic OS in VirtualBox environment with Arabic keyboard input and display.",
+                title: "VirtualBox - Fully Booted",
+                description: "Arabic OS running in VirtualBox with complete Arabic interface and system capabilities.",
+                platform: "Desktop virtualization"
+            },
+            "qemu-bootloader": {
+                title: "QEMU - Boot Loader",
+                description: "Arabic OS boot loader stage in QEMU showing initial system startup sequence.",
+                platform: "Cross-platform virtualization"
+            },
+            "qemu-startup": {
+                title: "QEMU - System Startup",
+                description: "Arabic OS startup process in QEMU displaying initialization messages and kernel loading.",
+                platform: "Cross-platform virtualization"
+            },
+            "virtualbox-bootloader": {
+                title: "VirtualBox - Boot Loader",
+                description: "Boot loader phase in VirtualBox demonstrating initial Arabic OS loading sequence.",
+                platform: "Desktop virtualization"
+            },
+            "virtualbox-startup": {
+                title: "VirtualBox - System Startup",
+                description: "VirtualBox startup sequence showing Arabic OS kernel initialization and system services.",
                 platform: "Desktop virtualization"
             },
             bochs: {

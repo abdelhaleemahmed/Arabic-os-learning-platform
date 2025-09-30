@@ -64,13 +64,33 @@ window.content = {
 
         emulators: {
             qemu: {
-                title: "محاكاة QEMU",
-                description: "نظام التشغيل العربي يقلع ويعمل في QEMU مع دعم كامل للنص العربي وعرض الأحرف.",
+                title: "QEMU - مُقلع بالكامل",
+                description: "نظام التشغيل العربي مُقلع بالكامل في QEMU يُظهر واجهة النظام الرئيسية مع دعم النص العربي.",
                 platform: "المحاكاة الافتراضية متعددة المنصات"
             },
             virtualbox: {
-                title: "VirtualBox",
-                description: "عرض نظام التشغيل العربي في بيئة VirtualBox مع إدخال وعرض لوحة المفاتيح العربية.",
+                title: "VirtualBox - مُقلع بالكامل",
+                description: "نظام التشغيل العربي يعمل في VirtualBox مع واجهة عربية كاملة وقدرات النظام.",
+                platform: "المحاكاة الافتراضية للحاسوب المكتبي"
+            },
+            "qemu-bootloader": {
+                title: "QEMU - محمل الإقلاع",
+                description: "مرحلة محمل الإقلاع لنظام التشغيل العربي في QEMU يُظهر تسلسل بدء النظام الأولي.",
+                platform: "المحاكاة الافتراضية متعددة المنصات"
+            },
+            "qemu-startup": {
+                title: "QEMU - بدء النظام",
+                description: "عملية بدء نظام التشغيل العربي في QEMU تُظهر رسائل التهيئة وتحميل النواة.",
+                platform: "المحاكاة الافتراضية متعددة المنصات"
+            },
+            "virtualbox-bootloader": {
+                title: "VirtualBox - محمل الإقلاع",
+                description: "مرحلة محمل الإقلاع في VirtualBox تُظهر تسلسل التحميل الأولي لنظام التشغيل العربي.",
+                platform: "المحاكاة الافتراضية للحاسوب المكتبي"
+            },
+            "virtualbox-startup": {
+                title: "VirtualBox - بدء النظام",
+                description: "تسلسل البدء في VirtualBox يُظهر تهيئة نواة نظام التشغيل العربي وخدمات النظام.",
                 platform: "المحاكاة الافتراضية للحاسوب المكتبي"
             },
             bochs: {

@@ -9,15 +9,39 @@ class ArabicOSGallery {
         this.images = [
             {
                 id: 'qemu',
-                src: 'gallery/images/qemu-boot.svg',
-                thumbnail: 'gallery/images/qemu-boot.svg',
-                fallback: 'gallery/images/qemu-boot.svg'
+                src: 'gallery/images/Qemu_Booted.png',
+                thumbnail: 'gallery/images/Qemu_Booted.png',
+                fallback: 'gallery/images/Qemu_Booted.png'
             },
             {
                 id: 'virtualbox',
-                src: 'gallery/images/virtualbox-arabic.svg',
-                thumbnail: 'gallery/images/virtualbox-arabic.svg',
-                fallback: 'gallery/images/virtualbox-arabic.svg'
+                src: 'gallery/images/VirtualBox_Booted.png',
+                thumbnail: 'gallery/images/VirtualBox_Booted.png',
+                fallback: 'gallery/images/VirtualBox_Booted.png'
+            },
+            {
+                id: 'qemu-bootloader',
+                src: 'gallery/images/Qemu_BootLoader.png',
+                thumbnail: 'gallery/images/Qemu_BootLoader.png',
+                fallback: 'gallery/images/Qemu_BootLoader.png'
+            },
+            {
+                id: 'qemu-startup',
+                src: 'gallery/images/Qemu_Startup.png',
+                thumbnail: 'gallery/images/Qemu_Startup.png',
+                fallback: 'gallery/images/Qemu_Startup.png'
+            },
+            {
+                id: 'virtualbox-bootloader',
+                src: 'gallery/images/VirtualBox_BootLoader.png',
+                thumbnail: 'gallery/images/VirtualBox_BootLoader.png',
+                fallback: 'gallery/images/VirtualBox_BootLoader.png'
+            },
+            {
+                id: 'virtualbox-startup',
+                src: 'gallery/images/VirtualBox_StartUp.png',
+                thumbnail: 'gallery/images/VirtualBox_StartUp.png',
+                fallback: 'gallery/images/VirtualBox_StartUp.png'
             },
             {
                 id: 'bochs',
