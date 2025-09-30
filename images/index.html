@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic OS - Bootable Images</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .download-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+        .download-card:hover {
+            transform: translateY(-5px);
+        }
+        .download-btn {
+            display: inline-block;
+            background: #2E7D32;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .download-btn:hover {
+            background: #1B5E20;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .file-info {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../" class="back-link">← Back to Platform</a>
+
+    <div class="container">
+        <div class="icon">💾</div>
+        <h1>Arabic OS Bootable Images</h1>
+        <p class="subtitle">Ready-to-use bootable images for Arabic OS development and learning</p>
+
+        <div class="download-card">
+            <h2>🖥️ Main Bootable Floppy Image</h2>
+            <div class="file-info">
+                <strong>File:</strong> floppy.flp<br>
+                <strong>Size:</strong> 1.47 MB<br>
+                <strong>Format:</strong> Raw floppy disk image<br>
+                <strong>Compatibility:</strong> QEMU, VirtualBox, Bochs, Real Hardware
+            </div>
+
+            <a href="floppy.flp" class="download-btn" download>
+                📥 Download Floppy Image
+            </a>
+
+            <h3>🚀 Usage Instructions</h3>
+            <div style="text-align: left; max-width: 600px; margin: 20px auto;">
+                <h4>With QEMU:</h4>
+                <code style="background: rgba(0,0,0,0.3); padding: 10px; display: block; border-radius: 5px;">
+                    qemu-system-i386 -fda floppy.flp -boot a
+                </code>
+
+                <h4>With VirtualBox:</h4>
+                <ol>
+                    <li>Create new VM (Type: Other, Version: DOS)</li>
+                    <li>Add floppy.flp as floppy disk</li>
+                    <li>Boot from floppy</li>
+                </ol>
+
+                <h4>Features:</h4>
+                <ul>
+                    <li>✅ Arabic-aware bootloader</li>
+                    <li>✅ Basic Arabic text display</li>
+                    <li>✅ Simple command interface</li>
+                    <li>✅ Educational OS components</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; opacity: 0.8;">
+            <p>📚 <a href="../documentation/html-en/" style="color: white;">View Documentation</a> |
+               🛠️ <a href="../interactive/" style="color: white;">Interactive Tools</a> |
+               🔧 <a href="../tools/" style="color: white;">Developer Tools</a></p>
+        </div>
+    </div>
+</body>
+</html>
