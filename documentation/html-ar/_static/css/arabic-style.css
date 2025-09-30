@@ -1,0 +1,111 @@
+/* Arabic OS Interactive Learning Platform - Arabic Typography and Styling */
+
+/* Arabic font settings */
+body[lang="ar"],
+html[lang="ar"] body,
+.arabic-content {
+    font-family: 'Amiri', 'Noto Sans Arabic', 'Tahoma', 'Arabic Typesetting', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+/* Ensure proper Arabic text rendering */
+.arabic-text {
+    font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "liga", "calt", "kern";
+    -moz-font-feature-settings: "liga", "calt", "kern";
+}
+
+/* Arabic headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Arabic paragraph spacing */
+p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+/* Code blocks and technical content - keep LTR */
+code, pre, .highlight, .code-block {
+    direction: ltr !important;
+    text-align: left !important;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+
+/* Keep URLs and email addresses LTR */
+a[href^="http"],
+a[href^="mailto"],
+.url, .email {
+    direction: ltr;
+    display: inline-block;
+}
+
+/* Arabic navigation improvements */
+.wy-nav-side {
+    text-align: right;
+}
+
+.wy-menu-vertical a {
+    text-align: right;
+    padding-right: 1em;
+    padding-left: 2.4em;
+}
+
+/* Search box adjustments for Arabic */
+.wy-side-nav-search input[type=text] {
+    text-align: right;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+/* Table of contents adjustments */
+.toctree-wrapper .caption {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Arabic list styling */
+ul, ol {
+    padding-right: 1.5em;
+    padding-left: 0;
+}
+
+li {
+    text-align: right;
+}
+
+/* Button and form adjustments */
+button, input[type="submit"], .btn {
+    font-family: inherit;
+}
+
+/* Arabic-specific class for mixed content */
+.mixed-content {
+    direction: rtl;
+    text-align: right;
+}
+
+.mixed-content .ltr {
+    direction: ltr;
+    display: inline-block;
+    text-align: left;
+}
+
+/* Ensure proper Arabic punctuation */
+.arabic-content::before {
+    content: "";
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+/* Responsive Arabic text */
+@media (max-width: 768px) {
+    body[lang="ar"] {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}

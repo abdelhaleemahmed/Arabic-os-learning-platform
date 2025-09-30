@@ -1,0 +1,703 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:2
+#: 2c5cf770cf12496fabb3fba08bc5caff
+msgid "Translation Quality Assurance"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:4
+#: e77978e6c14e4131a322f609a17dc7c3
+msgid ""
+"This comprehensive quality assurance guide ensures that all Arabic "
+"translations in the Arabic OS Platform documentation meet the highest "
+"professional standards. It provides systematic processes for validation, "
+"review, and continuous quality improvement."
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:7
+#: 337134a8464e4269af4cdc60ebe69740
+msgid "Quality Standards Overview"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:9
+#: 98c8f73b7d9f4d1cb26b38d687487b4c
+msgid "Our translation quality framework is built on four foundational pillars:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:11
+#: 659b6d1943b74382a4934395bb4013b4
+msgid "**Technical Accuracy**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:12
+#: 5591bd64f65a4be3ab7c12f22ee702c0
+msgid ""
+"Translations preserve the precise meaning of technical concepts while "
+"adapting them appropriately for Arabic-speaking audiences."
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:14
+#: 3a1321aa50df42418d180bcc519cf6e7
+msgid "**Language Excellence**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:15
+#: 0aca52b796664ef8b068390a0c276b97
+msgid ""
+"Arabic text demonstrates native fluency, proper grammar, and culturally "
+"appropriate expression."
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:17
+#: 662cf9c0d8dc49c3b79515dd2b9b7cfc
+msgid "**Educational Effectiveness**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:18
+#: e6ea872dffaa4cc288c326deec114210
+msgid ""
+"Content supports learning objectives and serves diverse educational "
+"contexts effectively."
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:20
+#: c06a39b3a78147f989c1ad7fe6b38f7f
+msgid "**Professional Consistency**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:21
+#: 85117ced6665425189be2d2b4f31feb8
+msgid ""
+"All translations follow established style guides and maintain terminology"
+" consistency across the entire documentation platform."
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:24
+#: 80116eb80d004ee2b87369a6f8025526
+msgid "Quality Assurance Framework"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:27
+#: 9ade4c44492f4e21bffac2bc485a6d1e
+msgid "Three-Tier Review Process"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:29
+#: a8b4dbafb0a146cb9c4ba299f98f4d93
+msgid "**Tier 1: Translator Self-Review**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:30
+#: 93fec0d03bb14bc69370bb1eaa85b393
+msgid "Translators conduct comprehensive self-assessment before submission."
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:32
+#: 2fecfe46cdb44f2b8392417a776991d9
+msgid "**Tier 2: Peer Review**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:33
+#: 499d8429e2954516b75eaf260bdb7c2f
+msgid "Experienced Arabic translators review work for accuracy and quality."
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:35
+#: 06befd3042844f6f97ec39f0c5a9eac9
+msgid "**Tier 3: Expert Validation**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:36
+#: 81fda97209b84103bc546d1fc831c724
+msgid ""
+"Subject matter experts validate technical accuracy and cultural "
+"appropriateness."
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:38
+#: db449ba76d6f4738ab8caff257945e39
+msgid "**Quality Gates**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:39
+#: 5207049034d643e09310910d358ed10f
+msgid ""
+"Each tier includes specific validation criteria that must be met before "
+"progression."
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:42
+#: 62f900e694504df9b3bf748faebd9b89
+msgid "Quality Metrics and Standards"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:44
+#: 60badd3c7508442ca8231ca8c18b1a42
+msgid "Quality Assessment Criteria"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:48
+#: 69fb2680831f48b68fdf19a8f2d5ab63
+msgid "Quality Dimension"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:49
+#: 3ff7f3e4d7f6413cbdbaadda20fe26b2
+msgid "Measurement Method"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:50
+#: ba959ae3f3934349b3db2bc46a1eeaf2
+msgid "Acceptance Threshold"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:51
+#: 258b10785ef14a119c014d77f103f30d
+msgid "Review Level"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:52
+#: ../../source/developer-guide/translation/quality-assurance.rst:321
+#: d9cef36703474f0da86764b054248114 fc3e91f7b7d945b78388cf33ef42ef69
+msgid "Technical Accuracy"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:53
+#: a9016b6f93394958abf221bf77d7d06f
+msgid "Expert validation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:54
+#: 8116c499befe4549a5652b7bfd254cb8
+#, python-format
+msgid "95% concept preservation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:55
+#: 2c57551089b14cce855c3a65580f5be2
+msgid "Tier 3"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:56
+#: ../../source/developer-guide/translation/quality-assurance.rst:322
+#: 06ae7be7aaa5435eb0f3a2154b8105b8 1f1d6065586346b69c7c96a46021420c
+msgid "Language Quality"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:57
+#: e79007700512449a96576ff253114fea
+msgid "Linguistic review"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:58
+#: 6fcc74f3ed994493983cc073401ac0d9
+msgid "Native fluency level"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:59
+#: 99831a4545e944f5b3aee63f8fc041ec
+msgid "Tier 2"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:60
+#: e75e5e3698e84400bac1530bfe3ccd46
+msgid "Style Consistency"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:61
+#: 6795082180284f2ebd6309d01ebccef3
+msgid "Automated + manual check"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:62
+#: 21b27ee961b2493dbea4c3d7b347f939
+#, python-format
+msgid "100% style guide compliance"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:63
+#: c5d0b8a5417947beb34538d4f3380ffe
+msgid "Tier 1 & 2"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:64
+#: 26319f6357394c53ae674a8297e11f1b
+msgid "Completeness"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:65
+#: f3847774269d43a48345895a938e9287
+msgid "Automated counting"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:66
+#: 7cca6762218a430aa31eb4d3bb51b28e
+#, python-format
+msgid "100% strings translated"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:67
+#: b525be5c73534068a830846ba0518af6
+msgid "Tier 1"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:70
+#: 96922a9f97254c04b42ae4014921601d
+msgid "Tier 1: Translator Self-Review"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:73
+#: 3f51c975127a4dbea4c4468bd060f726
+msgid "Pre-Submission Quality Checklist"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:75
+#: 00c3b8ddd6584e239562495fccaf245e
+msgid ""
+"**Before submitting any translation work, complete this comprehensive "
+"self-assessment:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:77
+#: 23d407a6b59d4175a26bd202956d69f0
+msgid "**Technical Content Review**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:94
+#: 8de67a89532549caaa81b8a013d76891
+msgid "**Language Quality Review**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:112
+#: 853ad9bad16040a9abf6f23508e165c4
+msgid "**Completeness Review**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:130
+#: 20fa717f6c034f35b9497b2ebad3094a
+msgid "Self-Review Tools and Techniques"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:132
+#: bdf9972e44e747e785f2d294a3bbf0e2
+msgid "**Automated Validation**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:134
+#: f6d39c0fd3bd4d55afe50ff3eee0c4a6
+msgid "Use these command-line tools for automated quality checking:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:150
+#: 68c6c2e9efed4fe6af85fb184efb72ae
+msgid "**Manual Quality Checks**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:164
+#: c33dcc1310ac4d34a2427ed2f8ab458e
+msgid "**Quality Review Template**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:166
+#: 6aacfbbd532d4f1aa0ce0a13a238f898
+msgid "Create a self-review report using this template:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:199
+#: e543ab5def6b46bd907d4e26f6b4055f
+msgid "Tier 2: Peer Review Process"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:202
+#: aa2a956df701411dac3d836581b9d948
+msgid "Peer Reviewer Qualifications"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:204
+#: 9ba64e168f4a40a4908d3f85782b927f
+msgid "**Peer reviewers must demonstrate:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:227
+#: 462a239589d24d1297d0a4a642c7cf3e
+msgid "Peer Review Workflow"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:229
+#: 97bf7f67676f49619fb8d5a9814af8ca
+msgid "**Step 1: Assignment and Preparation**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:245
+#: 68b1c1fdf5e342898dafe4d29d95516e
+msgid "**Step 2: Comprehensive Review Process**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:257
+#: 182afd95c70144d8aa32634ebfc60c05
+msgid "**Step 3: Review Documentation**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:259
+#: f0e6a2d30af94dddbe57965efa98a405
+msgid "Create detailed review report:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:312
+#: 5111d78ccd6b4e92b12f40f427f72981
+msgid "Peer Review Standards"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:314
+#: 3a0ef8f49cbd41b48e4e873415fbabed
+msgid "**Review Quality Criteria:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:316
+#: 4cd8c4668928471da291ac5788f7099d
+msgid "Peer Review Evaluation Framework"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:320
+#: de77d5d0b79f427797c835971ef07b83
+msgid "Score"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:323
+#: 0f2bb79c27b647c697c58cc39480b5a6
+msgid "5 (Excellent)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:324
+#: 853aed710d84413592a1d6ec870e24b9
+msgid "Perfect concept preservation, expert-level terminology"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:325
+#: 0316537e1394449194edd5ab96d91db8
+msgid "Native fluency, perfect grammar, natural expression"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:326
+#: 53ee35f7154f47bd84afbc39f112efd2
+msgid "4 (Good)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:327
+#: 2f731c581629445a961ca3a4f6509492
+msgid "Minor technical issues, mostly accurate terminology"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:328
+#: 58f57e4021214e17b2e2beeb08087d29
+msgid "High fluency, minor grammar issues, mostly natural"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:329
+#: 7a3d12d530bd487981f68d54be185b27
+msgid "3 (Adequate)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:330
+#: 1c3be789001840b1bea34842e99db683
+msgid "Some concept loss, terminology mostly correct"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:331
+#: 60a6f1a25b9e42ff994d4d8a0bf0ef57
+msgid "Good comprehension, noticeable grammar issues"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:332
+#: 0748e50ace614e1495de483e1aadf2f5
+msgid "2 (Needs Work)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:333
+#: fd15c0fdeabb41799fe966245ab694b1
+msgid "Significant concept issues, terminology inconsistent"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:334
+#: b9796be06dc641da9b5284832f4935d5
+msgid "Understandable but awkward, multiple grammar errors"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:335
+#: 11d9bfb620a54fad94345f77dcea3831
+msgid "1 (Requires Revision)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:336
+#: 3070660e2973412d8e2c4576bca46812
+msgid "Major concept errors, terminology problems"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:337
+#: 76b129e283cd41d6a89509a3b8ad77b6
+msgid "Poor fluency, grammar interferes with meaning"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:339
+#: 74026122acb44704a842b6b327e6e02c
+msgid "**Review Turnaround Expectations:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:355
+#: 27ec1781abf441538f8a8a591ab0ec1d
+msgid "Tier 3: Expert Validation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:358
+#: 1d5385e03f904d8189c769c6faad0673
+msgid "Expert Reviewer Qualifications"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:360
+#: 9b978db0437f4249a169c65fd01805a8
+msgid "**Subject Matter Experts provide final validation:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:383
+#: 08d60ea1731049eeabe298ff0d99954f
+msgid "Expert Review Focus Areas"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:385
+#: caff88b561b6407db6bb920be2534c9b
+msgid "**Cultural and Linguistic Validation**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:406
+#: edec1e28e6be4a99ac80b07045fd049b
+msgid "**Expert Review Process**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:421
+#: d67cf1d459a54385b41f3c97d64ffb6c
+msgid "Quality Assurance Automation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:424
+#: 78aa46943d09421aa5f9f552bf733b87
+msgid "Automated Quality Checks"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:426
+#: 70a232c300d943bfbdab58e89daf7e2d
+msgid "**Continuous Integration Validation**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:465
+#: 76024facc57b4ce4b711dfc244ef0fa8
+msgid "**Quality Metrics Dashboard**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:506
+#: eb99e8ee41dc4dfca3ebc9c9ca3290ab
+msgid "**Terminology Consistency Validation**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:547
+#: 26cf3f7429c043f28d4079e5f023d6ec
+msgid "Quality Improvement Process"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:550
+#: f663b7dbef2d44d49a3fc899e2dea905
+msgid "Feedback Integration"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:552
+#: 757733adaeee490393c193bb193ef456
+msgid "**Structured Feedback Collection**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:573
+#: 9fe08ed347694b4ab680f1a9f3059353
+msgid "**Feedback Processing Workflow**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:591
+#: 801c9a4d46424f169d33ffa9885a2feb
+msgid "Continuous Quality Enhancement"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:593
+#: 74b95c8e1b364a4db1ed832d3ab7a4c1
+msgid "**Monthly Quality Reviews**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:619
+#: e6e1c272979a4adba89de1ed5a0d357d
+msgid "**Quality Training Program**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:644
+#: 7bccc45b5e8d4a8597564f809b891e87
+msgid "Quality Assurance Metrics"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:647
+#: a2b6f804367f4c288257be832b6ef61e
+msgid "Key Performance Indicators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:649
+#: 8b3b3808361f4d8da336cfa10966a5e4
+msgid "Translation Quality KPIs"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:653
+#: eac15bcd28ec4d73b61a9d9f9c194bbe
+msgid "Quality Metric"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:654
+#: 3c35f3c79bae40f59bc162e4ea264df1
+msgid "Target Value"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:655
+#: 7ca4702fbcfb4eff85839eb7e286474c
+msgid "Current Status"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:656
+#: 50e9a4c932904e68a2cd94760dab10c4
+msgid "Trend"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:657
+#: 88c03682e32f4861bbe00e6f4e8ad52f
+msgid "Translation Completeness"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:658
+#: ../../source/developer-guide/translation/quality-assurance.rst:674
+#: a541544313884de3852ad79a1d80d879 a8fe292ff1844aaa89574caa349f8db8
+msgid ">95%"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:659
+#: ../../source/developer-guide/translation/quality-assurance.rst:663
+#: ../../source/developer-guide/translation/quality-assurance.rst:675
+#: 25b920f4b3fb4cf59b015f831a8fecd8 b821e0cb784c42f08bd31d34a7422e2a
+#: f14cb39c579f44beba6f67779e7b6da6
+msgid "[Current %]"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:660
+#: ../../source/developer-guide/translation/quality-assurance.rst:664
+#: ../../source/developer-guide/translation/quality-assurance.rst:668
+#: ../../source/developer-guide/translation/quality-assurance.rst:672
+#: ../../source/developer-guide/translation/quality-assurance.rst:676
+#: 4ce7987593b14214a75d46730496fc86 5e506af858be408f91163e05bbaddf70
+#: c5779c5ea5094e16b7bc08d5bc80ec60 d09f7633dc0e44788d8b8315def92b9c
+#: d9ded44944ed4b03a6f7ff653b9a25f6
+msgid "[↑/↓/→]"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:661
+#: 024e8f4650fa4acdb7561c1b18258d1e
+msgid "First-Pass Acceptance Rate"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:662
+#: 6e8f4757dbb34b399c2386c0e4bf572c
+msgid ">80%"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:665
+#: c2f6cd444ab546f382a9e01cbffb1d4b
+msgid "Review Turnaround Time"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:666
+#: cd808ecafe604ffe8b558bba8f9eae20
+msgid "<7 days average"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:667
+#: 5ce4292a65a54432b4a0462a539f0184
+msgid "[Current avg]"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:669
+#: 9b78a6d53a4142939bb1d1f489c3cb9c
+msgid "User Satisfaction Score"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:670
+#: 12fb86b7a0fb45588bcbcb792354a17f
+msgid ">4.0/5.0"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:671
+#: 155c66e969fb43c3a51cc70a272bc793
+msgid "[Current score]"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:673
+#: 60f2c5b949a24fb8b4ec09ca987d50f7
+msgid "Terminology Consistency"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:678
+#: d7e7320db1044d3cb05f3c1abadd11ae
+msgid "**Quality Dashboard Components**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:705
+#: b2147fa2dba64e1eb47546aa634b1efd
+msgid "Success Stories and Recognition"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:708
+#: 77fe5a7378524156b24019d6ba896cd6
+msgid "Quality Excellence Recognition"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:710
+#: bc24c151ee264a78afaf870abfa8a1b8
+msgid "**Translator Recognition Program**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:736
+#: 91d7dc794bf044f0af6398c81064b777
+msgid "**Case Studies in Quality Excellence**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quality-assurance.rst:752
+#: 881a44936e99423da20bf3ac8657087c
+msgid ""
+"The quality assurance framework ensures that Arabic OS Platform "
+"translations serve the global Arabic-speaking community with the highest "
+"standards of technical accuracy, linguistic excellence, and cultural "
+"appropriateness. Through systematic quality processes, continuous "
+"improvement, and community collaboration, we maintain translation quality"
+" that supports effective learning and professional development in Arabic "
+"technical education."
+msgstr ""
+

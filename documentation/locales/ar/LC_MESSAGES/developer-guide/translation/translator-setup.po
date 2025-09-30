@@ -1,0 +1,817 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/developer-guide/translation/translator-setup.rst:2
+#: 5375e5d390e14391b3d9a36558638978
+msgid "Translator Setup Guide"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:4
+#: 96e09f8c761e45c1bad2dec61304f693
+msgid ""
+"This comprehensive guide helps translators set up their environment for "
+"contributing Arabic translations to the Arabic OS Platform documentation."
+" Whether you're a professional translator or a community volunteer, this "
+"guide provides everything you need to start contributing."
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:7
+#: 0c736809dd3d4cc5af23a93a3b97ac84
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:9
+#: 66580ffdec254026b37f6c4038129b7c
+msgid "Before setting up your translation environment, ensure you have:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:11
+#: e12548c69f6e4e21b18305ecf9c8456b
+msgid "**Technical Requirements**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:13
+#: cc033fa3340644b4ade4f4bd8e64fb3c
+msgid "**Operating System**: Windows 10+, macOS 10.14+, or Linux (Ubuntu 18.04+)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:14
+#: 4a86b618b9df46bcbc22ac96fa468890
+msgid "**Internet Connection**: Required for repository access and tool downloads"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:15
+#: 6729074de52743659381e6a5a02bc5dd
+msgid "**Storage Space**: At least 2GB free disk space"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:16
+#: 70200a3287c9406fb4e9cddcce42b247
+msgid "**Memory**: Minimum 4GB RAM recommended"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:18
+#: 37ed6b10982e4ba4b07e528abddefa82
+msgid "**Language Expertise**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:20
+#: 57fb9eed6bc84f0587f849e5e7622892
+msgid "**Arabic Proficiency**: Native or near-native Arabic fluency"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:21
+#: 638d5a9b03d945c7909b8ebda56d0051
+msgid ""
+"**Technical Understanding**: Familiarity with computing and technology "
+"concepts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:22
+#: 497bb37a004e4a929636db2d0b14b9b3
+msgid ""
+"**English Reading**: Ability to understand technical English source "
+"material"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:23
+#: 2aeb71257d2549179a772ad6dc00c148
+msgid ""
+"**Cultural Awareness**: Understanding of Arabic cultural context in "
+"technical communication"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:25
+#: 75484362e819494a9255637e65a241ff
+msgid "**Optional but Helpful**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:27
+#: 3083ef8acdc044c38670bf16726f9359
+msgid "**Translation Experience**: Previous translation work (any domain)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:28
+#: 1b850d8eacd343e7803e131e647092f7
+msgid "**Arabic Computing Background**: Knowledge of Arabic text processing"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:29
+#: ca12fe53e7824b4f883d13d09fdc5a91
+msgid "**Open Source Familiarity**: Experience with collaborative development"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:32
+#: 4d076f4644ed432c961cfe3b13fed915
+msgid "Setup Overview"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:34
+#: c3b942caa74a41968e37ddf09a34f747
+msgid "The translator setup process involves:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:36
+#: 9074218ed5614fc69d8c26a4e9853668
+msgid "**Account Setup** - GitHub account and repository access"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:37
+#: 174545ffc1ae4b938de1abecfd5eb55a
+msgid "**Development Environment** - Git, Python, and Sphinx installation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:38
+#: c820f8e6f01c499db6ce4e909498fbcf
+msgid "**Translation Tools** - Poedit or alternative translation editors"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:39
+#: 6b3b57a4f2174bada25146b12e6bc184
+msgid "**Project Access** - Repository cloning and initial setup"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:40
+#: 2082521a4ce8489bb228d3849c557b11
+msgid "**Workflow Testing** - Verify translation workflow functionality"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:43
+#: 40a5ad1941b0480f83eb77e8271b1de1
+msgid "Step 1: Account and Access Setup"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:46
+#: 3ff846b237a4490ea79598b41a946522
+msgid "GitHub Account Creation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:48
+#: f60bf97dcaf240cfaded3d7793bd7e1a
+msgid "**Create GitHub Account:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:50
+#: af043c05d8b64ac7b68cc09a2cd89e20
+msgid "Visit https://github.com and click \"Sign up\""
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:51
+#: 25dad499c159481b8561fe937cd9866a
+msgid "Choose username (suggestion: include your name for recognition)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:52
+#: bc8e17c0856a4ce38286907a3aa47278
+msgid "Use professional email address"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:53
+#: 26804234c46f4d889a7f75ea699edd48
+msgid "Complete verification process"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:55
+#: 491d43aef8b246d0b3b67cf9447a1745
+msgid "**Profile Optimization:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:66
+#: b98e1dc180114c2b9520bd60818392b4
+msgid "**Example Profile:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:76
+#: ebd1fac4c2594a7498d34bec042357e7
+msgid "Repository Access Request"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:78
+#: be0d45e30d824ae9abaa7097ee463922
+msgid "**Join Translation Team:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:80
+#: 240aeca77b3b4560b1c6fd27512b7c81
+msgid "**Fork Repository**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:88
+#: 3c41b6e16cff4e57a6583912e19fd7f2
+msgid "**Request Translator Access**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:90
+#: ea1f7dab572347de84b867378d56b131
+msgid "Create issue for access request:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:112
+#: 22939e9b028140d99f6cf8a21f380c0e
+msgid "**Team Assignment**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:114
+#: 7262c3bc3f5e45c1833087622bea211c
+msgid ""
+"Project coordinators will: - Review your qualifications - Assign "
+"appropriate repository permissions - Add you to translator team - Provide"
+" initial assignment guidance"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:121
+#: 742ff74e5b3e404ab9d20b8a46a68afb
+msgid "Step 2: Development Environment Setup"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:124
+#: 534bc20a813f4979aaf239f176118f18
+msgid "Git Installation and Configuration"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:126
+#: 4e365cbef6894cef8ad8d3af791df126
+msgid "**Install Git:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:160
+#: 37803b00ea1749be8704a520755d230d
+msgid "**Configure Git:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:178
+#: c00216a9d566408a94b3301cea04a73b
+msgid "Python and Sphinx Installation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:180
+#: 6addd57f8deb412ba615a6c2262b84f0
+msgid "**Install Python:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:217
+#: a644e53728d34badab3b5eaa9f13e46d
+msgid "**Set Up Project Environment:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:241
+#: b128f76d1bb047faab2212e51cc51dea
+msgid "Step 3: Translation Tools Installation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:244
+#: 9759c4895d2545c1baa87d6ab8f6cafa
+msgid "Poedit (Recommended)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:246
+#: 635e2cc1374642d09d43529ca62c4fbf
+msgid "**Why Poedit:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:248
+#: cf04e71eb5bc408ea8df19315c7dc078
+msgid "**User-friendly interface** designed specifically for .po file editing"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:249
+#: 2dc8ce0544e647d2b3466c69c0859be2
+msgid "**Arabic RTL support** with proper text direction handling"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:250
+#: 2d94624199be4297a6dbca02e640b2fd
+msgid "**Translation memory** for consistency across projects"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:251
+#: 54d25ed16a5344aaa54ff81aaedc4825
+msgid "**Quality assurance features** including spell checking and validation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:252
+#: 6a0f95b8b8e746fe9c1bc48721bbe1f6
+msgid "**Cross-platform** availability (Windows, macOS, Linux)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:254
+#: c52b08ea061f41d3b2642f2e5e62fb85
+msgid "**Installation:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:286
+#: a108d444f79b484b8d47607df4c54343
+msgid "**Poedit Configuration for Arabic:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:288
+#: 4a2b691dd2624e10962bcac55c1c5707
+msgid "**Launch Poedit** and open Preferences"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:290
+#: df91b013a813459d9f419dca32b8590c
+msgid "**General Settings:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:299
+#: ac696a716de549d8ac9d11f04317d516
+msgid "**Editor Settings:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:308
+#: 6115c2c7fc8b4aedaf73357df5eb5bcd
+msgid "**Translation Memory:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:316
+#: 4f1477755cd54ac1b27ddc046644eb14
+msgid "**First-Time Setup:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:327
+#: b581674361ae41c0b7b9c9f4ea9c13c0
+msgid "Alternative Tools"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:329
+#: 3d5ca8663d38415181046bbdb27e50ae
+msgid "**For Advanced Users:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:331
+#: 3b9971d7164a41a9aeccfcea2ff87e3b
+msgid "Alternative Translation Tools"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:335
+#: 159b0eab909349229aeefb65550b244b
+msgid "Tool"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:336
+#: 73f595eec4bd414ba8368d0ebc6619a8
+msgid "Platform"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:337
+#: bfb3e5a0bd1b433ca4f52e6b028988ad
+msgid "Strengths"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:338
+#: b98a399c1881454696799e7998557ae4
+msgid "Best For"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:339
+#: d3d0b741b39e41bfa2f641773fadb7fc
+msgid "Lokalize"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:340
+#: cf1ee6da80804364b8c63fc0e804d69a
+msgid "Linux (KDE)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:341
+#: d4de82b57e7f4bdcb2df62342fe809b4
+msgid "Advanced CAT features, scripting"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:342
+#: 901c59d1748a4705abb058e338425836
+msgid "Power users, batch processing"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:343
+#: 31e32427b6e5443b87fbdb0567f291b0
+msgid "Gtranslator"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:344
+#: 6e0ce865522a49258d964d4fd5d78799
+msgid "Linux (GNOME)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:345
+#: f732d7b2bde84a9fa23573ac54c77f87
+msgid "GNOME integration, lightweight"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:346
+#: c01cf08314574f59b312ec5810f209ef
+msgid "Linux-focused workflows"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:347
+#: 16ba978bbb554ba9a3d894a241c9ec8c
+msgid "OmegaT"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:348
+#: ../../source/developer-guide/translation/translator-setup.rst:352
+#: 0296505f83904604803a857d43ae24f2 02ec0d3000fd447da8e3dccae01b66df
+msgid "Cross-platform"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:349
+#: 402e6bf9aa924d758a7f9aa2619050ff
+msgid "CAT tools, project management"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:350
+#: a194b8e16ab0463ebfdbd6aa3d934347
+msgid "Large translation projects"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:351
+#: 29798c692cba49008d90eb728c7f403d
+msgid "Virtaal"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:353
+#: a3edb099a7fa4ece89e4451323838ab6
+msgid "Quality checks, terminology"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:354
+#: 44794d044fb24687b9cf08a81906f890
+msgid "Quality-focused translation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:356
+#: ea9aa1f3365344e0a3ccd5a25690945a
+msgid "**Web-Based Options:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:358
+#: f9c2e64063f34f1fa7c47779328b6706
+msgid "**Weblate**: Collaborative web-based translation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:359
+#: 2cd96e466cd84d18b721c9f097559fae
+msgid "**Crowdin**: Professional translation management"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:360
+#: 61acd3560eff465e8c1fede9aea79380
+msgid "**Transifex**: Enterprise translation platform"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:362
+#: 5f53e798b54a40bc939bfe4012293d66
+msgid "**Setup for Web Tools (Optional):**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:364
+#: f32ee41ac86e46bfa387e2b20ac6bbe4
+msgid "If using web-based tools, you'll need to:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:366
+#: a8988f1009be4ba6832c94a3ce917c00
+msgid "**Export .po files** from local repository"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:367
+#: 1134cb1e82cf4381b9cf063c7d63121e
+msgid "**Upload to web platform** for translation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:368
+#: be12593fa61f4b4db7a0b72a2bad1e9d
+msgid "**Download completed translations**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:369
+#: 6a365277f7e74eebb1d98252b5db50a8
+msgid "**Import back to local repository**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:370
+#: de9c28b8aeda48b4831e0abda2262011
+msgid "**Test and commit changes**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:373
+#: e5f2350e24834c6aa8caa52c06eecf21
+msgid "Step 4: Project Repository Setup"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:376
+#: bb43fb5ccb1d44b5b0504235d51de50d
+msgid "Repository Cloning and Configuration"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:378
+#: 5711d56056c845a1bf5a6de39b10edda
+msgid "**Clone and Setup:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:401
+#: 391a7f90e15e4f86ba78a10d603974af
+msgid "**Directory Structure Understanding:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:419
+#: 8b2b2103cc804c24954d2620ed791873
+msgid "**Understand Translation File Structure:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:441
+#: 80d45cf3e255442b84b54cfea04b9851
+msgid "Initial Environment Testing"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:443
+#: 93f35f5e9f7e4d0e83c39a687b7c803f
+msgid "**Test Sphinx Build:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:464
+#: 55fac1d17be24b9584130b416390fb6b
+msgid "**Test Translation File Access:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:475
+#: 2c83e08fc6e148918047cac3ba043b1f
+msgid "Step 5: Workflow Testing and First Translation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:478
+#: 296e5a5cc86045c1a7df66af2849892b
+msgid "Practice Translation Workflow"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:480
+#: f09767b2c9f543b6921e3bc0dd16d791
+msgid "**Select Practice File:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:482
+#: 7b9452134adc4d80b031cc801b10f353
+msgid "Choose a small file for initial practice:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:490
+#: f01f6b5204734aca96a7f05710ef2352
+msgid "**Open in Poedit:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:492
+#: 7c5c938572c9413189a88edf33d9f123
+msgid "**Launch Poedit**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:493
+#: a2568e132f5342e5b7315cde1cfa9030
+msgid "**File → Open** → Navigate to chosen .po file"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:494
+#: 310daa475952433c8eaf2cf898eb6b74
+msgid ""
+"**Review file contents:** - Source English text - Existing Arabic "
+"translations (if any) - Translation status and statistics"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:499
+#: be7d442373814589903a5cf2d7877d77
+msgid "**Practice Translation Process:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:501
+#: c8b3d701c1e9482c882d44c10a65b7cd
+msgid "**Select untranslated string** (shown in red/orange)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:502
+#: e70f62dc371140fdb5c9b80536933d0f
+msgid "**Read source text** and context comments"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:503
+#: 3216dce0162d48f584371608dfecf8b7
+msgid "**Enter Arabic translation** following style guide"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:504
+#: b9950fd5b89c456786a92a93dee83a54
+msgid "**Use translation memory** suggestions if available"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:505
+#: 77e6bc968c114b2f8da7e27613233153
+msgid "**Save frequently** (Ctrl+S / Cmd+S)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:507
+#: 50dcce3b9de54415b78c50e626e061af
+msgid "**Example Practice Translation:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:527
+#: 5c37258ef23249c990f3a1cac6092b40
+msgid "Test Translation Integration"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:529
+#: 11fa5a2529ea46bf9a60b5fb80dc4364
+msgid "**Build with Your Translations:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:544
+#: 5fb75b9e9a824e82883ef47919e24c6f
+msgid "**Quality Check:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:546
+#: 181bd27da9b847c585a3be49178363b0
+msgid "Review your translated content for:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:563
+#: 2a5bd290f18845f29bf482ee3e47ef6b
+msgid "Commit Your Practice Work"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:565
+#: 5f567d758c8c414496db635b37d4b6f8
+msgid "**Create Feature Branch:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:586
+#: 556de66ad37c41768a4c005d42345375
+msgid "Development Environment Maintenance"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:589
+#: 092756d1f5da44798a36522450eab129
+msgid "Keeping Environment Updated"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:591
+#: 3df6f5ceba5f4f8caae4be938d09d5b5
+msgid "**Regular Maintenance Tasks:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:608
+#: 6c4c68d163fe4244bedfd8689c59b665
+msgid "**Backup Your Work:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:623
+#: 5d169ca5425c4c4ebe55a20a3aef72ec
+msgid "Troubleshooting Common Issues"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:626
+#: 48159bb23d28497c9c2fa925c07d2113
+msgid "Environment Problems"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:628
+#: f401f451c6c34d419ef421031389f9ae
+msgid "**Issue: Python command not found**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:639
+#: 3c1c66c8f9d444bea1f720ec5641421d
+msgid "**Issue: Sphinx build fails**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:652
+#: c2f82286e58f4a4fb883726a5b1e2d5c
+msgid "**Issue: Arabic text appears as boxes**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:662
+#: 1275f556a4cf46e3ac2f25d13f9e851c
+msgid "Translation Tool Issues"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:664
+#: 079efe38ee4341ecb91f269ab6a7bbf3
+msgid "**Issue: Poedit shows encoding errors**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:674
+#: 67d82c36d4ec4ca0b7fcbe4e659a6eac
+msgid "**Issue: RTL text displays incorrectly**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:683
+#: b7ad39e919c74a3f9d0166886f4c2e99
+msgid "**Issue: Translation memory not working**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:694
+#: 36a18fd03dc34347a254fbda36aec743
+msgid "Git and GitHub Issues"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:696
+#: 06732cd0b435475bb5763fe42fb47d65
+msgid "**Issue: Cannot push to repository**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:706
+#: 9d6d07047a3948fd84844e5983694693
+msgid "**Issue: Merge conflicts**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:720
+#: 746ea354dbae426b9535128cfd234005
+msgid "**Issue: Large files in commit**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:733
+#: bf358a2c03e54acd8975d64026bf657b
+msgid "Success Metrics"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:735
+#: 0dd4b633595c4fd4bb6266a479484814
+msgid "**Week 1 Goals:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:745
+#: 03c02be2c4564ddc883a5604738cc88c
+msgid "**Month 1 Goals:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:755
+#: 7169714cd2b84182a71feff26656447c
+msgid "**Ongoing Success Indicators:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:766
+#: 713eb8433efc4ee0b8015130c9a533e0
+msgid "Next Steps"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:768
+#: 67186ff2fe4e4a86af7c95ed373b10d1
+msgid "After completing this setup guide:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:770
+#: 3aae5c7e1f5e429381b9043a40494753
+msgid ""
+"**Join Translator Community** - Subscribe to translator mailing list - "
+"Join Slack/Discord channels - Attend monthly translator meetings"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:775
+#: a7196351895f468aa648a816b628757d
+msgid ""
+"**Request First Assignment** - Contact project coordinator - Specify your"
+" availability and interests - Receive assigned documentation section"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:780
+#: 47b95816dbad493dbffaef5fbae1acd3
+msgid ""
+"**Begin Regular Translation Work** - Follow the :doc:`translation-"
+"workflow` guide - Apply the :doc:`arabic-style-guide` standards - Submit "
+"work for :doc:`quality-assurance` review"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:785
+#: 7a37643ceabc458d9c28e9f14e5fd57f
+msgid ""
+"**Engage with Community** - Provide feedback on documentation - Suggest "
+"improvements to translation process - Help other translators with "
+"questions"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translator-setup.rst:790
+#: e28fbf86a7524ebe93ae3608699cfc89
+msgid ""
+"**Welcome to the Arabic OS Platform translation team! Your contributions "
+"directly support Arabic-speaking learners worldwide in accessing high-"
+"quality technical education in their native language.**"
+msgstr ""
+

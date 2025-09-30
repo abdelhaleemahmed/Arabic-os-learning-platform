@@ -1,0 +1,925 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:2
+#: c97b75d3ed3f40398cce90b096fb9000
+msgid "Kernel Debugger"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:4
+#: 3850e7c5eda24e908ec15da1503a4927
+msgid ""
+"The Kernel Debugger is an advanced interactive tool that provides real-"
+"time visualization and debugging capabilities for the Arabic OS kernel. "
+"This educational debugger simulates kernel execution states, system "
+"calls, interrupt handling, and memory management while offering hands-on "
+"experience with operating system internals and Arabic text processing at "
+"the kernel level."
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:7
+#: 9e0c4413449d40939f181efe6cdb10a0
+msgid "Overview"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:9
+#: 9bd97f2f7485447aa35b866f90ed015a
+msgid ""
+"Kernel debugging is essential for understanding operating system "
+"behavior, diagnosing system issues, and optimizing performance. The "
+"Arabic OS kernel includes specialized components for Arabic text "
+"processing, UTF-8 handling, and bidirectional text algorithms. This "
+"debugger provides insight into how these components work together at the "
+"lowest system level."
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:12
+#: 616105d779274f2b9bf8ea56a9d10a4d
+msgid "Key Learning Objectives"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:14
+#: 7d3a340080274321a842ea39b031f8c5
+msgid "By using this tool, you will understand:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:16
+#: 7aa334200a154d57884bade8bc7de19a
+msgid "Arabic OS kernel architecture and execution flow"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:17
+#: 7c90326397994b89ad636e6cbd349b4b
+msgid "System call mechanisms and kernel/user mode transitions"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:18
+#: cf2be159bf304088983f86b830f78812
+msgid "Interrupt handling and device driver interaction"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:19
+#: d940b6bcf60147fe820328202d4eaa2e
+msgid "Memory management at the kernel level"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:20
+#: be0384702d404c778ccdc513876d83d8
+msgid "Arabic text processing within kernel space"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:21
+#: 72272a12371446519cb8b11c93c60ead
+msgid "Debugging techniques for kernel-level issues"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:24
+#: 38c10a6c77854cab879a2e71b90e2609
+msgid "Interactive Features"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:27
+#: 9f72618f0255496da215c86335e0dbc7
+msgid "Real-time Kernel State Visualization"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:29
+#: 852947930ed24b1abf61f87960f7c744
+msgid "Live monitoring of kernel execution:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:31
+#: 68da489af6c2476695e9a8e3045cca1d
+msgid ""
+"**CPU Registers**: Real-time register values (EAX, EBX, ECX, EDX, ESP, "
+"EBP, etc.)"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:32
+#: 6536750389354d56a9d16b4619ad7615
+msgid "**Execution Flow**: Step-by-step instruction execution"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:33
+#: 0eab7e360bfe40ff895ee81d78dceaa6
+msgid "**System Call Tracking**: Monitor system calls and their parameters"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:34
+#: 92af8d3f9407491786832f3ce029219e
+msgid "**Interrupt Status**: View interrupt handlers and IRQ states"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:35
+#: 4291a830f0cb43d8ae09609cb7519e4d
+msgid "**Kernel Stack**: Examine kernel stack contents and call traces"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:38
+#: 9296d61f917a45fcbff966c7ced1445b
+msgid "Debugger Controls"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:40
+#: db74dbc2187a4a4987e5f4a6b85ba684
+msgid "Interactive debugging commands:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:42
+#: 3af9c5f9897c44408b29ccb5bb4969d1
+msgid "**Start Kernel**: Begin kernel simulation and execution"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:43
+#: 2cba27f78df34a1a87e34a0bbb542a30
+msgid "**Pause/Resume**: Suspend and continue kernel execution"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:44
+#: fdcc8a7388da4013b4cd204e87156a6c
+msgid "**Step Execution**: Execute one instruction at a time"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:45
+#: e7ce283f149345a18993dccb0bcef753
+msgid "**Reset Kernel**: Restart kernel to initial state"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:46
+#: 51f61c1b38634f698d56b4a6a8ce7466
+msgid "**Set Breakpoints**: Pause execution at specific addresses"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:47
+#: 8abe1b1f78674788bfd85a8afe11f638
+msgid "**Trigger Interrupts**: Simulate hardware and software interrupts"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:50
+#: d2da1bad1cb64fcd83fbba2d3b635118
+msgid "Memory and Process Inspection"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:52
+#: bfe31cb4c4ea4a10a175bb676a81b2a0
+msgid "Deep system state analysis:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:54
+#: 028f7fcb0fb74ecd9e3466ec763659cd
+msgid "**Physical Memory View**: Examine kernel memory layout"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:55
+#: 59ce96b065e74e79988d678d0eb9b1e3
+msgid "**Virtual Memory Mapping**: Inspect page tables and address translation"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:56
+#: b80f8e9008544de6ab7c0d4aac17358f
+msgid "**Process Control Blocks**: View running process information"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:57
+#: 846f1551222245c1b9a6438dd216c373
+msgid "**Arabic Text Buffers**: Monitor UTF-8 and BiDi processing buffers"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:58
+#: a0a3191750c74cb597f767aba71fa02d
+msgid "**Device Driver States**: Examine hardware interaction"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:61
+#: 2604c0ce08004940a82f9aabf7729651
+msgid "System Call Interface"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:63
+#: 881c5837f6e54c32939ec255728147a8
+msgid "Simulate and monitor system calls:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:65
+#: 76dbc2edc93942b4a7b7001b6dba56ae
+msgid "**File Operations**: open(), read(), write(), close()"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:66
+#: fb2946a875b44d88a2e71c2b7e7b9f36
+msgid "**Process Management**: fork(), exec(), wait(), exit()"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:67
+#: 9d55489470314bca914b1f2859c88420
+msgid "**Memory Management**: malloc(), free(), mmap()"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:68
+#: 2f3a49ed60ab48a78293a06f469b6a9b
+msgid "**Arabic Text Processing**: Custom system calls for text operations"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:69
+#: 56b93749833f48a197e4aa620f59cbb8
+msgid "**Network Operations**: socket(), bind(), listen(), accept()"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:72
+#: 257c050c282247e3ae7fdd83222540e9
+msgid "Technical Specifications"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:75
+#: fb04316228bc44ebb6b4b27f3dd3949f
+msgid "Arabic OS Kernel Architecture"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:77
+#: 1b3b859e41034b9bb7a0be73acbc03f4
+msgid "The debugger simulates the complete Arabic OS kernel structure:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:79
+#: 10716de8d42a40c4b402799567d0d631
+msgid "**Kernel Components**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:104
+#: c49f55fda21a4ee5be3bace96da1b405
+msgid "**Register States**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:106
+#: 336572f5f9844951a5d2e96a0aaa7b1f
+msgid "The debugger tracks all CPU registers:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:108
+#: cc74195a394e44feb7e63113bef0b0c5
+msgid "x86 Register Set"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:112
+#: 5449c3f0fd134c06829653859a667153
+msgid "Register"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:113
+#: 56040267ce764e4ebf84aebed77f6f70
+msgid "Size"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:114
+#: f6efed25894249509d1e23bc996ca8db
+msgid "Purpose in Arabic OS"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:115
+#: c42de9446b6448458803f318f4fe3285
+msgid "EAX"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:116
+#: ../../source/user-guide/tools/kernel-debugger.rst:119
+#: ../../source/user-guide/tools/kernel-debugger.rst:122
+#: ../../source/user-guide/tools/kernel-debugger.rst:125
+#: ../../source/user-guide/tools/kernel-debugger.rst:128
+#: ../../source/user-guide/tools/kernel-debugger.rst:131
+#: ../../source/user-guide/tools/kernel-debugger.rst:134
+#: ../../source/user-guide/tools/kernel-debugger.rst:137
+#: ../../source/user-guide/tools/kernel-debugger.rst:140
+#: ../../source/user-guide/tools/kernel-debugger.rst:143
+#: 00257ca3c3964062906ef90b3de8f22d 29c5f6fe309d4240997332e14763d079
+#: 4c9ce22040164b4a8894a2b510103cdb 608e72d3d16c4fe0a63ba74f9b7729c5
+#: 752522b202b244958c1e185fffb05a80 b767ca9e04fa449980bec63c1a5ecc68
+#: b85f01a43a964f8c88033e6448ecd4db dda4ed15d7f144aab71ae4a25c193170
+#: e19ef3dfe9db4237b88ba5f202682af8 fb7ad63140124d2ebace97204a40a3a6
+msgid "32-bit"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:117
+#: 67edf358a16d4aeca22e81409d185756
+msgid "Accumulator, return values, UTF-8 character processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:118
+#: 716393232cd34d6db8315eae1b1da161
+msgid "EBX"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:120
+#: 55a27cb75dcc4769af683711a4e9ea3c
+msgid "Base register, Arabic text buffer pointers"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:121
+#: e0a967c7fa054c77b3b0e52691cc93ec
+msgid "ECX"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:123
+#: b00d7d96514049119fe8cbb9fc748056
+msgid "Counter, loop operations, character counting"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:124
+#: 6b9aace6cf3c4d23b19065735d4a819b
+msgid "EDX"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:126
+#: 817e6ad5268c478196ac2aa112ad2451
+msgid "Data register, I/O operations, encoding flags"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:127
+#: fe8f66ca21a64f39bbe5ac26ce691406
+msgid "ESP"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:129
+#: 45d61d26a8894a2e9fb802f08dd2cec2
+msgid "Stack pointer, function call management"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:130
+#: 3e9219ed8b0347ec83691f3261149bbb
+msgid "EBP"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:132
+#: 605f77ff38cf4bfdbf6836a41ab9cc02
+msgid "Base pointer, local variable access"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:133
+#: ba30a6d207284faa9ac9d013b425e850
+msgid "ESI"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:135
+#: e27a342cb8c44061bf910e389df6b540
+msgid "Source index, string operations, text parsing"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:136
+#: 06123b9d47304208ae4126ed8699156e
+msgid "EDI"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:138
+#: 248c62a3deca4b72817a168141bbbef3
+msgid "Destination index, string operations, text output"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:139
+#: d92459bbe3d44387b360e28cc7d53c1e
+msgid "EIP"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:141
+#: cf9bed7836e54497b90618b0db7cab14
+msgid "Instruction pointer, program counter"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:142
+#: 8de9d40615d04874aa67fc4ac7aa5e13
+msgid "EFLAGS"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:144
+#: 34f693936ad64e2f873f9ce574d1e405
+msgid "Status flags, Arabic text processing state"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:146
+#: 2aef67e7362746199f357781379ff12d
+msgid "**System Call Interface**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:148
+#: 1b947dd7c0f7484b922155bcafa7f86d
+msgid "Arabic OS extends standard system calls with Arabic-specific operations:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:177
+#: d34547e92d6d46cf9f4e512246988e85
+msgid "Kernel Execution Simulation"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:180
+#: 69b43576c8214f59bf58dd0ebc350c5a
+msgid "Process Scheduling"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:182
+#: 9d5d477b8ffa4a3ebec90f8c8fb05c06
+msgid "The debugger simulates Arabic OS process scheduling:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:246
+#: cca3c61adde14427abab6b94433a1602
+msgid "Interrupt Handling"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:248
+#: 8f2fcc023c434e98a046a1c3654f14e8
+msgid "Arabic OS interrupt management with debugging support:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:317
+#: 584eeeca5bcf43d09053f787de5cdd9c
+msgid "Memory Management Debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:320
+#: 167ea6079f224198afe47e4083c7a6c9
+msgid "Virtual Memory Visualization"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:322
+#: 6742648c0c1a44538d1b453d88525848
+msgid "The debugger provides detailed memory management visualization:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:387
+#: 0f3534c461eb4c3d8800dc98e331cc4e
+msgid "Arabic Text Processing Debug"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:390
+#: 1c80090a0bbd41a7a9c5183b48c5474e
+msgid "UTF-8 Processing Debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:392
+#: 65997bf2d6dd4e0c8193a32011b0a850
+msgid "Kernel-level UTF-8 processing with debug support:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:456
+#: e484281c62db4133af5ce24dbed34461
+msgid "BiDi Algorithm Debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:458
+#: c0cda925b12f4d819883007ab5e8d784
+msgid "Kernel-level BiDi processing with step-by-step debugging:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:536
+#: afcf8db8d9754f88a4891091775490b4
+msgid "Practical Exercises"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:539
+#: cd7263d588274bb6968be73da29a7b0b
+msgid "Exercise 1: System Call Tracing"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:541
+#: 7dbcc672c9d046648d7774fb17c8acfa
+msgid "Learn how system calls work in Arabic OS:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:543
+#: d596a49596914d23b77da7911a8d864b
+msgid "**Scenario**: Trace a file read operation with Arabic text"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:545
+#: 93ffb3188d794600b7b93cebd76f4c7e
+msgid "Start the kernel debugger"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:546
+#: a281e3f421e2433f8c9ec819411c894c
+msgid "Set a breakpoint on the read() system call"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:547
+#: 55db069e6b9c403995c5f01a5f2a96b8
+msgid "Execute a program that reads Arabic text from a file"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:548
+#: edfe1793d4104346956819675739fe30
+msgid "Step through the system call execution"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:549
+#: 0749c57a35314f4aa20f0bc52e8e97f7
+msgid "Observe register changes and memory access"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:551
+#: 06087f09bdfb49b9a71698b90b36b06b
+msgid ""
+"**Expected observations**: * System call number in EAX register * File "
+"descriptor in EBX register * Buffer address in ECX register * Byte count "
+"in EDX register * UTF-8 validation during read operation"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:559
+#: 253dc756457741309ea6a0449df9d932
+msgid "Exercise 2: Interrupt Handling Analysis"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:561
+#: f6db6a7cdf804ac284b1489a0e5421fd
+msgid "Understand how Arabic OS handles hardware interrupts:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:563
+#: 69c225b4152d42a9a823ac092f625437
+msgid "**Scenario**: Simulate keyboard interrupt with Arabic input"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:565
+#: 6d17ea5742cd45299b231913945038d1
+msgid "Set up the debugger to monitor interrupts"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:566
+#: f9f611ffee654c5cbd665c17c8ea6ccd
+msgid "Trigger a keyboard interrupt (IRQ 1)"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:567
+#: 4bb3c863a58347088eaa519dd77ac40b
+msgid "Watch the interrupt handler execution"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:568
+#: 3fe936fd43c54ae99624eee6b1838bc1
+msgid "Observe Arabic character processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:569
+#: 0a5a7c517ce14a89b0eaac33dda0849a
+msgid "Trace the path from hardware to user application"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:571
+#: 72a662eca6844614ac5ae37c6be557fc
+msgid ""
+"**Key debugging points**: * Interrupt descriptor table lookup * Register "
+"state saving and restoration * Arabic keyboard driver execution * "
+"Character encoding conversion * Event delivery to applications"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:579
+#: 0b225965169048419cdeb4809f38940e
+msgid "Exercise 3: Memory Management Debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:581
+#: 03e8c37d1df54792bc21050b47257f26
+msgid "Analyze memory allocation and management:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:583
+#: 33f847b6005a4e4c96ccc9c0c0625c1c
+msgid "**Scenario**: Debug Arabic text buffer allocation"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:585
+#: 217e41246c524753a6ccffd1162d6054
+msgid "Monitor memory management system calls"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:586
+#: 6bc7dfe6c47f479c9a3ba6e6ffc939c3
+msgid "Allocate a buffer for Arabic text processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:587
+#: 0fd81c29db244c65b856bef547f0f34d
+msgid "Watch page table updates"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:588
+#: 832f3ade47174998b8e4543f674d34b8
+msgid "Observe virtual to physical address translation"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:589
+#: 47b60ccd8ea640249f46d082b342056a
+msgid "Track memory usage statistics"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:591
+#: d912478ca8c141de8ce4cf4d14f53287
+msgid ""
+"**Memory debugging focuses**: * Page fault handling * Memory mapping "
+"operations * Cache behavior with Arabic text * Memory fragmentation "
+"analysis"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:598
+#: f4516896766c4ca893c7c0e1f757980d
+msgid "Advanced Debugging Techniques"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:601
+#: 3e9c76c9563045fb976fc5d2f78d3422
+msgid "Kernel Crash Analysis"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:603
+#: 9d07bdadbb214ac9acbeb94b6f960b5e
+msgid "Diagnosing kernel panics and crashes:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:649
+#: 73a576c3cf234b18b4b5858350379653
+msgid "Performance Profiling"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:651
+#: c1135565d6c04cb5ae3b5352a69b3cbf
+msgid "Kernel performance analysis tools:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:711
+#: aa29b48d5c304b18b23358fba5744c5a
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:714
+#: 45a26bcc33534025bc6ce3b5470ac2be
+msgid "Operating System Development"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:716
+#: 8f5270035f7447e891aa050f5add930f
+msgid "Kernel debugging skills are essential for:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:718
+#: 3afad1dda0c7459d87e594664ad1f370
+msgid "**OS Kernel Development**: Building and debugging kernel components"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:719
+#: 1fee4f8636a242f4999b0212b468c094
+msgid ""
+"**Device Driver Writing**: Developing hardware drivers with debugging "
+"support"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:720
+#: c985fc5dcdc64666ad072cde8af850c6
+msgid "**System Optimization**: Identifying and fixing performance bottlenecks"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:721
+#: ed974a1784bb4a629734cd07aca767e8
+msgid "**Security Research**: Analyzing kernel vulnerabilities and exploits"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:724
+#: 4a7b1fe2f0d4451ab7d6a01906388771
+msgid "Arabic Computing Systems"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:726
+#: 8663d342c785454a865db74905f06632
+msgid "Specialized debugging for Arabic systems:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:728
+#: 308e65ab3c884286bdd276216fa37ca4
+msgid "**Text Processing Optimization**: Debugging Arabic text algorithms"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:729
+#: 70da1094bb28479d83d1c4062865def2
+msgid "**Encoding Issues**: Diagnosing character encoding problems"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:730
+#: 158083c768634dfc890bf278d2ba5321
+msgid "**Memory Management**: Optimizing memory usage for Arabic applications"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:731
+#: 2197d1b29c6c4c2da2dc6faa26721e73
+msgid "**Performance Tuning**: Improving Arabic text processing speed"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:734
+#: 3c7f8391e852400a8d8d4eb0507733a5
+msgid "Educational Applications"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:736
+#: 71b95af79d4f47af83d68a6bf08b6aaf
+msgid "Teaching operating system concepts:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:738
+#: c27ad38e77324c1ba5cca0d9de8c487b
+msgid "**Computer Science Education**: Hands-on OS kernel experience"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:739
+#: 3354dc7ca7584c818e8cd7d72d7546e8
+msgid "**Systems Programming**: Understanding low-level system behavior"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:740
+#: ac9818dfd0cb41d6b3f7984b2d318257
+msgid "**Debugging Methodology**: Learning systematic debugging approaches"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:741
+#: fb8e8578d4d44996be93319458d184b0
+msgid "**Arabic Computing**: Specialized knowledge for multilingual systems"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:744
+#: 8ff666baccd241b49b7222f58960acd0
+msgid "Integration with Arabic OS"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:747
+#: 3b924c30da1249da9d679f690aa1263f
+msgid "Development Environment"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:749
+#: 1f157cf3dfaf475ea66c0b1bebabbb4b
+msgid "The kernel debugger integrates with:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:751
+#: cebe95b2fd1f4f158aed4439a2841130
+msgid "**Development Tools**: IDE integration for kernel debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:752
+#: d31fe2b36ecb40ab81157150af6897e3
+msgid "**Testing Framework**: Automated kernel testing and validation"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:753
+#: d9b2490c78764cbe8c3dd460d5dac6b4
+msgid "**Documentation System**: Generating debugging documentation"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:754
+#: 82be2b15e0484ad0ad615fde5918650b
+msgid "**Version Control**: Tracking kernel changes with debug information"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:757
+#: ca7f8b05b94a4ce7995e6dad6f5f7b37
+msgid "System Monitoring"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:759
+#: a9e8397cfcca4977ada7be0b7870cea5
+msgid "Production debugging capabilities:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:761
+#: 5e4724cfef7848be8b828cf0819f240d
+msgid "**Live System Debugging**: Remote debugging of running systems"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:762
+#: 85a7a532766247ce805332062e2a3aa3
+msgid "**Performance Monitoring**: Continuous system performance tracking"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:763
+#: 03baff5984da43109cabff82ddc151bb
+msgid "**Error Logging**: Comprehensive kernel error and warning logs"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:764
+#: 018589e5c2c04c448770880bab0db16b
+msgid "**Crash Dump Analysis**: Automated crash analysis and reporting"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:767
+#: e3f05ad7a0754e59afc973b87fc03f6c
+msgid "API Reference"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:769
+#: 819b74663764461c9d62f3f784f4bf2d
+msgid "For developers building debugging tools:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:771
+#: b7a76fd58f6842acb2499067a5756b1b
+msgid "**Kernel Debugger API**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:801
+#: a1123403c3324903bae4dfc7bc8f88c7
+msgid "**JavaScript Debugger Interface**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:844
+#: 0d38496f31a342ddb85a7657e8449ca2
+msgid "Integration with Other Tools"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:846
+#: f9e3953c63304cdab91208cfc9affd40
+msgid "The Kernel Debugger complements other Arabic OS tools:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:848
+#: c7fcaa94fe5e41c2ac133d81f0031b60
+msgid "Use :doc:`memory-layout` knowledge for memory debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:849
+#: 29b1c32db0b8483db02526bf3efcc65a
+msgid "Apply :doc:`assembly-simulator` understanding for low-level debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:850
+#: ccec41380086462a8f46f6e2ca395048
+msgid "Reference :doc:`utf8-visualizer` for text processing debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:851
+#: cba79a94ee3d41c0b7f8ec4e58334c0e
+msgid "Connect to :doc:`font-renderer` for graphics debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:853
+#: 4596f251f62645c2a23e2b18950990b8
+msgid ""
+"Understanding kernel debugging is crucial for operating system "
+"development, system optimization, and creating robust Arabic computing "
+"systems."
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:856
+#: 19af9a14589e4fcdace66e44672de481
+msgid "Further Learning"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:858
+#: 905bfa4e9b6944a6919d1ad0440f052a
+msgid "Continue your kernel debugging journey with:"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:860
+#: d64f8c0bb5954564a17000765717b59c
+msgid ":doc:`assembly-simulator` - Low-level assembly and hardware debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:861
+#: 64f2f14cf13a41459fc0f8237401e585
+msgid ":doc:`memory-layout` - Advanced memory management debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:862
+#: 54200cfcefe146e6b2c81af41bc1bf99
+msgid ""
+":doc:`../../../tutorials/advanced/kernel-development` - Building Arabic "
+"OS components"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:863
+#: 59cdedc0203c4e599dfc4ceb310fe2da
+msgid ""
+":doc:`../../../developer-guide/api/kernel-interfaces` - Kernel API "
+"development"
+msgstr ""
+
+#: ../../source/user-guide/tools/kernel-debugger.rst:865
+#: 5acc4358b62645308b2fbfeaed62afca
+msgid ""
+"Master kernel debugging techniques to become proficient in operating "
+"system development and Arabic computing system optimization."
+msgstr ""
+

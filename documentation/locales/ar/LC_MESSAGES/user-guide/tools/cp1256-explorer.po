@@ -1,0 +1,741 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-29 12:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:2
+#: 3db939d1fbe64369aee13b385194cf2a
+msgid "CP1256 Character Encoding Explorer"
+msgstr "مستكشف ترميز الأحرف CP1256"
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:4
+#: 49460ac1387c4dfbb036c23900a6c419
+msgid ""
+"The CP1256 Character Encoding Explorer is an interactive educational tool"
+" designed to help you understand the CP1256 (Windows-1256) character "
+"encoding system, which has been widely used for Arabic text "
+"representation in computing systems."
+msgstr ""
+"مستكشف ترميز الأحرف CP1256 هو أداة تعليمية تفاعلية مصممة لمساعدتك على فهم "
+"نظام ترميز الأحرف CP1256 (Windows-1256)، والذي تم استخدامه على نطاق واسع "
+"لتمثيل النصوص العربية في أنظمة الحاسوب."
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:7
+#: 957ad4c629084299b3114565e55faaae
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:9
+#: d6e6277838bb43b9ba1e1ffbba026358
+msgid ""
+"CP1256, also known as Windows-1256, is a single-byte character encoding "
+"that was designed to support Arabic script alongside Latin characters. "
+"Despite being largely superseded by UTF-8, CP1256 remains important for "
+"understanding legacy systems and the evolution of Arabic computing."
+msgstr ""
+"CP1256، المعروف أيضاً باسم Windows-1256، هو ترميز أحرف أحادي البايت "
+"صُمم لدعم الخط العربي جنباً إلى جنب مع الأحرف اللاتينية. على الرغم من "
+"استبداله إلى حد كبير بـ UTF-8، يبقى CP1256 مهماً لفهم الأنظمة القديمة "
+"وتطور الحوسبة العربية."
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:12
+#: 6cacbae9198e4fb09e2a6a2feb5d812c
+msgid "Key Learning Objectives"
+msgstr "أهداف التعلم الرئيسية"
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:14
+#: efe5b3b7de9949af9b1f4913bc20a7ff
+msgid "By using this tool, you will learn:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:16
+#: 9ecbcbde71c04ed3b8a8b59eb100da9f
+msgid "How single-byte character encodings work"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:17
+#: 4eb61fd4da804d0b9ea4732eff670b19
+msgid "The structure and organization of the CP1256 character set"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:18
+#: 1f68cc670f294339836c84d272fc102e
+msgid "The relationship between CP1256 and Unicode"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:19
+#: 66887d7406c0429bb988abe81abe5dd5
+msgid "Common challenges in legacy Arabic text processing"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:20
+#: 644b7411bd824ce08343bf73cd3fb974
+msgid "Migration strategies from CP1256 to modern encoding systems"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:23
+#: 9b6d354b3aee45d8ad540a53570de11b
+msgid "Interactive Features"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:26
+#: 1ee75bfb234a4a2ea35e0f9f63f615b9
+msgid "Character Map Exploration"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:28
+#: d544ffecfc7e4a8a90b675662ff55160
+msgid ""
+"The tool displays all 256 characters in the CP1256 encoding as an "
+"interactive grid:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:30
+#: 0b207ed88af146d985707bd094573162
+msgid "**Visual Representation**: See each character as it appears"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:31
+#: 54ff5807bd424eadb728e4895521a54c
+msgid "**Encoding Information**: View decimal, hexadecimal, and binary values"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:32
+#: 9f8ee8cb9063476a9d609186a2211f06
+msgid "**Unicode Mapping**: Discover corresponding Unicode code points"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:33
+#: 38bbe062e45e46b6a57d5e881cd5ad8e
+msgid ""
+"**Character Categories**: Understand ASCII, extended, and Arabic "
+"character ranges"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:36
+#: 980a2281e84c452e9b30ec901cf06570
+msgid "Real-time Text Analysis"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:38
+#: 88654bd348c94d5c83145e8718dbfbfe
+msgid "Enter Arabic text to see how it would be encoded in CP1256:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:40
+#: 5be0ec4972f141349c93521da1657e70
+msgid "**Byte-by-byte Breakdown**: See the exact byte values for each character"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:41
+#: 0978f7f1b6094507857205531f8ca465
+msgid "**Encoding Validation**: Identify characters that cannot be represented"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:42
+#: 596ab16060a741ed998eec2588b7617e
+msgid "**Comparison Mode**: Compare CP1256 with UTF-8 encoding"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:43
+#: 997e6d61b8ee40a9ab5cf506f48d0ce1
+msgid "**Legacy Text Simulation**: Experience how text appeared in older systems"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:46
+#: eef2b0a2fd8d4a0db58036fbe4faedfd
+msgid "Character Details Panel"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:48
+#: 839d3335b0a84c2197e5a5a0983bb566
+msgid "Click any character to access comprehensive information:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:50
+#: 10f77576c773469081e339ce93685a9a
+msgid "**Character Properties**: Name, category, and script information"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:51
+#: 3afbab5be33b41e8beba7eeb53f50456
+msgid "**Encoding Details**: Multiple numeric representations"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:52
+#: a4f2362e37184bec8455394fae0498f3
+msgid "**Usage Context**: Where and how the character is typically used"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:53
+#: a05b54a7faea4dccb5db439ec2926d15
+msgid "**Historical Notes**: Background on character design and usage"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:56
+#: 6b1c41dff1664e26aa78d7ff2db507c9
+msgid "Technical Specifications"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:59
+#: 3268ab8cd8824051a82c63003afd0fa8
+msgid "CP1256 Character Ranges"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:61
+#: 48676ab7366840ab9cd89cfa2ac380e4
+msgid "The CP1256 encoding is organized into distinct ranges:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:63
+#: 5210ffe4f2d74f909a6abe5be20e7e54
+msgid "**ASCII Compatible Range (0x00-0x7F)**"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:64
+#: d67c965dd588462dab08f8feb71ec43e
+msgid "Standard ASCII characters including:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:66
+#: 200ed250f15648bd9aed2afc53c1b31b
+msgid "Control characters (0x00-0x1F)"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:67
+#: 52a3dc97fdb04f6393ecbe283188e19b
+msgid "Printable ASCII (0x20-0x7E)"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:68
+#: fe594d617f204149bbd586bbcdd39af4
+msgid "DEL character (0x7F)"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:70
+#: 745a01c201004fdb88b8a3c4f0f25123
+msgid "**Extended Range (0x80-0x9F)**"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:71
+#: dcc4d6d8ebd74c0e8db9d75be17cd754
+msgid "Additional symbols and control characters:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:73
+#: 9bc973f6358446f09630c7294495cf54
+msgid "European currency symbols"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:74
+#: 2a4941644de949dd86b3f471cf1efa73
+msgid "Quotation marks and punctuation"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:75
+#: 8d9ea80d6bfa479c853d71526ff0ee20
+msgid "Some Arabic punctuation marks"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:77
+#: 607a3bc16862464c911fc21520937aad
+msgid "**Arabic Range (0xA0-0xFF)**"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:78
+#: 5e6915a0c5ea4a94817d51a9669a5885
+msgid "Arabic letters and symbols:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:80
+#: 2b16815c290c4bcea3629434815c45cb
+msgid "Arabic-Indic digits (٠-٩)"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:81
+#: 473c7bfb00d740ec9462cdc1c7910f3f
+msgid "Arabic letters (ا-ي)"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:82
+#: 52d27a1f55d84f8c92b3d0cb45411d04
+msgid "Arabic punctuation and symbols"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:83
+#: 2cd96624887d47dfb890ff34761d25d7
+msgid "Extended Latin characters for European languages"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:86
+#: 789a4533c53747a5a3d172d93ac4699c
+msgid "Character Encoding Details"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:88
+#: 781f75e37f464c64897b1f3e87618c28
+msgid "**Encoding Properties:**"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:90
+#: 5f19db2d8edf4b7dbe2af1f90201d8e9
+msgid "**Type**: Single-byte character encoding"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:91
+#: ede0eee048a746fa90cb149adc8f068d
+msgid "**Total Characters**: 256 possible values"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:92
+#: db41914615d84370bd5ea41d8da2010e
+msgid "**Arabic Characters**: Approximately 100 Arabic letters and symbols"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:93
+#: c8fddcb5221041b89534695e16397d1e
+msgid "**Byte Order**: Not applicable (single-byte)"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:94
+#: 76f3fe07cb9d4624b1c0a48acb84f8c8
+msgid "**Compatibility**: Windows systems, legacy applications"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:96
+#: 3cf34216c3114ff899d494796a00a9d2
+msgid "**Comparison with Unicode:**"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:98
+#: a0d58d5201144936824582248492daa3
+msgid "Encoding Comparison"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:102
+#: 6df08aba57a44051ab5540722f5e7507
+msgid "Aspect"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:103
+#: 22dd021ffbac4632845c25278b8c453e
+msgid "CP1256"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:104
+#: 6ce9d5d097124e42b56764a1181bc528
+msgid "Unicode/UTF-8"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:105
+#: ca737164b8d343b986b8cb795ff771f9
+msgid "Notes"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:106
+#: e8f026d8a1d04523bedec34e727020b0
+msgid "Character Space"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:107
+#: f1bf25910cd246c091ad68475ffbe92c
+msgid "256 characters"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:108
+#: d48afa40089a40d1a88fdbb154bd94b6
+msgid "1.1+ million"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:109
+#: 878a29db0a9d41bf8e2f832c2ef7b79c
+msgid "UTF-8 supports all world scripts"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:110
+#: 139c4f22f3ce4c0094e7f4d829fe06b9
+msgid "Arabic Support"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:111
+#: b0f13a2d9d154488b17936fcca15873f
+msgid "Basic Arabic"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:112
+#: b62775ecef764c6b9debd8697585540d
+msgid "Complete Arabic"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:113
+#: ee9bf5ef6657447bb34d601991f49e15
+msgid "UTF-8 includes all Arabic variants"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:114
+#: c0cca93a693b486d8886b0461583754e
+msgid "Byte Usage"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:115
+#: 9e7ab1477af54ae8aa8df35ad130e4f3
+msgid "Always 1 byte"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:116
+#: f7affe2eee974122867e32b2fe319ec4
+msgid "1-4 bytes"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:117
+#: f44e82ff5bc4479c9991f2f6072bc508
+msgid "UTF-8 variable length"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:118
+#: 26807723b1c54120a52c9b5dc5151119
+msgid "Compatibility"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:119
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:120
+#: 30c5a44496ff4ddfaceddb1d2762c7b5 3aef661411394dc9a096dd14c363cc81
+msgid "ASCII compatible"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:121
+#: 6ab1acea9e774da5bb2f7f2b61f66e21
+msgid "Both preserve ASCII range"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:124
+#: a771692bc45a4938a26a9920d4c53ec8
+msgid "Practical Exercises"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:127
+#: e42942bf06734104883ca8fba5700c18
+msgid "Exercise 1: Character Hunt"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:129
+#: 6af8b4251c75496ea2e84a94cb8df174
+msgid "Use the interactive map to find specific characters:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:131
+#: 9f63ab754b88444a95a8f8eda1928fa8
+msgid "Locate the Arabic letter \"ص\" (Sad)"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:132
+#: e3768c9bb1d9484c9a6a093852dfda75
+msgid "Find its CP1256 code (decimal and hexadecimal)"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:133
+#: 17ca60f66e1a4792ac6fe6a37bd9b00c
+msgid "Identify the corresponding Unicode code point"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:134
+#: c3028614f6384c5ca92ce364efbd0dba
+msgid "Compare the byte representation with UTF-8"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:136
+#: 51ae046e31fc4a6a80402ea2acb4e46b
+msgid ""
+"**Expected Results:** * CP1256: 213 (0xD5) * Unicode: U+0635 * UTF-8: "
+"0xD8 0xB5 (two bytes)"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:142
+#: 19e6cf87a1064e0d95de826e95496434
+msgid "Exercise 2: Text Encoding Analysis"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:144
+#: f619e528a95b40c6b3c8f1709f1ec935
+msgid "Analyze how a common Arabic phrase is encoded:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:146
+#: ff7cb944439b4f4689b7a2f2d39f0226
+msgid "**Text to analyze**: \"مرحبا\" (Hello)"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:148
+#: aac124c41b1346d29c61453b6830b99e
+msgid "Enter the text in the analysis panel"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:149
+#: d3a855d6c5084518b8392b9018ba78f8
+msgid "Record the CP1256 byte sequence"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:150
+#: f1dc1230edfd4b96848bd4cd1843051e
+msgid "Note any encoding issues or limitations"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:151
+#: fc9b6965018f42fb82f4eddb24c54f1d
+msgid "Compare with the UTF-8 representation"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:154
+#: 7279d9ed55274b53b29700a35e669cff
+msgid "Exercise 3: Legacy Migration Scenario"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:156
+#: 103ef0fb864b49a7be3c9bc18387750c
+msgid "Simulate a real-world migration scenario:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:158
+#: 4ee1419f94fc4f2ab698508bc86586fb
+msgid ""
+"Identify characters that exist in CP1256 but require multiple bytes in "
+"UTF-8"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:159
+#: 992cb11beacb4814b44b9938005894e4
+msgid "Find Unicode characters that cannot be represented in CP1256"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:160
+#: f4036f83fb5849b6ba6d70ebfb80946e
+msgid "Analyze the implications for legacy data migration"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:161
+#: 57936331d24740faa536139d05842f93
+msgid "Propose strategies for handling encoding conversion"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:164
+#: b0f3ae34ad444255baf2a40089f9802e
+msgid "Common Issues and Solutions"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:167
+#: f778310221b34d7d8bda7c0d7c9b89bd
+msgid "Character Display Problems"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:169
+#: 4f5923efb1c34e53beb0293b83f2450c
+msgid "**Problem**: Arabic text displays as question marks or boxes"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:171
+#: 55d7d91031ef475d83ddef9cb1784875
+msgid ""
+"**Causes**: * Missing Arabic font support * Incorrect character encoding "
+"detection * Legacy system limitations"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:176
+#: ca44513e56714fb096f441988b6e1758
+msgid ""
+"**Solutions**: * Ensure proper font installation * Specify character "
+"encoding explicitly * Use encoding detection tools"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:181
+#: ae8e661882d246beaae61d516ad1b31d
+msgid "**Code Example**:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:192
+#: 4c976983d56d4c7cb56678821d5d5546
+msgid "Text Direction Issues"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:194
+#: 2c71907d92774c7399d91dc943f3a87a
+msgid "**Problem**: Arabic text displays left-to-right instead of right-to-left"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:196
+#: 1c07a2728b404d7fb304864776712eed
+msgid ""
+"**Causes**: * Missing RTL direction specification * Browser default "
+"handling * CSS direction conflicts"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:201
+#: 3fa1c706bdf9457582d93bd31ca61159
+msgid "**Solutions**:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:213
+#: 8f3ab944ee7049dfb32128354a52b157
+msgid "Migration Challenges"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:215
+#: 3402e5bdb196432a87ef5c7795bc03ae
+msgid "**Problem**: Data corruption during CP1256 to UTF-8 conversion"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:217
+#: cf4f54eeb5d44f4da090930eacf1bb07
+msgid ""
+"**Prevention Strategies**: * Always backup original data * Use verified "
+"conversion tools * Test conversion with sample data * Validate character "
+"mapping accuracy"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:224
+#: f2e9d4c3a0be43629f9c66399c240e13
+msgid "Real-world Applications"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:227
+#: f0d3f48aece74fcb9b29250145cf3455
+msgid "Legacy System Support"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:229
+#: ac0bb6bccd6644c583588efc65f31f5b
+msgid "Understanding CP1256 is essential for:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:231
+#: b3f6be4b6cb64af9b3b763287aa0b75c
+msgid "**Database Migration**: Converting legacy Arabic databases"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:232
+#: a8bc182b1cf14d469fb94dc389a3777c
+msgid "**Document Processing**: Handling older Arabic documents"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:233
+#: fc2d427519bc42f4b5c841069bef49c7
+msgid "**System Integration**: Interfacing with legacy Arabic systems"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:234
+#: c5684926146c40b0823b1750ac1eaa34
+msgid "**Data Recovery**: Recovering corrupted Arabic text files"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:237
+#: 8fc61ea268d4452e9dbefc9842fc403a
+msgid "Educational Value"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:239
+#: 80ca6bfd85764ab189b3931e05f27e1b
+msgid "CP1256 provides excellent learning opportunities for:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:241
+#: e78e5eb7b439437dae085bfd741e0537
+msgid ""
+"**Character Encoding Concepts**: Understanding single-byte vs multi-byte "
+"systems"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:242
+#: 8f8122e14f544459bf467833a299c712
+msgid "**Arabic Computing History**: Evolution of Arabic text processing"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:243
+#: 061f0f8e47a2406da9ee0d807c81f03d
+msgid "**Internationalization**: Challenges in multilingual software development"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:244
+#: 4e12ce0d849142f29b29b6346085eb34
+msgid "**System Design**: Trade-offs in character encoding design"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:247
+#: f414dc75d95347ba9fac2efdc8d4fefb
+msgid "API Reference"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:249
+#: ba75d8a7c43440b791a36f2189065cda
+msgid "For developers integrating CP1256 functionality:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:251
+#: c46d2feeb5ca4c299784b3bc06a660ee
+msgid "**JavaScript Integration:**"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:269
+#: f20014b5759a4cfc908db3ec1ad06e21
+msgid "**Python Integration:**"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:285
+#: 3eb08e4c005647a1bf7044f230235f41
+msgid "Further Learning"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:287
+#: 77ff0dc8c8d54c5a9ec5113453097d92
+msgid "Continue your Arabic computing journey with these related topics:"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:289
+#: 5a87fd092e954fe0bbc0948721491b23
+msgid ":doc:`utf8-visualizer` - Explore modern Unicode encoding"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:290
+#: 04eff4fef1f049a4a202712cc4d5f5d7
+msgid ":doc:`bidi-demo` - Understand bidirectional text algorithms"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:291
+#: 1963a0cb132444bc933b6e8760e6c6ae
+msgid ""
+":doc:`../../../tutorials/beginner/understanding-encoding` - Deep dive "
+"into character encoding theory"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:292
+#: 616eb3e23ee74593b3d417f4003a178c
+msgid ""
+":doc:`../../../developer-guide/api/character-encoding` - Technical "
+"implementation details"
+msgstr ""
+
+#: ../../../source/user-guide/tools/cp1256-explorer.rst:294
+#: 8dab9033cefd403bae61bd36cb5f539c
+msgid ""
+"The CP1256 Explorer provides a solid foundation for understanding Arabic "
+"character encoding. Master these concepts before moving on to more "
+"complex topics like Unicode normalization and advanced text processing "
+"algorithms."
+msgstr ""
+

@@ -11,9 +11,8 @@
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/arabic-style.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/interactive-embed.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/rtl-layout.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/responsive-design.css" />
 
   
@@ -29,6 +28,7 @@
       <script>let toggleOpenOnPrint = 'true';</script>
       <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
       <script src="../../_static/js/interactive-embed.js"></script>
       <script src="../../_static/js/arabic-support.js"></script>
@@ -1077,6 +1077,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../developer-guide/translation/index.html">Translation System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/quick-reference.html">Quick Reference: .po File Generation and Translation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/quick-reference.html#prerequisites-checklist">Prerequisites Checklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/quick-reference.html#step-1-environment-setup-5-minutes">Step 1: Environment Setup (5 minutes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/quick-reference.html#step-2-generate-translation-files-2-minutes">Step 2: Generate Translation Files (2 minutes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/quick-reference.html#step-3-translation-process">Step 3: Translation Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/quick-reference.html#step-4-build-and-test-2-minutes">Step 4: Build and Test (2 minutes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/quick-reference.html#step-5-commit-and-share">Step 5: Commit and Share</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/quick-reference.html#common-commands-reference">Common Commands Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/quick-reference.html#troubleshooting-quick-fixes">Troubleshooting Quick Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/quick-reference.html#translation-statistics-and-progress">Translation Statistics and Progress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/quick-reference.html#quick-start-workflow-summary">Quick Start Workflow Summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/translation-workflow.html">Translation Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/translation-workflow.html#workflow-overview">Workflow Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/translation-workflow.html#step-by-step-process">Step-by-Step Process</a><ul>
@@ -1133,6 +1144,53 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/translator-setup.html#success-metrics">Success Metrics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/translator-setup.html#next-steps">Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html">Translation Assessment Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#installation-and-setup">Installation and Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#basic-usage">Basic Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#detailed-report">Detailed Report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#simple-summary">Simple Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#advanced-options">Advanced Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#language-selection">Language Selection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#custom-locale-directory">Custom Locale Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#understanding-status-indicators">Understanding Status Indicators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#visual-indicators">Visual Indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#file-categories">File Categories</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#priority-recommendations">Priority Recommendations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#untranslated-files">Untranslated Files (❗)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#partial-files">Partial Files (🟡)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#professional-workflow-integration">Professional Workflow Integration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#project-planning">Project Planning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#regular-monitoring">Regular Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#continuous-integration">Continuous Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#automation-and-scripting">Automation and Scripting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#batch-analysis">Batch Analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#progress-tracking">Progress Tracking</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#common-issues">Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#for-translation-teams">For Translation Teams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#for-project-managers">For Project Managers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#for-quality-assurance">For Quality Assurance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#integration-with-translation-tools">Integration with Translation Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/assessment-tool.html#see-also">See Also</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/arabic-style-guide.html">Arabic Style Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/arabic-style-guide.html#translation-philosophy">Translation Philosophy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../developer-guide/translation/arabic-style-guide.html#arabic-language-standards">Arabic Language Standards</a><ul>
@@ -1218,6 +1276,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../../developer-guide/translation/index.html#getting-started">Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../developer-guide/translation/index.html#translation-impact">Translation Impact</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../developer-guide/translation/index.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../developer-guide/api/index.html">API Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../developer-guide/api/index.html#available-apis">Available APIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../developer-guide/api/index.html#coming-soon">Coming Soon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../developer-guide/build-tutorial/index.html">Build Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../developer-guide/build-tutorial/index.html#build-requirements">Build Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../developer-guide/build-tutorial/index.html#build-process">Build Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../developer-guide/build-tutorial/index.html#coming-soon">Coming Soon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../developer-guide/integration/index.html">Integration Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../developer-guide/integration/index.html#integration-topics">Integration Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../developer-guide/integration/index.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../developer-guide/integration/index.html#coming-soon">Coming Soon</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../developer-guide/index.html#overview">Overview</a></li>
@@ -1225,6 +1294,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../developer-guide/index.html#development-principles">Development Principles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../developer-guide/index.html#quick-reference">Quick Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../developer-guide/index.html#contributing">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/api/index.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/api/index.html#available-apis">Available APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/api/index.html#coming-soon">Coming Soon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/build-tutorial/index.html">Build Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/build-tutorial/index.html#build-requirements">Build Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/build-tutorial/index.html#build-process">Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/build-tutorial/index.html#coming-soon">Coming Soon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/integration/index.html">Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/integration/index.html#integration-topics">Integration Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/integration/index.html#best-practices">Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer-guide/integration/index.html#coming-soon">Coming Soon</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Educator Guide</span></p>
 <ul>
@@ -1673,7 +1753,7 @@ sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;1s/^\
 
   <div role="contentinfo">
     <p>&#169; Copyright 2025, Arabic OS Development Team.
-      <span class="lastupdated">Last updated on Sep 29, 2025.
+      <span class="lastupdated">Last updated on Sep 30, 2025.
       </span></p>
   </div>
 

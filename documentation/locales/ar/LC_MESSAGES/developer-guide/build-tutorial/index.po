@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/developer-guide/build-tutorial/index.rst:2
+#: 137099b6e5a24e898a78f776182afa9d
+msgid "Build Tutorial"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:4
+#: 30c52ebfccd6452c9065e7fb88d3fe24
+msgid ""
+"This section provides step-by-step instructions for building Arabic OS "
+"from source."
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:7
+#: 095eba6ba05f425b89239760c199b09e
+msgid ""
+"Build tutorial is under development and will be available in future "
+"releases."
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:10
+#: 2d5e4a47d7b04da08563dbef4fda306f
+msgid "Build Requirements"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:12
+#: 516b91eeae4b4b8e997375814f1e41df
+msgid "**System Requirements**: Minimum hardware and software specifications"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:13
+#: 36bfec76093e4b10a2b5c3dcd179cea2
+msgid "**Development Tools**: Required compilers, tools, and dependencies"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:14
+#: a119582b988240179582b982ca243180
+msgid "**Build Environment**: Setting up the development environment"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:15
+#: c32781d161af426da0ebfbebceaf8f11
+msgid "**Cross-compilation**: Building for different target architectures"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:18
+#: 39bd83f7c05a4a0f981fd0a72005d06a
+msgid "Build Process"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:20
+#: f9949f789a614853b734841c9a7d427f
+msgid "**Kernel Build**: Compiling the Arabic OS kernel"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:21
+#: 257f7a67c1bc4b4c840e2e12f03cbaed
+msgid "**Driver Compilation**: Building device drivers"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:22
+#: a9a7172b6f714c2487d5477d5eada0cf
+msgid "**System Libraries**: Compiling system libraries and frameworks"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:23
+#: 1fa3445feac74412b070674fe4f93895
+msgid "**User Space**: Building user-space applications and tools"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:26
+#: 2186275484af42859c1b1438738617ca
+msgid "Coming Soon"
+msgstr ""
+
+#: ../../source/developer-guide/build-tutorial/index.rst:28
+#: e49f0808044b4398a8eec58c592662ed
+msgid ""
+"Complete build instructions and tutorials will be added in upcoming "
+"releases."
+msgstr ""
+

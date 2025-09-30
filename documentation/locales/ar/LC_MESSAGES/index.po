@@ -1,0 +1,303 @@
+# Arabic OS Interactive Learning Platform Documentation - Arabic Translation
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# Arabic OS Translation Team <team@arabicos.org>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: 2025-09-30 10:30+0000\n"
+"Last-Translator: Arabic OS Translation Team <team@arabicos.org>\n"
+"Language: ar\n"
+"Language-Team: Arabic OS Translation Team <team@arabicos.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/index.rst:6
+msgid "User Guide"
+msgstr "دليل المستخدم"
+
+#: ../../source/index.rst:15
+msgid "Developer Guide"
+msgstr "دليل المطور"
+
+#: ../../source/index.rst:25
+msgid "Educator Guide"
+msgstr "دليل المعلم"
+
+#: ../../source/index.rst:36 ../../source/index.rst:151
+#: 11e5d5c769474a048ae2404624f99f21
+msgid "Tutorials"
+msgstr "الدروس التعليمية"
+
+#: ../../source/index.rst:46
+msgid "Reference"
+msgstr "المرجع"
+
+#: ../../source/index.rst:55
+msgid "About"
+msgstr "حول"
+
+#: ../../source/index.rst:2 ccee4cdb6616489281612be420f856bf
+msgid "Arabic OS Interactive Learning Platform Documentation"
+msgstr "وثائق منصة التعلم التفاعلية لنظام التشغيل العربي"
+
+#: ../../source/index.rst:4 75a584c926fb43f2864fc4f8c8eaa531
+msgid ""
+"Welcome to the comprehensive documentation for the Arabic OS Interactive "
+"Learning Platform - an enterprise-grade educational system for Arabic "
+"computing and operating system development."
+msgstr ""
+"مرحباً بكم في الوثائق الشاملة لمنصة التعلم التفاعلية لنظام التشغيل العربي - "
+"نظام تعليمي متقدم على مستوى المؤسسات للحوسبة العربية وتطوير أنظمة التشغيل."
+
+#: ../../source/index.rst:65 41bcb0dfb0bd4a87b9353028be64d72e
+msgid "Platform Overview"
+msgstr "نظرة عامة على المنصة"
+
+#: ../../source/index.rst:67 981dd730af9d44bba1686fb41f356dc0
+msgid ""
+"The Arabic OS Interactive Learning Platform is an enterprise-grade "
+"educational system designed for:"
+msgstr ""
+"منصة التعلم التفاعلية لنظام التشغيل العربي هي نظام تعليمي متقدم على مستوى "
+"المؤسسات مصمم لـ:"
+
+#: ../../source/index.rst:69 7da58ef194c84ea79a622966d2a72dea
+msgid "**Universities and Academic Institutions**"
+msgstr "**الجامعات والمؤسسات الأكاديمية**"
+
+#: ../../source/index.rst:70 83bf8e72dba34e498b74fac22f2e02f0
+msgid "**Corporate Training Programs**"
+msgstr "**برامج التدريب المؤسسي**"
+
+#: ../../source/index.rst:71 c9f671aa1f83410f9068eb61e60d0c99
+msgid "**Government Technology Initiatives**"
+msgstr "**مبادرات التكنولوجيا الحكومية**"
+
+#: ../../source/index.rst:72 2a270475fb22405d9c86a121683748ab
+msgid "**Open Source Community Education**"
+msgstr "**تعليم مجتمع المصادر المفتوحة**"
+
+#: ../../source/index.rst:75 3470be87a1b44be4b05f4c0b6a16f4d0
+msgid "Key Components"
+msgstr "المكونات الرئيسية"
+
+#: ../../source/index.rst:78 fffc8de54e5d4dbda479cb4429643e86
+msgid "Interactive Learning Tools"
+msgstr "أدوات التعلم التفاعلية"
+
+#: ../../source/index.rst:80 793cc029602e4fdf9f3ce9179d96c162
+msgid "Our platform includes 8 comprehensive interactive tools:"
+msgstr "تتضمن منصتنا 8 أدوات تفاعلية شاملة:"
+
+#: ../../source/index.rst:82 32975407889e47beb34b377b0a48b1b9
+msgid "**CP1256 Character Encoding Explorer** - Legacy Arabic encoding systems"
+msgstr "**مستكشف ترميز الأحرف CP1256** - أنظمة الترميز العربية القديمة"
+
+#: ../../source/index.rst:83 8223942d83894ae59d8b5b6b790c0430
+msgid "**UTF-8 Visualizer** - Modern Unicode text processing"
+msgstr "**مصور UTF-8** - معالجة النصوص الحديثة بـ Unicode"
+
+#: ../../source/index.rst:84 a379a2061ae947a49ba16fe3f1ba51fe
+msgid "**BiDi Demo** - Bidirectional text algorithm visualization"
+msgstr "**عرض BiDi** - تصور خوارزمية النص ثنائي الاتجاه"
+
+#: ../../source/index.rst:85 f495cbd6c9b94deeb75cb499dccc45e3
+msgid "**Arabic Typing Simulator** - Interactive keyboard and input methods"
+msgstr "**محاكي الطباعة العربية** - لوحة المفاتيح التفاعلية وطرق الإدخال"
+
+#: ../../source/index.rst:86 4aa6afe7268b43d89f16808f6fd9211c
+msgid "**Memory Layout Visualizer** - System memory and Arabic text storage"
+msgstr "**مصور تخطيط الذاكرة** - ذاكرة النظام وتخزين النص العربي"
+
+#: ../../source/index.rst:87 bca03a1aae464af28faf61766ec60e18
+msgid "**Kernel Debugger** - Operating system internals exploration"
+msgstr "**مصحح النواة** - استكشاف أجزاء نظام التشغيل الداخلية"
+
+#: ../../source/index.rst:88 e63c0b9828bf4f2bba540182c3926d98
+msgid "**Font Renderer** - Arabic typography and rendering engine"
+msgstr "**عارض الخطوط** - محرك الطباعة العربية والعرض"
+
+#: ../../source/index.rst:89 ed5c06ec73fc4cc991da691636818268
+msgid "**Assembly Simulator** - Low-level Arabic text processing"
+msgstr "**محاكي الأسمبلي** - معالجة النص العربي على المستوى المنخفض"
+
+#: ../../source/index.rst:92 8b6364517d9c4ba99a67e8bf3c99c33e
+msgid "Documentation Ecosystem"
+msgstr "نظام الوثائق البيئي"
+
+#: ../../source/index.rst:94 fd4bb93a05254431be2d9e7033e8ecac
+msgid "**User Guides** - Step-by-step learning materials for all skill levels"
+msgstr "**أدلة المستخدم** - مواد تعليمية تدريجية لجميع مستويات المهارة"
+
+#: ../../source/index.rst:95 216260d22a834c3cadae079c88b956a8
+msgid ""
+"**Developer Documentation** - Comprehensive API reference and integration"
+" guides"
+msgstr ""
+"**وثائق المطور** - مرجع شامل لواجهة برمجة التطبيقات وأدلة التكامل"
+
+#: ../../source/index.rst:96 a605eadaa24d4bf492026276db1c269c
+msgid ""
+"**Educator Resources** - Curriculum materials, lesson plans, and "
+"assessment tools"
+msgstr ""
+"**موارد المعلم** - مواد المناهج وخطط الدروس وأدوات التقييم"
+
+#: ../../source/index.rst:97 ef61175d26da4e75b0d84b5a44d76bc7
+msgid "**Build-from-Scratch Tutorial** - Complete Arabic OS development guide"
+msgstr "**دليل البناء من البداية** - دليل تطوير نظام التشغيل العربي الكامل"
+
+#: ../../source/index.rst:100 eefb17b118e9417a83a1fc46dc741d12
+msgid "Enterprise Features"
+msgstr "ميزات المؤسسات"
+
+#: ../../source/index.rst:103 6c4a723c726b4230b5e5466825f6998f
+msgid "Professional Documentation"
+msgstr "الوثائق الاحترافية"
+
+#: ../../source/index.rst:105 f073376988104705bdfae112ed9d4f3b
+msgid "**Multi-format Output** - HTML, PDF, ePub, and LaTeX formats"
+msgstr "**إخراج متعدد التنسيقات** - تنسيقات HTML و PDF و ePub و LaTeX"
+
+#: ../../source/index.rst:106 087f0cbf7f5e4c7b81262146a39bd16b
+msgid "**Bilingual Support** - Full Arabic and English documentation"
+msgstr "**الدعم ثنائي اللغة** - وثائق كاملة باللغتين العربية والإنجليزية"
+
+#: ../../source/index.rst:107 c0199c14e09e4384891cbff42353fa60
+msgid "**Professional Translation Workflow** - Industry-standard gettext system"
+msgstr "**سير عمل الترجمة الاحترافي** - نظام gettext المعياري في الصناعة"
+
+#: ../../source/index.rst:108 5ee74ac9efe442da9aefe9191c293d4d
+msgid "**Version Control Integration** - Git-based documentation management"
+msgstr "**تكامل مراقبة الإصدارات** - إدارة الوثائق القائمة على Git"
+
+#: ../../source/index.rst:111 61a2950a522c4d72baeab3573bf815b6
+msgid "Educational Excellence"
+msgstr "التميز التعليمي"
+
+#: ../../source/index.rst:113 abd06bde2b224867935e77cc979d0417
+msgid "**Structured Learning Paths** - Beginner to advanced progression"
+msgstr "**مسارات التعلم المنظمة** - تطور من المبتدئ إلى المتقدم"
+
+#: ../../source/index.rst:114 3473401ac95f4969b9fb580f3f736913
+msgid "**Interactive Embedded Tools** - Hands-on learning within documentation"
+msgstr "**الأدوات التفاعلية المدمجة** - التعلم العملي داخل الوثائق"
+
+#: ../../source/index.rst:115 ae0dab8e817940bb9cfc9ee2a571cab4
+msgid "**Assessment Integration** - Built-in exercises and evaluation tools"
+msgstr "**تكامل التقييم** - تمارين مدمجة وأدوات تقييم"
+
+#: ../../source/index.rst:116 1ff46b4b29554b218f7d68b0bcc53233
+msgid "**Offline Capabilities** - PDF and ePub for disconnected environments"
+msgstr "**القدرات غير المتصلة** - PDF و ePub للبيئات غير المتصلة"
+
+#: ../../source/index.rst:119 fd0b7d183d544eb7811464bae416e1cd
+msgid "Enterprise Integration"
+msgstr "التكامل المؤسسي"
+
+#: ../../source/index.rst:121 5ea4c79cae0e42bca37605e66ee6976b
+msgid "**API Documentation** - Complete developer reference"
+msgstr "**وثائق واجهة برمجة التطبيقات** - مرجع المطور الكامل"
+
+#: ../../source/index.rst:122 23659a4ab1c241e8ad1d211a6e5aae9f
+msgid "**Deployment Guides** - Production-ready installation instructions"
+msgstr "**أدلة النشر** - تعليمات التثبيت الجاهزة للإنتاج"
+
+#: ../../source/index.rst:123 b52073966170489a94e297526e3d7a10
+msgid "**Security Documentation** - Enterprise security considerations"
+msgstr "**وثائق الأمان** - اعتبارات الأمان المؤسسي"
+
+#: ../../source/index.rst:124 15865bd6ee904fe4b8b019ad7ded6b29
+msgid "**Scalability Guidelines** - Multi-user and institutional deployment"
+msgstr "**إرشادات القابلية للتوسع** - النشر متعدد المستخدمين والمؤسسي"
+
+#: ../../source/index.rst:127 0000c95bc2ec489889f5cdd95d638b16
+msgid "Quick Start"
+msgstr "البدء السريع"
+
+#: ../../source/index.rst:131 30ee73e1c01d44cfb3f82bf5bb887b41
+msgid "Students & Learners"
+msgstr "الطلاب والمتعلمون"
+
+#: ../../source/index.rst:135 b3175ef4dad74a0395f7ff2251749b66
+msgid ""
+"Start your journey into Arabic computing and OS development with our "
+"comprehensive user guide."
+msgstr ""
+"ابدأ رحلتك في الحوسبة العربية وتطوير أنظمة التشغيل مع دليل المستخدم الشامل "
+"الخاص بنا."
+
+#: ../../source/index.rst:137 274f49d1a00d4fea94adbee1480a874e
+msgid "Developers"
+msgstr "المطورون"
+
+#: ../../source/index.rst:141 8e6d70758e6c444aa5ca308e4cbfaff9
+msgid ""
+"Integrate our tools, contribute to the platform, or build custom "
+"educational solutions."
+msgstr ""
+"قم بدمج أدواتنا، أو المساهمة في المنصة، أو بناء حلول تعليمية مخصصة."
+
+#: ../../source/index.rst:145 84062a8e95db4ceab7b71bd0538cc1ac
+msgid "Educators"
+msgstr "المعلمون"
+
+#: ../../source/index.rst:149 b1d64f629ba9470eb20d108115983b70
+msgid ""
+"Integrate our platform into your curriculum with ready-to-use educational"
+" materials."
+msgstr ""
+"ادمج منصتنا في منهجك الدراسي مع المواد التعليمية الجاهزة للاستخدام."
+
+#: ../../source/index.rst:155 3ff44664a59f401fa61e5c844ded6d6e
+msgid ""
+"Follow step-by-step tutorials from basic concepts to advanced Arabic OS "
+"development."
+msgstr ""
+"اتبع الدروس التعليمية التدريجية من المفاهيم الأساسية إلى تطوير نظام "
+"التشغيل العربي المتقدم."
+
+#: ../../source/index.rst:158 0fa112d3138b41028f161744248a4e9b
+msgid "Support & Community"
+msgstr "الدعم والمجتمع"
+
+#: ../../source/index.rst:160 512b8e7c59ea42a68315f8054a5b591b
+msgid "**Documentation**: Comprehensive guides in multiple formats"
+msgstr "**الوثائق**: أدلة شاملة بتنسيقات متعددة"
+
+#: ../../source/index.rst:161 5937e883489e44c087075bc0385324a4
+msgid "**Community Forums**: Active developer and educator community"
+msgstr "**منتديات المجتمع**: مجتمع نشط من المطورين والمعلمين"
+
+#: ../../source/index.rst:162 59a044f3eb3f4fdd95f7eadf45a84e35
+msgid "**Professional Support**: Enterprise support options available"
+msgstr "**الدعم الاحترافي**: خيارات دعم المؤسسات متاحة"
+
+#: ../../source/index.rst:163 3b9c1d5ccd7d45f1a66f8289017f187b
+msgid "**Contribution Guidelines**: Join our open-source development"
+msgstr "**إرشادات المساهمة**: انضم إلى تطوير المصادر المفتوحة الخاص بنا"
+
+#: ../../source/index.rst:166 9aa04999265349109ad9dcd57f05eeec
+msgid "Indices and Tables"
+msgstr "الفهارس والجداول"
+
+#: ../../source/index.rst:168 24cd6e79c1b742a19e9b4468b62b5bdd
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../source/index.rst:169 8fb0f47e74c6495a920cfccbe668a26c
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+#: ../../source/index.rst:170 3b4f0a08db094be8ac4d5231e073d136
+msgid ":ref:`search`"
+msgstr ":ref:`search`"

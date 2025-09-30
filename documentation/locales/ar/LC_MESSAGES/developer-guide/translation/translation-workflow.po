@@ -1,0 +1,692 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 12:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:2
+#: 3a2dcc24ac224f44bcb1300b9988247a
+msgid "Translation Workflow"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:4
+#: 6d498a0610cb4db3ad46891bb9e14aa7
+msgid ""
+"This guide explains the complete translation workflow for the Arabic OS "
+"Platform documentation. Follow these steps to contribute professional-"
+"quality Arabic translations."
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:7
+#: 465d971a554b44e292a351b91fe1b5c3
+msgid "Workflow Overview"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:9
+#: 2e6ea59a19cb4660b56671a2944b981d
+msgid "The translation process follows a professional gettext workflow:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:11
+#: 80d7726092af47c88a306a1bc829c50e
+msgid "**Content Creation** - English documentation written in .rst files"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:12
+#: 53eeec6262eb4ee6a69480a7d8cc6f36
+msgid ""
+"**Message Extraction** - Sphinx extracts translatable strings to .pot "
+"files"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:13
+#: 845de5cb367c41a4adee6c9e81ceb202
+msgid "**Translation Assignment** - .po files created and assigned to translators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:14
+#: 00b6fd9cb5da48dea55d7e4c2eacdbf3
+msgid "**Translation Work** - Professional translation using specialized tools"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:15
+#: fbdda92e40914b938481332ba108a020
+msgid "**Quality Review** - Peer review and quality assurance validation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:16
+#: 6ff1fd81c272416f8bf6d1fbe2f4bf78
+msgid "**Integration** - Approved translations integrated into builds"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:17
+#: 7e4ff2b706994f55b50c052f499da051
+msgid "**Publication** - Bilingual documentation published to production"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:20
+#: f39e525f17644ae6a81087750e7c5854
+msgid "Step-by-Step Process"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:23
+#: 17983e43cc6a4d4e9824b736ea0d6817
+msgid "Step 1: Environment Setup"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:25
+#: ../../source/developer-guide/translation/translation-workflow.rst:405
+#: 481be3ff8ead49fab91785321f70466d 821a9f04187d46e3aa6bd89445ea9cc4
+msgid "**For Translators:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:38
+#: ../../source/developer-guide/translation/translation-workflow.rst:421
+#: f6fd0d46107141aeb213154eacbec68d f82a167717954b63aa1a26ed690cff15
+msgid "**For Project Maintainers:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:49
+#: fbb9cba6c4284101a4688795274a795d
+msgid "Step 2: Working with Translation Files"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:51
+#: a77815c99e614ab29133ab0794bd71a4
+msgid "**File Structure:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:68
+#: d34824c4710049fbb7e1a0a2973973fd
+msgid "**Translation File Format:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:94
+#: 587c157a084b4db397f59b10c3d6ec0d
+msgid "Step 3: Translation Assignment Process"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:96
+#: 5ec24c10484f4fcf98f9d75b18264ad4
+msgid "**Project Coordinator Tasks:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:98
+#: 065598da9cff4c959144deb13e5413d2
+msgid "**Create Work Assignments**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:108
+#: 694b85dddda84366925d49b4bf111bf8
+msgid "**Assign Translation Tasks**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:110
+#: 4aa3d2a4330a41aa98f9dc3373ffb0f5
+msgid "Create GitHub issues for each translation assignment:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:131
+#: a59b4ef8a07943e89dd2ff1082e90324
+msgid "Step 4: Professional Translation Work"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:133
+#: 1b099914f09f438487f07444ed99431e
+msgid "**Using Poedit (Recommended):**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:135
+#: 3460bfeba446431d8659b4bfa00870d4
+msgid "**Install Poedit**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:147
+#: 43717b1f62c843d9a5bff9ecb261ef4b
+msgid "**Configure Poedit for Arabic**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:149
+#: 02516237479842629385d0753dfb02b9
+msgid "**File → Preferences → General**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:150
+#: b6b9e73281c0440f9207e49802e951bf
+msgid "Set **Default language** to Arabic (ar)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:151
+#: 767dbf53c5a24261b5434f7b8ff53140
+msgid "Enable **Right-to-left language support**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:152
+#: afc04defce2946c2a7e1262c01a7b6c0
+msgid "Configure **Arabic fonts** (Amiri, Noto Sans Arabic)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:154
+#: 5d8f599eab0e44019e6d37d9bfeec600
+msgid "**Translation Process**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:156
+#: eca5cb96ecba4d9ebce1aedd04b31eda
+msgid "Open .po file in Poedit"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:157
+#: b90d1fe991604b1ab2c0d4bc30a3996f
+msgid "Review **source text** and **context comments**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:158
+#: 5f267949760a447c959c30301a37c00e
+msgid "Enter **Arabic translation** in target field"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:159
+#: 979d8c7ffa6f45aa8e7134483d21e41e
+msgid "Use **Translation Memory** for consistency"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:160
+#: 10c0f55df4c4493eb954a464fb0ac0a5
+msgid "Save frequently to preserve work"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:162
+#: c43bd909f46c42809f88b060fce2f8e1
+msgid "**Using Web-Based Tools:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:164
+#: 7a10c2c7761b4255914d70227d82a522
+msgid "Translation Tool Comparison"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:168
+#: b3b37f9bb49e46caa8a148489284a2ff
+msgid "Tool"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:169
+#: 96d833de92784eb6bbc18a208df648fd
+msgid "Type"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:170
+#: a0059ddcf7734e9b98871f9f615a2b03
+msgid "Advantages"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:171
+#: 50b1830d90404a939466343f5e47ca73
+msgid "Best For"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:172
+#: c1056f35a7234b6eb354b57c87f054cc
+msgid "Poedit"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:173
+#: 2133c30616c844a98ed97ad4ddf8291f
+msgid "Desktop"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:174
+#: 7f3bdcff6ff04e4e9671839077ee7f0f
+msgid "Full features, offline work"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:175
+#: 09cb1d9a15ff49a7ac25a877bb316db5
+msgid "Professional translators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:176
+#: 956aacf71aec456f9158663c52e06c77
+msgid "Weblate"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:177
+#: ../../source/developer-guide/translation/translation-workflow.rst:185
+#: 15a9e72ac7ce42d7b0ddf91790b38c27 cdb5eba68a464b55bbed960470378d58
+msgid "Web-based"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:178
+#: 11edd4f524ce48b9a83e1f114074673d
+msgid "Collaborative, built-in QA"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:179
+#: 89abee62188d46ac9e3d182ee54abd35
+msgid "Team projects"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:180
+#: 1fead7946865411ca5a201239f1e4b62
+msgid "Lokalize"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:181
+#: 057570afc585454a95080333bb5ad741
+msgid "Desktop (KDE)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:182
+#: 0b2da37114964c61ad5595c2ba68e612
+msgid "Advanced CAT features"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:183
+#: a1080247f7c24175b6750a332ccf8a7d
+msgid "Technical translators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:184
+#: c314f35218c948a4af3d74900f7b5ee7
+msgid "Transifex"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:186
+#: 6816ee3fa8884751906bc582884cddc2
+msgid "Project management"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:187
+#: fded5ef4db0a4509b1ba8a56ff2d8fdd
+msgid "Large teams"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:190
+#: f451c9eba52243679326769678e6acb2
+msgid "Step 5: Quality Review Process"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:192
+#: 28dc16d65a6d4625921c482dd69e1aa4
+msgid "**Self-Review Checklist:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:194
+#: d6a5f1c8ad9847fcb16f5e93801bf466
+msgid "Before submitting translations, verify:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:207
+#: 58098f14491b4a729e663a0fefbc243d
+msgid "**Peer Review Process:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:209
+#: 0017cbab32344b9c85e7339135a7e840
+msgid "**Create Pull Request**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:217
+#: 20245404ca2b4f10bac6888b4d31207f
+msgid "**Request Review**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:219
+#: 4dc8ea6dccd64688a35678b7b5969db7
+msgid "Assign Arabic language reviewer"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:220
+#: ebdf6d251c7f41f4944a2ad7ff94a8c7
+msgid "Include translation statistics"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:221
+#: aa4e501543e64c988bc2529aeb24ba48
+msgid "Reference style guide compliance"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:222
+#: 1b40d271c4fb4417b67044415eae4dd4
+msgid "Note any translation challenges"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:224
+#: 7fafdcfc03334683890d4852fd36e240
+msgid "**Review Criteria**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:226
+#: e6cf77638bb8466db8f2ce5f89c12cd5
+msgid "**Technical Accuracy**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:227
+#: 8d8db6a0d0a44b54958d82722d01ca54
+msgid "Correct translation of technical concepts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:228
+#: dc3ab5249ca54ab4913af0df815e1bd0
+msgid "Consistent terminology usage"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:229
+#: c6a9773bffe74ac3ba9d5134bfa054c9
+msgid "Preservation of meaning"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:231
+#: 16d248b91eb8410683d9f0aab2157ee0
+msgid "**Language Quality**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:232
+#: d8a8e28f798d446a9194e3d2d815d8f8
+msgid "Natural, fluent Arabic"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:233
+#: cf6ff18107984b76979ca745856e076a
+msgid "Appropriate register for audience"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:234
+#: 6e7d45af8f754a568ee9be1f5f82f033
+msgid "Grammar and syntax accuracy"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:236
+#: 7919230293df435e8b887383797c5931
+msgid "**Cultural Sensitivity**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:237
+#: 90d09d6380944f9c83ba2fcf3376145f
+msgid "Respectful language use"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:238
+#: 662a57e5895a46a2b6fcbfcaa76c7e53
+msgid "Culturally appropriate examples"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:239
+#: a3319aeda84647c0876adb75e690f1b8
+msgid "Regional considerations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:242
+#: 5d5d0673d9cb4feeac8e669b31d671dc
+msgid "Step 6: Testing and Validation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:244
+#: e9a568c7c3534bf2a7738da32e207d7f
+msgid "**Build Testing:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:257
+#: 01b072c3f2404485b621d9c0a0f9b904
+msgid "**Translation Validation:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:273
+#: 9255977583ea4abf954f46a947950d45
+msgid "**Translation Assessment Tool:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:275
+#: 51d6cb1a26224e29861fc2c8bab40fbd
+msgid ""
+"For comprehensive translation monitoring, use the Translation Assessment "
+"Tool:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:277
+#: c518020c0a18465299c3a82ee71db371
+msgid ""
+"**Project Overview:** ``python3 translation_assessment.py`` - Detailed "
+"report with priorities"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:278
+#: 786d5ec84961473dac5a1c4173038499
+msgid ""
+"**Quick Status:** ``python3 translation_assessment.py --simple`` - One-"
+"line summary per file"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:279
+#: 55bfe7ad5ca9494a82288f2d682e1eaf
+msgid ""
+"**Progress Tracking:** Regular use helps identify translation bottlenecks"
+" and priorities"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:281
+#: 54c6cddc3a644a28a3e113246ecc41d2
+msgid "See :doc:`assessment-tool` for complete usage documentation."
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:284
+#: 7421bb3bb6e04782bfc56c9fd268c064
+msgid "Step 7: Integration and Publication"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:286
+#: 6413b06f24e4434d8c01f6873d6d9437
+msgid "**Maintainer Integration Process:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:288
+#: 4680e28006cd4c1ab51f8b2eeff4eca3
+msgid "**Final Quality Check**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:301
+#: 7108cd927b80453ba376801252c3345d
+msgid "**Merge and Deploy**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:312
+#: 37625b253561428e8f607d70d0ca076c
+msgid "**Publication Verification**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:314
+#: e57c57f4b3604e738901af34de3bd5eb
+msgid "**English**: https://docs.arabic-os.org/en/"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:315
+#: 2cf5cebf79974290af38a25eb66e8e2e
+msgid "**Arabic**: https://docs.arabic-os.org/ar/"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:316
+#: 69e605332f5b4edf8632d6620f1b2a03
+msgid "**Download Formats**: PDF, EPUB availability"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:319
+#: a1f43f4cc7d64288bac98b1d312e3205
+msgid "Workflow Automation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:321
+#: dd9a8b92039848f8a77821ffabd991f4
+msgid "**GitHub Actions Integration:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:323
+#: 4ea851c0f56a4118b577f6e6408a58b5
+msgid "Our repository includes automated workflows:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:349
+#: 4d47efd169664bdcaba70effd30cd4cc
+msgid "**Translation Statistics Dashboard:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:351
+#: b2821422b48849c8bdc272ec6c20773b
+msgid "Automated reporting provides:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:353
+#: 3b62fc87e81541fca2aaf990e1836a35
+msgid "**Translation Progress**: Percentage complete per section"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:354
+#: 093e6366e6ea4e93a3fa90450c24c5bf
+msgid "**Quality Metrics**: Review status and approval tracking"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:355
+#: 23b3d62ee0d14e41a12d42de3366d8d4
+msgid "**Contributor Recognition**: Translation contribution statistics"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:356
+#: dbd874acf3964bb6bb0c8aa9fbc94c03
+msgid "**Release Planning**: Translation readiness for upcoming releases"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:359
+#: e71d9164487d4c3881578f9de55a3892
+msgid "Common Issues and Solutions"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:361
+#: 53b7bc9917b84a5f8e40842e5d52ca06
+msgid "**Issue: Fuzzy Translations**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:372
+#: dcc7ee65332b41f9bc91213046a36eaa
+msgid "**Issue: Encoding Problems**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:380
+#: 2c2cabbc2fad4b67ad2b73d71eaa693e
+msgid "**Issue: Build Failures**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:388
+#: 464181fc0719426d95bd909c172d4f79
+msgid "**Issue: Missing Context**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:403
+#: 507f30d4a6154fb489be2895b1de6ff5
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:407
+#: e5881d68b4b2459e9c63c133f4f9d236
+msgid "**Read Source Context** - Always review the source .rst file for context"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:408
+#: c94c73238a764c9da8719100f9c634a3
+msgid "**Maintain Consistency** - Use consistent terminology across translations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:409
+#: 78f768f6ae654ccc8986cab269a30b8f
+msgid "**Consider Audience** - Technical content for educational purposes"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:410
+#: 1e624fd63a4d49b2b58d958b0d9a39d7
+msgid "**Test Your Work** - Build and review the Arabic documentation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:411
+#: 2a83d22059e64c7dad4073a929fc217f
+msgid "**Collaborate** - Discuss challenging translations with team"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:413
+#: 753b6ea942ac4bf2925c9ce53d563ea3
+msgid "**For Reviewers:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:415
+#: f70e60af72334d11b8e24a3cbfb94a31
+msgid "**Technical Expertise** - Understand both languages and technical concepts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:416
+#: c0332eee051f4793ba2d4a0e833fcdd3
+msgid "**Cultural Sensitivity** - Ensure cultural appropriateness"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:417
+#: d02f33a8cd3c4165bdcfc9a57f267b37
+msgid "**Constructive Feedback** - Provide specific, actionable review comments"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:418
+#: d9f56069b4244235befe59ae34ee7340
+msgid "**Timely Reviews** - Maintain project momentum with prompt reviews"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:419
+#: 3dbcafdb55624bfaad0cf24c4b515b32
+msgid "**Recognition** - Acknowledge quality translation work"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:423
+#: 11ca6d10b6dd4707aacb305d49b40530
+msgid "**Clear Assignments** - Provide context and expectations for translators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:424
+#: b963a9b4e3cb42d5849231870cfa8e4f
+msgid "**Resource Support** - Maintain glossaries and style guides"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:425
+#: 62ad6a38dae340ecad26a5c2b6d894ff
+msgid "**Quality Standards** - Enforce consistent quality requirements"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:426
+#: aa8d013171c248558efe1bc8b60fc237
+msgid "**Community Building** - Foster collaborative translation community"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:427
+#: 40b1c97022cd404c843ea476b29b3887
+msgid "**Process Improvement** - Continuously refine workflow efficiency"
+msgstr ""
+
+#: ../../source/developer-guide/translation/translation-workflow.rst:429
+#: c2fe1e63412349579453a462c5aa412b
+msgid ""
+"The professional translation workflow ensures our documentation serves "
+"the global Arabic-speaking community with the highest quality bilingual "
+"technical content."
+msgstr ""
+

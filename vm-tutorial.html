@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-content="pageTitle">VM Setup Tutorial - Arabic OS</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #388E3C;
+            --accent-color: #FFC107;
+            --text-color: #212121;
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --border-color: #E0E0E0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --code-bg: #F8F9FA;
+            --success-color: #4CAF50;
+            --warning-color: #FF9800;
+            --info-color: #2196F3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bg-color) 0%, #E8F5E8 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .hero .description {
+            font-size: 1.1em;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        .nav-breadcrumb {
+            background: var(--card-bg);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Quick Start Section */
+        .quick-nav {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .quick-nav h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .platform-card {
+            background: var(--code-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .platform-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .platform-card .difficulty {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .difficulty.easy { background: #E8F5E8; color: var(--success-color); }
+        .difficulty.medium { background: #FFF3E0; color: var(--warning-color); }
+        .difficulty.advanced { background: #E3F2FD; color: var(--info-color); }
+
+        /* Tutorial Sections */
+        .tutorial-section {
+            background: var(--card-bg);
+            margin-bottom: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .tutorial-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 25px 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tutorial-header:hover {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+        }
+
+        .tutorial-header h2 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .tutorial-header .platform-icon {
+            font-size: 1.8em;
+        }
+
+        .tutorial-header .platform-subtitle {
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+
+        .tutorial-content {
+            padding: 30px;
+            display: none;
+        }
+
+        .tutorial-content.active {
+            display: block;
+        }
+
+        /* Steps */
+        .step {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--code-bg);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 0.9em;
+        }
+
+        .step-title {
+            color: var(--primary-color);
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .step-content {
+            margin-left: 45px;
+        }
+
+        /* Code blocks */
+        .code-block {
+            background: #2D3748;
+            color: #E2E8F0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin: 15px 0;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent-color);
+            color: #2D3748;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+
+        /* Alert boxes */
+        .alert {
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .alert-info {
+            background: #E3F2FD;
+            border-left: 4px solid var(--info-color);
+            color: #1565C0;
+        }
+
+        .alert-warning {
+            background: #FFF3E0;
+            border-left: 4px solid var(--warning-color);
+            color: #E65100;
+        }
+
+        .alert-success {
+            background: #E8F5E8;
+            border-left: 4px solid var(--success-color);
+            color: #2E7D32;
+        }
+
+        /* Requirements section */
+        .requirements {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .requirements h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .req-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .req-item {
+            background: var(--code-bg);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .req-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+
+        .req-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .req-item li {
+            padding: 3px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .req-item li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .faq h2 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding-top: 10px;
+            display: none;
+            color: #666;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .platform-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tutorial-header {
+                padding: 20px;
+            }
+
+            .tutorial-content {
+                padding: 20px;
+            }
+
+            .step-content {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            .step-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+
+        /* RTL Support */
+        [dir="rtl"] .step-number {
+            margin-right: 0;
+            margin-left: 15px;
+        }
+
+        [dir="rtl"] .step-content {
+            margin-left: 0;
+            margin-right: 45px;
+        }
+
+        [dir="rtl"] .alert {
+            text-align: right;
+        }
+
+        [dir="rtl"] .req-item li {
+            padding-left: 0;
+            padding-right: 20px;
+        }
+
+        [dir="rtl"] .req-item li:before {
+            left: auto;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher will be dynamically inserted here -->
+    <div class="container">
+        <!-- Navigation Breadcrumb -->
+        <nav class="nav-breadcrumb">
+            <a href="index.html" data-content="navigation.backToHome">← Back to Home</a>
+            <span> / </span>
+            <span data-content="navigation.vmTutorial">Virtual Machine Setup Tutorial</span>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 data-content="hero.title">🖥️ Virtual Machine Setup Tutorial</h1>
+            <p class="subtitle" data-content="hero.subtitle">Complete guide to running Arabic OS on popular virtualization platforms</p>
+            <p class="description" data-content="hero.description">Learn how to set up and configure virtual machines using VirtualBox, QEMU, Bochs, and VMware Workstation to boot and run the Arabic Operating System from the floppy disk image.</p>
+        </section>
+
+        <!-- System Requirements -->
+        <section class="requirements">
+            <h2 data-content="requirements.title">📋 System Requirements</h2>
+            <div class="req-grid">
+                <div class="req-item">
+                    <h3 data-content="requirements.general.title">General Requirements</h3>
+                    <ul>
+                        <li data-content="requirements.general.cpu">x86 or x64 processor</li>
+                        <li data-content="requirements.general.ram">At least 2GB RAM available</li>
+                        <li data-content="requirements.general.storage">50MB free disk space</li>
+                        <li data-content="requirements.general.os">Windows, macOS, or Linux host OS</li>
+                    </ul>
+                </div>
+                <div class="req-item">
+                    <h3 data-content="requirements.files.title">Required Files</h3>
+                    <ul>
+                        <li data-content="requirements.files.floppy">Arabic OS floppy image (floppy.flp)</li>
+                        <li data-content="requirements.files.vm">Virtualization software installed</li>
+                        <li data-content="requirements.files.vt">Hardware virtualization enabled (VT-x/AMD-V)</li>
+                    </ul>
+                </div>
+                <div class="req-item">
+                    <h3 data-content="requirements.knowledge.title">Recommended Knowledge</h3>
+                    <ul>
+                        <li data-content="requirements.knowledge.basic">Basic computer operation</li>
+                        <li data-content="requirements.knowledge.vm">Understanding of virtual machines</li>
+                        <li data-content="requirements.knowledge.bios">BIOS/UEFI configuration (optional)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Navigation -->
+        <section class="quick-nav">
+            <h2 data-content="quickNav.title">🚀 Choose Your Platform</h2>
+            <div class="platform-grid">
+                <div class="platform-card" onclick="showTutorial('virtualbox')">
+                    <h3 data-content="quickNav.virtualbox.title">🔵 VirtualBox</h3>
+                    <span class="difficulty easy" data-content="quickNav.virtualbox.difficulty">Easy</span>
+                    <p data-content="quickNav.virtualbox.description">Free, cross-platform, beginner-friendly</p>
+                </div>
+                <div class="platform-card" onclick="showTutorial('qemu')">
+                    <h3 data-content="quickNav.qemu.title">⚡ QEMU</h3>
+                    <span class="difficulty medium" data-content="quickNav.qemu.difficulty">Medium</span>
+                    <p data-content="quickNav.qemu.description">Lightweight, command-line based, fast</p>
+                </div>
+                <div class="platform-card" onclick="showTutorial('vmware')">
+                    <h3 data-content="quickNav.vmware.title">🔶 VMware Workstation</h3>
+                    <span class="difficulty easy" data-content="quickNav.vmware.difficulty">Easy</span>
+                    <p data-content="quickNav.vmware.description">Professional, feature-rich, paid</p>
+                </div>
+                <div class="platform-card" onclick="showTutorial('bochs')">
+                    <h3 data-content="quickNav.bochs.title">🔧 Bochs</h3>
+                    <span class="difficulty advanced" data-content="quickNav.bochs.difficulty">Advanced</span>
+                    <p data-content="quickNav.bochs.description">Debug-focused, detailed emulation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VirtualBox Tutorial -->
+        <section class="tutorial-section" id="virtualbox-tutorial">
+            <div class="tutorial-header" onclick="toggleTutorial('virtualbox')">
+                <h2>
+                    <span class="platform-icon">🔵</span>
+                    <div>
+                        <div data-content="tutorials.virtualbox.title">VirtualBox Setup</div>
+                        <div class="platform-subtitle" data-content="tutorials.virtualbox.subtitle">Oracle VirtualBox - Free and user-friendly</div>
+                    </div>
+                </h2>
+            </div>
+            <div class="tutorial-content" id="virtualbox-content">
+                <div class="alert alert-info">
+                    <span>ℹ️</span>
+                    <div>
+                        <strong data-content="tutorials.virtualbox.info.title">Why VirtualBox?</strong>
+                        <p data-content="tutorials.virtualbox.info.description">VirtualBox is perfect for beginners. It's free, has an intuitive GUI, and works on all major operating systems.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">1</span>
+                        <span data-content="tutorials.virtualbox.step1.title">Download and Install VirtualBox</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.virtualbox.step1.description">Download VirtualBox from the official website and install it on your system.</p>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            # Download from: https://www.virtualbox.org/wiki/Downloads
+                            # Choose your operating system version
+                            # Install with default settings
+                        </div>
+                        <div class="alert alert-warning">
+                            <span>⚠️</span>
+                            <span data-content="tutorials.virtualbox.step1.warning">Make sure to enable hardware virtualization (VT-x/AMD-V) in your BIOS if it's disabled.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">2</span>
+                        <span data-content="tutorials.virtualbox.step2.title">Create a New Virtual Machine</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.virtualbox.step2.description">Create a new VM with the following specifications:</p>
+                        <ul>
+                            <li data-content="tutorials.virtualbox.step2.name"><strong>Name:</strong> Arabic OS</li>
+                            <li data-content="tutorials.virtualbox.step2.type"><strong>Type:</strong> Other</li>
+                            <li data-content="tutorials.virtualbox.step2.version"><strong>Version:</strong> DOS</li>
+                            <li data-content="tutorials.virtualbox.step2.memory"><strong>Memory:</strong> 32 MB (minimum 16 MB)</li>
+                            <li data-content="tutorials.virtualbox.step2.hdd"><strong>Hard Disk:</strong> Do not add a virtual hard disk</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">3</span>
+                        <span data-content="tutorials.virtualbox.step3.title">Configure VM Settings</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.virtualbox.step3.description">Right-click the VM and select "Settings". Configure:</p>
+                        <ul>
+                            <li data-content="tutorials.virtualbox.step3.storage"><strong>Storage:</strong> Add floppy controller and attach floppy.flp</li>
+                            <li data-content="tutorials.virtualbox.step3.display"><strong>Display:</strong> Video Memory: 16 MB, Graphics Controller: VBoxVGA</li>
+                            <li data-content="tutorials.virtualbox.step3.boot"><strong>System → Boot Order:</strong> Floppy first, then disable others</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">4</span>
+                        <span data-content="tutorials.virtualbox.step4.title">Boot the Arabic OS</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.virtualbox.step4.description">Click "Start" to boot the VM. You should see the Arabic OS loading from the floppy disk.</p>
+                        <div class="alert alert-success">
+                            <span>✅</span>
+                            <span data-content="tutorials.virtualbox.step4.success">Success! Your Arabic OS should now be running in VirtualBox.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QEMU Tutorial -->
+        <section class="tutorial-section" id="qemu-tutorial">
+            <div class="tutorial-header" onclick="toggleTutorial('qemu')">
+                <h2>
+                    <span class="platform-icon">⚡</span>
+                    <div>
+                        <div data-content="tutorials.qemu.title">QEMU Setup</div>
+                        <div class="platform-subtitle" data-content="tutorials.qemu.subtitle">Fast, lightweight command-line emulator</div>
+                    </div>
+                </h2>
+            </div>
+            <div class="tutorial-content" id="qemu-content">
+                <div class="alert alert-info">
+                    <span>ℹ️</span>
+                    <div>
+                        <strong data-content="tutorials.qemu.info.title">Why QEMU?</strong>
+                        <p data-content="tutorials.qemu.info.description">QEMU is lightweight, fast, and perfect for testing operating systems. It requires minimal setup and system resources.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">1</span>
+                        <span data-content="tutorials.qemu.step1.title">Install QEMU</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.qemu.step1.description">Install QEMU on your system:</p>
+
+                        <h4>Windows:</h4>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            # Download from: https://www.qemu.org/download/#windows
+                            # Or use chocolatey:
+                            choco install qemu
+                        </div>
+
+                        <h4>macOS:</h4>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            # Using Homebrew:
+                            brew install qemu
+                        </div>
+
+                        <h4>Linux (Ubuntu/Debian):</h4>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            sudo apt update
+                            sudo apt install qemu-system-x86
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">2</span>
+                        <span data-content="tutorials.qemu.step2.title">Prepare the Floppy Image</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.qemu.step2.description">Place the floppy.flp file in an accessible directory and open a terminal/command prompt in that location.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">3</span>
+                        <span data-content="tutorials.qemu.step3.title">Boot the Arabic OS</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.qemu.step3.description">Use the following command to boot the Arabic OS:</p>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            qemu-system-i386 -fda floppy.flp -boot a
+                        </div>
+
+                        <p data-content="tutorials.qemu.step3.options">Optional parameters for better experience:</p>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            # With more memory and better display
+                            qemu-system-i386 -fda floppy.flp -boot a -m 32 -display gtk
+
+                            # For debugging (shows CPU state)
+                            qemu-system-i386 -fda floppy.flp -boot a -m 32 -monitor stdio
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">4</span>
+                        <span data-content="tutorials.qemu.step4.title">QEMU Controls</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.qemu.step4.description">Useful QEMU keyboard shortcuts:</p>
+                        <ul>
+                            <li data-content="tutorials.qemu.step4.ctrl1"><strong>Ctrl+Alt+1:</strong> Switch to VM console</li>
+                            <li data-content="tutorials.qemu.step4.ctrl2"><strong>Ctrl+Alt+2:</strong> Switch to QEMU monitor</li>
+                            <li data-content="tutorials.qemu.step4.ctrlaltf"><strong>Ctrl+Alt+F:</strong> Toggle fullscreen</li>
+                            <li data-content="tutorials.qemu.step4.ctrlaltq"><strong>Ctrl+Alt+Q:</strong> Quit QEMU</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VMware Tutorial -->
+        <section class="tutorial-section" id="vmware-tutorial">
+            <div class="tutorial-header" onclick="toggleTutorial('vmware')">
+                <h2>
+                    <span class="platform-icon">🔶</span>
+                    <div>
+                        <div data-content="tutorials.vmware.title">VMware Workstation Setup</div>
+                        <div class="platform-subtitle" data-content="tutorials.vmware.subtitle">Professional virtualization solution</div>
+                    </div>
+                </h2>
+            </div>
+            <div class="tutorial-content" id="vmware-content">
+                <div class="alert alert-info">
+                    <span>ℹ️</span>
+                    <div>
+                        <strong data-content="tutorials.vmware.info.title">Why VMware?</strong>
+                        <p data-content="tutorials.vmware.info.description">VMware Workstation offers professional-grade virtualization with excellent performance and advanced features.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">1</span>
+                        <span data-content="tutorials.vmware.step1.title">Install VMware Workstation</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.vmware.step1.description">Download and install VMware Workstation Pro from the official website.</p>
+                        <div class="alert alert-warning">
+                            <span>⚠️</span>
+                            <span data-content="tutorials.vmware.step1.warning">VMware Workstation is commercial software. A free trial is available, and there's also VMware Workstation Player (free for personal use).</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">2</span>
+                        <span data-content="tutorials.vmware.step2.title">Create New Virtual Machine</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.vmware.step2.description">Follow the New Virtual Machine Wizard:</p>
+                        <ul>
+                            <li data-content="tutorials.vmware.step2.config"><strong>Configuration:</strong> Custom (advanced)</li>
+                            <li data-content="tutorials.vmware.step2.compat"><strong>Compatibility:</strong> Latest Workstation version</li>
+                            <li data-content="tutorials.vmware.step2.source"><strong>Guest OS Source:</strong> I will install the operating system later</li>
+                            <li data-content="tutorials.vmware.step2.guest"><strong>Guest OS:</strong> Other → DOS</li>
+                            <li data-content="tutorials.vmware.step2.name"><strong>Name:</strong> Arabic OS</li>
+                            <li data-content="tutorials.vmware.step2.memory"><strong>Memory:</strong> 32 MB</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">3</span>
+                        <span data-content="tutorials.vmware.step3.title">Configure Floppy Drive</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.vmware.step3.description">Edit VM settings to add the floppy disk:</p>
+                        <ul>
+                            <li data-content="tutorials.vmware.step3.add"><strong>Add Hardware:</strong> Floppy Drive</li>
+                            <li data-content="tutorials.vmware.step3.image"><strong>Connection:</strong> Use floppy image file</li>
+                            <li data-content="tutorials.vmware.step3.browse"><strong>Browse:</strong> Select floppy.flp file</li>
+                            <li data-content="tutorials.vmware.step3.connect"><strong>Device Status:</strong> Connect at power on</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">4</span>
+                        <span data-content="tutorials.vmware.step4.title">Set Boot Order</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.vmware.step4.description">Configure the VM to boot from floppy:</p>
+                        <ul>
+                            <li data-content="tutorials.vmware.step4.options"><strong>VM Settings:</strong> Options tab</li>
+                            <li data-content="tutorials.vmware.step4.advanced"><strong>Advanced:</strong> Boot Options</li>
+                            <li data-content="tutorials.vmware.step4.firmware"><strong>Firmware Type:</strong> BIOS</li>
+                            <li data-content="tutorials.vmware.step4.delay"><strong>Boot Delay:</strong> 3 seconds (to access boot menu if needed)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">5</span>
+                        <span data-content="tutorials.vmware.step5.title">Power On and Boot</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.vmware.step5.description">Click "Power on this virtual machine" to start the Arabic OS.</p>
+                        <div class="alert alert-success">
+                            <span>✅</span>
+                            <span data-content="tutorials.vmware.step5.success">The Arabic OS should boot successfully in VMware Workstation.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bochs Tutorial -->
+        <section class="tutorial-section" id="bochs-tutorial">
+            <div class="tutorial-header" onclick="toggleTutorial('bochs')">
+                <h2>
+                    <span class="platform-icon">🔧</span>
+                    <div>
+                        <div data-content="tutorials.bochs.title">Bochs Setup</div>
+                        <div class="platform-subtitle" data-content="tutorials.bochs.subtitle">Detailed x86 PC emulator for debugging</div>
+                    </div>
+                </h2>
+            </div>
+            <div class="tutorial-content" id="bochs-content">
+                <div class="alert alert-info">
+                    <span>ℹ️</span>
+                    <div>
+                        <strong data-content="tutorials.bochs.info.title">Why Bochs?</strong>
+                        <p data-content="tutorials.bochs.info.description">Bochs provides the most detailed emulation and debugging capabilities, perfect for OS development and understanding low-level operations.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">1</span>
+                        <span data-content="tutorials.bochs.step1.title">Install Bochs</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.bochs.step1.description">Download and install Bochs:</p>
+
+                        <h4>Windows:</h4>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            # Download from: http://bochs.sourceforge.net/getcurrent.html
+                            # Choose the Windows binary package
+                        </div>
+
+                        <h4>Linux (Ubuntu/Debian):</h4>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            sudo apt update
+                            sudo apt install bochs bochs-x
+                        </div>
+
+                        <h4>macOS:</h4>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            # Using Homebrew:
+                            brew install bochs
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">2</span>
+                        <span data-content="tutorials.bochs.step2.title">Create Bochs Configuration</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.bochs.step2.description">Create a configuration file named 'bochsrc.txt':</p>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+# Bochs configuration for Arabic OS
+memory: guest=32, host=32
+romimage: file=$BXSHARE/BIOS-bochs-latest
+vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+
+# Floppy drive configuration
+floppya: 1_44=floppy.flp, status=inserted
+
+# Boot from floppy
+boot: floppy
+
+# CPU configuration
+cpu: count=1, ips=4000000, reset_on_triple_fault=1
+
+# Display configuration
+display: library=x, options="gui_debug"
+
+# Logging
+log: bochs.log
+logprefix: %t%e%d
+panic: action=ask
+error: action=report
+info: action=report
+debug: action=ignore
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">3</span>
+                        <span data-content="tutorials.bochs.step3.title">Prepare Files</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.bochs.step3.description">Ensure both files are in the same directory:</p>
+                        <ul>
+                            <li data-content="tutorials.bochs.step3.floppy">floppy.flp (Arabic OS image)</li>
+                            <li data-content="tutorials.bochs.step3.config">bochsrc.txt (configuration file)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">4</span>
+                        <span data-content="tutorials.bochs.step4.title">Run Bochs</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.bochs.step4.description">Start Bochs with the configuration:</p>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                            # Command line method:
+                            bochs -f bochsrc.txt
+
+                            # Or start Bochs GUI and load the configuration file
+                            bochs
+                        </div>
+                        <div class="alert alert-warning">
+                            <span>⚠️</span>
+                            <span data-content="tutorials.bochs.step4.warning">Bochs may be slower than other emulators but provides excellent debugging information.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">5</span>
+                        <span data-content="tutorials.bochs.step5.title">Debugging Features</span>
+                    </div>
+                    <div class="step-content">
+                        <p data-content="tutorials.bochs.step5.description">Bochs offers powerful debugging capabilities:</p>
+                        <ul>
+                            <li data-content="tutorials.bochs.step5.debugger"><strong>Built-in Debugger:</strong> Step through code instruction by instruction</li>
+                            <li data-content="tutorials.bochs.step5.breakpoints"><strong>Breakpoints:</strong> Set breakpoints at specific memory addresses</li>
+                            <li data-content="tutorials.bochs.step5.memory"><strong>Memory Inspection:</strong> View and modify memory contents</li>
+                            <li data-content="tutorials.bochs.step5.registers"><strong>Register Monitoring:</strong> Real-time CPU register values</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2 data-content="faq.title">❓ Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span data-content="faq.q1.question">What if the Arabic OS doesn't boot?</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-content="faq.q1.answer">Ensure that: 1) The floppy image file is not corrupted, 2) Boot order is set to floppy first, 3) Floppy drive is properly connected in VM settings, 4) VM has sufficient memory allocated (minimum 16MB).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span data-content="faq.q2.question">Can I run this on real hardware?</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-content="faq.q2.answer">Yes! You can write the floppy image to a physical floppy disk or USB drive (with proper tools) and boot from real x86 hardware. Make sure the target hardware supports floppy boot or USB legacy boot.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span data-content="faq.q3.question">Which emulator is best for beginners?</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-content="faq.q3.answer">VirtualBox is recommended for beginners due to its user-friendly GUI and extensive documentation. QEMU is great for quick testing, while Bochs is ideal for development and debugging.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span data-content="faq.q4.question">Why does the OS look different in each emulator?</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-content="faq.q4.answer">Different emulators may have slightly different video card emulations, timing, and hardware configurations. The core functionality should remain the same, but visual presentation might vary slightly.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span data-content="faq.q5.question">How can I take screenshots or record the session?</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-content="faq.q5.answer">Most emulators support screenshots: VirtualBox (Host+E), VMware (VM menu → Capture Screen), QEMU (monitor command 'screendump'), Bochs (built-in screenshot feature). You can also use external screen recording software.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="hero" style="margin-top: 40px;">
+            <h2 data-content="cta.title">🚀 Ready to Experience Arabic Computing?</h2>
+            <p data-content="cta.description">Choose your preferred virtualization platform above and start exploring the Arabic Operating System. Each method offers a unique way to experience Arabic computing innovation.</p>
+            <div style="margin-top: 20px;">
+                <a href="about-os.html" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; margin: 5px; font-weight: 600;" data-content="cta.aboutOS">Learn About Arabic OS</a>
+                <a href="interactive/index.html" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; margin: 5px; font-weight: 600;" data-content="cta.interactiveTools">Try Interactive Tools</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/content-loader.js"></script>
+
+    <script>
+        // Tutorial functionality
+        function showTutorial(platform) {
+            // Close all tutorials
+            document.querySelectorAll('.tutorial-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Show selected tutorial
+            const tutorial = document.getElementById(platform + '-content');
+            if (tutorial) {
+                tutorial.classList.add('active');
+                tutorial.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function toggleTutorial(platform) {
+            const content = document.getElementById(platform + '-content');
+            content.classList.toggle('active');
+        }
+
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const arrow = element.querySelector('span:last-child');
+
+            answer.classList.toggle('active');
+            arrow.textContent = answer.classList.contains('active') ? '▲' : '▼';
+        }
+
+        function copyCode(button) {
+            const codeBlock = button.parentElement;
+            const code = codeBlock.textContent.replace('Copy', '').trim();
+
+            navigator.clipboard.writeText(code).then(() => {
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                }, 2000);
+            });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize content loader
+            window.contentLoader = new ContentLoader();
+
+            // Initialize language switcher
+            window.languageSwitcher = new ArabicOSLanguageSwitcher({
+                persistLanguage: true,
+                showNotifications: false,
+                autoDetectRTL: true,
+                defaultLanguage: 'en'
+            });
+
+            // Set up content loading and translation
+            async function initializeContent() {
+                const currentLang = window.languageSwitcher.currentLanguage;
+
+                // Load the VM tutorial content
+                await window.contentLoader.loadContent('vm-tutorial', currentLang);
+
+                // Apply content to page elements
+                updatePageContent();
+            }
+
+            // Function to update page content with loaded data
+            function updatePageContent() {
+                if (!window.content) return;
+
+                const elementsWithContent = document.querySelectorAll('[data-content]');
+                elementsWithContent.forEach(element => {
+                    const contentKey = element.getAttribute('data-content');
+                    const value = getNestedValue(window.content, contentKey);
+                    if (value) {
+                        element.textContent = value;
+                    }
+                });
+            }
+
+            // Helper function to get nested object values
+            function getNestedValue(obj, path) {
+                return path.split('.').reduce((current, key) => {
+                    return current && current[key] !== undefined ? current[key] : null;
+                }, obj);
+            }
+
+            // Handle language changes
+            window.languageSwitcher.onLanguageChange(async (newLanguage) => {
+                // Load new language content
+                await window.contentLoader.loadContent('vm-tutorial', newLanguage);
+
+                // Update all page content
+                updatePageContent();
+            });
+
+            // Initialize everything
+            setTimeout(initializeContent, 100);
+        });
+    </script>
+</body>
+</html>

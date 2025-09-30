@@ -258,14 +258,27 @@ Step 6: Testing and Validation
 
 .. code-block:: bash
 
-   # Check translation completeness
+   # Check translation completeness for individual files
    msgfmt --statistics locales/ar/LC_MESSAGES/user-guide/tools/cp1256-explorer.po
 
    # Validate .po file syntax
    msgfmt --check-format locales/ar/LC_MESSAGES/user-guide/tools/cp1256-explorer.po
 
-   # Generate translation report
-   ./scripts/translation-report.sh
+   # Generate comprehensive translation assessment (recommended)
+   python3 translation_assessment.py
+
+   # Quick status check for all files
+   python3 translation_assessment.py --simple
+
+**Translation Assessment Tool:**
+
+For comprehensive translation monitoring, use the Translation Assessment Tool:
+
+* **Project Overview:** ``python3 translation_assessment.py`` - Detailed report with priorities
+* **Quick Status:** ``python3 translation_assessment.py --simple`` - One-line summary per file
+* **Progress Tracking:** Regular use helps identify translation bottlenecks and priorities
+
+See :doc:`assessment-tool` for complete usage documentation.
 
 Step 7: Integration and Publication
 -----------------------------------

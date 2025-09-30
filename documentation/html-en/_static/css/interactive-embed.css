@@ -1,0 +1,52 @@
+/* Interactive Embed Styles for Arabic OS Platform */
+
+.interactive-embed {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.interactive-header {
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    color: #2E7D32;
+}
+
+.interactive-content {
+    padding: 1rem;
+    background: white;
+}
+
+.interactive-demo {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border: 1px dashed #ccc;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.interactive-controls {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.interactive-button {
+    background: #2E7D32;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0.25rem;
+}
+
+.interactive-button:hover {
+    background: #1B5E20;
+}

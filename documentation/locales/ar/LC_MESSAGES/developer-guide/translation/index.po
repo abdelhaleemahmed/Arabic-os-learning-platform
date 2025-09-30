@@ -1,0 +1,503 @@
+# Arabic OS Interactive Learning Platform Documentation - Translation System - Arabic Translation
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# Arabic OS Translation Team <team@arabicos.org>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 09:50+0000\n"
+"PO-Revision-Date: 2025-09-30 11:20+0000\n"
+"Last-Translator: Arabic OS Translation Team <team@arabicos.org>\n"
+"Language: ar\n"
+"Language-Team: Arabic OS Translation Team <team@arabicos.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/developer-guide/translation/index.rst:2
+#: e619511b4e604d7ea8c22bb3f708e83a
+msgid "Translation System"
+msgstr "نظام الترجمة"
+
+#: ../../source/developer-guide/translation/index.rst:4
+#: d694c5b3b0c64a039941b7be7d9a997e
+msgid ""
+"The Arabic OS Platform uses a professional gettext-based translation "
+"workflow to maintain high-quality bilingual documentation. This section "
+"provides comprehensive guidance for translators, reviewers, and project "
+"maintainers."
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:16
+#: 78855434c36d4e73863f00623568d403
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#: ../../source/developer-guide/translation/index.rst:18
+#: 2e30140edee74c8884a5e0532ebc2413
+msgid ""
+"Our translation system is built on industry-standard gettext technology, "
+"enabling:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:20
+#: 36a164ecd9ab4a3a9f42355c44bb1a39
+msgid ""
+"**Professional Workflow** - Standard .po/.pot file system used by major "
+"projects"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:21
+#: 7bf58fc75b884f9099bd510d2d1bc455
+msgid ""
+"**Tool Integration** - Compatible with CAT tools, Poedit, and web-based "
+"editors"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:22
+#: c59a0dce62f44990aac7385cb7895805
+msgid "**Quality Control** - Built-in validation and review processes"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:23
+#: 74e5efcce88f46b7900243952e3f33b3
+msgid "**Scalability** - Ready for multiple languages and large translation teams"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:26
+#: b9089dea60b14b2db335e2954bc2f6dc
+msgid "Translation Architecture"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:28
+#: 09be6ebc3d7b4353ab3e6d4078fcbab3
+msgid "**Source Content (English)**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:29
+#: df34c0428e174c36962a70824b0eb8c6
+msgid ""
+"All original content is written in English using reStructuredText (.rst) "
+"format."
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:31
+#: a6c618aef6bf4fdf9ee64c50587d1874
+msgid "**Message Extraction**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:32
+#: 63ae5003ba3a484dbec75c0a00134a36
+msgid ""
+"Sphinx automatically extracts translatable strings into .pot template "
+"files."
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:34
+#: 1f7a68f5da124ff399143574b38b3232
+msgid "**Translation Files**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:35
+#: 9fa359c26bb84117a118f69a5b33fb6a
+msgid ""
+"Professional translators work with .po files containing source and target"
+" text pairs."
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:37
+#: 67a43245bb9047e49ccbb346e5f70ef4
+msgid "**Localized Builds**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:38
+#: a5a3f4b3ca9241cca0307572119bb5c7
+msgid "Sphinx generates separate documentation builds for each language."
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:40
+#: 5221c0c59869453f821c5ee53ce5b660
+msgid "**Quality Assurance**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:41
+#: d51157aff282434592e50e2b3c155f47
+msgid "Automated validation ensures translation completeness and accuracy."
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:44
+#: 49e3554f627141fcb4050e9bc4de4ada
+msgid "Target Audience"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:46
+#: deff40507040483b97a284e7c2276dac
+msgid "This documentation serves multiple roles:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:48
+#: e8ffbf20706842828a4a8881f14ed63c
+msgid "**Professional Translators**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:49
+#: bf10e1506c6d49dc884852676fbed58d
+msgid "Arabic language experts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:50
+#: 1b9118b33517427897f50a0beecd34ed
+msgid "Technical translation specialists"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:51
+#: 3fe4d3c89ce0483aa67d36a13b9cf9ab
+msgid "Localization industry professionals"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:53
+#: b293355aeb7c4ebda56b3e9660d0216f
+msgid "**Community Contributors**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:54
+#: 2065cf72e6f84466a36e96bc217175e6
+msgid "Bilingual developers and educators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:55
+#: 139b6969a61b4a66a547670e75a6084d
+msgid "Arabic computing enthusiasts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:56
+#: fea72665a8e24b2d809e8150fabdf372
+msgid "Open source volunteers"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:58
+#: 9123cb6b1c7d4990b8b86c7aea721a7e
+msgid "**Project Maintainers**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:59
+#: 7d070daf62344c4a88f4c648fee64996
+msgid "Documentation coordinators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:60
+#: 1060087e929d454aa21ef57465b16aa3
+msgid "Release managers"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:61
+#: 0fc0a0b909a144898bb0f402ca5d5df9
+msgid "Quality assurance teams"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:63
+#: 3c39a566ac8742518f455f7ae08083fe
+msgid "**Academic Partners**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:64
+#: b7ff1fa868604e90b44c8e5ca6f38e27
+msgid "University translation programs"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:65
+#: 91cb7d4be11b427d905e9e8ca55b392d
+msgid "Linguistics research groups"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:66
+#: 34511f1249374e6f8674d596355ee682
+msgid "Arabic language departments"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:69
+#: cefb0487d19f45939a0e309ccffd3688
+msgid "Translation Standards"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:71
+#: 39fa2a5c8dd0434fa0b1bd367f085720
+msgid "Our translations maintain the highest professional standards:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:73
+#: 23db848503204536b212724def795e8f
+msgid "**Technical Accuracy**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:74
+#: 916e92b7346643cf8ac2381f1aef17a3
+msgid "Precise translation of technical concepts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:75
+#: 684656196eb94be19f928de880087a37
+msgid "Consistency across all documentation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:76
+#: cb01856e52c84ae49c4cbfd079c846a8
+msgid "Preservation of meaning and intent"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:78
+#: 9e95c871a8b743528de5defb9c4890fa
+msgid "**Cultural Appropriateness**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:79
+#: 371a4613b6fe4039af1a8c0a3dfcd5dc
+msgid "Respectful use of Arabic language"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:80
+#: bb0f0c12759b482c84396a9ac02a77bf
+msgid "Culturally sensitive examples"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:81
+#: 8bdb3a9885b2447c95b496fb9002cab4
+msgid "Regional Arabic considerations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:83
+#: 432d9c203e294ceda41dfeaf01f59ca1
+msgid "**Educational Value**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:84
+#: 85d048028fef4a46931a5138c195e401
+msgid "Clear, accessible language"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:85
+#: 4cc05a1537d44b1286e9631ca6090be8
+msgid "Appropriate for learning contexts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:86
+#: d5974f91a02242a79cecd1a9efa4406c
+msgid "Supportive of diverse skill levels"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:88
+#: 49ace5b633cf4bb2bd9ec5239b1785f1
+msgid "**Professional Quality**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:89
+#: d9d6b13ce107415caed467b51edcecf0
+msgid "Native-level Arabic fluency"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:90
+#: 2a884104d82d4884bfcaa5de9e076276
+msgid "Technical writing expertise"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:91
+#: c1b2b4c9601642fd80d608d9d613a9c8
+msgid "Thorough quality review process"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:94
+#: c21bc387f7dd48568b5fc15604d36170
+msgid "Getting Started"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:96
+#: f0a246d990974ec791c4909903a6190b
+msgid "**New Translators:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:98
+#: 956ac8b236ff4285bde3ae0f74daaf95
+msgid ""
+"**Quick Start** - :doc:`quick-reference` - Essential workflow for .po "
+"file generation and translation"
+msgstr ""
+"**البدء السريع** - :doc:`quick-reference` - سير العمل الأساسي لإنشاء ملفات .po "
+"والترجمة"
+
+#: ../../source/developer-guide/translation/index.rst:99
+#: c2a24452e6024ea9a32c92636c3ec121
+msgid ""
+"**Setup Environment** - :doc:`translator-setup` - Install tools and "
+"access files"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:100
+#: 5871f6bf64c4459fb644306b073c1f11
+msgid ""
+"**Learn Workflow** - :doc:`translation-workflow` - Master the translation"
+" process"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:101
+#: 4e1bb486069c4f7c85ec6ddb5cbbfdd4
+msgid ""
+"**Study Style Guide** - :doc:`arabic-style-guide` - Understand Arabic "
+"standards"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:102
+#: 848818dac7744f26ad406deedde2f5d1
+msgid "**Review QA Process** - :doc:`quality-assurance` - Ensure quality output"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:104
+#: 9c4c5bd546844f98b50976890d86e9bc
+msgid "**Project Coordinators:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:106
+#: 5b6484b68c3d43a38e08edb079266be6
+msgid "**Workflow Management** - Coordinate translator assignments"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:107
+#: 86c2758c5e2a4075b4bd2c4b99e1b7d1
+msgid "**Quality Oversight** - Review and approve translations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:108
+#: 8373559bcbca48669e5e36fd8921e85a
+msgid "**Release Coordination** - Integrate translations into builds"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:109
+#: d990807e841746aca369f2cba17c32a9
+msgid "**Community Building** - Support and develop translator community"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:112
+#: 7c01993c382842f693b3382774b8c8cc
+msgid "Translation Impact"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:114
+#: 0cfa241954f649fc8b24ea2c48d0f514
+msgid "High-quality Arabic translations directly support our educational mission:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:116
+#: ba89fba84a2b4f50930e1ffce4228835
+msgid "**Accessibility**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:117
+#: 449ee1d74f724825aac67c7d168a4801
+msgid ""
+"Native Arabic speakers can fully engage with complex technical concepts "
+"in their primary language."
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:119
+#: 2eddbd07760147648b3b72f0c1cc5371
+msgid "**Educational Excellence**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:120
+#: 53c000a8d64742f88187161736801ca4
+msgid ""
+"Students learn more effectively when content respects their linguistic "
+"and cultural context."
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:122
+#: 83958606e0e94941a66fbe47f6fc46a6
+msgid "**Professional Development**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:123
+#: fae9ef349bda47faaa6c57a90584a465
+msgid ""
+"Arabic-speaking developers gain access to world-class technical resources"
+" in their native language."
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:125
+#: 9cfd8d7478484800b3cca0a05fa6b927
+msgid "**Community Building**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:126
+#: 39cc58451d02451ca2764b6a98410362
+msgid ""
+"Bilingual documentation welcomes diverse contributors to the Arabic "
+"computing community."
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:128
+#: 542946bada804b6cbd1255035458547c
+msgid "**Cultural Preservation**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:129
+#: 5e150abb90c745888b25e7f723852611
+msgid ""
+"Technical Arabic terminology development supports digital Arabic language"
+" evolution."
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:132
+#: eb1a47c891734f35b4a2d5ab48abcf69
+msgid "Next Steps"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:134
+#: 9d25e7b32c9b4421bb04f91a0f91838a
+msgid "Choose your path based on your role:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:138
+#: 82bddf95c9074412983b71c537b66471
+msgid "I'm a Translator"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:142
+#: 863d078685fa4f3fa0065aabf5f23ba7
+msgid "Set up your translation environment and learn the workflow"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:144
+#: 8d61423b3d434af7a481f235485ec4e7
+msgid "I'm a Developer"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:148
+#: a3829820b37b445aab4132454f1c888b
+msgid "Understand how translations integrate with development"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:152
+#: 70188057ca314addb77ef4f491741109
+msgid "I'm a Project Manager"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:156
+#: 2d0c2d7dcfe240b096a3d7a182f843bf
+msgid "Learn translation quality management processes"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:158
+#: b1661ccefe164b74b430276a0a1ec7ad
+msgid "I Need Arabic Guidelines"
+msgstr ""
+
+#: ../../source/developer-guide/translation/index.rst:162
+#: 6ebe13a8cf6d481c87ff23e6c111e14f
+msgid "Review Arabic language and cultural standards"
+msgstr ""
+

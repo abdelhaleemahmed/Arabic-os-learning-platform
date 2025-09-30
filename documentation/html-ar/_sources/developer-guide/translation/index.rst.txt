@@ -6,8 +6,10 @@ The Arabic OS Platform uses a professional gettext-based translation workflow to
 .. toctree::
    :maxdepth: 2
 
+   quick-reference
    translation-workflow
    translator-setup
+   assessment-tool
    arabic-style-guide
    quality-assurance
 
@@ -94,10 +96,11 @@ Getting Started
 
 **New Translators:**
 
-1. **Setup Environment** - :doc:`translator-setup` - Install tools and access files
-2. **Learn Workflow** - :doc:`translation-workflow` - Master the translation process
-3. **Study Style Guide** - :doc:`arabic-style-guide` - Understand Arabic standards
-4. **Review QA Process** - :doc:`quality-assurance` - Ensure quality output
+1. **Quick Start** - :doc:`quick-reference` - Essential workflow for .po file generation and translation
+2. **Setup Environment** - :doc:`translator-setup` - Install tools and access files
+3. **Learn Workflow** - :doc:`translation-workflow` - Master the translation process
+4. **Study Style Guide** - :doc:`arabic-style-guide` - Understand Arabic standards
+5. **Review QA Process** - :doc:`quality-assurance` - Ensure quality output
 
 **Project Coordinators:**
 

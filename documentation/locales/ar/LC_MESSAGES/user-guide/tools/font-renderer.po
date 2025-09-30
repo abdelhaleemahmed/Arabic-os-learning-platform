@@ -1,0 +1,1065 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/user-guide/tools/font-renderer.rst:2
+#: 6616e4533c3a4ce3bdcad9becb3fa034
+msgid "Arabic Font Renderer Demo"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:4
+#: 4a665d561c074fe288a496e135deb524
+msgid ""
+"The Arabic Font Renderer Demo is an interactive tool that demonstrates "
+"how Arabic OS processes and renders Arabic text at the font and glyph "
+"level. This tool showcases the complete font processing pipeline from "
+"UTF-8 input to final character display, including contextual shaping, "
+"glyph selection, and rendering optimization."
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:7
+#: a51484a28e784d3ebc2b73bdcf555a86
+msgid "Overview"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:9
+#: 5982bc43e5d842c3856f5d4a8f904bdc
+msgid ""
+"Arabic text rendering is significantly more complex than Latin text due "
+"to contextual letter forms, right-to-left flow, and complex typographic "
+"rules. Arabic letters change their appearance based on their position in "
+"words, requiring sophisticated font technology and rendering algorithms "
+"to display text correctly."
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:12
+#: 414c2708727644399850e144db02b48f
+msgid "Key Learning Objectives"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:14
+#: 3bbe9d48e4284e78beb8f0b97fee4784
+msgid "By using this tool, you will understand:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:16
+#: 484c6f2008514bb8b1ae7c4c87ad912c
+msgid "The Arabic font processing pipeline in Arabic OS"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:17
+#: 7c778e6781e7451bb2d8437417a5be83
+msgid "How contextual Arabic letter shaping works"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:18
+#: 23f914b7d9e6482ca241dc6a95c0c4b2
+msgid "Glyph selection and font rendering algorithms"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:19
+#: cf18398e3f1447af974cc358ee282fd2
+msgid "The relationship between Unicode, fonts, and display"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:20
+#: 4e0e72a362fc4951a8b2b08f0e000f99
+msgid "Performance considerations in Arabic text rendering"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:21
+#: 9a7b6940a37647be8bec6b32ee401db4
+msgid "Font technology standards for Arabic script"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:24
+#: 109e83977c0b41d99579b54f7dd4b57c
+msgid "Interactive Features"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:27
+#: a4ce2657107d4d33b2a7d76d5f11966f
+msgid "Real-time Font Processing Pipeline"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:29
+#: 62d8f52196c44f14802b706d3710da55
+msgid "Experience the complete Arabic text rendering process:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:31
+#: 77cdfaadbaa54a6bb1038428e7ffe6b3
+msgid "**UTF-8 Input Detection**: Character encoding validation and analysis"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:32
+#: 51ec8efdc96e4e5c878b2ea363bf1091
+msgid "**Unicode Processing**: Code point identification and classification"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:33
+#: 13da8dd2979c49aa95e3562176117217
+msgid "**Contextual Analysis**: Determination of letter positions and connections"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:34
+#: ad935b82ab754ba68a3c7fcefeda66dc
+msgid "**Glyph Selection**: Choosing correct character forms from font files"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:35
+#: bd37ccdb7b2c4daeba85e28efbccff22
+msgid "**Rendering Output**: Final display with proper spacing and positioning"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:38
+#: 38610be2834540159595934fd42c0a16
+msgid "Font Preview System"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:40
+#: f0dd5fa819204464916f289f06974e0b
+msgid "Interactive font demonstration:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:42
+#: 16d86b01d2fb4f32bf98120081eb83a2
+msgid "**Multiple Font Families**: Compare different Arabic font styles"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:43
+#: 2b1245b858e642cabc16b3fa489e2180
+msgid "**Size Scaling**: See how fonts render at different sizes"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:44
+#: c1cd6086ba4040f79968edc83e21d542
+msgid "**Weight Variations**: Bold, regular, and light font weights"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:45
+#: b668e8aa19b644148c8e3372e4cb3534
+msgid "**Style Options**: Regular, italic, and decorative styles"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:46
+#: ec5be9155d0b45aa895d9547a0ef987b
+msgid "**Real-time Updates**: Instant preview as you type"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:49
+#: 838845c9b23d4b7c902bf7ed96e5f675
+msgid "Contextual Shaping Visualization"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:51
+#: 33f206ac915b491f89007e4d91ddac58
+msgid "Detailed breakdown of Arabic letter shaping:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:53
+#: aacf02e590904a7ca6d606732ad3198a
+msgid "**Letter Forms**: Isolated, initial, medial, and final shapes"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:54
+#: 93cae87a3f0d4f1c8fe271b2e43baa35
+msgid "**Connection Analysis**: Which letters connect and how"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:55
+#: 4392753394c74bc8aac7d35723c17889
+msgid "**Shaping Rules**: Applied contextual rules and exceptions"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:56
+#: 2b36b876dbb3444985e3d2dbcf63042d
+msgid "**Glyph Mapping**: Unicode to glyph transformations"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:57
+#: df1e0fc5c7ce4799b5c39328a0e81a46
+msgid "**Position Indicators**: Visual markers for letter positions"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:60
+#: 8ae29cdd0ef24a8cbf028aacb319eb3d
+msgid "Character Analysis Panel"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:62
+#: 30727f596e04448a9f0745ec1d47f881
+msgid "Comprehensive analysis for each character:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:64
+#: a820d65d035c49028246635ad3c8d675
+msgid "**Unicode Information**: Code point, name, and properties"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:65
+#: 51addb792f9d4d6cb30a6c01d403411d
+msgid "**Glyph Details**: Font-specific rendering information"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:66
+#: 1b5fdddeeed8401fa008f20a5726f67e
+msgid "**Contextual Form**: Current shape based on position"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:67
+#: bf5518b63aef4f5cbd10bd66f30615a6
+msgid "**Connection Points**: Where letters connect to neighbors"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:68
+#: a42d690a5a1b4ab88a9495dba8e1ad6b
+msgid "**Rendering Metrics**: Width, height, and positioning data"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:71
+#: 4b13b5ee639c45efb0e942c00a819b26
+msgid "Technical Specifications"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:74
+#: 5fc4107f473c4f2493a5cdabdc72c1fb
+msgid "Arabic Font Architecture"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:76
+#: c056ce07095c45cabb26918b0420a4c8
+msgid "Arabic fonts require sophisticated internal structure:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:78
+#: 1d47f44a50d4477090ae4b67638d384b
+msgid "**Glyph Tables**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:80
+#: a9aed03c21f04cca91f28feaf5a230f9
+msgid "**Basic Forms**: Isolated letter shapes for each Arabic character"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:81
+#: 22bc2ae3dd614b04a3a75370f4710ffb
+msgid "**Contextual Forms**: Initial, medial, and final variants"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:82
+#: a80b041c81964a469234065c940e0581
+msgid "**Ligatures**: Special combined character shapes"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:83
+#: 9b5ab60e0f684312806cb657cdd91ad7
+msgid "**Marks**: Diacritical marks and vowel signs"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:84
+#: 716b6d676c864356a966b15a73dbd775
+msgid "**Numerals**: Arabic-Indic digit forms (٠-٩)"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:86
+#: da6488d4b9ae49dd9c0486cd93c2893b
+msgid "**OpenType Features**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:88
+#: 805797d20a4c4429ac2687300b2ec4ab
+msgid "Modern Arabic fonts use OpenType technology:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:90
+#: f12d68dd6b5f41e9a165091c62e0d73b
+msgid "OpenType Features for Arabic"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:94
+#: 32318cb43e5c42008af152fd7cef9e48
+msgid "Feature"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:95
+#: fae9da3e7d2b4e21841717b5879db102
+msgid "Code"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:96
+#: 4727db3399fe4749945d4b441aea6083
+msgid "Purpose"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:97
+#: e6a98fe1067344c98a944bfa078c246d
+msgid "Initial Forms"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:98
+#: ca1bf34249d0407d8935bed6f751f731
+msgid "init"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:99
+#: a2c66fdb4f754e8cbfeacabb86169bb8
+msgid "Letters at word beginnings"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:100
+#: ef00ac1b63154131baefe59073f3e8aa
+msgid "Medial Forms"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:101
+#: 72ac427503c5447fb68cf6407d17a438
+msgid "medi"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:102
+#: acc77ad03d464840b2190624fb3d0a11
+msgid "Letters in word middle"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:103
+#: 63376bbc5cfb4293921f00cfdc80e93f
+msgid "Final Forms"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:104
+#: f3a443f2824b4a82bd0f6a95467a884f
+msgid "fina"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:105
+#: 60e8d7e9d4164a32b64e4501ffe474ed
+msgid "Letters at word endings"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:106
+#: 18fae1d6a8c1494db412e68f14157bd5
+msgid "Contextual Alternates"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:107
+#: b9f0894ba16546eaaeaa165d9f40fa74
+msgid "calt"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:108
+#: aa4d24d5a38445d3aec18022357b4aad
+msgid "Context-dependent forms"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:109
+#: fa4572cabe6b4b37b00e599e5377656d
+msgid "Ligatures"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:110
+#: 785b7de31b9341bda2ca705e11c8cf0c
+msgid "liga"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:111
+#: 597feaa295b24a6aa5a7503eb02025ba
+msgid "Character combinations"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:112
+#: 3e59be2f69d84efa9cbc7abab2241996
+msgid "Mark Positioning"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:113
+#: e9b0ec47d4ec4c32a6bfe85792e0a289
+msgid "mark"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:114
+#: 387b57f4221d4d469137311c779b3a1f
+msgid "Diacritic placement"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:117
+#: b590022a61db4db182c8bb7afe465e52
+msgid "Arabic Shaping Algorithm"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:119
+#: 9a274f8d473d4f18a3456954ca52cf6e
+msgid "The font renderer applies complex shaping rules:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:121
+#: 1f658b802c414b2696f4347ad0a15efb
+msgid "**Step 1: Character Classification**"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:123
+#: cc28cdb4af6d4d6cbf1a753dd2936993
+msgid "Each character is classified by type:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:125
+#: eee59c19aec643cbbcadb012cb470527
+msgid "**Dual-joining**: Connect on both sides (ب، ت، ث)"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:126
+#: db8b5fbf76134bdb8ab6354e64bcc936
+msgid "**Right-joining**: Connect only on right (د، ذ، ر)"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:127
+#: 65c1f14e43a04eda8feb7954f624ebf2
+msgid "**Left-joining**: Connect only on left (rare in Arabic)"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:128
+#: 41fab852dc3d4263a8c6a32142088ad9
+msgid "**Non-joining**: No connections (ا in some contexts)"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:129
+#: 89a2c3cc41e64c8da067454f2e7fa514
+msgid "**Transparent**: Don't affect shaping (marks, spaces)"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:131
+#: 0492fc725a534fa5804792fa620c9394
+msgid "**Step 2: Joining Analysis**"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:133
+#: c5044f1c39ac4fd2ad0d9a012ac22628
+msgid "Determine connection points:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:143
+#: af097c9c5ee94e838c09538ee783728a
+msgid "**Step 3: Glyph Selection**"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:145
+#: 030130e38e67442a936da08877a81afb
+msgid "Choose appropriate glyphs from font:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:147
+#: 51f298f11a854a3ca2fd4a0f429f444a
+msgid "Initial ك → U+0643.init"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:148
+#: 29ea42ef7c994a2d8fb29e46a06a95f5
+msgid "Medial ت → U+062A.medi"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:149
+#: 407d7e8d30f14c328b9c3cfb2932d3dc
+msgid "Isolated ا → U+0627"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:150
+#: d06723a733e1499c976242ae3019c034
+msgid "Final ب → U+0628.fina"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:152
+#: 80aeb80e5d4349ffbf571ae33037fa4f
+msgid "**Step 4: Positioning**"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:154
+#: 914e45855b6f437c8fc5706cd3a03f0b
+msgid "Calculate final character positions:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:156
+#: 6ca4cb3abaaf4b4588add5446e214d9f
+msgid "Right-to-left baseline progression"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:157
+#: 5b58a730d72945c9bab70b722b2922d2
+msgid "Vertical positioning adjustments"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:158
+#: f231caf98bc6442b848529f3d049f686
+msgid "Kerning between characters"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:159
+#: 050d3a2fc4ab4aceb98c09cb15f8aeec
+msgid "Mark attachment coordinates"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:162
+#: 6ed40aa84b4d4020ad1aeccd96cf9936
+msgid "Font Rendering Pipeline"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:165
+#: 8c64a62056d74370a9af5ad721408b11
+msgid "Arabic OS Font Processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:167
+#: 9ed471fcab234ec99db9f504bf3b1807
+msgid "The complete rendering pipeline:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:169
+#: d38c8fd342c344d395b0ff2afdb8ee27
+msgid "**1. Text Input Processing**"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:193
+#: 1f8ede1af9334aad9b24f6815ea3118c
+msgid "**2. Contextual Analysis**"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:228
+#: 881272f589744b058c559dd829ef71e9
+msgid "**3. Glyph Rendering**"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:264
+#: e957fdffbe3e42e589a51483a510aa23
+msgid "Performance Optimization"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:267
+#: 6fb3273b7f5043afac7e55c8c1601667
+msgid "Font Caching Strategies"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:269
+#: 6ac2dd46d251469092c803d21a729213
+msgid "Arabic OS optimizes font rendering performance:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:271
+#: 91af8e6480074169b83e6c0216d691fd
+msgid "**Glyph Caching**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:303
+#: d9936fcc842743d29aca91f2c45f3e37
+msgid "**Shaping Result Caching**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:336
+#: 0ca753d7e85442279e2ad6897ceb49d6
+msgid "GPU Acceleration"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:338
+#: 9198d64f076a4621ba0967acc53363d7
+msgid "Hardware-accelerated Arabic text rendering:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:340
+#: 872e8bd8afe5426592bbf86acd209590
+msgid "**Vertex Shader** (GLSL):"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:364
+#: f8df9d3f4d624eb1911d5786d1682f4f
+msgid "**Fragment Shader** (GLSL):"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:394
+#: e7157ecf56444774bc3f82b733f95884
+msgid "Practical Exercises"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:397
+#: 6e47a241e5b14618ba0b44b2b85408a0
+msgid "Exercise 1: Contextual Form Analysis"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:399
+#: 9093ff084592473d943f97104ebabb90
+msgid "Analyze how letter forms change in different contexts:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:401
+#: 393c814cc95f42eaad5e246ab813b819
+msgid "**Test word**: \"كتابة\" (writing)"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:403
+#: 488e2dd24f724f3c941c2994437a869d
+msgid "Enter the word in the renderer"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:404
+#: 5a38946a2277430fb701f4315e67e1d4
+msgid "Observe each letter's contextual form"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:405
+#: d623bfb03fe446c18252eab765be6e70
+msgid "Note connection points between letters"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:406
+#: a254d1a04d414149820fc69bc29c0c95
+msgid "Compare with isolated letter forms"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:408
+#: 919fd2dd121d406ead3aff7959ba86d6
+msgid ""
+"**Expected analysis**: * ك: Initial form (connects to right) * ت: Medial "
+"form (connects both sides) * ا: Isolated form (non-connecting) * ب: "
+"Medial form (connects both sides) * ة: Final form (connects to left)"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:416
+#: 417755cd626b4a97beb5d5697bff42fb
+msgid "Exercise 2: Font Comparison"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:418
+#: 1abac9fd0d5e40ec9376615e864a66b9
+msgid "Compare how different fonts render the same text:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:420
+#: e3a0c5ac19cd4c6dac683ecc0a786f9d
+msgid "**Test text**: \"مرحبا بالعالم العربي\""
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:422
+#: 43fe872545b84d3bad40551037cbb53f
+msgid "Try text with different Arabic fonts"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:423
+#: d5252a300c8e4b5fac932a0dd33f49e2
+msgid "Note differences in letter shapes"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:424
+#: ae0f547237e64ef4a094a8c25c211f59
+msgid "Observe spacing and kerning variations"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:425
+#: a55dc7f73ecf4947b562e5198bd4b3bf
+msgid "Compare readability across fonts"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:427
+#: 8087c7acfaa74935a9b74b13d80eeb8a
+msgid ""
+"**Fonts to test**: * Traditional Arabic * Modern Arabic * Naskh style * "
+"Thuluth style * Sans-serif Arabic"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:435
+#: 297bb16283cf4bd2ac03af4e96a5b318
+msgid "Exercise 3: Performance Analysis"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:437
+#: 026b6ec5d9744cc6a67c0ed329cefec0
+msgid "Analyze rendering performance with different text characteristics:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:439
+#: 9f45ec36e0604931a4166ab7fec3fca7
+msgid ""
+"**Test scenarios**: 1. Short text (5-10 characters) 2. Medium text "
+"(50-100 characters) 3. Long text (500+ characters) 4. Mixed "
+"Arabic/English text 5. Text with many diacritics"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:446
+#: 2ed04146020149a9bf4904cd10d2854e
+msgid ""
+"**Metrics to observe**: * Rendering time * Memory usage * Cache hit rates"
+" * GPU utilization"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:453
+#: 6e231c3610724a7b84a0c395002d3754
+msgid "Common Font Issues"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:456
+#: b5a0c598cab7436ab273fe3161334fdc
+msgid "Glyph Substitution Problems"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:458
+#: 4bd5797a8e834f29976888f9ba664006
+msgid "**Problem**: Wrong character shapes displayed"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:460
+#: f643a1bc99b341fda1f9936ad82c3913
+msgid ""
+"**Causes**: * Missing contextual forms in font * Incorrect shaping engine"
+" implementation * Font feature not enabled"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:465
+#: ../../source/user-guide/tools/font-renderer.rst:511
+#: 94d81ff513fa43e091b8d4a2e06e254e d9af52c0b6654180aae075d83443913f
+msgid "**Solutions**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:479
+#: 6a8ce92f1422405aabb253689f03f993
+msgid "Font Loading Issues"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:481
+#: 39b56a32c22e4d1199e91bd2c75f08a4
+msgid "**Problem**: Arabic text displays as squares or question marks"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:483
+#: 6382e2d22dca4e06ac622044b4ce5c9f
+msgid "**Debugging steps**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:507
+#: 01a77d7ff02843608ef6515d192fed21
+msgid "Baseline and Positioning Issues"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:509
+#: 4f64c5f0f9d44857bc6f30671917acce
+msgid "**Problem**: Arabic text not aligned properly with Latin text"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:528
+#: 413c0a7639944f71ac8f29d25adf1ad7
+msgid "Font Development"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:531
+#: b968e87c68414da99bad283f37cd29c3
+msgid "Creating Arabic Fonts"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:533
+#: c07c68d82bed455eb4ac821a65a20d8b
+msgid "Key considerations for Arabic font development:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:535
+#: 65f78380f3a7431cbe2552f368f1d95f
+msgid ""
+"**Glyph Coverage**: * All Arabic Unicode characters (U+0600-U+06FF) * "
+"Contextual forms for connecting letters * Ligatures for common letter "
+"combinations * Diacritical marks and positioning * Arabic-Indic numerals"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:542
+#: 37434c63cd3e47e68b3568df78e726a9
+msgid "**OpenType Programming**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:564
+#: 144bebf900564215a854dd1ff45422fe
+msgid "Font Testing"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:566
+#: 46c638da32ca4e8d8731f3ceef1d22b7
+msgid "Comprehensive testing for Arabic fonts:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:568
+#: bb9ae3777be546de8a64aa6afade4f78
+msgid "**Automated Testing**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:600
+#: 8159fe9ccc08431d9a3a5ea19d79dca5
+msgid "**Visual Testing**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:636
+#: a52cb111582c485bbedc56ad45e1ffbf
+msgid "Integration with Arabic OS"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:639
+#: b135f2f074ae4e50822e0c46fbb318f6
+msgid "System Font Management"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:641
+#: 73c11e50f17e40e483610ed8c7312e14
+msgid "Arabic OS provides comprehensive font management:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:643
+#: dc15777177e24f6ea07c8b90e0bc1c19
+msgid ""
+"**Font Discovery**: * Automatic scanning of system font directories * "
+"Metadata extraction for Arabic support detection * Priority ordering for "
+"Arabic fonts * Fallback font chain configuration"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:649
+#: 04caf20f889d40058ecb10536841fefc
+msgid "**Runtime Font Selection**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:672
+#: 0168acc6d6db4b9bb8f39e476951962b
+msgid "Applications Integration"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:674
+#: 6961ab38450745fe8e8b4e34e2250746
+msgid "How applications use the font renderer:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:676
+#: 8b14984964d642e9811205a9c0f65b14
+msgid ""
+"**Text Editors**: * Real-time character shaping as you type * Cursor "
+"positioning in shaped text * Selection handling across contextual forms"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:681
+#: eb784d9deb4f4a4b90b379e307f76b1d
+msgid ""
+"**Web Browsers**: * CSS font-feature-settings support * WebFont loading "
+"with Arabic subset optimization * Canvas text rendering with proper "
+"shaping"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:686
+#: 7d7623c62a4d494e9940e6dcbf802772
+msgid ""
+"**Desktop Publishing**: * Professional typography controls * Advanced "
+"kerning and spacing adjustment * Multi-column text layout with RTL "
+"support"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:692
+#: 0e58dc86b11a4754a6fcc4d048a1a524
+msgid "API Reference"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:694
+#: 1378368c654e4a20af2842a244420d11
+msgid "For developers integrating font rendering:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:696
+#: 9e40d6b2ee16436cafd8ac6f3231ffc3
+msgid "**Font Renderer API**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:724
+#: fa22300c5ba24fefb0d699c5cbb7981f
+msgid "**JavaScript Font API**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:749
+#: d03c4e55deac49b69c5126d33af530e2
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:752
+#: 3a2817b582e943519e1e718185ff37b9
+msgid "Publishing and Media"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:754
+#: dbbb708bb105454293107ad206e69c08
+msgid "Arabic font rendering enables:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:756
+#: f78073c718c548329d5e7cb6a234ab1a
+msgid "**Digital Publishing**: Books, magazines, newspapers in Arabic"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:757
+#: 2b91d804ad3745589ca029feaa194af9
+msgid "**Web Content**: Websites and blogs with Arabic typography"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:758
+#: 1176d515b4784fdcbb1b89eadffde147
+msgid "**Advertising**: Marketing materials with Arabic text"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:759
+#: cb2ff9aebec347e1abcad2821ee67786
+msgid "**Signage**: Digital displays and electronic signs"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:762
+#: bd5699371f99463191f4c903fa0eebd2
+msgid "Software Localization"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:764
+#: 6dd5d0eba10049c6b8fd73c2bfb1bd0d
+msgid "Font support is crucial for:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:766
+#: fb52501a655a45b597311668eb7ef27c
+msgid "**User Interface Translation**: Arabic application interfaces"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:767
+#: 01b978124f3e4e7a83ea7dada8e864a2
+msgid "**Documentation**: Help files and manuals in Arabic"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:768
+#: 8726c25d235643d9b62c10ec23ea3a50
+msgid "**Error Messages**: System messages in Arabic"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:769
+#: 82b908af79914974a49955978d3f4c72
+msgid "**Data Display**: Database content and reports"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:772
+#: 078e2f5af61d4828996f3e7d9b3b366b
+msgid "Education and Research"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:774
+#: d06d19c7e2934b268b09ec6617aea226
+msgid "Font rendering supports:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:776
+#: 0aa89d8bc37842449a8cfb96d7bafac5
+msgid "**E-learning Platforms**: Online Arabic language courses"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:777
+#: 2f244206628e49a7a8d04b788961d3cf
+msgid "**Digital Libraries**: Arabic manuscript digitization"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:778
+#: e0e3026cc6f04eb38e06c3e74a9321a5
+msgid "**Research Tools**: Arabic text analysis software"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:779
+#: 43ca3daa6c284182bb7f64a818267244
+msgid "**Language Learning**: Interactive Arabic learning applications"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:782
+#: 246f59bc070746f5a7fa8026a11c9c3e
+msgid "Integration with Other Tools"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:784
+#: 113cf9e35a3e4356ac7dccbae5613f25
+msgid "The Font Renderer Demo works with other Arabic OS components:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:786
+#: 7867fc95921a426a92f9447abac5bed2
+msgid "Apply knowledge from :doc:`utf8-visualizer` for character encoding"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:787
+#: fbd3af61b21f46c4b362853005d3f0cf
+msgid "Use :doc:`bidi-demo` understanding for text direction"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:788
+#: 475c69a724b24ef9b28f02930149b8f4
+msgid "Reference :doc:`arabic-typing` for input processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:789
+#: c5eeec478080498aacd82bf64640b4db
+msgid "Connect to :doc:`memory-layout` for system-level rendering"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:791
+#: c3d6b5c2eadd4ff992f9b6a474fcfe0f
+msgid ""
+"Understanding Arabic font rendering is essential for creating high-"
+"quality Arabic text display systems. This demo provides deep insight into"
+" the complex processes involved in transforming Unicode text into "
+"beautiful, readable Arabic typography."
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:794
+#: b74ef2dd074b4be095870ab90f3e5432
+msgid "Further Learning"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:796
+#: c6660245c1b5494f8d180fee251d0e95
+msgid "Continue exploring Arabic text rendering with:"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:798
+#: dacfd2863db74eadbd4ebcf55ff8c142
+msgid ":doc:`memory-layout` - How rendered text is stored in memory"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:799
+#: e66a4e869ee243029d1e48a969ebd0df
+msgid ":doc:`kernel-debugger` - System-level font processing debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:800
+#: dc2570546c474c93b194e811bc5156ee
+msgid ""
+":doc:`../../../tutorials/advanced/font-development` - Creating custom "
+"Arabic fonts"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:801
+#: 666342d344394a55af9d75fdf465dee1
+msgid ""
+":doc:`../../../developer-guide/api/graphics-rendering` - Low-level "
+"rendering APIs"
+msgstr ""
+
+#: ../../source/user-guide/tools/font-renderer.rst:803
+#: 9297d341fc674271999dc4d582de6693
+msgid ""
+"Master the complexities of Arabic font rendering to create professional-"
+"quality multilingual applications and systems."
+msgstr ""
+

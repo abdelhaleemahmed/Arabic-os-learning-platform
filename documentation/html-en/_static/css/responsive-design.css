@@ -1,0 +1,63 @@
+/* Responsive Design for Arabic OS Platform Documentation */
+
+/* Mobile-first responsive design */
+@media screen and (max-width: 768px) {
+    .wy-nav-side {
+        left: -300px;
+    }
+
+    .wy-nav-side.shift {
+        left: 0;
+    }
+
+    .wy-nav-content-wrap {
+        margin-left: 0;
+    }
+
+    .wy-nav-content-wrap.shift {
+        margin-left: 0;
+    }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .wy-nav-content {
+        max-width: none;
+    }
+}
+
+/* Large screen optimizations */
+@media screen and (min-width: 1200px) {
+    .wy-nav-content {
+        max-width: 1200px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .wy-nav-side,
+    .wy-nav-top,
+    .rst-footer-buttons {
+        display: none;
+    }
+
+    .wy-nav-content-wrap {
+        margin-left: 0;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .wy-menu-vertical a {
+        border-bottom: 1px solid;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

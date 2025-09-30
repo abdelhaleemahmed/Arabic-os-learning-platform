@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/developer-guide/api/index.rst:2
+#: 7b3ad07f2e7e4697b0d44e60c4cf6508
+msgid "API Reference"
+msgstr ""
+
+#: ../../source/developer-guide/api/index.rst:4
+#: 4bdd75a07d2d4d4fb72a51cd5943ba2d
+msgid "This section contains the API documentation for Arabic OS components."
+msgstr ""
+
+#: ../../source/developer-guide/api/index.rst:7
+#: 4325cea0f75340e7867873622c4d2bdd
+msgid ""
+"API documentation is under development and will be available in future "
+"releases."
+msgstr ""
+
+#: ../../source/developer-guide/api/index.rst:10
+#: 3b7613db01184df8ac05ea6015ca0a0e
+msgid "Available APIs"
+msgstr ""
+
+#: ../../source/developer-guide/api/index.rst:12
+#: b46a9c589761494b8b05b641d311136a
+msgid "**Text Processing API**: UTF-8 and Arabic text processing functions"
+msgstr ""
+
+#: ../../source/developer-guide/api/index.rst:13
+#: 6af66f40b9484df1b0dcc0586f56b0aa
+msgid "**Font Rendering API**: Font loading and character rendering interfaces"
+msgstr ""
+
+#: ../../source/developer-guide/api/index.rst:14
+#: 22f5da1b741d4ca78622a24e95290935
+msgid "**Memory Management API**: System memory allocation and management"
+msgstr ""
+
+#: ../../source/developer-guide/api/index.rst:15
+#: 8f9012447275461382623cb79b254403
+msgid "**Input Method API**: Keyboard and input device interfaces"
+msgstr ""
+
+#: ../../source/developer-guide/api/index.rst:16
+#: 136738711ae14a6390bb0d4b268c73ee
+msgid "**System Call API**: Kernel system call interfaces"
+msgstr ""
+
+#: ../../source/developer-guide/api/index.rst:19
+#: ce65c285509f4225b2746c429f53f500
+msgid "Coming Soon"
+msgstr ""
+
+#: ../../source/developer-guide/api/index.rst:21
+#: 4192154c1bc34ad9851c25b114b16eca
+msgid ""
+"Detailed API documentation for all Arabic OS components will be added in "
+"upcoming releases."
+msgstr ""
+

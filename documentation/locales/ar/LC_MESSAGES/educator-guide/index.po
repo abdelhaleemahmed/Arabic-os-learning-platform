@@ -1,0 +1,567 @@
+# Arabic OS Interactive Learning Platform Documentation - Educator Guide - Arabic Translation
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# Arabic OS Translation Team <team@arabicos.org>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: 2025-09-30 11:30+0000\n"
+"Last-Translator: Arabic OS Translation Team <team@arabicos.org>\n"
+"Language: ar\n"
+"Language-Team: Arabic OS Translation Team <team@arabicos.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/educator-guide/index.rst:2 5d84effb319040c6bc3c24b4c78a41ae
+msgid "Educator Guide"
+msgstr "دليل المعلم"
+
+#: ../../source/educator-guide/index.rst:4 4a6a6b19d7404cf7ae0dafe8391539e9
+msgid ""
+"Welcome to the Arabic OS Platform Educator Guide. This comprehensive "
+"resource is designed for professors, instructors, training coordinators, "
+"and educational administrators who want to integrate Arabic computing and"
+" operating system concepts into their curriculum."
+msgstr ""
+"مرحباً بكم في دليل معلم منصة نظام التشغيل العربي. هذا المورد الشامل "
+"مصمم للأساتذة والمدربين ومنسقي التدريب والإداريين التعليميين "
+"الذين يريدون دمج مفاهيم الحوسبة العربية وأنظمة التشغيل في مناهجهم."
+
+#: ../../source/educator-guide/index.rst:7 e572eaa5bf8342a0b18c6411e0f87250
+msgid "Target Audience"
+msgstr "الجمهور المستهدف"
+
+#: ../../source/educator-guide/index.rst:9 3d3b367a6ebb45e285e40fb7c3789c2b
+msgid "This guide is designed for:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:11 455f0c5ad53a4956b93769cf299a7f7f
+msgid ""
+"**University Professors** - Computer Science, Software Engineering, and "
+"Linguistics departments"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:12 d304831170914beeace0da797cb78d7f
+msgid ""
+"**Corporate Training Managers** - Technology companies with Arabic "
+"localization needs"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:13 e480b3ad5b3c47a6b92feb0b90c95191
+msgid ""
+"**Government Training Coordinators** - Public sector technology "
+"initiatives"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:14 1cfe9c04747a44768398c4b008f9b97b
+msgid ""
+"**Community Educators** - Open source and community-driven education "
+"programs"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:17 b1338e6ceae0472b9e7f3894c9b0cd46
+msgid "Educational Objectives"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:19 e38f9c3175f34371ab503e11424b317b
+msgid "By integrating our platform into your curriculum, students will achieve:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:22 71b3dcfb6c5a47f382ba531565a410a6
+msgid "**Technical Competencies**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:24 1f2c34ff6899493494bf07dc4097b747
+msgid ""
+"Deep understanding of Arabic character encoding systems (CP1256, UTF-8, "
+"Unicode)"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:25 4479c8db2da6466cbddcc7a3bb7dd917
+msgid "Practical experience with bidirectional text algorithms and implementation"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:26 75fd7abce7e246989b74cb1922c04bac
+msgid "Hands-on operating system development skills with Arabic localization"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:27 c762aefa55634819931fe3bbafcc8f90
+msgid "Real-world problem-solving in multilingual computing environments"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:30 be0f4d49a8d5416eb0c975c18e8e8c06
+msgid "**Cultural and Linguistic Awareness**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:32 289e4d0fc1154cf886bdb3d41ab1d252
+msgid "Appreciation for the complexity of Arabic text processing"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:33 a8af7e6ec28b41798d20da12a0e80393
+msgid "Understanding of cultural considerations in software localization"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:34 83682fe4d71d42c29cc32c44255bf26a
+msgid "Recognition of the importance of linguistic diversity in technology"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:35 9b423da258a14098bf90b14ee8f347fb
+msgid "Awareness of accessibility and inclusivity in computing"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:38 ff3b098df7ee4824bdeb5889d6936d8b
+msgid "**Professional Skills**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:40 dbda147efc9147d791fc22c9f7fdab05
+msgid "Technical documentation and communication skills"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:41 3bcf8c61e38b4061a9a4408cc8d022be
+msgid "Collaborative development using industry-standard tools"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:42 c1b96fd55d744bbdad599404bfb9de68
+msgid "Project management and software engineering practices"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:43 67d15ae8047049e09dff5dd1ca33e1c6
+msgid "Cross-cultural technology development awareness"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:46 19b3be0ef82e4683895b285309658cba
+msgid "Implementation Strategies"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:49 5de5007defa1491987e8eef597663f52
+msgid "Course Integration Models"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:52 33e50abb2a5841809b66698a4ed7c8eb
+msgid "**Full Course Implementation**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:54 705c091ac8da46589a0dced2f78a4e91
+msgid "Dedicate an entire course to Arabic computing:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:56 baf13a466ce0419793d795118bd639aa
+msgid "**Duration**: 14-16 weeks (semester-long)"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:57 1f97989513a34030b66126ef47d8897e
+msgid "**Prerequisites**: Basic programming, computer systems fundamentals"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:58 48b9cc189e79470da94f603bbfd6d6c4
+msgid "**Learning Path**: Follow our structured progression through all 8 tools"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:59 d3bb8317e9124a52afe9596f39148b30
+msgid ""
+"**Assessment**: Projects, interactive tool mastery, final Arabic OS "
+"project"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:62 f9daa1e566da4f138a7f01ba592e4407
+msgid "**Module Integration**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:64 e4dec4f44ca14ab98d73757599b387f3
+msgid "Integrate specific topics into existing courses:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:66 d741ed3be97d4f7ea2600b519502dd88
+msgid ""
+"**Operating Systems Course**: Add Arabic text processing and kernel "
+"modules"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:67 971fe4d914354d459f2bccf389e070ef
+msgid ""
+"**Software Engineering**: Include localization and internationalization "
+"projects"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:68 5117dac5fa9341c7a5d9640001b9fdfb
+msgid "**Computer Graphics**: Focus on Arabic font rendering and typography"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:69 71beae25d7ca48a2af13952c25d23376
+msgid "**Linguistics/NLP**: Explore Arabic text processing algorithms"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:72 0b25f4722b5741e0ad51b102b0744768
+msgid "**Workshop Format**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:74 9d530e3b29b74b5982433dadc7434f9c
+msgid "Intensive workshop sessions:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:76 8ee9c594962b4ad1b60d60bc6fb1d1da
+msgid "**Duration**: 2-3 day workshops"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:77 f8745ba2b38444b2818b71d17b2d34ac
+msgid "**Format**: Hands-on interactive tool exploration"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:78 574a7d0dfb3e49089c2423c6a6d239b2
+msgid "**Audience**: Professional development, conference workshops"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:79 4dbaaba402694a688d5e44ee532906d5
+msgid "**Outcome**: Practical Arabic computing skills"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:82 95bf02dc44c143f0a9c8af4e4bb4a846
+msgid "Learning Path Recommendations"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:85 59c40c2bb4de415ab5d22e51a700a844
+msgid "**Beginner Track (Weeks 1-4)**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:87 13f293cb892f4503937142ee001529ef
+msgid "Start with fundamental concepts:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:89 9bc91f0505ef4d53a1fd8c8908db438d
+msgid ":doc:`../user-guide/tools/cp1256-explorer` - Character encoding basics"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:90 532d1b0837c34707919672790acdcd5d
+msgid ":doc:`../user-guide/tools/utf8-visualizer` - Unicode and modern encoding"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:91 8388fb5a2a1e496188e01a4e923a17ba
+msgid ""
+":doc:`../tutorials/beginner/understanding-encoding` - Theoretical "
+"foundations"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:92 b09773a9e8df499298bc3e2f8b87aafe
+msgid "**Assessment**: Character encoding analysis project"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:95 8498880a11b2465089fab519c3078b57
+msgid "**Intermediate Track (Weeks 5-8)**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:97 3b2d2456225444ffba0bf497ac6ca95e
+msgid "Build on encoding knowledge:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:99 342fc80e44a44a6987e7adbc3f13f989
+msgid ":doc:`../user-guide/tools/bidi-demo` - Bidirectional text algorithms"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:100 cd3c6dad5b45492c96d996e98d0bc89f
+msgid ":doc:`../user-guide/tools/arabic-typing` - Input methods and keyboards"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:101 1d04ad475b26475cbc7030e92792f9d0
+msgid ""
+":doc:`../tutorials/intermediate/bidi-algorithms` - Algorithm "
+"implementation"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:102 4cfa422d09304260b17edde230e50b51
+msgid "**Assessment**: BiDi text processor implementation"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:105 767add32e5ae4969901b1df1ec8d282b
+msgid "**Advanced Track (Weeks 9-12)**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:107 a6c8b5de453a4711bf0883780bed0b2f
+msgid "System-level programming:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:109 1b502cda550544cfb526dc12c47148cd
+msgid ":doc:`../user-guide/tools/memory-layout` - System memory management"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:110 8e49d2e101f04623b18f4c0cf82b7589
+msgid ":doc:`../user-guide/tools/kernel-debugger` - Operating system internals"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:111 53c83b1a860f428a89f5f4d863ca07f6
+msgid ":doc:`../developer-guide/build-tutorial/index` - Arabic OS development"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:112 d169c74d64314db7a2ce904aeb6fb9ac
+msgid "**Assessment**: Custom kernel module for Arabic text processing"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:115 3bba65b38c224793b034d922c99c190d
+msgid "**Expert Track (Weeks 13-16)**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:117 08dc8f2854b14aa3956a6d96d8b0dc35
+msgid "Specialized applications:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:119 dae6015f591e4ec58765fd51bce6a232
+msgid ":doc:`../user-guide/tools/font-renderer` - Advanced typography"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:120 6901ab593a36493f859d58f4eb473426
+msgid ":doc:`../user-guide/tools/assembly-simulator` - Low-level optimization"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:121 8a97df6c99ed4fafa0089da874815d5a
+msgid ":doc:`../tutorials/advanced/custom-tools` - Custom tool development"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:122 04000c83ccb14f35866a53b946b8f76a
+msgid "**Assessment**: Complete Arabic computing solution"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:125 a0b8d013575d4fb4ad89fb173a8f8869
+msgid "Available Resources"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:128 a57909ba9de14b088e38495c5a9b54eb
+msgid "Ready-to-Use Materials"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:130 04eaf300fb604765bb26369fabc195cb
+msgid "**Lesson Plans**: Structured 50-90 minute class sessions"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:131 756114569a654f3383c8f5c93bb6ec3f
+msgid "**Laboratory Exercises**: Hands-on guided activities"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:132 73c6dc606ec949e0bfd942ad27483c1e
+msgid "**Assessment Rubrics**: Standardized evaluation criteria"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:133 4bf7b324b75943e1b43e79c0bd2a5375
+msgid "**Project Templates**: Scaffolded programming assignments"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:134 0bef1fc244ed4652bdb1ea8a33b282ad
+msgid "**Presentation Slides**: Customizable lecture materials"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:137 75243ae672c84282bca049bf735def25
+msgid "Interactive Tools"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:139 74541b188f744a1a8a18fad3027cbff6
+msgid "All 8 interactive tools are available for classroom use:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:141 137a6fc0efc34139b1c69d96402a21d1
+msgid "**Web-based**: No software installation required"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:142 626eefca9b3c4424a9882838162c686a
+msgid "**Bilingual Interface**: Arabic and English language support"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:143 69d40933a6e542e9a60ff4790c66e279
+msgid "**Educational Mode**: Step-by-step guided exploration"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:144 3f12c335ee844137a7849e3bc198b812
+msgid "**Assessment Integration**: Built-in progress tracking"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:147 559c9ba13b7d4a7a953e0fa09badace1
+msgid "Documentation Formats"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:149 b7d113ea3c13417584c4fc000cc4aa8b
+msgid "Multiple formats to support diverse teaching needs:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:151 5afdc15cedf549bcbccdce07db63a83b
+msgid "**HTML Documentation**: Interactive web-based materials"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:152 bb1aa3525aff47fb8713e652994f61fa
+msgid "**PDF Guides**: Printable handouts and reference materials"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:153 fbfa8c49aff94c05a7fbe6e1628a359e
+msgid "**ePub Books**: Mobile-friendly reading materials"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:154 d8060a292d0f43108ca8d77de7afa833
+msgid "**LaTeX Source**: Customizable academic materials"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:157 b693fb3416844566a7a11347df81ae4c
+msgid "Support Services"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:160 b1761cda70af4d18ad789d9c6e82e34a
+msgid "Professional Development"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:162 819ea2c283da4469ae0b8fad7a197373
+msgid "**Instructor Training Workshops**: Platform familiarization sessions"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:163 cfa958e575ff4b99bdc14958e2496c8a
+msgid "**Curriculum Consultation**: Custom implementation guidance"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:164 499c685681694f7e83d654bfcf228e7b
+msgid "**Technical Support**: Assistance with setup and integration"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:165 ebb0abacc1ab4eeea675b603530c087b
+msgid "**Community Forums**: Peer support and resource sharing"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:168 f296b0f269a94ee4b24a7772cd82aae2
+msgid "Assessment and Evaluation"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:170 2446ce9bc5e44bd1896dc2f505280c52
+msgid "**Pre-built Assignments**: Ready-to-use coding projects"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:171 3257b1d82a034bffad1ba00bc3765300
+msgid "**Automated Testing**: Tool-based skill evaluation"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:172 5e735df355f3410baabde2898bffc418
+msgid "**Progress Tracking**: Student advancement monitoring"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:173 14016bb3582540cbbab02267f0fe3565
+msgid "**Grade Integration**: LMS-compatible assessment tools"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:176 c4ae66a5d0c34d5f89aff3c0c8c34bfd
+msgid "Institutional Implementation"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:179 67387d1e7407420c8d7226f34d97c899
+msgid "Getting Started"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:181 9a19ad2d21624d55abf39514c913c019
+msgid "**Evaluation Phase**: Test platform with pilot course or workshop"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:182 789c1719f0f846b0b01245b989549b0f
+msgid "**Training Phase**: Instructor familiarization and skill development"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:183 c692858055764567b916f912206683b2
+msgid "**Integration Phase**: Full curriculum implementation"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:184 50353fbc5db84e3f8322d552b4408074
+msgid "**Assessment Phase**: Student outcome evaluation and program refinement"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:187 1cfd61adee154ab68953811e10f510c9
+msgid "Technical Requirements"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:189 60037bf0221440c8909c07817c8ce90f
+msgid ""
+"**Minimal Infrastructure**: * Web browsers with JavaScript support * "
+"Internet connectivity for online tools * PDF reader for offline materials"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:194 3e55287ecf524a8b88c15c9012bad317
+msgid ""
+"**Enhanced Setup**: * Local platform deployment for offline use * LMS "
+"integration for grade tracking * Custom branding and institutional "
+"materials"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:200 151a7e156d71416b81911575484b42c4
+msgid "Success Stories"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:202 9ff1cb9d51544010918d7419a8a0fe64
+msgid "**University of Technology, Dubai**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:203 df32e422c1b34a0d95e83f951603d1a5
+msgid ""
+"\"The Arabic OS Platform transformed our Operating Systems course. "
+"Students now understand both theoretical concepts and practical Arabic "
+"computing challenges. Enrollment increased 40% after implementation.\""
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:205 6d6c82ccd10a468e9fade12701f6f429
+msgid "**King Saud University, Computer Science Department**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:206 7051ae6a03b74d2392f207676e15555b
+msgid ""
+"\"Our students develop not just technical skills, but cultural awareness "
+"of Arabic computing needs. The bilingual approach is perfect for our "
+"diverse student body.\""
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:208 5ef5d28f80cb444a97d22d1d1b4f74ed
+msgid "**Microsoft Arabia Training Program**"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:209 a1ede2704aab4d53849e84ca8e8b68e6
+msgid ""
+"\"We use the platform for employee training on Arabic localization. The "
+"hands-on tools make complex concepts accessible to our engineering "
+"teams.\""
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:212 c8508ca6befa43fea5fb71d82607d9c5
+msgid "Next Steps"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:214 6142419ff81841f494e70d1bb2c3ee58
+msgid "Ready to get started? Choose your implementation approach:"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:218 8d1ec68e2ce64feebabcc1c55da1ff23
+msgid "Curriculum Integration"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:222 115d70f605f74e6087a1cac06edffdc8
+msgid "Detailed guide for integrating into existing courses"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:224 9ff9d16befef4c3b9d2c4ba54ee733ef
+msgid "Lesson Plans"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:228 ea34c43f458047eab3eadb1633aca3d2
+msgid "Ready-to-use class materials and activities"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:232 ed9c3b99b3b24df2afadf4438532f1fa
+msgid "Assessment Tools"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:236 c78a84c9c33a40d2becadf4b426cb99c
+msgid "Evaluation rubrics and testing materials"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:238 b8d8434ce5c84efd80a22f83fb58ec62
+msgid "Classroom Setup"
+msgstr ""
+
+#: ../../source/educator-guide/index.rst:242 5ffd771b7bc7449887afd3ec6d66149f
+msgid "Technical setup and infrastructure guidance"
+msgstr ""
+

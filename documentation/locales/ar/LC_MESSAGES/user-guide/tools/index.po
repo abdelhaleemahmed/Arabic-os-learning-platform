@@ -1,0 +1,189 @@
+# Arabic OS Interactive Learning Platform Documentation - Tools - Arabic Translation
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# Arabic OS Translation Team <team@arabicos.org>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-29 12:56+0000\n"
+"PO-Revision-Date: 2025-09-30 11:25+0000\n"
+"Last-Translator: Arabic OS Translation Team <team@arabicos.org>\n"
+"Language: ar\n"
+"Language-Team: Arabic OS Translation Team <team@arabicos.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../../source/user-guide/tools/index.rst:2
+#: 818ca7b124874d1589cca0ef6e463b70
+msgid "Interactive Learning Tools"
+msgstr "أدوات التعلم التفاعلية"
+
+#: ../../../source/user-guide/tools/index.rst:4
+#: e6573a248aa642b3affd3555f8258177
+msgid ""
+"The Arabic OS Platform features eight comprehensive interactive tools "
+"designed to provide hands-on experience with Arabic text processing, "
+"character encoding, and operating system concepts."
+msgstr ""
+"تتميز منصة نظام التشغيل العربي بثماني أدوات تفاعلية شاملة "
+"مصممة لتوفير تجربة عملية مع معالجة النصوص العربية وترميز "
+"الأحرف ومفاهيم أنظمة التشغيل."
+
+#: ../../../source/user-guide/tools/index.rst:7
+#: bc41dd373714451eb90f3e9f1536b710
+msgid "Tool Categories"
+msgstr "فئات الأدوات"
+
+#: ../../../source/user-guide/tools/index.rst:10
+#: fe841193524543bab4e438ba9efdb53a
+msgid "Character Encoding Tools"
+msgstr "أدوات ترميز الأحرف"
+
+#: ../../../source/user-guide/tools/index.rst:18
+#: 40f102a377c9477381569575386e9925
+msgid ""
+"These tools help you understand how Arabic characters are represented and"
+" stored in computer systems."
+msgstr ""
+"تساعدكم هذه الأدوات على فهم كيف يتم تمثيل وحفظ الأحرف "
+"العربية في أنظمة الحاسوب."
+
+#: ../../../source/user-guide/tools/index.rst:21
+#: 7764f618f670458fa8e7422e84dcec4c
+msgid "Text Processing Tools"
+msgstr "أدوات معالجة النصوص"
+
+#: ../../../source/user-guide/tools/index.rst:29
+#: d5011238941a48c487c35b8ed0a82a3f
+msgid "Explore the complexities of bidirectional text and Arabic input methods."
+msgstr "استكشفوا تعقيدات النص ثنائي الاتجاه وطرق إدخال العربية."
+
+#: ../../../source/user-guide/tools/index.rst:32
+#: 1b47f3adda724dfdb6dc40326ba918e0
+msgid "System-Level Tools"
+msgstr "أدوات مستوى النظام"
+
+#: ../../../source/user-guide/tools/index.rst:42
+#: 19a1bd6dccec4f428ddab1eea5a7b674
+msgid ""
+"Examine how Arabic text is handled at the operating system and hardware "
+"levels."
+msgstr ""
+"افحصوا كيف يتم التعامل مع النص العربي على مستويات نظام "
+"التشغيل والعتاد."
+
+#: ../../../source/user-guide/tools/index.rst:45
+#: ec6de187ce934acbbceb1a3b5a70154c
+msgid "Tool Features"
+msgstr "ميزات الأدوات"
+
+#: ../../../source/user-guide/tools/index.rst:47
+#: 6c21f2ea041c4074af7d90b12fd5015f
+msgid "Each interactive tool provides:"
+msgstr "توفر كل أداة تفاعلية:"
+
+#: ../../../source/user-guide/tools/index.rst:49
+#: b8c1255af0c64f3ca71bf950e6323747
+msgid "**Real-time Visualization** - See concepts in action as you interact"
+msgstr "**التصور في الوقت الفعلي** - شاهدوا المفاهيم في العمل أثناء التفاعل"
+
+#: ../../../source/user-guide/tools/index.rst:50
+#: f99f2c3ec0154571a82cf584150dcfb0
+msgid "**Step-by-step Guidance** - Built-in tutorials and explanations"
+msgstr "**الإرشاد خطوة بخطوة** - دروس تعليمية وشروحات مدمجة"
+
+#: ../../../source/user-guide/tools/index.rst:51
+#: a059be41fdcf4009b134b737630d12f8
+msgid "**Practical Examples** - Real-world Arabic text samples and use cases"
+msgstr "**أمثلة عملية** - عينات نصوص عربية وحالات استخدام من العالم الحقيقي"
+
+#: ../../../source/user-guide/tools/index.rst:52
+#: 67fb3fc81c5547ce99e17062a31eae7b
+msgid "**Educational Content** - Comprehensive background information"
+msgstr "**محتوى تعليمي** - معلومات خلفية شاملة"
+
+#: ../../../source/user-guide/tools/index.rst:53
+#: 436cfd22573d4e16bf25e736da5f25f4
+msgid "**Interactive Exercises** - Hands-on learning activities"
+msgstr "**تمارين تفاعلية** - أنشطة تعلم عملية"
+
+#: ../../../source/user-guide/tools/index.rst:56
+#: db697cf23e724fc985556c8dd0fae11f
+msgid "Getting Started"
+msgstr "البدء"
+
+#: ../../../source/user-guide/tools/index.rst:58
+#: b656bad140f54c42987f5028aa927212
+msgid "**Recommended Learning Path:**"
+msgstr "**مسار التعلم الموصى به:**"
+
+#: ../../../source/user-guide/tools/index.rst:60
+#: cb86f88b77ea4ed2a9792aa5dd1630fa
+msgid "Start with :doc:`cp1256-explorer` to understand character encoding basics"
+msgstr "ابدأوا بـ :doc:`cp1256-explorer` لفهم أساسيات ترميز الأحرف"
+
+#: ../../../source/user-guide/tools/index.rst:61
+#: a9bd87dd305e438398a90404336cc283
+msgid "Progress to :doc:`utf8-visualizer` for modern Unicode concepts"
+msgstr "تقدموا إلى :doc:`utf8-visualizer` لمفاهيم يونيكود الحديثة"
+
+#: ../../../source/user-guide/tools/index.rst:62
+#: 9cc66e93dc8e40f48413614e8e8616de
+msgid "Explore :doc:`bidi-demo` for text flow algorithms"
+msgstr "استكشفوا :doc:`bidi-demo` لخوارزميات تدفق النص"
+
+#: ../../../source/user-guide/tools/index.rst:63
+#: e1f177d9905a40e38cb2fc877519f34f
+msgid "Continue with system-level tools for advanced topics"
+msgstr "تابعوا مع أدوات مستوى النظام للمواضيع المتقدمة"
+
+#: ../../../source/user-guide/tools/index.rst:65
+#: 5648f21130e946a898a6824b1a1b6969
+msgid "**Quick Access:**"
+msgstr "**الوصول السريع:**"
+
+#: ../../../source/user-guide/tools/index.rst:67
+#: f276f37df712448cab0bc0a5e3459614
+msgid ""
+"Each tool can be accessed directly through the documentation or run "
+"independently in your web browser. No installation is required - all "
+"tools are web-based and run locally in your browser."
+msgstr ""
+"يمكن الوصول إلى كل أداة مباشرة من خلال الوثائق أو تشغيلها "
+"بشكل مستقل في متصفح الويب. لا حاجة للتثبيت - جميع الأدوات "
+"مبنية على الويب وتعمل محلياً في متصفحكم."
+
+#: ../../../source/user-guide/tools/index.rst:70
+#: 58e39d2a73f94123b9a726d33953444b
+msgid "Technical Requirements"
+msgstr "المتطلبات التقنية"
+
+#: ../../../source/user-guide/tools/index.rst:72
+#: 7f1b2ac6ee5c44c48f89aa25df96641a
+msgid ""
+"**Minimum Requirements:** * Modern web browser (Chrome 80+, Firefox 75+, "
+"Safari 13+, Edge 80+) * JavaScript enabled * Internet connection for "
+"initial loading"
+msgstr ""
+"**الحد الأدنى من المتطلبات:** * متصفح ويب حديث (Chrome 80+، Firefox 75+، "
+"Safari 13+، Edge 80+) * JavaScript مفعل * اتصال إنترنت "
+"للتحميل الأولي"
+
+#: ../../../source/user-guide/tools/index.rst:77
+#: da421fd00d714b9dab459dcebed594bf
+msgid ""
+"**Recommended:** * Desktop or laptop computer for optimal interaction * "
+"Arabic font support (included in most modern operating systems) * Screen "
+"resolution of 1024x768 or higher"
+msgstr ""
+"**موصى به:** * حاسوب مكتبي أو محمول للتفاعل الأمثل * "
+"دعم الخطوط العربية (متضمن في معظم أنظمة التشغيل الحديثة) * "
+"دقة شاشة 1024x768 أو أعلى"
+

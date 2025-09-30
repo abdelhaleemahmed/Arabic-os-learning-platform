@@ -1,0 +1,754 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/developer-guide/documentation-development.rst:2
+#: a804db49fd4544ee8714e85ec6595699
+msgid "Documentation Development Guide"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:4
+#: 7c59941474f84ae4a924bd4c164cf01d
+msgid ""
+"This comprehensive guide provides everything you need to build, access, "
+"and contribute to the Arabic OS Platform documentation system. Whether "
+"you're a developer, translator, or contributor, this guide ensures you "
+"can efficiently work with our professional Sphinx documentation."
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:7
+#: bfaa97fc62484be8a322a6c630346bf8
+msgid "Overview"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:9
+#: 46da8f009cdd4863a1034b187b607caa
+msgid "Our documentation system is built with Sphinx and provides:"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:11
+#: 04faf19be4a345eead6dc88ba4bb9908
+msgid "**Multi-format Output** - HTML, PDF, EPUB in English and Arabic"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:12
+#: c517a6df3f304f33a53297d1d35c7945
+msgid ""
+"**Professional Workflow** - Industry-standard build processes and "
+"automation"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:13
+#: bdb7df6a2b32468fb5fde6358b89acef
+msgid "**Developer Tools** - Live reload, automated builds, quality validation"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:14
+#: ba52db20878f48e1b022c2047f654482
+msgid "**Bilingual Support** - Complete Arabic translation integration"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:15
+#: 3aab30edd3fc432b901bc76165213c0a
+msgid "**Production Deployment** - Automated builds and GitHub Pages integration"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:18
+#: 94a17219bae0450dbf7fdf3184ddde07
+msgid "Quick Reference"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:20
+#: a46fa945c2024a15a7fe4a97cbba4efa
+msgid "**Common Tasks:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:22
+#: 9cb0fed161c043f6a035269dcfdf71b5
+msgid "Quick Commands"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:26
+#: ca1bb99794e446ad8ff96e8a18efcf6c
+msgid "Task"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:27
+#: 575d955df9a94102971b7b302aa506c8
+msgid "Command"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:28
+#: dd14049c893c4dd0958ad30b74d18491
+msgid "Build English HTML"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:29
+#: fc23b62918b64a4595339d4760d83255
+msgid "``make html-en`` or ``sphinx-build -b html source build/html``"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:30
+#: dc6be339ac6743128d155d072d382130
+msgid "Build Arabic HTML"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:31
+#: ce1999cf23a6415ba8176f85d02781d7
+msgid ""
+"``make html-ar`` or ``sphinx-build -b html -D language=ar source build"
+"/html-ar``"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:32
+#: 5eb29321348349619af8072d0edc16ad
+msgid "Build all formats"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:33
+#: ../../source/developer-guide/documentation-development.rst:846
+#: 34c8d3d07c22439992c5d0f1d05a3d68 b73d650ef5cd4b40a21986245d3eb40a
+msgid "``make all``"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:34
+#: a285cc2fdb4048c5a0217dd5494b1e8d
+msgid "Development build"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:35
+#: ../../source/developer-guide/documentation-development.rst:845
+#: 5303755655be4b6fa51e5ce250feb614 ca4a5f5a314b45aaaacb5f13a6e8cf46
+msgid "``make dev``"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:36
+#: 9b3599683e6943ec88f487ec2d721171
+msgid "Live development server"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:37
+#: e7578251eb2b4069b61f10eaf9a9f0dc
+msgid "``sphinx-autobuild source build/html --open-browser``"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:38
+#: 7e9f150f74a34314a001bf8c86c9414c
+msgid "Clean builds"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:39
+#: e496cbdaa19a42f9a771a9d421911600
+msgid "``make clean``"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:42
+#: a76510fc32d842d7ba9609c628c4cedc
+msgid "Environment Setup"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:45
+#: 65e11f436d5c42c0b92dcbb397394e16
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:47
+#: 1679283b2ab44713b7e0713b09389627
+msgid "Before working with documentation:"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:61
+#: b25423f653644d618abf0b406a613242
+msgid "Virtual Environment Activation"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:63
+#: 2a97d68ceae545328d22987280e909bf
+msgid "**Always activate the virtual environment before working:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:88
+#: a2635de9a3724501a750cc44136b3a09
+msgid "Dependency Installation"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:90
+#: f0dba0c01900477cb073c266fc9424f2
+msgid "**Install or update dependencies:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:103
+#: d4602bfa442644908f0904b573573138
+msgid "Building Documentation"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:106
+#: 7215c4ae464c4e4eb801b823312f90dd
+msgid "HTML Documentation"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:108
+#: 74e1ca2db04a43509cf04908ecbc03fa
+msgid "**English HTML Documentation:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:120
+#: 618c7936697542b3a3ddbb8ef1bddcb3
+msgid "**Arabic HTML Documentation:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:132
+#: 007c2453327f4937b43e80ae949c2eb4
+msgid "**Both Languages:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:140
+#: 3c16205cf7ef4ccebf3c2275c7694cdf
+msgid "Multi-Format Documentation"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:142
+#: ../../source/developer-guide/documentation-development.rst:292
+#: 00c89381498644268bb208e769a23551 290329e7d4f2465fa1689dab15189ceb
+msgid "**PDF Documentation:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:156
+#: ../../source/developer-guide/documentation-development.rst:299
+#: 91f1e6c5085d423295f7cc2f1f5e1a22 d3d36e14a4934e55931d0479c957eff6
+msgid "**EPUB Documentation:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:170
+#: a79eb9e9120a4a56b779eaee817e552c
+msgid "**All Formats (Complete Build):**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:186
+#: 0e589559e2014bfca7134ffb62ddbb85
+msgid "Development Workflows"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:189
+#: f408f961160440fb89fe522d98d4f7a0
+msgid "Quick Development Build"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:191
+#: 566e15052bf64eba9e08e2c5f41ed1bf
+msgid "For fast iteration during development:"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:207
+#: 777f0a344ec24ddea102ce559d010f05
+msgid "Live Development Server"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:209
+#: 1eff77c008a6497f98d2f62002883a9d
+msgid "**Install sphinx-autobuild for live reloading:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:216
+#: 804efff126734ec88d8831226526fb44
+msgid "**Start live development server:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:233
+#: d167bf4411e04c4cb43a0df3d55b1419
+msgid "**Advanced live development:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:251
+#: a23a89c5ddcb41979a8dc27b6b07d11f
+msgid "Translation Development"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:253
+#: 97bb5bd7a0684463adbf7cdb9f436d1c
+msgid "**Working with translations:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:272
+#: fa622753fc534717b6378e987feca16f
+msgid "Accessing Documentation"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:275
+#: ef47b9ebb9874d1e8df8c88a47792c19
+msgid "Local Access Methods"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:277
+#: 78a957cd06a34aafafd0169d7d97901b
+msgid "**After building documentation, access via:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:279
+#: 4fbbc551bf09497baf7ee51674e2545a
+msgid "**HTML Documentation:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:307
+#: 19c5decdc2be4cb6ab05e6fdb1695d1b
+msgid "Specific Documentation Sections"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:309
+#: c1647a594c8f43638e3875de2a65e0ee
+msgid "**Translation Guides Access:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:326
+#: 425204e37a0949388cc887c770f971c1
+msgid "**User Guide Access:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:341
+#: 53ad08d792e94e5bbfe371b50d9878da
+msgid "**Developer Guide Access:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:353
+#: 6685e7545a4b46249ee2daa44a6360e1
+msgid "Browser Recommendations"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:355
+#: 7ae2944bd1744b7bb7b9141e0f3ac39a
+msgid "**For optimal viewing:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:357
+#: b4e152ba3d0047fd8d971715cef1f8ff
+msgid "Browser Compatibility"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:361
+#: e61b4a488ce546ba8ab2d80271107a7c
+msgid "Browser"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:362
+#: fbbede394b8b42ef8be8b519f494d6e8
+msgid "Arabic Support"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:363
+#: a8da03504c6f485b8b151f4aed037618
+msgid "Recommendations"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:364
+#: ba57287b651c4727ba6f6c3a56567dbf
+msgid "Chrome 80+"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:365
+#: ../../source/developer-guide/documentation-development.rst:368
+#: 6b06888f68884a00ba95134d4e941117 e9042bfd8a44472eb25e1bc10f9a9ed3
+msgid "Excellent"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:366
+#: 297405e114c4437f8f66d6dccab37421
+msgid "Best for development, good debugging tools"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:367
+#: d57f9e8b285c43a7a5c94c5a9c4e765d
+msgid "Firefox 75+"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:369
+#: 120624ad9b0e47c6839c7674aa94c61a
+msgid "Good Arabic font rendering"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:370
+#: 244a7da7a3fd4a02a25200c60b24ff85
+msgid "Safari 13+"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:371
+#: ../../source/developer-guide/documentation-development.rst:374
+#: 6e87825712cc42af9af673b42a6b0032 f6cd9a56f1a048c7b4006ead4500a793
+msgid "Good"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:372
+#: f24e973e42084096baefe78f265a9f21
+msgid "macOS integration, good performance"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:373
+#: 74cb1a2c503e4921b282b1f63f9dce76
+msgid "Edge 80+"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:375
+#: a2612e351c4f4658973cbd05f2da41af
+msgid "Windows integration"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:378
+#: 8f40a71aea944f11b52ab4a62de805a4
+msgid "Quality Assurance and Testing"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:381
+#: 836e8ded165a4c45859a9e097c66425f
+msgid "Build Validation"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:383
+#: c0e37155038647cdbce471e56b0c5601
+msgid "**Always validate builds before submitting:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:400
+#: a78a62a026e44f668c651ac619a180c6
+msgid "Translation Testing"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:402
+#: 5a962c5491c04a378061fb1e06e1b9a7
+msgid "**For translation contributors:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:423
+#: 9bc3a1841dc841609b6124cd5f871856
+msgid "Link Validation"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:425
+#: 41b064ac0867453094131c1ee386149c
+msgid "**Check internal and external links:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:439
+#: ddd72ae74d5e416c9b154045e8fc9ae8
+msgid "Performance Testing"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:441
+#: 96e152fb3bb04d40829dcb66db6335b2
+msgid "**Test documentation performance:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:457
+#: 71491b556a4840959b20f46d2978f377
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:460
+#: beba9d3ac36b44569950fe60b23baddf
+msgid "Common Issues and Solutions"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:462
+#: e853faf4f16c4028beead42570ba311f
+msgid "**Issue: Virtual Environment Not Activated**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:473
+#: d4c47b5fbaaf47d78ce3929c0e4fc868
+msgid "**Issue: Build Failures**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:492
+#: 9e094642938743b985f94a6addaea7f2
+msgid "**Issue: Arabic Text Display Problems**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:511
+#: 92694018863547b1b04af5d901bf7859
+msgid "**Issue: Translation Files Not Found**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:528
+#: 36819a5dcd544f4e8ab61736272e5656
+msgid "**Issue: Live Server Not Working**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:544
+#: 7f3657bfebc94839a4cd7287944b255f
+msgid "**Issue: PDF Generation Fails**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:563
+#: 04fcff3ee1cc45a4a0081204517b16a5
+msgid "Performance Optimization"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:565
+#: 110d415e41bf4de08f3b7d8ebebd4e92
+msgid "**Build Speed Optimization:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:578
+#: 883f3f2251fa4f50914f23bbed20117a
+msgid "**Memory Usage:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:586
+#: c30edc36e6e241f8a9f15beece0af2a7
+msgid "**Clean Builds:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:604
+#: 25129cf9692b44ab9ae460ab36555630
+msgid "Development Best Practices"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:607
+#: 4c34097f12144ae4a3de890f28582eb4
+msgid "Documentation Writing"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:609
+#: 02a89ca1bc6c4870a51d189977d8c35b
+msgid "**File Organization:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:619
+#: 5903d66aacea408a8ee064af68275c22
+msgid "**RestructuredText Best Practices:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:647
+#: 6fcb7c6054784f67aaae9555f8d3afd2
+msgid "Translation Integration"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:649
+#: e049a190826b4c618af0b0e9f8815869
+msgid "**For new content:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:668
+#: 0699dc87d59446b195915dbfa616f0ef
+msgid "Version Control Best Practices"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:670
+#: 3b83f280293a455f801a6b5b095a0081
+msgid "**What to commit:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:687
+#: 6f2f99a730ba4c7eb1a204d5907c940a
+msgid "**Commit message examples:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:698
+#: b1cf470bc83642d4b837ba5379d5275f
+msgid "Contribution Workflow"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:701
+#: 2b1aba572f5f4e61959b7086d4af6ee5
+msgid "For New Contributors"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:703
+#: 0b216a0c5cc84e52acfa20f185b3ed81
+msgid "**First-time setup:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:722
+#: 0c18a734ad3c452c908735675d696fc4
+msgid "**Making contributions:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:742
+#: b80e84f9f2c74dc0ab5efd64386b4fe7
+msgid "For Translation Contributors"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:744
+#: 42bd2d677dba4ec3811b44eac9f515ab
+msgid "**Translation workflow:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:763
+#: 69c15a493fed41858a619b56df27c8f6
+msgid "Continuous Integration"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:765
+#: 8022dd2d163a4a1fad23fc130866873b
+msgid "Our documentation system includes automated building and deployment:"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:768
+#: 6069f15b58724bedb54c1a9e684f73b7
+msgid "GitHub Actions Integration"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:770
+#: 3346b65373904293b3f713e5dd720a0b
+msgid "**Automated builds trigger on:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:782
+#: 6c6daa60572b4f51b1aa20bfa341da57
+msgid "**Build process includes:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:796
+#: f56522a03bf143a8b4f5c4a3ff94c2a3
+msgid "Local CI Testing"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:798
+#: 6547313926ad4d9ab0d9f6aa69659e57
+msgid "**Test locally before pushing:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:813
+#: 63d542e06d964509a7938f8fc5adff52
+msgid "Production Deployment"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:815
+#: 29b1cbdc69f144f899458b79edee902c
+msgid "Our documentation is automatically deployed to production:"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:817
+#: 3a7bda2087834013a55d95eb0a181a53
+msgid ""
+"**English Documentation**: https://docs.arabic-os.org/en/ **Arabic "
+"Documentation**: https://docs.arabic-os.org/ar/"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:821
+#: 506c0646acce46938ff30866b2da1781
+msgid "Manual Deployment"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:823
+#: 706d5f9104444be994ada1e08f2a6a37
+msgid "**For emergency deployments:**"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:835
+#: d00680d8837c47db8474ab690ca93e53
+msgid "Development vs Production"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:837
+#: fc537ed9daab476b924e925290e027bb
+msgid "Environment Differences"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:841
+#: 0896a9b0ba8641dc8c83a10fa323391b
+msgid "Aspect"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:842
+#: 775af7240bf8463f9ca7401e5ad24a81
+msgid "Development"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:843
+#: 72bd978badab4c20a0f985882503d995
+msgid "Production"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:844
+#: e5713667ba134b0b9176ea0fa8c702af
+msgid "Build Command"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:847
+#: bfda0cee097f4dd4b76c35693f6bd92e
+msgid "Formats"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:848
+#: 653826ae35ca4f5694d71d0d20706eee
+msgid "HTML only"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:849
+#: cd61948eb8e74ab29d56c969eeab723e
+msgid "HTML, PDF, EPUB"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:850
+#: 2950efc9a0e644a6bdec6224df8d90b8
+msgid "Languages"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:851
+#: c3697f856ac445858651b183165682ab
+msgid "Usually English"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:852
+#: 44b84e47df5c427aa4402ca5be9700db
+msgid "Both English and Arabic"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:853
+#: 35a1900b677d4c888fb1eefc0c53a03b
+msgid "Optimization"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:854
+#: 20cde270868c49cda983c8721331d3c4
+msgid "Fast builds"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:855
+#: be94123ce6364bcaac1673c8ed47ba02
+msgid "Optimized assets"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:856
+#: c3f442ad1ca142cfbb673a41b9783bb8
+msgid "Error Handling"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:857
+#: d72c23f1b09b4bc59c42ac768377e403
+msgid "Show warnings"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:858
+#: 0ff39d155aa54bad913856823fe208ba
+msgid "Warnings as errors"
+msgstr ""
+
+#: ../../source/developer-guide/documentation-development.rst:860
+#: d58347993bf848239f3dcd8bdfb6bf9d
+msgid ""
+"This comprehensive documentation development guide ensures that anyone "
+"can efficiently build, access, and contribute to the Arabic OS Platform "
+"documentation system. Whether you're developing content, translating, or "
+"simply accessing the guides, you now have all the tools and knowledge "
+"needed for success."
+msgstr ""
+

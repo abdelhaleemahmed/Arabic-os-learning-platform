@@ -1,0 +1,731 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 12:41+0000\n"
+"PO-Revision-Date: 2025-09-30 12:45+0000\n"
+"Last-Translator: Claude Code <noreply@anthropic.com>\n"
+"Language: ar\n"
+"Language-Team: Arabic OS Development Team\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:2
+#: 130ba8dead1446019c5f1b7859dc840e
+msgid "Translation Assessment Tool"
+msgstr "أداة تقييم الترجمة"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:4
+#: c5d246a726ea4216a7250a8688442349
+msgid ""
+"The Translation Assessment Tool (``translation_assessment.py``) is a "
+"comprehensive utility that analyzes translation coverage across all "
+"documentation files, providing detailed statistics and actionable "
+"recommendations for translation teams."
+msgstr ""
+"أداة تقييم الترجمة (``translation_assessment.py``) هي أداة شاملة "
+"تحلل تغطية الترجمة عبر جميع ملفات التوثيق، وتوفر إحصائيات مفصلة "
+"وتوصيات قابلة للتنفيذ لفرق الترجمة."
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:7
+#: 56bfef98fc284ee3b4faf3530e7bd29c
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:9
+#: aa09614b8a514372b0b57635262cede2
+msgid "This tool helps translation teams and project managers:"
+msgstr "تساعد هذه الأداة فرق الترجمة ومديري المشاريع على:"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:11
+#: b30cf534ae194a788b33e900e76f76b2
+msgid "**Track translation progress** across all documentation sections"
+msgstr "**تتبع تقدم الترجمة** عبر جميع أقسام التوثيق"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:12
+#: 99d98637934d48408d59d568c70e7b80
+msgid "**Identify priority files** for translation work"
+msgstr "**تحديد الملفات ذات الأولوية** لأعمال الترجمة"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:13
+#: c3f3e7d130d44e2e92c8ca2ca1630105
+msgid "**Monitor quality metrics** and completion percentages"
+msgstr "**مراقبة مقاييس الجودة** ونسب الإنجاز"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:14
+#: d08c9a22a31f4b8e85aee6578b81030c
+msgid "**Generate professional reports** for project planning"
+msgstr "**إنتاج تقارير مهنية** لتخطيط المشاريع"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:15
+#: a078b2ccdfee47578d748927149d97f9
+msgid "**Optimize translation workflows** with data-driven insights"
+msgstr "**تحسين سير عمل الترجمة** بالاعتماد على رؤى مدفوعة بالبيانات"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:17
+#: 8c823778c1cb410f9f74528b97faf638
+msgid ""
+"The tool analyzes all ``.po`` files in the project and provides both "
+"detailed reports and quick summaries with visual indicators for easy "
+"assessment."
+msgstr ""
+"تحلل الأداة جميع ملفات ``.po`` في المشروع وتوفر تقارير مفصلة "
+"وملخصات سريعة مع مؤشرات بصرية للتقييم السهل."
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:20
+#: 0f739654983843338d29d1e3a6bf5472
+msgid "Installation and Setup"
+msgstr "التركيب والإعداد"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:22
+#: 8ba1352f45fc41439115ee9a2f1989b7
+msgid ""
+"The assessment tool is included in the documentation repository and "
+"requires no additional installation beyond the standard Sphinx "
+"environment."
+msgstr ""
+"أداة التقييم متضمنة في مستودع التوثيق ولا تتطلب تركيب إضافي "
+"بعد بيئة Sphinx القياسية."
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:24
+#: 8a4dc175374844e2a4a31e8ad8225387
+msgid "**Prerequisites:**"
+msgstr "**المتطلبات المسبقة:**"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:26
+#: 8b11797273e9442db88c178b4f68267a
+msgid "Python 3.7 or higher"
+msgstr "Python 3.7 أو أحدث"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:27
+#: e620906342554fc69359960002fc6596
+msgid "Standard gettext tools (``msgfmt``, ``msgcat``, ``msgattrib``)"
+msgstr "أدوات gettext القياسية (``msgfmt``، ``msgcat``، ``msgattrib``)"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:28
+#: 10fa256a70d34c309b42194ac87b4003
+msgid "Access to the documentation repository"
+msgstr "الوصول إلى مستودع التوثيق"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:30
+#: 536b42812d2d4bbf8048b54ad5db5b0a
+msgid "**Verification:**"
+msgstr "**التحقق:**"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:41
+#: bbe0d1e507eb4b5c90f60c3badc0a852
+msgid "Basic Usage"
+msgstr "الاستخدام الأساسي"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:44
+#: 45cd52fd71e94e488cb8209e8d529db5
+msgid "Detailed Report"
+msgstr "التقرير المفصل"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:46
+#: 2bc8bf82ac3b4d54b90cb6005001c419
+msgid "Generate a comprehensive translation status report:"
+msgstr "إنتاج تقرير شامل عن حالة الترجمة:"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:52
+#: d02e4b1c1cd64523843c48cd28b8ca19
+msgid "This produces a detailed report with:"
+msgstr "هذا ينتج تقريرًا مفصلاً يتضمن:"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:54
+#: ff9b9a1b6d8c4dc7991fb61ae3453b43
+msgid "**File categorization** by documentation section"
+msgstr "**تصنيف الملفات** حسب قسم التوثيق"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:55
+#: d3a66f8ea3204d2a96559ee44e5ed533
+msgid "**Visual progress indicators** (✅🟡🟠❌)"
+msgstr "**مؤشرات تقدم بصرية** (✅🟡🟠❌)"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:56
+#: 602cddfeb1a94462a49ca101a47bebef
+msgid "**Completion percentages** and message counts"
+msgstr "**نسب الإنجاز** وعدد الرسائل"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:57
+#: 118bfab54c0146e3b38d39798d3cb77b
+msgid "**Priority recommendations** for next translation work"
+msgstr "**توصيات الأولوية** لأعمال الترجمة التالية"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:58
+#: ab98d727c5c74aa78306ffd04d6ffdaa
+msgid "**Overall project statistics** with progress visualization"
+msgstr "**إحصائيات عامة للمشروع** مع تصور التقدم"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:60
+#: ../../source/developer-guide/translation/assessment-tool.rst:101
+#: 4dcfc79b250d4b56a91be7d855dba273 8cdd829f4b1c41188b93d2a44324f440
+msgid "**Sample Output:**"
+msgstr "**مثال على المخرجات:**"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:93
+#: 9cd1c16d59a54036a44c4c48c008cb7b
+msgid "Simple Summary"
+msgstr "ملخص بسيط"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:95
+#: 4456d0426afb422cbc9430f7b5753fb1
+msgid "For quick status checks, use the simple format:"
+msgstr "لفحص الحالة السريع، استخدم التنسيق البسيط:"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:113
+#: 05a860ca6e594291ab8ff4b2de9e767f
+msgid "Advanced Options"
+msgstr "الخيارات المتقدمة"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:116
+#: 64847e9c25b94e2fa898ce33dd831f7a
+msgid "Language Selection"
+msgstr "اختيار اللغة"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:118
+#: d554020b18844391b6689010204c8562
+msgid "Analyze translations for different target languages:"
+msgstr "تحليل الترجمات للغات هدف مختلفة:"
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:131
+#: 2524a9c14e954ea2bd4d74430da22f6d
+msgid "Custom Locale Directory"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:133
+#: 02681e952c2c47dd8a43c53b49ce65fc
+msgid "Specify a custom path to translation files:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:140
+#: 0b1fc2605d40424fb42d2d830b1ec99a
+msgid "Understanding Status Indicators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:143
+#: b1ebabfa337d445db292627695436298
+msgid "Visual Indicators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:145
+#: deb1c29b5c81435b81514ade627f26d3
+msgid "The tool uses color-coded indicators for quick status assessment:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:147
+#: e2a46716e023489385358c6009893c00
+msgid "Status Indicators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:151
+#: 2fc29d384d624e30a79dc4354717c54f
+msgid "Icon"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:152
+#: c5ee4b4bdd7f46f0bd8d74590a5b529a
+msgid "Coverage"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:153
+#: e3129df2ef40420f8c814e6e85f82ea4
+msgid "Description"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:154
+#: d26dbef859fb480eb5cb64757bfd2869
+msgid "✅"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:155
+#: 0d357a60096a4fe182b33aa50e47792a
+msgid "90-100%"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:156
+#: d4a8d22e63304b929732463bbfae6e92
+msgid "**Complete/Ready** - File is fully or nearly fully translated"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:157
+#: 341e4f4dde0948a1802d2223aa8515b3
+msgid "🟡"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:158
+#: 79807465d50844d09b9346abdff47dc0
+msgid "50-89%"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:159
+#: f6a83e735cb34858a043eabaa1477d2c
+msgid "**Good Progress** - Substantial translation work completed"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:160
+#: 54a13bd59a154de79220ecfe74e76546
+msgid "🟠"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:161
+#: 0dd3c6a03fab41dc95b69bac63d2fde9
+msgid "1-49%"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:162
+#: 384524976e7b407a8c4618dc5cdb3fd4
+msgid "**In Progress** - Translation started but significant work remains"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:163
+#: 46a17f6538cd4a48a657362709072e4c
+msgid "❌"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:164
+#: ed8753be28044915880095f20a5b6f09
+msgid "0%"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:165
+#: 63c21e7ee3e74ce9a64b8ad779352572
+msgid "**Not Started** - No translation work has begun"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:168
+#: 1f1b319e04c34cf9aff2cd6a5f97027e
+msgid "File Categories"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:170
+#: a2d839f1be5c40ee821784dc0ea24072
+msgid "Files are automatically organized into logical categories:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:172
+#: e45fd16887fd4832838d9eddc68e9e0c
+msgid "**Root/Other**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:173
+#: efeb5d354fb14e4aaff04de5581cc572
+msgid "Main documentation files and uncategorized content"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:175
+#: a6fb763082684860a4a7702068a2d4a8
+msgid "**User Guide - General**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:176
+#: 836877040ae2496097c09a9aa79c6c9f
+msgid "General user documentation and getting started guides"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:178
+#: 2b37e9aab5e64933b27aa5611db91307
+msgid "**User Guide - Tools**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:179
+#: 54bb5ec117dc40f9b1abe8da110a2133
+msgid "Interactive learning tool documentation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:181
+#: 533867b4ff79432aa4871eccf7c052d3
+msgid "**Developer Guide**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:182
+#: cadc335991744d0e81e98ab204879c7c
+msgid "Technical documentation for developers and contributors"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:184
+#: fb6d89397644435d8b00353b3f5e7adc
+msgid "**Educator Guide**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:185
+#: d3e089ec75e14f21ac7eb6ac12a24d15
+msgid "Educational materials and curriculum guides"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:188
+#: ee77d6322251427f9d419fd6871963a4
+msgid "Priority Recommendations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:190
+#: ada39948c90f4528b87aa44b85e9108b
+msgid "The tool provides actionable recommendations in two categories:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:193
+#: e02c38ebee0242b885172d431612758e
+msgid "Untranslated Files (❗)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:195
+#: ac6898d6e0484fa8803c386c2dbb0a2d
+msgid ""
+"Files with 0% translation coverage, sorted by message count (highest "
+"impact first):"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:204
+#: 804b6adf682d42edafd58a86cde85458
+msgid ""
+"**Strategy:** Start with the largest files for maximum impact on overall "
+"coverage."
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:207
+#: ffbe660a9da54e42919ff962b7cbb8d1
+msgid "Partial Files (🟡)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:209
+#: 62dd4c8a5bb748059e9420c83fe36823
+msgid "Files with incomplete translations, sorted by completion percentage:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:217
+#: af3fc24fb0eb49c4a5f84874af4c0209
+msgid "**Strategy:** Complete files with higher percentages first for quick wins."
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:220
+#: 59fee122a6664beb878b34888489e455
+msgid "Professional Workflow Integration"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:223
+#: 02a20412b8f54b7ca7d53bfdb7b76864
+msgid "Project Planning"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:225
+#: d3594e0ec18241289e068a3a1c0b274b
+msgid "Use assessment reports for:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:227
+#: a99644d35d7849beab607e3ebb459b5c
+msgid "**Sprint planning** - Assign translation work based on file priorities"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:228
+#: b29497d65dfb428b8b474a3241aaa48b
+msgid "**Resource allocation** - Estimate translation effort using message counts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:229
+#: 9cc7b1f95ca948939a51bfa38853d0c9
+msgid "**Milestone tracking** - Monitor progress toward coverage goals"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:230
+#: bafa080bbc5c436b8abbea9b5ecdcfda
+msgid "**Quality metrics** - Track improvements over time"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:233
+#: 41b1a5da6e3b473bad566f7ff364feef
+msgid "Regular Monitoring"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:235
+#: 5f6c86bb2de2410085ab97b87a6deab2
+msgid "Integrate assessment into your workflow:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:249
+#: bd3761e0bd694bec87b3de6a04e59315
+msgid "Continuous Integration"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:251
+#: a58c5941bac240338514936b1c09b02e
+msgid "The tool can be integrated into CI/CD pipelines:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:270
+#: 99e86865d20a449fbba2dc12fa8541bd
+msgid "Automation and Scripting"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:273
+#: 7a59a7427e5545f4a64a7c6237095803
+msgid "Batch Analysis"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:275
+#: 08537f5264fe46feaf4a582098b7e2e6
+msgid "Analyze multiple languages at once:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:289
+#: bd47f4ae592a49448f9420d0fa1b5aef
+msgid "Progress Tracking"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:291
+#: 008e8cdd32804408a3b8c0bd3f3d9f8e
+msgid "Track progress over time:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:308
+#: c242e84907754807ae7391bc30348ca2
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:311
+#: 8f671c4c94fa4f70bcbf45335112d707
+msgid "Common Issues"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:313
+#: 92a4a786c1c7444fbe2691c0ead72943
+msgid "**Tool not found:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:321
+#: 20e1ed2bd036462d9c87b32c25c0c307
+msgid "**Permission errors:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:328
+#: 495d3bf7849144c88e2628d0db347d3e
+msgid "**msgfmt command not found:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:342
+#: 6ea107106af64fb1bf3d735fa0528be3
+msgid "**Empty or incorrect results:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:353
+#: e4ad753fd01b4777b4a27607964d2a0e
+msgid "Best Practices"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:356
+#: 9402487f520c434c8138131c0341991c
+msgid "For Translation Teams"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:358
+#: 1c11eedbfc8c4692a8dd2469da68c601
+msgid "**Start each session** with a status check"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:359
+#: 75a09906de91436c8a146e4c0556046b
+msgid "**Focus on priority files** identified by the tool"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:360
+#: fe29c8c883f3402897fe08c1785438d0
+msgid "**Track progress regularly** using simple summaries"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:361
+#: c5679c5630e54a29867e1ceacc2aae06
+msgid "**Complete partial files** before starting new ones"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:362
+#: b29c7f558c424963b9efddf5f022dfc8
+msgid "**Use detailed reports** for planning and documentation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:365
+#: fac0c636cb6342c4b2fa0fc16eb2bd87
+msgid "For Project Managers"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:367
+#: cfe1bb1c1aa040b69e9f22da6c1d1cf3
+msgid "**Generate weekly reports** for stakeholder updates"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:368
+#: 54528d0040364d7ab5acf1624b293839
+msgid "**Set coverage targets** and track progress toward goals"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:369
+#: 8d5ba1ccfd134973ae6e1e17a01698a2
+msgid "**Identify bottlenecks** using file-specific statistics"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:370
+#: 8bd4efb510744360b49b922d115ffd73
+msgid "**Plan releases** around translation milestones"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:371
+#: 48c3cd2cc5ca43af8fe3ff38ddf2a6f4
+msgid "**Recognize contributors** using completion metrics"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:374
+#: 52e64ecf3bbe4e0c8804e50403bdc8dd
+msgid "For Quality Assurance"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:376
+#: 63e25bd75bb24364b1a98a178611175e
+msgid "**Monitor completion rates** across all file categories"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:377
+#: fe830d9716d14ada94275f12251dfc07
+msgid "**Identify inconsistencies** in translation coverage"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:378
+#: 2b84b51fb2bd439988f5ab9cddffca4f
+msgid "**Validate improvements** after translation updates"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:379
+#: 1176cad6953f41aa8336b82bca57ab32
+msgid "**Track translation velocity** over time"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:380
+#: bc9dce4000474a068c183bec9a8d22a0
+msgid "**Ensure balanced coverage** across documentation sections"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:383
+#: 9cae1de67aa841989e0042e36e596a05
+msgid "Integration with Translation Tools"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:385
+#: faec89c16a18495799d454a5862830e3
+msgid "The assessment tool complements existing translation workflows:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:387
+#: 13a00a222b384350b50511be56d75a90
+msgid "**With Poedit:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:388
+#: b54641efbd8443f3a70a1a675ac15b1b
+msgid "Use assessment reports to prioritize which .po files to open in Poedit."
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:390
+#: c508e230787945099d6025141b027514
+msgid "**With CAT Tools:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:391
+#: b4384dc9302e4f43ae75faec733c0bd0
+msgid "Export priority lists for translation memory integration."
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:393
+#: 7872f17ab928401da16320791e73bf34
+msgid "**With Web Platforms:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:394
+#: 698350e4fa8a4049a026d85ad6114895
+msgid "Generate status reports for web-based translation platforms."
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:396
+#: 5c891d5ab5694f36be03f6343be5e391
+msgid "**With Project Management:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:397
+#: 97776fa7ae26471b94d0b7972c6a3e16
+msgid "Import statistics into project tracking tools for planning."
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:400
+#: 0ed45e2992cf40dd8b9333df39c58d1f
+msgid "Contributing"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:402
+#: 5ab18afb8cb9406b8a9e557a0aba6151
+msgid ""
+"The translation assessment tool is part of the Arabic OS documentation "
+"project. To contribute improvements:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:404
+#: 95d78ae55a7144219e4b8868a70d247a
+msgid "**Feature Requests:** Submit issues for new functionality"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:405
+#: 4574ead9a73845fb921849bdc20dc7d8
+msgid "**Bug Reports:** Report problems with analysis accuracy"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:406
+#: 02f32c966ddc4a0697d1c7fd744e8003
+msgid "**Enhancements:** Propose improvements to reporting or categorization"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:407
+#: 538a6619a06442e587fef7e5bdfafe6f
+msgid "**Documentation:** Help improve this usage guide"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:409
+#: 77fc4c79ad674123a99ca4447c20353d
+msgid "**Tool Location:** ``docs/translation_assessment.py``"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:411
+#: 046150240062498681ab29a3ea14dde5
+msgid "**Repository:** Arabic OS Documentation Project"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:414
+#: b6df8981fbaf4770b63608d25ef290d6
+msgid "See Also"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:416
+#: c272c463515b45c9a09c2e9bbdc60c54
+msgid ":doc:`translation-workflow` - Complete translation process"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:417
+#: 8fe247fc11ec4f808a684818d4135346
+msgid ":doc:`quality-assurance` - Translation quality guidelines"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:418
+#: 2ca5e4d59f394e00b2da54f3517832a3
+msgid ":doc:`translator-setup` - Environment setup for translators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/assessment-tool.rst:419
+#: 9cc7bcd059344f9ca6306aa567a7f614
+msgid ":doc:`quick-reference` - Translation quick reference guide"
+msgstr ""
+

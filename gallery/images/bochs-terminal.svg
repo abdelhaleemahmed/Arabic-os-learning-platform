@@ -1,0 +1,24 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bochsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#457A64;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E5945;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bochsBg)"/>
+  <rect x="15" y="15" width="370" height="270" fill="#000" stroke="#888" stroke-width="1"/>
+  <text x="200" y="40" font-family="monospace" font-size="12" fill="#FFFF00" text-anchor="middle">Bochs x86 Emulator - Arabic OS</text>
+  <text x="25" y="70" font-family="monospace" font-size="9" fill="#00AA00">Booting from A:...</text>
+  <text x="25" y="85" font-family="monospace" font-size="9" fill="#00AA00">Loading kernel...</text>
+  <text x="25" y="100" font-family="monospace" font-size="9" fill="#00AA00">Initializing Arabic text engine...</text>
+  <text x="25" y="115" font-family="monospace" font-size="9" fill="#00AA00">CP1256 codec loaded</text>
+  <text x="25" y="130" font-family="monospace" font-size="9" fill="#00AA00">UTF-8 support enabled</text>
+  <text x="25" y="145" font-family="monospace" font-size="9" fill="#00AA00">BiDi algorithm initialized</text>
+  <text x="25" y="160" font-family="monospace" font-size="9" fill="#CCCCCC">Arabic OS Shell v1.0</text>
+  <text x="25" y="180" font-family="monospace" font-size="9" fill="#CCCCCC">تم تحميل النظام بنجاح</text>
+  <text x="25" y="195" font-family="monospace" font-size="9" fill="#CCCCCC">System loaded successfully</text>
+  <text x="25" y="215" font-family="monospace" font-size="9" fill="#00FF00">arabic-os$ _</text>
+  <rect x="115" y="205" width="6" height="10" fill="#00FF00" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.1;0.9" dur="0.8s" repeatCount="indefinite"/>
+  </rect>
+</svg>

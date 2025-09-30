@@ -1,0 +1,963 @@
+# Arabic OS Interactive Learning Platform Documentation - Bidirectional Text Demo - Arabic Translation
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# Arabic OS Translation Team <team@arabicos.org>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: 2025-09-30 12:50+0000\n"
+"Last-Translator: Arabic OS Translation Team <team@arabicos.org>\n"
+"Language: ar\n"
+"Language-Team: Arabic OS Translation Team <team@arabicos.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/user-guide/tools/bidi-demo.rst:2
+#: 5aaddb8d7fe644e293fa7a6649c03507
+msgid "Bidirectional Text Demo"
+msgstr "عرض النص ثنائي الاتجاه"
+
+#: ../../source/user-guide/tools/bidi-demo.rst:4
+#: 3177853ebe1545598be038a3f999b07f
+msgid ""
+"The Bidirectional Text Demo is an interactive tool that demonstrates how "
+"Arabic OS handles bidirectional (BiDi) text processing. This tool "
+"showcases the breakthrough UTF-8 implementation and illustrates how "
+"Arabic (RTL) and Latin (LTR) text can coexist seamlessly in a single "
+"system."
+msgstr ""
+"عرض النص ثنائي الاتجاه هو أداة تفاعلية توضح كيف يتعامل نظام التشغيل العربي مع "
+"معالجة النصوص ثنائية الاتجاه (BiDi). تعرض هذه الأداة اختراق تنفيذ UTF-8 "
+"وتوضح كيف يمكن للنص العربي (من اليمين إلى اليسار) واللاتيني (من اليسار إلى اليمين) "
+"أن يتعايشا بسلاسة في نظام واحد."
+
+#: ../../source/user-guide/tools/bidi-demo.rst:7
+#: f8736089ed614c99811221b2743a9aac
+msgid "Overview"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:9
+#: 7de33f816ef84362917f7fc3ccda959b
+msgid ""
+"Bidirectional text processing is one of the most complex challenges in "
+"internationalization. Arabic script flows right-to-left (RTL), while "
+"Latin script flows left-to-right (LTR). When these scripts appear "
+"together, sophisticated algorithms determine the proper display order "
+"while maintaining readability for both script types."
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:12
+#: 048447d4089f44899b2e466fb2fbd856
+msgid "Key Learning Objectives"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:14
+#: ccaac99229084619950eb3e30c567a8e
+msgid "By using this tool, you will understand:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:16
+#: 8101895438b54aca8d34d3e8f3099d8c
+msgid "The Unicode Bidirectional Algorithm (UBA) fundamentals"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:17
+#: b34a940cb75a48dea955b7c9335c5cb1
+msgid "How mixed RTL/LTR text is processed and displayed"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:18
+#: cdd9b8c1924c4852aa7127f3e1a6d8ec
+msgid "Character classification for directional processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:19
+#: 7ec0cf1c9219408f8d1a3fd7f4f18287
+msgid "The Arabic OS text rendering pipeline"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:20
+#: 22d0a33cd2dc4aaa98dd754ff2141e53
+msgid "Real-world challenges in multilingual text display"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:23
+#: f8417a52f655419da7c726a02c3d5b81
+msgid "Interactive Features"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:26
+#: 3ef75403c67e48bdaf97d98009db91b2
+msgid "Live Bidirectional Text Processor"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:28
+#: 921921d072f947188932858d639c3faa
+msgid "The main interface provides real-time bidirectional text processing:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:30
+#: 82610305d4cb49c0931d6eafbe5c3cf7
+msgid "**Text Input**: Enter any combination of Arabic and Latin text"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:31
+#: b7c8af7c8d96487ea6ef5308a3916350
+msgid "**Instant Rendering**: See immediate BiDi algorithm results"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:32
+#: c216b3ff86ce42f7a324b21f00f45e9d
+msgid "**Character Analysis**: Detailed breakdown of each character's properties"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:33
+#: d09a845526074db190b275b4e22e3230
+msgid "**Direction Statistics**: Metrics on text composition and flow"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:34
+#: ec6ab7e84bb043d58aa0b4b4a9a2b08b
+msgid "**UTF-8 Encoding Info**: Byte-level analysis of input text"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:37
+#: 97d50afdd62b49569f371c4330b697aa
+msgid "Preset Text Examples"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:39
+#: f49a2698787e449491b82cafcc6c398d
+msgid "Quick access to common bidirectional text scenarios:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:41
+#: ef013a172bdc4eaa9ecf234d1bae92b3
+msgid "**\"مرحبا Hello\"** - Basic Arabic-English mixing"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:42
+#: f9af850e9e3c4dfd8026d7a456aca4d5
+msgid "**\"Arabic OS نظام تشغيل عربي\"** - Technical terminology mixing"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:43
+#: a6ebe993115845c8933f244e63873240
+msgid "**\"Version 2.0 الإصدار الثاني\"** - Versioning with translations"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:44
+#: 65ea5967b06e480dad799b6f8999466b
+msgid "**\"UTF-8 يدعم العربية\"** - Encoding demonstration"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:45
+#: 49e8579441084ffdbea16e067cd8582b
+msgid "**Pure Arabic** - Right-to-left only text"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:46
+#: c9d753034fe7404fb5edf9572ec03c4b
+msgid "**Pure English** - Left-to-right only text"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:49
+#: 6b912ff391ce437996e4c7f815eb6e80
+msgid "Character Analysis Panel"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:51
+#: 5b08b33419554177a241dd43bfe6dd5a
+msgid "For each character in your input, view:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:53
+#: e6b7100554be4da59e9a38d46100e48b
+msgid "**Character Display**: Visual representation with directional indicators"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:54
+#: 0502025e7a764b3aa673e561629a57a9
+msgid "**Unicode Category**: Strong RTL, Strong LTR, Neutral, etc."
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:55
+#: 1ca1af9c20bc420080fa25cb18e3445e
+msgid "**Script Classification**: Arabic, Latin, Common, etc."
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:56
+#: 567e17c7a8e842ebb3ce0aedfc7be077
+msgid "**Directional Properties**: How the character affects text flow"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:57
+#: 73928b187b004489b77949e3443ad4b2
+msgid "**Position in Algorithm**: Role in bidirectional processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:60
+#: 0a5cfb88318f4f02b1b0f3e758176538
+msgid "Arabic OS Text Processing Pipeline"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:62
+#: f37092ed534849f4aba598373526f421
+msgid "Step-by-step visualization of the kernel's text processing:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:64
+#: a4f604242ab0468b880ca42fec4a6558
+msgid "**Input Detection**: Character encoding analysis and validation"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:65
+#: f0a503c2bf914ad7a82ad2aec1fbbb21
+msgid "**Character Classification**: Assignment of directional properties"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:66
+#: 025fd6a9770d483bb6933b7b4137cfc2
+msgid ""
+"**Direction Resolution**: Application of the Unicode Bidirectional "
+"Algorithm"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:67
+#: f1e1ca4320164d10ae3e3f0889b43cc8
+msgid "**Display Output**: Final rendering with proper text flow"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:70
+#: c01605eb9e0f4c1bb09303fcdeb15bfc
+msgid "Technical Specifications"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:73
+#: 57f6a51b6b2740c6b05489e1947e64e0
+msgid "Unicode Bidirectional Algorithm"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:75
+#: dd60a67f9851443ebd70f1074e8376d9
+msgid "The tool implements key UBA concepts:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:77
+#: ba85ec4f5c7f4c78b66057b0ff08d17c
+msgid "**Character Types**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:79
+#: d87cd674317640faa4e0c7f5c7625bed
+msgid "**Strong RTL**: Arabic letters (ا, ب, ت, etc.)"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:80
+#: f063de7c94b3446eaf9f0c08a37b3691
+msgid "**Strong LTR**: Latin letters (A, B, C, etc.)"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:81
+#: 377e65ae9f17425189cd0dfd20d68158
+msgid "**Weak**: Numbers (0-9, ٠-٩) and some punctuation"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:82
+#: e549d510191d46a1aae2ae1b61251622
+msgid "**Neutral**: Spaces, symbols, punctuation marks"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:84
+#: 6c06f33e2639448aaf5378287a08e47f
+msgid "**Processing Rules**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:86
+#: 47c5e70ef7e74ffb86e8540828475fae
+msgid "**Paragraph Direction**: Determined by first strong character"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:87
+#: 61667f1c40ce477881988aaa5011f354
+msgid "**Run Segmentation**: Text divided into directional runs"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:88
+#: 80e1ab4b00df4fbf9ac4fa73604f8538
+msgid "**Weak Character Resolution**: Numbers and punctuation inherit direction"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:89
+#: aa37477dcebe4f7cb5749c1d283d5bbb
+msgid "**Neutral Character Resolution**: Symbols follow surrounding text"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:90
+#: 25a73632d5a042fab090d7ea488eb26f
+msgid "**Level Resolution**: Final ordering based on embedding levels"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:93
+#: ea89aaa9e9b84e78ad329e4439d7608a
+msgid "Arabic Text Direction Rules"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:95
+#: 8179543fb1b24d2fae7546540b9ca2cf
+msgid "Specific rules for Arabic text processing:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:97
+#: de828ce9a40c4b8787e5bf00c17a1898
+msgid "Arabic BiDi Behavior"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:101
+#: 7a9b57a2f3a9447885c37e88096d03c7
+msgid "Text Type"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:102
+#: 8646d5505787462a93ccba48773b44ef
+msgid "Direction"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:103
+#: 78f2a19dba114648b2ccc856111e231d
+msgid "Example"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:104
+#: ba1f94d1850b4231afab1eee3d4c39bd
+msgid "Pure Arabic"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:105
+#: 57e3e0892d0e4d898eed6e3247a81370
+msgid "RTL"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:106
+#: 5f9515ce73c747f09efc08a32f1d049b
+msgid "مرحبا بالعالم"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:107
+#: 04ef9b0a9dd14be1a616de52607b398b
+msgid "Arabic + Numbers"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:108
+#: a87c5cdddb344189b9d88e12fa6b5c62
+msgid "RTL + LTR numbers"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:109
+#: 6ad54af1ac0c49cdb427119974b74121
+msgid "الصفحة 123"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:110
+#: c7ec47e332704a748a5dfa449d0f79d2
+msgid "Arabic + Latin"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:111
+#: b3282f1a58954c1bb3273405940061ca
+msgid "RTL + LTR words"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:112
+#: b830c89650cc4e8e9af7f374a6d3d057
+msgid "مرحبا Hello عالم"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:113
+#: ee922da43de445e39cfdf4fdc796dfcd
+msgid "Technical Terms"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:114
+#: 087490d6acde422789bc83bdc6ce0536
+msgid "Context-dependent"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:115
+#: 0fb3b15513b84d97bd1d5f5de817b04b
+msgid "HTML في صفحة الويب"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:118
+#: bd2dd2b20a6d486badb122a7c427016c
+msgid "Mixed Script Processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:120
+#: aa60cf5f7f7f4c4f9ececc0832a02d83
+msgid "Complex scenarios handled by the algorithm:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:122
+#: 702183caa73d4cf1931f769132acad98
+msgid ""
+"**Nested Directions**: ``` English sentence with مرحبا Arabic text "
+"inside. ```"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:127
+#: 0668b5d025744334aa4a90d7f8d669e6
+msgid "**Number Processing**: ``` الصفحة 123 من 456 صفحة ```"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:132
+#: f504ddfbf6e74da7b43913ec192d1104
+msgid "**Punctuation Handling**: ``` \"مرحبا Hello!\" قال الرجل. ```"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:138
+#: 98d2746c509b4451b9a028dd5d9d2e82
+msgid "Practical Exercises"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:141
+#: c58b022dba3a4f8b97ae102a34bd541f
+msgid "Exercise 1: Basic Direction Analysis"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:143
+#: 79500adbf20c4a0996577f3ad44fbc4c
+msgid "Experiment with simple mixed text:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:145
+#: a6cb0a182c1b4e978da4146b8398a0ea
+msgid ""
+"**Test cases**: 1. \"Hello مرحبا\" 2. \"مرحبا Hello\" 3. \"Hello مرحبا "
+"World\""
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:150
+#: 31715c56d0b64267bdef1f2c44dd1ef5
+msgid ""
+"**Observations to make**: * How paragraph direction is determined * Where"
+" each word appears visually * How punctuation behaves * The role of "
+"spaces in direction resolution"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:157
+#: f6d878de35474fd099d7ca82f2f7842a
+msgid "Exercise 2: Number and Punctuation"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:159
+#: 0a6acf4e68674042b6e8c2aee5137a12
+msgid "Analyze how numbers behave in different contexts:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:161
+#: 5df7ac13c2034deab3ce9638cecf09a9
+msgid ""
+"**Test cases**: 1. \"Page 123\" 2. \"الصفحة 123\" 3. \"Version 2.0 "
+"الإصدار 2.0\""
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:166
+#: 3d6479576b454934b23a1c4038747f6e
+msgid ""
+"**Analysis points**: * Number direction in LTR vs RTL context * How "
+"punctuation affects direction * Mixed numbering systems (123 vs ١٢٣)"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:172
+#: b31b52a93b774fae9c1f914266446aa3
+msgid "Exercise 3: Complex Nested Text"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:174
+#: 8d648cee2cfb467fbe17f514795cba32
+msgid "Explore challenging bidirectional scenarios:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:176
+#: 556e34f06f354e3998dd5d73ac71da1a
+msgid ""
+"**Test cases**: 1. \"The word مرحبا means hello\" 2. \"HTML tags like "
+"<div> في البرمجة\" 3. \"Email: user@domain.com البريد الإلكتروني\""
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:181
+#: 68c5cc8dc74b4bafa05bd8213429811d
+msgid ""
+"**Advanced concepts**: * Embedding levels * Override characters * "
+"Technical term handling"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:187
+#: bb839e82bdfb4fb291c17b0bf33b18fa
+msgid "Common BiDi Challenges"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:190
+#: 6fbbef851c534463b310164296c72ec5
+msgid "Text Alignment Issues"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:192
+#: 4db234ea71094517a8b87aa2a38ff14d
+msgid "**Problem**: Text doesn't align properly in mixed content"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:194
+#: f5cbbe9c45c644eeb93a186ba012e43b
+msgid ""
+"**Causes**: * Incorrect paragraph direction detection * CSS direction "
+"conflicts * Missing RTL styling"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:199
+#: ../../source/user-guide/tools/bidi-demo.rst:240
+#: 112d020d9f634c1f936828bece7f6a6a 8e95b99a66a544fd9d1429a3737e0d13
+msgid "**Solutions**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:215
+#: e55ae35e08014cb9891a32a601a9a22f
+msgid "Number Display Problems"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:217
+#: 9d6b897717df45bd9c270c5f09ace820
+msgid "**Problem**: Numbers appear in wrong positions"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:219
+#: d7db6dac4cce4d228bead3d30cbff705
+msgid ""
+"**Example**: Instead of \"الصفحة 123\" showing as intended, it might "
+"display incorrectly"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:221
+#: 600bd95996774acbb1ac179e8e2b86ff
+msgid ""
+"**Solutions**: * Use proper BiDi marks (LRM, RLM) * Apply CSS direction "
+"explicitly * Consider Unicode directional formatting"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:232
+#: c87cef7456ae4292b5e3f72f63d7ed71
+msgid "Punctuation Confusion"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:234
+#: 99ba9c6052a64b6a80a699a048858fc7
+msgid "**Problem**: Punctuation appears on wrong side of text"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:236
+#: 7da6f780f18c4db590703bae870b9183
+msgid ""
+"**Examples**: * Question marks in wrong position * Quotes opening/closing"
+" incorrectly"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:257
+#: 1f52100db73643fbbdac9289fc3bb1d4
+msgid "Implementation Examples"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:260
+#: df7f83f01f8a47aab70fb456d546473c
+msgid "Web Development"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:262
+#: 2fcbc50288764d8ea6fc1a51e3decac8
+msgid "**HTML with proper BiDi support**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:278
+#: f46a80f971454b738525f4607b2c3bde
+msgid "**CSS for mixed content**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:295
+#: c8eacdd060374ab39aa0df3d1c4f6f69
+msgid "JavaScript BiDi Detection"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:297
+#: 97043ec7716b44b6870b7c837eecdc4e
+msgid "**Automatic direction detection**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:325
+#: 3737bb2507a94befa366815ad3534582
+msgid "Database Considerations"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:327
+#: 016c542320f44fbb84a02f2a4b60a834
+msgid "**MySQL UTF-8 configuration for BiDi**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:339
+#: c8c1e86f88844fde8aeb33644a45c62e
+msgid "Arabic OS Integration"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:342
+#: 6acf9443f7fb48cc85b6a861ea5b2d37
+msgid "Kernel-Level BiDi Support"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:344
+#: 77f56063918a4f2ca9fe9e64afd711bc
+msgid "The Arabic OS kernel provides:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:346
+#: 0408697542e04c07868afe88a03fb2b1
+msgid "**Hardware-accelerated BiDi processing**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:347
+#: d61ce78a1f1f46ba8aa0dbc64c5e3f05
+msgid "**Font shaping for connected Arabic letters**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:348
+#: 8e4f957c61104206be5624408dd6db9e
+msgid "**Optimized memory layout for RTL text**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:349
+#: b03766c96b3246699f10287b74d058fb
+msgid "**System-wide directional consistency**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:352
+#: 04003eb23d6545728d0ae7799b053cfd
+msgid "Terminal and Console"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:354
+#: 1c56f499ae05480095667177df4b1315
+msgid "Arabic OS terminal features:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:356
+#: 99da2c2cafa9469c896da4bf128fa892
+msgid "**RTL command prompt support**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:357
+#: 03779a5e6b944824ab1cc44e6c95d404
+msgid "**Mixed-direction file paths**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:358
+#: 6d0a615caa8f4b4ea9170a136e5999f3
+msgid "**Arabic command aliases**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:359
+#: 29e70f6bd830476f8e36aa17078aa725
+msgid "**Bidirectional text editing**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:362
+#: 027e75b1f9e941a39b981df551e20450
+msgid "File System"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:364
+#: 2a72cd055e9c4fa38883f54b8a81c390
+msgid "BiDi support throughout the file system:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:366
+#: aa41feb02066481ba2d7e4ccda8d374c
+msgid "**RTL file and folder names**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:367
+#: a855304cbc4b4e89b7ced8e455a97d5d
+msgid "**Mixed-script path handling**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:368
+#: d5c8e3ab07d74bb48cef0af273357bf3
+msgid "**Proper sorting of Arabic names**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:369
+#: ff22e6fb15434e40a0e95a2cb64888ee
+msgid "**Metadata with directional information**"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:372
+#: ae92423901af41e482c3cfa40203bce9
+msgid "API Reference"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:374
+#: 91a587944abe45618323db284a7b9d71
+msgid "For developers working with BiDi text:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:376
+#: 93f6b4d7c045432e92a73f6332ea9abd
+msgid "**JavaScript BiDi API**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:404
+#: 20b11cdd3dc04198afef04513f4a0321
+msgid "**Python BiDi Processing**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:425
+#: 6244e0fb57a946d5b928904cd07bc42c
+msgid "Performance Considerations"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:428
+#: 4075eed3e9734f18b29e4849e7baa75b
+msgid "BiDi Algorithm Optimization"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:430
+#: 1685e9e42bff46da96555baae817ce8f
+msgid "Best practices for efficient BiDi processing:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:432
+#: 44da912dfd4e43d3a66599133db36bb2
+msgid "**Cache Results**: Store processed text for repeated use"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:433
+#: 3a488d413a4d42db988bc8e0c9d405db
+msgid "**Segment Processing**: Handle long texts in chunks"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:434
+#: bc2f736c9cd540d481409d21923d4dcf
+msgid "**Early Detection**: Quick RTL/LTR classification"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:435
+#: cc73abe5fa3b4e4b8c84b71631ab494f
+msgid "**Lazy Evaluation**: Process only visible text portions"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:438
+#: af9fc6cd91794c58a7d15140c0e3f049
+msgid "Memory Management"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:440
+#: 43c715795d79466f87ae02fedca99a0c
+msgid "RTL text requires special memory considerations:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:442
+#: 7dacfafa1b964832afe3dd38155c9daa
+msgid "**Buffer Allocation**: Account for reordering overhead"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:443
+#: b3c7f470ff9d4b1a9f7e931b83f23052
+msgid "**Cache Efficiency**: Optimize for BiDi access patterns"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:444
+#: 6f45b03dd322454dac1ce593bda97639
+msgid "**Garbage Collection**: Manage temporary reordering arrays"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:447
+#: 5b9eedc742a1462d9ebfe0a803feeb78
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:450
+#: 780ae255c9db4cddb1f60a1401eeb4b3
+msgid "Content Management Systems"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:452
+#: 1591419c27cd4992bacbf18f6e5e15ec
+msgid "BiDi considerations for CMS development:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:454
+#: 1dd00d4aef04431c958d324c45f162b9
+msgid "**Editor interfaces** that handle mixed content"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:455
+#: d73dc385b4b9475c97f843a2436c4ea2
+msgid "**Template systems** with automatic direction detection"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:456
+#: 75e210abfdbe4a5c92da7c3622e5bd24
+msgid "**Search functionality** that works across scripts"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:457
+#: e839f7170ade4e47b54c141709c9cbc0
+msgid "**URL handling** for RTL domain names"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:460
+#: 87353be0c8a54c8aa657e291c1ac8f5a
+msgid "Social Media Platforms"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:462
+#: 8adb031880ff41bf98da3711556903a6
+msgid "Challenges in social media BiDi support:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:464
+#: 7598c0fead474cef9db0ef83f5d3a5c2
+msgid "**User-generated content** with unpredictable mixing"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:465
+#: 56749ec418df47e58dfb271426049daf
+msgid "**Hashtags and mentions** in mixed scripts"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:466
+#: 6d54cf9b152a46bea6d69b3b359fa188
+msgid "**Reply threading** with varying directions"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:467
+#: 2b7f86c8d63e4046a876f916f776abd4
+msgid "**Embedded media** with BiDi captions"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:470
+#: 5ed536418ac943eca4c920323e45024e
+msgid "E-commerce Applications"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:472
+#: a06b96e03bca47e0800473c2e5bf972c
+msgid "BiDi requirements for online stores:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:474
+#: c473146ca85349f9b7c309a2a715f7f5
+msgid "**Product names** in multiple scripts"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:475
+#: 1ad14381318e43cda98b13cc95f224ec
+msgid "**Pricing** with appropriate number formatting"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:476
+#: 6c55b33cfc48492dbee44add87c18103
+msgid "**Address fields** supporting RTL input"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:477
+#: 062da246062f49bf9b8a57df48d87ee6
+msgid "**Review systems** handling mixed-language content"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:480
+#: a5ff5830f7ba4883924ddb52c47b36d3
+msgid "Integration with Other Tools"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:482
+#: 9e8529e422a54bdb86367e06058cfda7
+msgid "This BiDi demo complements other Arabic OS tools:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:484
+#: 7f88ab120b8548718dcbb37a91659830
+msgid "Start with :doc:`utf8-visualizer` to understand character encoding"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:485
+#: 4790e6bd6b164064b5a226cf95bdfdeb
+msgid "Use :doc:`arabic-typing` to explore input methods"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:486
+#: 462cda845e2f47edad6a0544ec217a12
+msgid "Continue to :doc:`font-renderer` for display rendering details"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:487
+#: 244b84f1da81418d8e5aaf2d45b526a4
+msgid ""
+"Advanced users can explore :doc:`assembly-simulator` for low-level "
+"implementation"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:489
+#: 48911455c21344ac91987dd4f2c733f0
+msgid ""
+"Understanding bidirectional text processing is essential for creating "
+"truly multilingual applications. This demo provides hands-on experience "
+"with the algorithms and challenges involved in RTL/LTR text coexistence."
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:492
+#: f370a904f19f4e948bb0a9c2bb6762e9
+msgid "Further Learning"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:494
+#: 08aba4e4420d4a56a1d4e2eaa4a84efe
+msgid "Continue your BiDi journey with:"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:496
+#: de390f10e08042cb90da32cec9fddda9
+msgid ":doc:`font-renderer` - How fonts handle bidirectional text"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:497
+#: 241cf4603a8042dc922185955c9c4456
+msgid ":doc:`arabic-typing` - Input methods for RTL languages"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:498
+#: fcaf972a3b8548d9af6dc5e0a52bd264
+msgid ""
+":doc:`../../../tutorials/advanced/bidi-algorithm` - Deep dive into UBA "
+"implementation"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:499
+#: 0660960f9ebd414787aa00ea816444e5
+msgid ""
+":doc:`../../../developer-guide/api/text-rendering` - System-level BiDi "
+"APIs"
+msgstr ""
+
+#: ../../source/user-guide/tools/bidi-demo.rst:501
+#: 23006383d3274a3f81c12e25cf9db818
+msgid ""
+"Master bidirectional text concepts with this demo before tackling more "
+"advanced Arabic text processing challenges."
+msgstr ""
+

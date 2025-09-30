@@ -1,0 +1,339 @@
+/* RTL Layout for Arabic OS Documentation */
+
+/* Global RTL layout */
+html[lang="ar"] {
+    direction: rtl;
+}
+
+html[lang="ar"] body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Main content container */
+html[lang="ar"] .wy-grid-for-nav {
+    direction: rtl;
+}
+
+/* Navigation sidebar */
+html[lang="ar"] .wy-nav-side {
+    right: 0;
+    left: auto;
+    border-left: 1px solid #e1e4e5;
+    border-right: none;
+}
+
+html[lang="ar"] .wy-nav-content-wrap {
+    margin-right: 300px;
+    margin-left: 0;
+}
+
+html[lang="ar"] .wy-nav-content {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Menu items */
+html[lang="ar"] .wy-menu-vertical a {
+    padding-right: 1.618em;
+    padding-left: 2.427em;
+    text-align: right;
+}
+
+html[lang="ar"] .wy-menu-vertical a span.toctree-expand {
+    right: auto;
+    left: 0.4em;
+}
+
+/* Search box */
+html[lang="ar"] .wy-side-nav-search {
+    text-align: right;
+}
+
+html[lang="ar"] .wy-side-nav-search input[type=text] {
+    border-radius: 0 50px 50px 0;
+    padding-right: 12px;
+    padding-left: 40px;
+    text-align: right;
+}
+
+html[lang="ar"] .wy-side-nav-search .wy-dropdown > a,
+html[lang="ar"] .wy-side-nav-search > a {
+    text-align: right;
+}
+
+/* Content headings */
+html[lang="ar"] .rst-content h1,
+html[lang="ar"] .rst-content h2,
+html[lang="ar"] .rst-content h3,
+html[lang="ar"] .rst-content h4,
+html[lang="ar"] .rst-content h5,
+html[lang="ar"] .rst-content h6 {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Paragraphs and text */
+html[lang="ar"] .rst-content p,
+html[lang="ar"] .rst-content li {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Lists */
+html[lang="ar"] .rst-content ul,
+html[lang="ar"] .rst-content ol {
+    padding-right: 2em;
+    padding-left: 0;
+}
+
+html[lang="ar"] .rst-content ul li,
+html[lang="ar"] .rst-content ol li {
+    text-align: right;
+}
+
+/* Tables */
+html[lang="ar"] .rst-content table.docutils {
+    direction: rtl;
+}
+
+html[lang="ar"] .rst-content table.docutils thead,
+html[lang="ar"] .rst-content table.docutils tbody {
+    text-align: right;
+}
+
+/* Navigation breadcrumbs */
+html[lang="ar"] .wy-breadcrumbs {
+    direction: rtl;
+}
+
+html[lang="ar"] .wy-breadcrumbs li {
+    display: inline-block;
+}
+
+html[lang="ar"] .wy-breadcrumbs li:first-child {
+    margin-right: 0;
+}
+
+html[lang="ar"] .wy-breadcrumbs li + li::before {
+    content: " < ";
+    color: #b3b3b3;
+    padding: 0 5px;
+}
+
+/* Footer */
+html[lang="ar"] .rst-footer-buttons {
+    direction: rtl;
+}
+
+html[lang="ar"] .rst-footer-buttons .btn {
+    float: left;
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+/* Admonitions (notes, warnings, etc.) */
+html[lang="ar"] .rst-content .admonition {
+    text-align: right;
+    direction: rtl;
+}
+
+html[lang="ar"] .rst-content .admonition .admonition-title {
+    text-align: right;
+}
+
+/* Code blocks - keep LTR but adjust container */
+html[lang="ar"] .rst-content .highlight {
+    direction: ltr;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+html[lang="ar"] .rst-content pre {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Inline code */
+html[lang="ar"] .rst-content code.literal {
+    direction: ltr;
+    display: inline-block;
+}
+
+/* Definition lists */
+html[lang="ar"] .rst-content dl dt {
+    text-align: right;
+}
+
+html[lang="ar"] .rst-content dl dd {
+    margin-right: 30px;
+    margin-left: 0;
+    text-align: right;
+}
+
+/* Images and figures */
+html[lang="ar"] .rst-content .figure {
+    text-align: center;
+}
+
+html[lang="ar"] .rst-content .figure .caption {
+    text-align: right;
+}
+
+/* Version selector and language switcher */
+html[lang="ar"] .wy-versions {
+    right: auto;
+    left: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    html[lang="ar"] .wy-nav-side {
+        right: -300px;
+        left: auto;
+    }
+
+    html[lang="ar"] .wy-nav-content-wrap {
+        margin-right: 0;
+    }
+
+    html[lang="ar"] .wy-nav-side.shift {
+        right: 0;
+    }
+}
+
+/* Specific fixes for table of contents */
+html[lang="ar"] .toctree-wrapper .caption {
+    text-align: right;
+    font-weight: bold;
+}
+
+html[lang="ar"] .toctree-wrapper ul {
+    text-align: right;
+}
+
+/* Navigation menu specific adjustments */
+html[lang="ar"] .wy-menu-vertical li ul {
+    padding-right: 1.618em;
+    padding-left: 0;
+}
+
+html[lang="ar"] .wy-menu-vertical li.current > a {
+    border-right: solid 3px #c9302c;
+    border-left: none;
+    padding-right: 1.3180000000000001em;
+}
+
+/* Section numbering and references */
+html[lang="ar"] .rst-content .section-number::after {
+    content: " - ";
+}
+
+/* Cross-references and links */
+html[lang="ar"] .rst-content a.reference {
+    direction: rtl;
+    display: inline;
+}
+
+/* Ensure proper text flow for mixed content */
+html[lang="ar"] .rst-content .line-block {
+    text-align: right;
+}
+
+html[lang="ar"] .rst-content .line-block .line {
+    text-align: right;
+}
+
+/* Fix Edit on GitHub button position */
+html[lang="ar"] .wy-breadcrumbs-aside {
+    float: left !important;
+    right: auto;
+    left: 0;
+}
+
+html[lang="ar"] .wy-breadcrumbs-aside a {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Fix Previous/Next navigation buttons */
+html[lang="ar"] .rst-footer-buttons {
+    direction: rtl !important;
+    text-align: right;
+}
+
+html[lang="ar"] .rst-footer-buttons .btn-neutral {
+    float: none !important;
+    display: inline-block;
+    margin: 0 0.5rem 0 0;
+}
+
+html[lang="ar"] .rst-footer-buttons .btn-neutral:first-child {
+    margin-right: 0;
+}
+
+html[lang="ar"] .rst-footer-buttons .btn-neutral[rel="next"] {
+    float: left !important;
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+html[lang="ar"] .rst-footer-buttons .btn-neutral[rel="prev"] {
+    float: right !important;
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+/* Fix icon directions for RTL */
+html[lang="ar"] .rst-footer-buttons .btn-neutral[rel="next"] .fa {
+    margin-left: 0.3em;
+    margin-right: 0;
+}
+
+html[lang="ar"] .rst-footer-buttons .btn-neutral[rel="prev"] .fa {
+    margin-right: 0.3em;
+    margin-left: 0;
+}
+
+/* Edit page link positioning */
+html[lang="ar"] .wy-breadcrumbs li.wy-breadcrumbs-aside {
+    float: left !important;
+    right: auto;
+    left: 0;
+}
+
+/* Version/language selector adjustments */
+html[lang="ar"] .rst-versions {
+    left: 0 !important;
+    right: auto !important;
+}
+
+/* Content area padding adjustments */
+html[lang="ar"] .wy-nav-content {
+    padding: 1.618em 1.618em 1.618em 3.236em;
+}
+
+/* Table responsive wrapper */
+html[lang="ar"] .wy-table-responsive table {
+    direction: rtl;
+}
+
+html[lang="ar"] .wy-table-responsive table td,
+html[lang="ar"] .wy-table-responsive table th {
+    text-align: right !important;
+}
+
+/* Code block line numbers for RTL */
+html[lang="ar"] .rst-content .highlight .linenos {
+    float: left !important;
+    margin-right: 0;
+    margin-left: 1em;
+}
+
+/* Admonition icons for RTL */
+html[lang="ar"] .rst-content .admonition .admonition-title::before {
+    right: auto;
+    left: 0;
+    margin-left: 0.5em;
+    margin-right: 0;
+}

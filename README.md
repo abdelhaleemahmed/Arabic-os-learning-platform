@@ -59,12 +59,26 @@ Located in `interactive/` - **9 comprehensive learning tools**:
 - 🔧 **Educational Focus** - step-by-step explanations
 
 ### 📖 Comprehensive Documentation
-Located in `documentation/` - **Professional documentation**:
+Located in `documentation/` - **Professional bilingual documentation**:
 
-- **📄 PDF Manual** (595 KB, 221 pages): Complete platform documentation
+- **📄 HTML Documentation**:
+  - **English**: `html-en/` - Full English documentation
+  - **Arabic**: `html-ar/` - Complete Arabic translations with RTL layout
 - **🔧 Developer Guides**: API references, build tutorials, integration guides
-- **🌍 Translation Workflow**: Professional Arabic localization process
-- **📝 Sphinx Sources**: Fully documented, buildable documentation
+- **🌍 Translation Workflow**: Professional Arabic localization process with assessment tools
+- **📝 Sphinx Sources**: Fully documented, buildable documentation system
+- **🛠️ Update Tools**: Automated scripts for maintaining and deploying documentation
+
+### 🛠️ Development Tools
+Located in `tools/` - **Standalone utilities for platform development**:
+
+- **🌍 Translation Tools**:
+  - **Translation Assessment Tool** (`translation/translation_assessment.py`) - Analyze translation coverage and progress
+  - Comprehensive analysis with visual indicators (✅🟡🟠❌)
+  - Priority recommendations for translation work
+  - Multiple output formats and automation support
+- **📥 Easy Download**: Direct access to tools via GitHub or wget
+- **📋 Documentation**: Complete usage guides and examples in `tools/README.md`
 
 ### 💾 Bootable OS Image
 Located in `images/` - **Ready-to-use OS development**:
@@ -127,9 +141,14 @@ arabic-os-learning-platform/
 │   ├── 📜 js/                  # JavaScript libraries
 │   └── 🌐 content/             # Multilingual content
 ├── 📚 documentation/           # Comprehensive documentation
-│   ├── 📄 pdf/                # Generated PDF manual
+│   ├── 📄 html-en/            # English HTML documentation
+│   ├── 📄 html-ar/            # Arabic HTML documentation (RTL)
 │   ├── 📝 source/             # Sphinx documentation source
-│   └── 🔧 guides/             # Development guides
+│   └── 🔧 locales/            # Translation files (.po/.pot)
+├── 🛠️ tools/                  # Development and maintenance tools
+│   ├── 🌍 translation/        # Translation management tools
+│   │   └── translation_assessment.py  # Translation progress analyzer
+│   └── 📋 README.md           # Tools documentation
 ├── 💾 images/                 # Bootable OS image
 │   └── floppy.flp             # Main bootable floppy
 ├── 📖 docs/                   # Additional documentation
@@ -163,16 +182,35 @@ qemu-system-i386 -fda images/floppy.flp -boot a
 # - Simple command interface
 ```
 
-### Example 3: Documentation Development
+### Example 3: Translation Management
 ```bash
-# Build documentation from source
-cd documentation/source
-pip install sphinx sphinx-design
-sphinx-build -b html . ../build/html
+# Download translation assessment tool
+wget https://raw.githubusercontent.com/YOUR_USERNAME/REPO_NAME/main/tools/translation/translation_assessment.py
+chmod +x translation_assessment.py
 
-# Generate PDF
-sphinx-build -b latex . ../build/latex
-cd ../build/latex && pdflatex ArabicOSPlatformDocumentation.tex
+# Quick translation status check
+python3 translation_assessment.py --simple
+
+# Detailed analysis with priorities
+python3 translation_assessment.py
+```
+
+### Example 4: Documentation Development
+```bash
+# Quick update and deployment (automated)
+cd documentation/
+./update_and_deploy.sh
+
+# Manual step-by-step process
+cd /home/vagrant/os/k/C++/src_c/doc/docs/
+source sphinx-env/bin/activate
+
+# Build both language versions
+sphinx-build -b html source build/html          # English
+sphinx-build -b html -D language=ar source build/html-ar  # Arabic
+
+# Check translation progress
+python3 translation_assessment.py --simple
 ```
 
 ## 🤝 Contributing
@@ -183,8 +221,30 @@ We welcome contributions to improve the Arabic OS Learning Platform:
 - **🔧 Interactive Tools**: Add new educational tools or improve existing ones
 - **📚 Documentation**: Improve guides, add tutorials, fix issues
 - **🌍 Translation**: Contribute Arabic/English translations
+- **🛠️ Development Tools**: Create utilities for platform development and maintenance
 - **🐛 Bug Reports**: Report issues or suggest improvements
 - **🎓 Educational Content**: Add exercises, examples, lesson plans
+
+### 📖 Documentation Maintenance
+
+The documentation system includes comprehensive maintenance tools:
+
+**Quick Updates**:
+```bash
+cd documentation/
+./update_and_deploy.sh  # Automated update and deployment
+```
+
+**Translation Management**:
+```bash
+python3 translation_assessment.py          # Detailed progress report
+python3 translation_assessment.py --simple # Quick status check
+```
+
+**Available Guides**:
+- `DOCUMENTATION_UPDATE_GUIDE.md` - Complete step-by-step process
+- `QUICK_UPDATE_CHECKLIST.md` - Fast reference for common tasks
+- Translation workflow documentation in `html-en/developer-guide/translation/`
 
 ### Development Setup
 ```bash

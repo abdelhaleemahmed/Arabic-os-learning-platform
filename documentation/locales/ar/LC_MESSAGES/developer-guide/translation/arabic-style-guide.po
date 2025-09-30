@@ -1,0 +1,1154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:2
+#: 364217ab16dd431782402b0cf5db07e8
+msgid "Arabic Style Guide"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:4
+#: ba8371b3a6a14f2e93797b374efbe970
+msgid ""
+"This comprehensive style guide ensures consistent, high-quality Arabic "
+"translations across all Arabic OS Platform documentation. It addresses "
+"technical terminology, cultural sensitivity, and linguistic standards "
+"specific to Arabic technical writing."
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:7
+#: 022800bde41d4ce7996e0f3faf66860a
+msgid "Translation Philosophy"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:9
+#: 5308ecbcbb99431eb45ea81e6760437d
+msgid ""
+"Our Arabic translations serve the educational mission of making Arabic "
+"computing concepts accessible to native Arabic speakers. We prioritize:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:11
+#: 61cdc00029354b819c9390955c8b3a7b
+msgid "**Cultural Authenticity**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:12
+#: d0a28580d5fa46758a0d8aea984fbf99
+msgid ""
+"Translations respect Arabic language conventions and cultural context "
+"while maintaining technical precision."
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:14
+#: 6f14882ae6c24c2a83ee1ab0a68acc96
+msgid "**Educational Clarity**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:15
+#: 2a732dd4ce074cbb92d06da9fa1d944e
+msgid ""
+"Content supports learning at all levels, from beginners to advanced "
+"practitioners."
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:17
+#: 27487807f96a47a3be59aa7f6a474e15
+msgid "**Technical Accuracy**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:18
+#: ba6141ab01f04ac89df9b1c8f1edeb9c
+msgid ""
+"Complex technical concepts are translated with precision, maintaining "
+"their intended meaning."
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:20
+#: a04ffe9e1cb44479805f97fca2f6adc6
+msgid "**Professional Quality**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:21
+#: 67607ace930f43b9b40251239f183518
+msgid ""
+"Documentation meets international standards for technical communication "
+"in Arabic."
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:24
+#: 502680aa5c8d484d8fa308214e9b0df5
+msgid "Arabic Language Standards"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:27
+#: 8b8d0727596e492cbcbd35fff96678ec
+msgid "Script and Typography"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:29
+#: e9228bc685384ccbb1b81483383cbd73
+msgid "**Arabic Script Requirements:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:31
+#: e8f495dcc7184030bd58304ad3b4426a
+msgid "**Primary Font**: Amiri (for traditional Arabic text)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:32
+#: 5b0ef6a6c24242d190663ec334b13fed
+msgid "**Secondary Font**: Noto Sans Arabic (for modern technical content)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:33
+#: 73938e40da4c493d800f0a457a77e7c2
+msgid "**Character Set**: Full Unicode Arabic support (U+0600-U+06FF)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:34
+#: c0cfae94945f4b91b12fed34a1cb5dfc
+msgid "**Diacritics**: Use sparingly, only for disambiguation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:35
+#: 6820778090d34da7beaa0868bfde77f8
+msgid ""
+"**Numerals**: Use Arabic-Indic numerals (٠١٢٣٤٥٦٧٨٩) for Arabic context, "
+"Western numerals (0123456789) for technical specifications"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:37
+#: d567c3d603f64e468f3c9d77b902e6e4
+msgid "**Typography Guidelines:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:58
+#: aacadff9188e48cbb1b131e1e60f45fb
+msgid "Right-to-Left (RTL) Considerations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:60
+#: ba8632962c5d49d89784a9be4967fd7a
+msgid ""
+"**Text Flow:** - All Arabic content flows right-to-left - Mixed content "
+"(Arabic with English technical terms) maintains RTL base direction - Code"
+" examples and technical diagrams may use LTR embedding"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:65
+#: e6e1dc6870d54fec9343fe78b034d55e
+msgid ""
+"**Punctuation:** - Use Arabic punctuation marks: ، (comma), ؛ "
+"(semicolon), ؟ (question mark) - Maintain RTL punctuation rules (space "
+"before, not after) - Technical symbols (like parentheses) follow context "
+"direction"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:70
+#: df1485b1e7cb48a89a8f16ae72de3160
+msgid "**Example:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:81
+#: 5b6428997d324956a912e5ec00b60d0d
+msgid "Technical Terminology"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:84
+#: 1a471b871baa4c3eac07d6997a77d705
+msgid "Standardized Technical Terms"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:86
+#: bc3a1ea0b3e3480d9eeb571006c06062
+msgid "**Character Encoding Terms:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:88
+#: 5ba20dcbb4774a74831fae1fd215d780
+msgid "Character Encoding Terminology"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:92
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:123
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:154
+#: 2090ed665e2c48059d26b157fed4bffa 7675088fc02c456081b64a0df78e78ac
+#: bae6d23d6e4a4b11a81f749c89261a1a
+msgid "English Term"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:93
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:124
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:155
+#: 9828a5b817e34f639b3d2ee8c8a8fc34 dbd4cec91b1741a0969db16bc049fec2
+#: dfbf379c08394c339f76cd1b2c81fe26
+msgid "Arabic Translation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:94
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:125
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:156
+#: 3cf5c5034a2046bfb0e5706d375353ef a30e4c04d31f439da8214fb4f80bad99
+#: acb60d60c9284906aa77e64c4544124f
+msgid "Usage Notes"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:95
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:467
+#: 50240e6ab45641958ebfae6ab0399aba f81c58bcc8ff4c07814f5ec9fa1e59b6
+msgid "Character Encoding"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:96
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:466
+#: 42231fac9d2e4b4782f104fcd7ac390c b06af783d4204276ab8e18c81ad5e1d8
+msgid "ترميز الأحرف"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:97
+#: 414e41a75ce9438383758f244d081169
+msgid "Standard term, well established"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:98
+#: 67e090ea48cf45a5a62189b04222aa42
+msgid "Code Point"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:99
+#: c7eee8b8c3cc4427a5611bc2dbf3bddc
+msgid "نقطة الرمز / رمز الموضع"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:100
+#: bc8cd9ea53f148409c2ea6efb87f8812
+msgid "Use \"نقطة الرمز\" for Unicode contexts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:101
+#: 548db0541089464291544dc7bc77abee
+msgid "Byte"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:102
+#: 93027e1243d849bb900e6e04c3bb4373
+msgid "بايت"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:103
+#: a04b7aa2e0084adbbf50ae83e10022fd
+msgid "Borrowed term, widely understood"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:104
+#: cb469ebf9f3647ba96d7d9511fea6ee9
+msgid "Bit"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:105
+#: 7c2020ca27e64fde9224076acadc7093
+msgid "بت / خانة ثنائية"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:106
+#: 2753ccb36c784e058cc110bd14c3b33e
+msgid "Use \"بت\" in technical contexts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:107
+#: c78309f7d8bf46aaa6ccbe8c5389cd18
+msgid "ASCII"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:108
+#: e388541ae2b3493c91c17f456f4e4963
+msgid "أسكي / ASCII"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:109
+#: 5056ad48007140a4b2fb537bd1e79bbc
+msgid "Keep acronym, add Arabic pronunciation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:110
+#: dd3db9f88c254b3d87875f1bfbc193de
+msgid "Unicode"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:111
+#: ad67dd14430d41aabdae0b20a9783cbf
+msgid "يونيكود / Unicode"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:112
+#: 0ccfc2944d1e43cfa8cea802dd55bf8a
+msgid "Keep original term, it's globally recognized"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:113
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:114
+#: 030218c748694e40bccd06e6cb85d284 da68ba73d5e44cf2b9221317fecf7ab3
+msgid "UTF-8"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:115
+#: 009067ac9a9d4da4b2883cf4ddd699ff
+msgid "Acronym preserved, explain in parentheses"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:117
+#: 494c88b9daf544e195d3da44466cdd51
+msgid "**Operating System Terms:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:119
+#: 6b0831094b054bc0aa4eda69a30017b8
+msgid "Operating System Terminology"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:126
+#: 2b40144019e446399a95bc7ccb10f226
+msgid "Operating System"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:127
+#: 7300596718744d859aa89dd2c8f207e1
+msgid "نظام التشغيل"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:128
+#: 53b2a524129c4604a349f4d1163fe907
+msgid "Standard Arabic computing term"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:129
+#: b22514a488c9464a8f9cbe26ec0b022d
+msgid "Kernel"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:130
+#: f93aa52058c442f8af90d309040c44ec
+msgid "النواة"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:131
+#: 35390c55bed34575a69c5dc398c22337
+msgid "Well-established translation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:132
+#: 4be8e8d2bb07433b9e5ec877855d15e3
+msgid "Process"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:133
+#: 824b9a46ae954d96830bf8ba2d5f6536
+msgid "عملية"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:134
+#: 1f170b13c5d84e0998dc0209d97a7f4b
+msgid "Standard term in Arabic computing"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:135
+#: e7091424cefa4a9583d6ba5766338de5
+msgid "Thread"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:136
+#: 59206e9ceb924d369374234466e751e7
+msgid "خيط معالجة / مسار فرعي"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:137
+#: 3c27b2eada27426aa98f34e5e6bbe20a
+msgid "Context-dependent choice"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:138
+#: 27f7812fca0a4b938e33d6ecf68d8db9
+msgid "Memory"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:139
+#: 1cf4d9f74a234cd98f7ab8d98593ed01
+msgid "الذاكرة"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:140
+#: 8274c17a74d9431b91b04807cbde0e61
+msgid "Standard term"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:141
+#: 88293e0de399435688ddd35be8f9de42
+msgid "Buffer"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:142
+#: 7e60749670a6463da0a8b02df54afb22
+msgid "منطقة تخزين مؤقت / مخزن مؤقت"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:143
+#: 86c78e263203414eb2432ecfb708e8e3
+msgid "Use shorter form in repeated contexts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:144
+#: d78a790290dd4780999d74d2eb221358
+msgid "Cache"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:145
+#: c5a115db6e474d15abee83af6233ef11
+msgid "ذاكرة تخزين مؤقت / كاش"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:146
+#: 8a58fc4d98e94a5a88db07b8f248de50
+msgid "Technical context determines choice"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:148
+#: 4858ac53f909444ea88af709145a45db
+msgid "**Arabic Computing Terms:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:150
+#: 1a0d90541ade42898bab825f52b6f6c7
+msgid "Arabic-Specific Technical Terms"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:157
+#: 4bb5501749fa4067897161ca818c4152
+msgid "Bidirectional Text"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:158
+#: 5a1cd1cf19624864bfc10faaa6c78505
+msgid "النص ثنائي الاتجاه"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:159
+#: 5790db7963bf4b098361448c8dc4d198
+msgid "Standard Arabic linguistics term"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:160
+#: 113b05608ffe471898cab569f5a9665b
+msgid "Right-to-Left"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:161
+#: 801a33cc4ad143e8bd391ede66af0cfa
+msgid "من اليمين إلى اليسار / RTL"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:162
+#: 8be3764b602347eb99cc4ea323d9f753
+msgid "Use abbreviation in technical contexts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:163
+#: 1505feb65c7642fbb9389019c7a9753e
+msgid "Arabic Script"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:164
+#: dcffa20e32954cb78f7b9b805e59b3c2
+msgid "الخط العربي / الكتابة العربية"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:165
+#: a69d7a9368e34768aa60e9e7c9eb7e50
+msgid "\"الخط العربي\" preferred"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:166
+#: 2b443d362c054e30bdff89096685ea90
+msgid "Diacritics"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:167
+#: 3e479805428a48bcb2bd1a9ed10e8050
+msgid "الحركات / التشكيل"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:168
+#: c20bab2fc1a64669951cac2cea35a9af
+msgid "\"التشكيل\" more common"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:169
+#: 2e6ccf993c4740dc87a317a50ba056d0
+msgid "Ligature"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:170
+#: f5f663ebfcba4a33a05026997fed78bc
+msgid "الربط / الحرف المركب"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:171
+#: 5e138f94e46c4794a545dbf1b6cc3f80
+msgid "Context-dependent"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:172
+#: 3b95ea9f5fd142cb9df8aeb1198deb41
+msgid "Shaping"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:173
+#: 5f40e703656d4e6a9546bc604222d906
+msgid "تشكيل الأحرف / تكوين الحروف"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:174
+#: 2c8a0de3361446a1b117c002e5e8af43
+msgid "Technical rendering context"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:177
+#: b6081521e4d84584a20213f196b284c6
+msgid "Terminology Consistency Rules"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:179
+#: 4b6e7eb9d41e4bac97d09092d54f5e84
+msgid "**Rule 1: First Occurrence Definition**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:181
+#: d2bbea91a3cb463e8f9cb9a7eb22e14b
+msgid "When introducing technical terms, provide both Arabic and English:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:191
+#: 3c56a48a5abd4566b7a8d7948fa4fa58
+msgid "**Rule 2: Established Terms Priority**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:193
+#: b04c697f8a9c4143b90bd9f61b0b1c66
+msgid "Use widely accepted Arabic terms over literal translations:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:203
+#: 11f34f00f50543c29c9edd255c1c458a
+msgid "**Rule 3: Context-Appropriate Register**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:205
+#: a1601c670ea940d68b5f1b83b6c2b393
+msgid "Match formality level to content type:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:219
+#: 96d38e3f4eea42b29a8c521a780de95f
+msgid "Cultural and Regional Considerations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:222
+#: 1517c834d89045eaa5778879b84774f3
+msgid "Arabic Language Variants"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:224
+#: c00c88b22bbc46a2afab3e2fcce33525
+msgid "**Modern Standard Arabic (MSA) Priority**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:226
+#: bbbec8d9fe754a699f22f3ed9a05e89c
+msgid "All translations use Modern Standard Arabic as the primary register:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:228
+#: b0d856144f574809ac61bb9389aa4dfa
+msgid "**Formal but accessible** language level"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:229
+#: 24a546798fe143649aba8d3f0416492e
+msgid "**Avoiding excessive classical forms** that hinder comprehension"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:230
+#: e577eef1463b4a9ab655410e1adf23ae
+msgid "**Including contemporary technical vocabulary**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:231
+#: 3c6e7ea213604857b5a6015420e02d9b
+msgid "**Maintaining clarity** for diverse Arabic-speaking regions"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:233
+#: a4c502a973374b7cbd98c6bb4b9d1ec8
+msgid "**Regional Sensitivity**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:235
+#: 12f1c6e368fa4055a5397c93fb58e7fe
+msgid "While using MSA, consider regional preferences:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:237
+#: 2781d9da57584965aeb75983a8b0515c
+msgid "Regional Term Variations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:241
+#: aacad48aca094ece89ba93d00c072ac1
+msgid "Concept"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:242
+#: 09082ef2d402410d84bc1fed45026a2a
+msgid "Gulf/Saudi"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:243
+#: c6114cec89ff47c0867ccea04ee746d9
+msgid "Levant/Egypt"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:244
+#: fb5f1e393f11460bbaf04e7cafdb0f58
+msgid "Maghreb"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:245
+#: 22a45619c9d84ce99f1e773cec5f8e5e
+msgid "Computer"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:246
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:248
+#: 5d69b23ebad34b4ba01ef9deb4f83ca2 a19721cb08564998bb1cf84a9bf17909
+msgid "حاسوب"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:247
+#: 953c0d2103ee4a918c59abc6ef001bea
+msgid "كمبيوتر"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:249
+#: 178bd441cc4d47268172785c48a05672
+msgid "Software"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:250
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:251
+#: 1ec651bf5435403abf31c76d1a9cc773 7f092e5441ad4132a4b1eff55a36db5d
+msgid "برنامج"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:252
+#: 847e3a49aed945eb953e3420ea464105
+msgid "برمجية"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:253
+#: ee62ff292af94929a3ab14f8b8e2cecc
+msgid "Email"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:254
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:256
+#: 0cb49aa718574921b89d573c57a43203 73902b63850d4374ad46947411e378f9
+msgid "بريد إلكتروني"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:255
+#: 95d1def1b2504b56a4d52a436d74eb3c
+msgid "إيميل"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:257
+#: c9a7c034b2534cb4a09d543e73f4a965
+msgid "Download"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:258
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:260
+#: 0a317b3d1738450fb63d8519d0a565ad 3da0deadbf0f4783b47497d2eade86f8
+msgid "تنزيل"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:259
+#: bef3fe37874b494b8e94d944d140bf41
+msgid "تحميل"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:262
+#: bbd8528433a34f98af539101abee3226
+msgid ""
+"**Recommended Approach**: Use the most widely understood term, with "
+"regional variants in glossary."
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:265
+#: b8dbefe5a71f46a8aef0838652235e4b
+msgid "Cultural Context Adaptation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:267
+#: 5de20c9f7a3f42dda544ed9e04dffb0c
+msgid "**Educational Context**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:269
+#: 39ca1e398a804dfbae4c33f2e1b156b9
+msgid "Adapt examples and scenarios to Arabic cultural context:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:279
+#: d7bc4aeffcb74ed480afb8278c76fea4
+msgid "**Technical Examples**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:281
+#: e00244e7481d46da9d5d08ed1d99908c
+msgid "Use Arabic-relevant examples while maintaining technical accuracy:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:291
+#: b0d5a32e897243e790b63fe0483e05d0
+msgid "**Time and Date Formats**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:293
+#: ae47bfb6552145fa802a5e6af99fc95c
+msgid "Consider Arabic calendar and cultural preferences:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:305
+#: 45360ebe8bb94ff8823400e9611950fe
+msgid "Writing Style Guidelines"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:308
+#: f659e2f6cbf64c82831cf9a100010492
+msgid "Tone and Voice"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:310
+#: 7620a51266d14cad890521d6477789bb
+msgid "**Educational Tone**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:312
+#: 56882579841140d9b7319f42678bfd3b
+msgid "Maintain an encouraging, supportive tone appropriate for learners:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:322
+#: 0917620057c04b6d9f4755994d6dec9c
+msgid "**Professional Voice**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:324
+#: 701a4ab0326c4cfb87d80e091ae10c2a
+msgid "Balance formality with accessibility:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:338
+#: dde5883d2ad2495fbb02e56392a5b060
+msgid "Sentence Structure"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:340
+#: 1597bb96078b4b4987b73f8336bd3311
+msgid "**Clarity Priority**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:342
+#: a3615ffed04c4119aea6d79ca35515a6
+msgid "Favor clear, straightforward sentence structures:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:352
+#: b518cada97a04678971a2f661e7b2693
+msgid "**Active Voice Preference**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:354
+#: 7ab7003683ff47e394995e06c0284174
+msgid "Use active voice when possible:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:364
+#: 8d0627eef4cb4c7e980f73e02d36f916
+msgid "**Parallel Structure**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:366
+#: 9cea514391964370901eed5f20efc686
+msgid "Maintain consistency in lists and instructions:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:381
+#: ad1b9dd3ceb34f8f89675c533936ba5f
+msgid "Formatting and Presentation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:384
+#: 9985314ee10a4679aa96a3bd257c696d
+msgid "Arabic Text Layout"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:386
+#: c2d73f5074f24ba4b66bf1f7a1bacdc0
+msgid "**Paragraph Direction**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:395
+#: bb1fa138004c443091d57aa4d530672f
+msgid "**Mixed Content Handling**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:406
+#: d653795fd4544b9895d0e805eee0183e
+msgid "Code Examples in Arabic Context"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:408
+#: 99dd7b46f0dc4ddf8c665e3fb82ab19e
+msgid "**Code Comments Translation**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:424
+#: 426c314598f247b7a78fc86bc22d5115
+msgid "**Variable Names Policy**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:426
+#: b4d13d14716a44f4893604690f8418a6
+msgid "Keep English variable names but translate comments and documentation:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:437
+#: 55d8bf07d09c4eef84ca5712c0dd05dc
+msgid "Lists and Tables"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:439
+#: 5804e0fa00b44f2581a7795eddccac81
+msgid "**Numbered Lists**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:441
+#: 9251f76804104f779cf34b6b62f6c8f2
+msgid "Use Arabic-Indic numerals in Arabic context:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:455
+#: daff2b3dd6cb48c5b58aae13aa5160af
+msgid "**Table Headers**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:457
+#: b27285c11a104c3f91e1b78bdfb36c0d
+msgid "Ensure proper RTL alignment:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:459
+#: 419e029d90d7499e88b801ca84b77ac6
+msgid "مثال على جدول عربي صحيح"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:463
+#: a208fbb5f9e146acace5cb7770474083
+msgid "المصطلح العربي"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:464
+#: 27b81fe49a5b40cf8674d6992726dc2e
+msgid "المصطلح الإنجليزي"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:465
+#: 413d4ba159b4443b8d9257b88543bacd
+msgid "الملاحظات"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:468
+#: de84cb4b2b864a14a31b88125eb3d67e
+msgid "مصطلح قياسي"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:471
+#: 86630ae3d00242e3be1b77390a3c1ca2
+msgid "Quality Assurance Checklist"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:473
+#: 43fecdfa653a4e4a8e6f7a58420a0fb4
+msgid "**Pre-Translation Review**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:482
+#: 2505fe60619c4f608f8b06e39766f3e0
+msgid "**Translation Quality Check**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:492
+#: 4a74be086b9a44ac8333c81a125345f3
+msgid "**Post-Translation Validation**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:503
+#: 462d852af27f4b329ee92da0b1a37919
+msgid "Common Translation Challenges"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:506
+#: ee5d7f2d1bb5455ea56c66b20fdec8cc
+msgid "Technical Term Ambiguity"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:508
+#: 078a6b86531f4aa5b3f7dda087c083b2
+msgid ""
+"**Challenge**: English technical terms with multiple possible Arabic "
+"translations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:510
+#: e4eff8e95bd14b8b822763743615e969
+msgid "**Solution Process**:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:512
+#: e855d51c297b488883456eb55e478941
+msgid "**Research existing usage** in Arabic technical literature"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:513
+#: 512dec142bc442e2981deaed17fe0cee
+msgid "**Consult established glossaries** (IEEE, ISO Arabic standards)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:514
+#: c7b5bde4238e41f18fc9c1437cc16b55
+msgid "**Consider context** (academic vs. professional vs. general)"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:515
+#: 47fde036566442c1942534552fa4ff3e
+msgid "**Document decision** in project glossary"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:516
+#: 2310de02ecae4f0bb1a3acf0e9ed25c6
+msgid "**Maintain consistency** across all documentation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:518
+#: 0d189f61704f471382eefc669e3b3ebe
+msgid "**Example Resolution**:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:534
+#: 8ee0daf61493494ba352ed064a997b6f
+msgid "Mixed Language Text Flow"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:536
+#: b7922b14dd194fdbb7f89d15080c9691
+msgid "**Challenge**: English technical terms within Arabic sentences"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:538
+#: 944bf01776e94c669df74fa918fd0189
+msgid "**Guidelines**:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:540
+#: 1eaa5599bf6a4f13a1a4cd182f6ebabc
+msgid "**Maintain Arabic sentence flow** as primary"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:541
+#: 42b5efb119bc4719b213eb934bf0f866
+msgid "**Embed English terms** naturally within Arabic context"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:542
+#: d7a0176ea0474a1a909a901916c87679
+msgid "**Provide Arabic explanation** on first occurrence"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:543
+#: b43949cbee0140ccbebdd76eff73343c
+msgid "**Use parenthetical clarification** when needed"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:554
+#: cda3619726de4dca8acef4a5f9daa5ee
+msgid "Cultural Sensitivity Balance"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:556
+#: d43845ed4d2f4fa5bf1e50c1319edc3b
+msgid "**Challenge**: Balancing cultural adaptation with technical accuracy"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:558
+#: 41a5d94dc39247c8937e4ccab30116ad
+msgid "**Approach**:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:560
+#: 0dc82314f1684f7fbf8b9ca0001fd414
+msgid "**Prioritize technical accuracy** while respecting cultural context"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:561
+#: 973b3452b53540fa84aaba9b68e085d6
+msgid "**Adapt examples and scenarios** to Arabic cultural context"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:562
+#: 948f6a47c8ae40aaa564f5f75982af6f
+msgid "**Maintain educational objectivity** while being culturally sensitive"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:563
+#: c8d4ac7331834df5a15612c31c10c32d
+msgid "**Consult cultural experts** for sensitive topics"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:565
+#: 6a518d78a81d48868daf720140e6f27b
+msgid "**Best Practices**:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:579
+#: c0f31873a2e34f74a1500e0b305e7937
+msgid "Style Guide Maintenance"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:581
+#: ec3cbcda37a240ebb9f1be1c0c8ca6db
+msgid "**Living Document Philosophy**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:583
+#: 7b4aea26a9e048cf804f702b102ca25b
+msgid "This style guide evolves with:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:585
+#: e6b6a31755d74ec59909aa28436aefc9
+msgid "**Arabic language development** in technical contexts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:586
+#: 47f936fa48ab412aba6bce5049551e74
+msgid "**Community feedback** from translators and users"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:587
+#: 166bd529a8dc4a9d83786dc3ef46acff
+msgid "**Technical advancement** in Arabic computing"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:588
+#: 12d4c53d21c64f68a2eea53d8d9ca43c
+msgid "**Educational best practices** research"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:590
+#: f7fac025a94547f5b159d7e54427538b
+msgid "**Update Process**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:592
+#: c6cb55a0f7c8434b9a7c633f99ff053c
+msgid "**Quarterly Review** of terminology decisions"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:593
+#: 5f4110309016431089e32b181b9bf8f6
+msgid "**Community Input** collection and evaluation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:594
+#: 64ec64b951024e1d8cd514eda732223b
+msgid "**Expert Consultation** with Arabic linguistics professionals"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:595
+#: 997f286ec1ca4fd39151f023f507f2f5
+msgid "**Version Control** of style guide changes"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:596
+#: a19786eeef88459b9a54ed71720e48b3
+msgid "**Translator Training** on updated guidelines"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:598
+#: f791d3984025491295e53c10eb51d2a9
+msgid "**Feedback Integration**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:600
+#: 096c8a03d73e4c9aaae187b7951442fb
+msgid "Submit style guide suggestions through:"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:602
+#: 59740ffff4cf4282a8e9cf38dcd3f699
+msgid "**GitHub Issues** for terminology discussions"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:603
+#: b1640102bd5b4750ba1f6004d277c62b
+msgid "**Translator Forum** for community input"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:604
+#: c2753d2e81e04a72b96fc1fb4c8d8ea6
+msgid "**Expert Panel** for complex linguistic questions"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:605
+#: e1000f3fbfa04f5f9e9f8fdcd6b418d0
+msgid "**User Feedback** for accessibility improvements"
+msgstr ""
+
+#: ../../source/developer-guide/translation/arabic-style-guide.rst:607
+#: 9a60c58c200c4c44a849a433d2d97662
+msgid ""
+"This comprehensive Arabic Style Guide ensures our translations serve the "
+"global Arabic-speaking community with culturally respectful, technically "
+"accurate, and educationally effective content."
+msgstr ""
+

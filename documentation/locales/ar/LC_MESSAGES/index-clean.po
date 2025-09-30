@@ -1,0 +1,255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/index-clean.rst:6
+msgid "User Guide"
+msgstr ""
+
+#: ../../source/index-clean.rst:13
+msgid "Developer Guide"
+msgstr ""
+
+#: ../../source/index-clean.rst:24
+msgid "Educator Guide"
+msgstr ""
+
+#: ../../source/index-clean.rst:2 d081f258aa5044deb1677f9a5c8e16ea
+msgid "Arabic OS Interactive Learning Platform Documentation"
+msgstr ""
+
+#: ../../source/index-clean.rst:4 8843827d06504574bbe9bd776d8ab469
+msgid ""
+"Welcome to the comprehensive documentation for the Arabic OS Interactive "
+"Learning Platform - an enterprise-grade educational system for Arabic "
+"computing and operating system development."
+msgstr ""
+
+#: ../../source/index-clean.rst:31 1f03823c699c40ba854a9f62319b38e8
+msgid "About the Platform"
+msgstr ""
+
+#: ../../source/index-clean.rst:33 0cb43645aab644408bd3fd1a7a1d605e
+msgid ""
+"The Arabic OS Interactive Learning Platform provides a comprehensive "
+"environment for:"
+msgstr ""
+
+#: ../../source/index-clean.rst:35 8faf5514bb064d55878d709a7f373add
+msgid ""
+"**Interactive Tools**: Hands-on learning with Arabic text processing and "
+"encoding"
+msgstr ""
+
+#: ../../source/index-clean.rst:36 31eec0bfed6142f29d09e8ae8f4177a9
+msgid "**Development Environment**: Complete toolchain for Arabic OS development"
+msgstr ""
+
+#: ../../source/index-clean.rst:37 cd045e392bd446d881cc354134d3ad13
+msgid ""
+"**Educational Resources**: Structured curriculum for learners and "
+"educators"
+msgstr ""
+
+#: ../../source/index-clean.rst:38 122881545b294e289d165e0a05b687c4
+msgid "**Translation Framework**: Professional Arabic localization workflow"
+msgstr ""
+
+#: ../../source/index-clean.rst:41 9827512f7f6f40bda6afb2ed13610a73
+msgid "Key Features"
+msgstr ""
+
+#: ../../source/index-clean.rst:44 09d369ac97e04ea1b8d2cd9a9e4e73c9
+msgid "Educational Tools"
+msgstr ""
+
+#: ../../source/index-clean.rst:46 cb8f241d460f430b90525819c1e08b20
+msgid ""
+"Our platform includes specialized interactive tools designed for Arabic "
+"computing education:"
+msgstr ""
+
+#: ../../source/index-clean.rst:48 07542ee5422d47c0b2dabe79dcfb315c
+msgid ""
+"**CP1256 Encoding Explorer**: Understanding Windows Arabic character "
+"encoding"
+msgstr ""
+
+#: ../../source/index-clean.rst:49 fa1ef791a8d244b7a8e03c6aea70c1b8
+msgid "**UTF-8 Visualizer**: Learn Unicode processing for Arabic text"
+msgstr ""
+
+#: ../../source/index-clean.rst:50 016bc7c00921451db26fd50e0f77f32a
+msgid "**Bidirectional Text Demo**: Master right-to-left text handling"
+msgstr ""
+
+#: ../../source/index-clean.rst:51 d4dfac804acb46c3bcf26b337d2d308a
+msgid "**Arabic Virtual Keyboard**: Practice Arabic text input methods"
+msgstr ""
+
+#: ../../source/index-clean.rst:52 8c5ef6e8b4384bc1b2735918f844e3c0
+msgid "**Memory Layout Viewer**: Explore how Arabic text is stored in memory"
+msgstr ""
+
+#: ../../source/index-clean.rst:53 f15adc6b90094b248e615ee07b16a8ba
+msgid "**Kernel Debugger**: Debug Arabic OS components"
+msgstr ""
+
+#: ../../source/index-clean.rst:54 618b4f1bd25b4a27af253a913d6250e3
+msgid "**Font Renderer**: Understand Arabic typography"
+msgstr ""
+
+#: ../../source/index-clean.rst:55 19c7458313464f43a215eccfc2942484
+msgid "**Assembly Simulator**: Low-level Arabic text processing"
+msgstr ""
+
+#: ../../source/index-clean.rst:58 a237e8e8f6ca4a0289b8b5c80da0d1b7
+msgid "Developer Resources"
+msgstr ""
+
+#: ../../source/index-clean.rst:60 589710e666d249ec81ddd1177a3b1d41
+msgid "Comprehensive development documentation covering:"
+msgstr ""
+
+#: ../../source/index-clean.rst:62 99a931a20f8c4bb2b41e50454d395e3e
+msgid "**API Documentation**: Complete Arabic OS API reference"
+msgstr ""
+
+#: ../../source/index-clean.rst:63 9174739717ab4ccda62a8de07ec53f91
+msgid "**Build Tutorials**: Step-by-step development guides"
+msgstr ""
+
+#: ../../source/index-clean.rst:64 68c4b543f51d4ec9ab7135478aae6cbd
+msgid "**Integration Guides**: How to integrate with existing systems"
+msgstr ""
+
+#: ../../source/index-clean.rst:65 d8b8c8cf4a3145db8708c58eeb7571d9
+msgid "**Translation Workflow**: Professional Arabic localization process"
+msgstr ""
+
+#: ../../source/index-clean.rst:68 8bb9fea2cdf447bb9624d79eead71e5e
+msgid "Getting Started"
+msgstr ""
+
+#: ../../source/index-clean.rst:71 649bda0dbc3644d6a6d0bf8f6460d204
+msgid "Quick Start Guide"
+msgstr ""
+
+#: ../../source/index-clean.rst:73 003eb76b72084150996262af764b3fdd
+msgid "**For Students**: Start with the User Guide to explore interactive tools"
+msgstr ""
+
+#: ../../source/index-clean.rst:74 0f6dbdf2475f4a9b982d5699ffe5666c
+msgid ""
+"**For Developers**: Begin with the Developer Guide for API and build "
+"instructions"
+msgstr ""
+
+#: ../../source/index-clean.rst:75 573a157a08d84e58ad7fe1729a9c0bc6
+msgid "**For Educators**: Review the Educator Guide for curriculum integration"
+msgstr ""
+
+#: ../../source/index-clean.rst:76 54be231603ae43f8a6c5e87108f51e1e
+msgid "**For Translators**: Follow the Translation Workflow documentation"
+msgstr ""
+
+#: ../../source/index-clean.rst:79 febd3f7e10a24b9eb34103a26e357e96
+msgid "System Requirements"
+msgstr ""
+
+#: ../../source/index-clean.rst:81 3d04de137ed24bd1830ba145e2cffc63
+msgid "**Operating System**: Linux (RHEL 9, CentOS Stream 9, Ubuntu 20.04+)"
+msgstr ""
+
+#: ../../source/index-clean.rst:82 bffe23938e9a47a093d708fd5d936ec1
+msgid "**Memory**: Minimum 4GB RAM (8GB recommended)"
+msgstr ""
+
+#: ../../source/index-clean.rst:83 ecce39d655d949409de5bc5024b6763e
+msgid "**Storage**: 2GB free space for development environment"
+msgstr ""
+
+#: ../../source/index-clean.rst:84 f027a34048984e9c8f75405e2082f8c3
+msgid "**Display**: 1920x1080 resolution recommended for optimal UI experience"
+msgstr ""
+
+#: ../../source/index-clean.rst:87 696fff8bab0d46d1b6d51698906af35e
+msgid "Support and Community"
+msgstr ""
+
+#: ../../source/index-clean.rst:89 ceabe033a2bd40428bc0b2f40c02383b
+msgid "**Documentation**: Comprehensive guides and API references"
+msgstr ""
+
+#: ../../source/index-clean.rst:90 4db802f16730483fabcdd72830a7c166
+msgid "**Examples**: Real-world code samples and tutorials"
+msgstr ""
+
+#: ../../source/index-clean.rst:91 6fba0e82e88546dea6f7f86271137b1e
+msgid "**Translation**: Professional Arabic localization framework"
+msgstr ""
+
+#: ../../source/index-clean.rst:92 bab0afff06ca46168b8aa7d48056a7e9
+msgid "**Development**: Active open-source development community"
+msgstr ""
+
+#: ../../source/index-clean.rst:95 731a96fd5f1549619b711b6f6f465a54
+msgid "Contributing"
+msgstr ""
+
+#: ../../source/index-clean.rst:97 b7e83d9b8e2146108391e62fdea23649
+msgid "We welcome contributions to the Arabic OS Interactive Learning Platform:"
+msgstr ""
+
+#: ../../source/index-clean.rst:99 bc85d9973e1844af9c1d7fa468fca033
+msgid "**Documentation**: Help improve and translate documentation"
+msgstr ""
+
+#: ../../source/index-clean.rst:100 b8e9881df6c042b9bde0ae17e9d7518e
+msgid "**Tools**: Develop new interactive educational tools"
+msgstr ""
+
+#: ../../source/index-clean.rst:101 4ab1adf7dcb2452983aa95182a995b17
+msgid "**Testing**: Report bugs and suggest improvements"
+msgstr ""
+
+#: ../../source/index-clean.rst:102 b2292dc240754ad9a5e740a4d859743e
+msgid "**Translation**: Contribute to Arabic localization efforts"
+msgstr ""
+
+#: ../../source/index-clean.rst:105 faa19ab8aba84a96809b787630373dc5
+msgid "License and Acknowledgments"
+msgstr ""
+
+#: ../../source/index-clean.rst:107 1c4bccc2208a44fb9c1cde44c13afc17
+msgid ""
+"This project is developed as part of the Arabic OS initiative to provide "
+"comprehensive Arabic language support in operating systems and "
+"educational tools."
+msgstr ""
+
+#: ../../source/index-clean.rst:109 9d28e1f0fa59428992734b8568e2d3d6
+msgid ""
+"For technical support and contributions, please refer to the developer "
+"documentation and community guidelines."
+msgstr ""
+

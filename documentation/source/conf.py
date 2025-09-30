@@ -75,12 +75,28 @@ if language == 'ar':
 
 # Custom CSS and JavaScript
 html_static_path = ['_static']
+
+# Base CSS files for all languages
 html_css_files = [
-    'css/arabic-style.css',
     'css/interactive-embed.css',
-    'css/rtl-layout.css',
     'css/responsive-design.css',
 ]
+
+# CSS files setup function
+def setup(app):
+    """Setup function to handle language-specific CSS loading"""
+    def add_rtl_css(app, config):
+        if config.language == 'ar':
+            config.html_css_files.extend([
+                'css/arabic-style.css',
+                'css/rtl-layout.css',
+            ])
+
+    app.connect('config-inited', add_rtl_css)
+
+# Add RTL-specific CSS only for Arabic builds
+# This is handled in the setup function above for dynamic loading
+
 html_js_files = [
     'js/interactive-embed.js',
     'js/arabic-support.js',

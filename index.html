@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arabic OS Interactive Learning Platform</title>
+    <title data-content="pageTitle">Arabic OS Interactive Learning Platform</title>
     <style>
         :root {
             --primary-color: #2E7D32;
@@ -203,24 +203,6 @@
             margin: 20px 0;
         }
 
-        .language-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .language-toggle:hover {
-            background: var(--secondary-color);
-            transform: scale(1.05);
-        }
 
         @media (max-width: 768px) {
             .navigation-grid {
@@ -239,108 +221,226 @@
     </style>
 </head>
 <body>
-    <button class="language-toggle" onclick="window.location.href='./documentation/html-ar/index.html'">العربية</button>
-
+    <!-- Language Switcher will be dynamically inserted here -->
     <div class="container">
         <header>
-            <h1>🌟 Arabic OS Interactive Learning Platform</h1>
-            <p class="subtitle">Educational platform for Arabic computing and operating system development</p>
+            <h1 data-content="mainTitle">🌟 Arabic OS Interactive Learning Platform</h1>
+            <p class="subtitle" data-content="subtitle">Educational platform for Arabic computing and operating system development</p>
             <div class="badges">
-                <span class="badge">📚 Educational</span>
-                <span class="badge">🌐 Bilingual (Arabic + English)</span>
-                <span class="badge">🎮 Interactive Tools</span>
-                <span class="badge">💻 OS Development</span>
+                <span class="badge" data-content="badges.educational">📚 Educational</span>
+                <span class="badge" data-content="badges.bilingual">🌐 Bilingual (Arabic + English)</span>
+                <span class="badge" data-content="badges.interactive">🎮 Interactive Tools</span>
+                <span class="badge" data-content="badges.osdev">💻 OS Development</span>
             </div>
         </header>
 
         <div class="quick-start">
-            <h2>🚀 Quick Start Options</h2>
+            <h2 data-content="quickStart.title">🚀 Quick Start Options</h2>
             <div class="quick-start-options">
                 <div class="quick-option">
-                    <h3>🎮 Try Interactive Tools</h3>
-                    <p>Start learning immediately with web-based tools</p>
-                    <code>Open: interactive/index.html</code>
+                    <h3 data-content="quickStart.option1.title">🎮 Try Interactive Tools</h3>
+                    <p data-content="quickStart.option1.description">Start learning immediately with web-based tools</p>
+                    <code data-content="quickStart.option1.code">Open: interactive/index.html</code>
                 </div>
                 <div class="quick-option">
-                    <h3>📖 Read Documentation</h3>
-                    <p>Comprehensive guides and tutorials</p>
-                    <code>Open: documentation/html-en/index.html</code>
+                    <h3 data-content="quickStart.option2.title">📖 Read Documentation</h3>
+                    <p data-content="quickStart.option2.description">Comprehensive guides and tutorials</p>
+                    <code data-content="quickStart.option2.code">Open: documentation/html-en/index.html</code>
                 </div>
                 <div class="quick-option">
-                    <h3>💾 Boot OS Image</h3>
-                    <p>Run the Arabic OS in QEMU/VirtualBox</p>
-                    <code>qemu-system-i386 -fda images/floppy.flp</code>
+                    <h3 data-content="quickStart.option3.title">💾 Boot OS Image</h3>
+                    <p data-content="quickStart.option3.description">Run the Arabic OS in QEMU/VirtualBox</p>
+                    <code data-content="quickStart.option3.code">qemu-system-i386 -fda images/floppy.flp</code>
+                </div>
+                <div class="quick-option">
+                    <h3 data-content="quickStart.option4.title">🖥️ VM Setup Guide</h3>
+                    <p data-content="quickStart.option4.description">Detailed tutorial for all major platforms</p>
+                    <code data-content="quickStart.option4.code">Open: vm-tutorial.html</code>
                 </div>
             </div>
         </div>
 
         <div class="navigation-grid">
             <div class="nav-card">
-                <h2><span class="icon">🎮</span>Interactive Learning Tools</h2>
-                <p>9 comprehensive web-based educational tools for hands-on learning of Arabic computing concepts, encoding systems, and OS development.</p>
+                <h2><span class="icon">💻</span><span data-content="navCards.aboutOS.title">About Arabic OS</span></h2>
+                <p data-content="navCards.aboutOS.description">Discover the comprehensive features, architecture, and innovative capabilities of our Arabic-first operating system designed for computing excellence.</p>
                 <div class="nav-links">
-                    <a href="./interactive/index.html" class="nav-link">Main Interactive Hub</a>
-                    <a href="./interactive/cp1256_explorer.html" class="nav-link">CP1256 Encoding Explorer</a>
-                    <a href="./interactive/utf8_visualizer.html" class="nav-link">UTF-8 Visualizer</a>
-                    <a href="./interactive/arabic_typing.html" class="nav-link">Arabic Virtual Keyboard</a>
-                    <a href="./interactive/assembly_simulator.html" class="nav-link">Assembly Simulator</a>
+                    <a href="./about-os.html" class="nav-link" data-content="navCards.aboutOS.links.features">OS Features & Architecture</a>
+                    <a href="./about-os.html#specifications" class="nav-link" data-content="navCards.aboutOS.links.specifications">Technical Specifications</a>
+                    <a href="./about-os.html#innovation" class="nav-link" data-content="navCards.aboutOS.links.innovation">Innovation & Performance</a>
                 </div>
             </div>
 
             <div class="nav-card">
-                <h2><span class="icon">📚</span>Documentation</h2>
-                <p>Comprehensive documentation including user guides, developer references, and educational materials in both English and Arabic.</p>
+                <h2><span class="icon">🎮</span><span data-content="navCards.interactiveTools.title">Interactive Learning Tools</span></h2>
+                <p data-content="navCards.interactiveTools.description">9 comprehensive web-based educational tools for hands-on learning of Arabic computing concepts, encoding systems, and OS development.</p>
                 <div class="nav-links">
-                    <a href="./documentation/html-en/index.html" class="nav-link">English Documentation</a>
-                    <a href="./documentation/html-ar/index.html" class="nav-link">Arabic Documentation (العربية)</a>
-                    <a href="./documentation/source/" class="nav-link">Sphinx Source Files</a>
+                    <a href="./interactive/index.html" class="nav-link" data-content="navCards.interactiveTools.links.hub">Main Interactive Hub</a>
+                    <a href="./interactive/cp1256_explorer.html" class="nav-link" data-content="navCards.interactiveTools.links.cp1256">CP1256 Encoding Explorer</a>
+                    <a href="./interactive/utf8_visualizer.html" class="nav-link" data-content="navCards.interactiveTools.links.utf8">UTF-8 Visualizer</a>
+                    <a href="./interactive/arabic_typing.html" class="nav-link" data-content="navCards.interactiveTools.links.typing">Arabic Virtual Keyboard</a>
+                    <a href="./interactive/assembly_simulator.html" class="nav-link" data-content="navCards.interactiveTools.links.assembly">Assembly Simulator</a>
                 </div>
             </div>
 
             <div class="nav-card">
-                <h2><span class="icon">💾</span>OS Development</h2>
-                <p>Bootable operating system image and development resources for hands-on OS programming with Arabic language support.</p>
+                <h2><span class="icon">📚</span><span data-content="navCards.documentation.title">Documentation</span></h2>
+                <p data-content="navCards.documentation.description">Comprehensive documentation including user guides, developer references, and educational materials in both English and Arabic.</p>
                 <div class="nav-links">
-                    <a href="./images/" class="nav-link">Bootable Floppy Image</a>
-                    <a href="./documentation/html-en/developer-guide/index.html" class="nav-link">Developer Guide</a>
-                    <a href="./documentation/html-en/user-guide/index.html" class="nav-link">Usage Instructions</a>
+                    <a href="./documentation/html-en/index.html" class="nav-link" data-content="navCards.documentation.links.english">English Documentation</a>
+                    <a href="./documentation/html-ar/index.html" class="nav-link" data-content="navCards.documentation.links.arabic">Arabic Documentation (العربية)</a>
+                    <a href="./documentation/source/" class="nav-link" data-content="navCards.documentation.links.source">Sphinx Source Files</a>
                 </div>
             </div>
 
             <div class="nav-card">
-                <h2><span class="icon">🌍</span>Educational Resources</h2>
-                <p>Complete educational package including curriculum materials, assessment tools, and multilingual learning resources.</p>
+                <h2><span class="icon">💾</span><span data-content="navCards.osDevelopment.title">OS Development</span></h2>
+                <p data-content="navCards.osDevelopment.description">Bootable operating system image and development resources for hands-on OS programming with Arabic language support.</p>
                 <div class="nav-links">
-                    <a href="./documentation/html-en/educator-guide/index.html" class="nav-link">Educator Guide</a>
-                    <a href="./documentation/html-en/user-guide/tools/index.html" class="nav-link">Tool Documentation</a>
-                    <a href="./interactive/index.html" class="nav-link">Hands-on Exercises</a>
+                    <a href="./images/" class="nav-link" data-content="navCards.osDevelopment.links.image">Bootable Floppy Image</a>
+                    <a href="./vm-tutorial.html" class="nav-link" data-content="navCards.osDevelopment.links.vmTutorial">VM Setup Tutorial</a>
+                    <a href="./documentation/html-en/developer-guide/index.html" class="nav-link" data-content="navCards.osDevelopment.links.devGuide">Developer Guide</a>
+                    <a href="./documentation/html-en/user-guide/index.html" class="nav-link" data-content="navCards.osDevelopment.links.instructions">Usage Instructions</a>
+                </div>
+            </div>
+
+            <div class="nav-card">
+                <h2><span class="icon">🌍</span><span data-content="navCards.educational.title">Educational Resources</span></h2>
+                <p data-content="navCards.educational.description">Complete educational package including curriculum materials, assessment tools, and multilingual learning resources.</p>
+                <div class="nav-links">
+                    <a href="./documentation/html-en/educator-guide/index.html" class="nav-link" data-content="navCards.educational.links.educator">Educator Guide</a>
+                    <a href="./documentation/html-en/user-guide/tools/index.html" class="nav-link" data-content="navCards.educational.links.tools">Tool Documentation</a>
+                    <a href="./interactive/index.html" class="nav-link" data-content="navCards.educational.links.exercises">Hands-on Exercises</a>
+                </div>
+            </div>
+
+            <div class="nav-card">
+                <h2><span class="icon">🖼️</span><span data-content="navCards.gallery.title">Gallery</span></h2>
+                <p data-content="navCards.gallery.description">Screenshots and demonstrations of the Arabic OS running on various platforms and emulators, showcasing real-world performance.</p>
+                <div class="nav-links">
+                    <a href="./gallery.html" class="nav-link" data-content="navCards.gallery.links.fullGallery">View Full Gallery</a>
+                    <a href="./gallery.html#qemu" class="nav-link" data-content="navCards.gallery.links.qemu">QEMU Screenshots</a>
+                    <a href="./gallery.html#virtualbox" class="nav-link" data-content="navCards.gallery.links.virtualbox">VirtualBox Demo</a>
+                    <a href="./gallery.html#hardware" class="nav-link" data-content="navCards.gallery.links.hardware">Real Hardware</a>
                 </div>
             </div>
         </div>
 
+        <!-- Gallery Section -->
+        <div id="gallery-section"></div>
+
         <div class="repository-info">
-            <h2>📋 Repository Contents</h2>
+            <h2 data-content="repositoryInfo.title">📋 Repository Contents</h2>
             <ul style="list-style: none; padding: 0;">
-                <li><strong>📱 interactive/</strong> - Web-based educational tools (9 interactive applications)</li>
-                <li><strong>📚 documentation/</strong> - Comprehensive documentation (English + Arabic HTML builds, Sphinx source)</li>
-                <li><strong>💾 images/</strong> - Bootable OS floppy image (1.47 MB)</li>
-                <li><strong>📖 README.md</strong> - Detailed project information and setup instructions</li>
+                <li data-content="repositoryInfo.items.interactive"><strong>📱 interactive/</strong> - Web-based educational tools (9 interactive applications)</li>
+                <li data-content="repositoryInfo.items.documentation"><strong>📚 documentation/</strong> - Comprehensive documentation (English + Arabic HTML builds, Sphinx source)</li>
+                <li data-content="repositoryInfo.items.images"><strong>💾 images/</strong> - Bootable OS floppy image (1.47 MB)</li>
+                <li data-content="repositoryInfo.items.readme"><strong>📖 README.md</strong> - Detailed project information and setup instructions</li>
             </ul>
         </div>
 
         <footer>
-            <h3>🎯 Learning Objectives</h3>
-            <p>Master Arabic computing fundamentals • Understand OS development concepts • Learn assembly programming • Explore typography and internationalization</p>
+            <h3 data-content="footer.objectives">🎯 Learning Objectives</h3>
+            <p data-content="footer.objectivesText">Master Arabic computing fundamentals • Understand OS development concepts • Learn assembly programming • Explore typography and internationalization</p>
 
             <div style="margin-top: 20px;">
-                <strong>🏆 Perfect for:</strong> Computer Science Students • Arabic Language Technology Researchers • International Developers • Educators
+                <strong data-content="footer.perfectFor">🏆 Perfect for:</strong> <span data-content="footer.perfectForText">Computer Science Students • Arabic Language Technology Researchers • International Developers • Educators</span>
             </div>
 
             <div style="margin-top: 20px; font-size: 0.9em; color: #666;">
-                <p>📞 <strong>Need Help?</strong> Check the comprehensive documentation or explore the interactive tutorials</p>
-                <p>🌟 <strong>Start Learning:</strong> Click any link above to begin your journey into Arabic computing!</p>
+                <p><strong data-content="footer.needHelp">📞 Need Help?</strong> <span data-content="footer.needHelpText">Check the comprehensive documentation or explore the interactive tutorials</span></p>
+                <p><strong data-content="footer.startLearning">🌟 Start Learning:</strong> <span data-content="footer.startLearningText">Click any link above to begin your journey into Arabic computing!</span></p>
             </div>
         </footer>
     </div>
+
+    <!-- Scripts -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script src="js/gallery.js"></script>
+
+    <!-- Initialize the page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize content loader
+            window.contentLoader = new ContentLoader();
+
+            // Initialize language switcher
+            window.languageSwitcher = new ArabicOSLanguageSwitcher({
+                persistLanguage: true,
+                showNotifications: false,
+                autoDetectRTL: true,
+                defaultLanguage: 'en'
+            });
+
+            // Set up content loading and translation
+            async function initializeContent() {
+                const currentLang = window.languageSwitcher.currentLanguage;
+
+                // Load the landing page content
+                await window.contentLoader.loadContent('landing', currentLang);
+
+                // Apply content to page elements
+                updatePageContent();
+
+                // Load gallery content
+                loadGallery();
+            }
+
+            // Function to update page content with loaded data
+            function updatePageContent() {
+                if (!window.content) return;
+
+                const elementsWithContent = document.querySelectorAll('[data-content]');
+                elementsWithContent.forEach(element => {
+                    const contentKey = element.getAttribute('data-content');
+                    const value = getNestedValue(window.content, contentKey);
+                    if (value) {
+                        element.textContent = value;
+                    }
+                });
+            }
+
+            // Helper function to get nested object values (e.g., "navCards.interactiveTools.title")
+            function getNestedValue(obj, path) {
+                return path.split('.').reduce((current, key) => {
+                    return current && current[key] !== undefined ? current[key] : null;
+                }, obj);
+            }
+
+            // Load gallery content
+            function loadGallery() {
+                const gallerySection = document.getElementById('gallery-section');
+                if (gallerySection && window.gallery && window.content) {
+                    gallerySection.innerHTML = window.gallery.generateGalleryHTML();
+                }
+            }
+
+            // Handle language changes
+            window.languageSwitcher.onLanguageChange(async (newLanguage) => {
+                // Load new language content
+                await window.contentLoader.loadContent('landing', newLanguage);
+
+                // Update all page content
+                updatePageContent();
+
+                // Update gallery content
+                setTimeout(() => {
+                    loadGallery();
+                }, 100);
+            });
+
+            // Initialize everything
+            setTimeout(() => {
+                initializeContent();
+                // Ensure gallery loads after content is ready
+                setTimeout(() => {
+                    if (window.gallery && window.content) {
+                        loadGallery();
+                    }
+                }, 200);
+            }, 100);
+        });
+    </script>
 </body>
 </html>

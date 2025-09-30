@@ -1,0 +1,448 @@
+# Arabic OS Interactive Learning Platform Documentation - Quick Reference - Arabic Translation
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# Arabic OS Translation Team <team@arabicos.org>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 09:50+0000\n"
+"PO-Revision-Date: 2025-09-30 11:50+0000\n"
+"Last-Translator: Arabic OS Translation Team <team@arabicos.org>\n"
+"Language: ar\n"
+"Language-Team: Arabic OS Translation Team <team@arabicos.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:2
+#: 60f772eb528b40a7bbe932c823ed9adc
+msgid "Quick Reference: .po File Generation and Translation"
+msgstr "مرجع سريع: إنشاء ملفات .po والترجمة"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:4
+#: d006f101f76741e3a7c68046934a3f77
+msgid ""
+"This quick reference guide provides the essential steps for generating "
+".po translation files and translating Arabic OS Platform documentation. "
+"Use this alongside the comprehensive :doc:`translator-setup` and :doc"
+":`translation-workflow` guides."
+msgstr ""
+"يوفر هذا المرجع السريع الخطوات الأساسية لإنشاء ملفات الترجمة .po "
+"وترجمة وثائق منصة نظام التشغيل العربي. استخدموه جنباً إلى جنب "
+"مع أدلة :doc:`translator-setup` و :doc:`translation-workflow` الشاملة."
+
+#: ../../source/developer-guide/translation/quick-reference.rst:7
+#: e93e0996502847e5ac7e2e64354a2302
+msgid "Prerequisites Checklist"
+msgstr "قائمة المتطلبات المسبقة"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:9
+#: 8e73aa88b6834eaf95b9af11df803590
+msgid "**Required Software:**"
+msgstr "**البرامج المطلوبة:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:19
+#: 51641b42c7c144ec87a7bf1da9d70411
+msgid "**Required Setup:**"
+msgstr "**الإعداد المطلوب:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:29
+#: c6f86362091249efafc5de811a626d58
+msgid "Step 1: Environment Setup (5 minutes)"
+msgstr "الخطوة 1: إعداد البيئة (5 دقائق)"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:31
+#: adef3fae643f4c3397f068dad14ff251
+msgid "**Clone and Prepare:**"
+msgstr "**استنساخ وتحضير:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:51
+#: 6503344d433f436bb94245a7ce793061
+msgid "Step 2: Generate Translation Files (2 minutes)"
+msgstr "الخطوة 2: إنشاء ملفات الترجمة (دقيقتان)"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:53
+#: 52073f7df0284df39d89d56114919938
+msgid "**Extract Translatable Strings:**"
+msgstr "**استخراج النصوص القابلة للترجمة:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:63
+#: 64b0cc17a46b414ca9dbc65602e84215
+msgid "**Create/Update Arabic .po Files:**"
+msgstr "**إنشاء/تحديث ملفات .po العربية:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:72
+#: 4640abce37344536a51ead0274d21e91
+msgid "**Verify File Generation:**"
+msgstr "**تحقق من إنشاء الملفات:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:85
+#: 8e291f0a9459425393c1b8281300f7b0
+msgid "Step 3: Translation Process"
+msgstr "الخطوة 3: عملية الترجمة"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:87
+#: 449c71cf09c848efbee725e1779693a0
+msgid "**File Structure Overview:**"
+msgstr "**نظرة عامة على هيكل الملفات:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:107
+#: baff874835994c90a02487f6065740f2
+msgid "**Translation Methods:**"
+msgstr "**طرق الترجمة:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:109
+#: d2f2981150ac4b71a1b64d737fce9bac
+msgid "**Method 1: Poedit (Recommended)**"
+msgstr "**الطريقة 1: Poedit (موصى بها)**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:120
+#: 8e543487202b40869eb471e245f2a655
+msgid "**Method 2: Text Editor**"
+msgstr "**الطريقة 2: محرر النصوص**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:133
+#: 62a42aab356e4316b90001803fc2b6b0
+msgid "**Method 3: Web Tools**"
+msgstr "**الطريقة 3: أدوات الويب**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:142
+#: 7c5d40ff026946d4b2d2ce04cd199248
+msgid "**Priority Translation Order:**"
+msgstr "**ترتيب أولوية الترجمة:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:155
+#: b26f6d00b4f04c4bbcab85db26dc7501
+msgid "Step 4: Build and Test (2 minutes)"
+msgstr "الخطوة 4: البناء والاختبار (دقيقتان)"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:157
+#: 38a99d0233d44d0d93c458ad5accea22
+msgid "**Build Arabic Documentation:**"
+msgstr "**بناء الوثائق العربية:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:167
+#: 46491c7dbad142379d04ec6f3e30b8db
+msgid "**Verify Translation:**"
+msgstr "**تحقق من الترجمة:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:179
+#: bc32fab7250a40bd80a6850fb01ced45
+msgid "**Quality Check:**"
+msgstr "**فحص الجودة:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:191
+#: 12ff57c53591440f98395ef6f4d1725f
+msgid "Step 5: Commit and Share"
+msgstr "الخطوة 5: الحفظ والمشاركة"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:193
+#: 9977641123ed4a42a489923fc59011b2
+msgid "**Commit Your Work:**"
+msgstr "**حفظ عملكم:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:214
+#: 43666817ae864856ad924b315fa2bd24
+msgid "Common Commands Reference"
+msgstr "مرجع الأوامر الشائعة"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:216
+#: 633bbfdd881d406180b8e430e03b2504
+msgid "**Essential Commands:**"
+msgstr "**الأوامر الأساسية:**"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:222
+#: ../../source/developer-guide/translation/quick-reference.rst:241
+#: ef548ba9ff8846d586160b8eb6afaa6f
+msgid "Task"
+msgstr "المهمة"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:223
+#: ../../source/developer-guide/translation/quick-reference.rst:242
+#: 249a1864cddf4c55bfe0f1fd261cf1ee
+msgid "Command"
+msgstr "الأمر"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:224
+#: 5e86277c3194421ba56794a91aa7be15
+msgid "Generate .po files"
+msgstr "إنشاء ملفات .po"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:225
+#: df7831fc6c59461db451ef55ff2fc01a
+msgid "``make gettext && sphinx-intl update -p build/gettext/gettext -l ar``"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:226
+#: 71395f4bd26b4ee5a70ea19c5d815fae
+msgid "Build Arabic docs"
+msgstr "بناء الوثائق العربية"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:227
+#: 49bb1371878e42fa8c674a28faf9c0e6
+msgid "``make html-ar``"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:228
+#: a421a09e6c5b4f82b303fb2c55c14663
+msgid "Check translation stats"
+msgstr "فحص إحصائيات الترجمة"
+
+#: ../../source/developer-guide/translation/quick-reference.rst:229
+#: b4680538ec8d4d0286c64f67957b5149
+msgid "``msgfmt --statistics file.po``"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:230
+#: b8f362ff691440619552b07b7405e68d
+msgid "Find untranslated"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:231
+#: f2bf46b9d1f94854b922e6b7d219a910
+msgid "``grep -l 'msgstr \"\"' locales/ar/LC_MESSAGES/*.po``"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:232
+#: 3cf44d56c6c141d1b510d3734fe43aac
+msgid "Clean build"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:233
+#: a53afd123bfc4e67b9a04b0efad81c7f
+msgid "``make clean``"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:235
+#: e079b1b2c4144ec5b88f4e97dbf7fe6f
+msgid "**File Operations:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:243
+#: 4e5628cf79564b6cbf884d8385f9717f
+msgid "List all .po files"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:244
+#: 5dab6ceb4695426e9ce41e93907e93f3
+msgid "``find locales/ar/LC_MESSAGES -name \"*.po\"``"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:245
+#: fabc116686244167ac5fec44e49fe3bc
+msgid "Count translations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:246
+#: 5b2bacfcc4094e04a423b16db2627e38
+#, python-brace-format
+msgid ""
+"``find locales/ar/LC_MESSAGES -name \"*.po\" -exec msgfmt --statistics {}"
+" \\;``"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:247
+#: 526041a806d14f2aace90a401100e25d
+msgid "Backup translations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:248
+#: 486c08c4e5a54de49bcd8fb97ee2688c
+#, python-format
+msgid "``cp -r locales/ar backup-$(date +%Y%m%d)``"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:251
+#: 8d00b3df3b194127be404d9b4f12df00
+msgid "Troubleshooting Quick Fixes"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:253
+#: 3dd2408832994ae7ba3aeedbeaeb1171
+msgid "**Common Issues:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:259
+#: 2df927055a394865a7c07e83eddf39ef
+msgid "Problem"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:260
+#: 138e2e3b897c4a9c9a061aca9996a624
+msgid "Cause"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:261
+#: 51c7b50c81b24dc2b225d8911361fa7f
+msgid "Solution"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:262
+#: a03bdf474170401ca9c2fb83e6a088f8
+msgid "\"sphinx-build not found\""
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:263
+#: 6abe519ba3b044309883f68a9547b04a
+msgid "Virtual environment not active"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:264
+#: 60d42fc14c004b6d8250b16325a2fb6d
+msgid "``source sphinx-env/bin/activate``"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:265
+#: 41340e72b38746b8a8dee428992bf6c3
+msgid "\"No .po files generated\""
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:266
+#: 1c3fefb2aed0488eacf48d3bbd098755
+msgid "gettext step skipped"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:267
+#: abc140ac455b48c79cebbe1bdf66257e
+msgid "``make gettext`` first"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:268
+#: 425219aa2cc74f3f8d5884d649766336
+msgid "\"Arabic text shows as boxes\""
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:269
+#: fbdb305f1c7e42d8a5574029afda7035
+msgid "Missing Arabic fonts"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:270
+#: a94317dcabd94c56ad492ddc19c5b2ae
+msgid "Install fonts: ``apt install fonts-noto``"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:271
+#: 1d836ce8d6ec4000ac769aa4c3b6ae10
+msgid "\"Build warnings\""
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:272
+#: c06482ace9984b22bd785d694f0202e8
+msgid "Untranslated strings"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:273
+#: 4e932ee8e73945e2abe7b2d7eb5a5b41
+msgid "Continue translating or ignore"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:274
+#: ed0638f9c5e440b5bf8fbc8bd59a44af
+msgid "\"RTL layout broken\""
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:275
+#: 2dc820d40c4f4ae6b534d6e1599be109
+msgid "CSS/theme issue"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:276
+#: a8fa4fb92b0d41caaf8c4de4d64f985a
+msgid "Check browser Arabic support"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:278
+#: ae93c455afad464ba5fec19bafab4dce
+msgid "**Emergency Recovery:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:293
+#: 23b51267c5974d64b0b2ec022f873be4
+msgid "Translation Statistics and Progress"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:295
+#: 863ac2cbf03b44998cf4942a0740adb8
+msgid "**Check Your Progress:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:309
+#: 77ed53ecc83646a8b3fc08244935170d
+msgid "**Translation Priorities:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:327
+#: ccb9590997fa4d0280b01c42f4a7e206
+msgid "Quick Start Workflow Summary"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:329
+#: da2cd78f9fcb47749fbb6dfd20f5816e
+msgid "**Complete Workflow (15 minutes):**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:357
+#: 8fdb55a1bb9a40c192b2e7ca1985457f
+msgid "**Next Steps:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:359
+#: e5552df2ed424974a7093469fd3e864b
+msgid "Review :doc:`arabic-style-guide` for translation standards"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:360
+#: a33c30aa30744d04b71547a598c302a3
+msgid "Join translator community channels"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:361
+#: 9a5450995da143f990d4b16a7130a543
+msgid "Request assignment for specific documentation sections"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:362
+#: 983cd97363594249b954fb1953a29bef
+msgid "Follow :doc:`quality-assurance` process for review"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:364
+#: ad838f07883e468c8626921bc6582ce6
+msgid "**Success Metrics:**"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:366
+#: a89d9cea815f4cda822a705d7b88a085
+msgid "**Week 1:** Complete environment setup, translate 1-2 small files"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:367
+#: f939a7fd50804619bd7b62dda9fe92ce
+msgid "**Week 2:** Complete major index page translations"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:368
+#: 2caca28d837440e2b469b15a22022731
+msgid "**Month 1:** Significant contribution to user-facing documentation"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:369
+#: dbb0d27888834ee8a3ae30821b34a1a3
+msgid "**Ongoing:** Regular contributions, help onboard new translators"
+msgstr ""
+
+#: ../../source/developer-guide/translation/quick-reference.rst:371
+#: 6ec693dcff9441abac354ff05c4f62a1
+msgid ""
+"This quick reference covers the essential workflow. For detailed "
+"explanations, troubleshooting, and best practices, refer to the "
+"comprehensive guides in this section."
+msgstr ""
+

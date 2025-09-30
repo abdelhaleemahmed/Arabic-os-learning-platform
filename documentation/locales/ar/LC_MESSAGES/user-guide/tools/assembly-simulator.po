@@ -1,0 +1,1382 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Arabic OS Development Team
+# This file is distributed under the same license as the Arabic OS
+# Interactive Learning Platform package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic OS Interactive Learning Platform 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-30 06:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:2
+#: 1091505c0caa46d9a618c9b1906a6d0b
+msgid "x86 Assembly Simulator"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:4
+#: 5668f73953f1476abd8d82b5ba1e9d55
+msgid ""
+"The x86 Assembly Simulator is an interactive educational tool that "
+"provides hands-on experience with low-level assembly programming in the "
+"context of Arabic OS. This simulator executes x86 assembly instructions "
+"step-by-step, showing register changes, memory operations, and the "
+"specific assembly routines used for Arabic text processing at the "
+"hardware level."
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:7
+#: 7fc3d6a6312d4f16a6c4b366cd79b94f
+msgid "Overview"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:9
+#: 7f4ab38fc5ee4395bcaa97ce5ae78e2e
+msgid ""
+"Assembly language programming is fundamental to understanding how "
+"computers work at the lowest level. Arabic OS includes specialized "
+"assembly routines for efficient Arabic text processing, UTF-8 "
+"manipulation, and bidirectional text algorithms. This simulator provides "
+"a safe environment to learn assembly programming while exploring the low-"
+"level implementation of Arabic computing concepts."
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:12
+#: c4aae3a92d1d49468565c9bbebffb4f0
+msgid "Key Learning Objectives"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:14
+#: ddb14d876e9549888ff815e655fd9040
+msgid "By using this tool, you will understand:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:16
+#: d4f53be2af2a4b129070f06fdee8bb4d
+msgid "x86 assembly language syntax and instruction set"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:17
+#: 7b9f54245a8a474da0568729d21b2832
+msgid "How assembly instructions manipulate registers and memory"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:18
+#: 344a47d82ee44f4aa9365a6b6ded43f3
+msgid "Low-level implementation of Arabic text processing algorithms"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:19
+#: 19165a838d3b444b9fdb5a2aa4b617ed
+msgid "The relationship between high-level code and assembly"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:20
+#: 33c78e3e76324a68beaa4048ee80dc85
+msgid "Performance optimization through assembly programming"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:21
+#: 4553911347b447379b019e7d5271e27e
+msgid "Debugging techniques for assembly code"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:24
+#: 9abd613193e947ee9eee111d2981be97
+msgid "Interactive Features"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:27
+#: 1ffe051ae4e44aba9fc3801425147c18
+msgid "Real-time Assembly Execution"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:29
+#: 5086f5e30061419fa7815787893f412d
+msgid "Step-by-step assembly program execution:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:31
+#: 9878e8ec69494807ab66b6c956336600
+msgid ""
+"**Instruction-by-Instruction Execution**: Watch each assembly instruction"
+" execute"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:32
+#: 5f09d57010804ca1940e4739070898b1
+msgid ""
+"**Register Monitoring**: Real-time register value updates (EAX, EBX, ECX,"
+" EDX, etc.)"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:33
+#: fbc77ca4a3be4868b0298fa2f3aee162
+msgid ""
+"**Memory Visualization**: See memory contents change during program "
+"execution"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:34
+#: a94ac45e3bb84ef59a934412ab8ace6b
+msgid "**Flag Register Display**: Monitor CPU flags (Zero, Carry, Sign, etc.)"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:35
+#: 4e7bd2e0dbd540e08009ddb87c478ee7
+msgid "**Program Counter Tracking**: Follow instruction pointer (EIP) progression"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:38
+#: 134875134e204d0286edb7d19d4e9414
+msgid "Interactive Code Editor"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:40
+#: 30aff0729e7148919e5dbd9ef32ca713
+msgid "Write and execute assembly programs:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:42
+#: 3f75d52a13034f3c9902aebae0f092ce
+msgid "**Syntax Highlighting**: Color-coded assembly instructions and operands"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:43
+#: 3f17aa43ab6845bca535edca44e25f15
+msgid "**Error Detection**: Real-time syntax error checking"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:44
+#: e7b85cf458e04001b3d8a3dac8a086d6
+msgid "**Code Completion**: Assembly instruction and register auto-completion"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:45
+#: 103bf35938c64fe988a10019164021b6
+msgid "**Sample Programs**: Pre-loaded examples for Arabic text processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:46
+#: aa12c1f0b86248188d81b47177fcfd0a
+msgid "**Save/Load Functionality**: Manage your assembly programs"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:49
+#: 5b7bbf0cfcc74aedb3c35055b45f565e
+msgid "CPU State Visualization"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:51
+#: 1e8f337e025b43ba9a4b496727c18afe
+msgid "Comprehensive processor state display:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:53
+#: 1a2f8411039e481598bea8169c09a7ed
+msgid "**General Purpose Registers**: EAX, EBX, ECX, EDX, ESI, EDI, EBP, ESP"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:54
+#: 2933e0172d744764b741a99feda9039e
+msgid "**Segment Registers**: CS, DS, ES, FS, GS, SS"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:55
+#: 67b29921d4864583b222e194dbbab1ea
+msgid "**Index Registers**: ESI (Source Index), EDI (Destination Index)"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:56
+#: 203acc1044f64394b29895943f8c953b
+msgid "**Stack Pointer**: ESP and base pointer EBP tracking"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:57
+#: 5d0b6f7b08d8474c9a24cf961f015522
+msgid "**Flags Register**: Individual flag bit visualization"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:58
+#: b19f1ff25a174ef5aa60c19113274fb1
+msgid "**Instruction Pointer**: Current execution address (EIP)"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:61
+#: 281b1202fdf245ffaebfc57af1f27885
+msgid "Memory Viewer"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:63
+#: 4804812a56974ddeb8680c37da1b9db6
+msgid "Interactive memory inspection:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:65
+#: 911068d8b1f94a32a894cda11cb16ee4
+msgid "**Hexadecimal Display**: Raw memory contents in hex format"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:66
+#: f4f623cff99b44b7adfb4278fbffd3b3
+msgid "**ASCII Interpretation**: Character representation of memory data"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:67
+#: 5b70b20146774aaf97f2fbfebe5b2e13
+msgid "**UTF-8 Visualization**: Arabic characters in memory"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:68
+#: bf8fec3741fe4700a085a8b3aa7028f8
+msgid "**Stack Visualization**: Function call stack with return addresses"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:69
+#: f853228f4a364a0591d068899ec6677a
+msgid "**Data Segment Display**: Program variables and constants"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:72
+#: be155ff688ce43c3adca12a21b8f667f
+msgid "Technical Specifications"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:75
+#: a8cd86208d394c13bda9a8281b2e9bcf
+msgid "x86 Instruction Set Support"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:77
+#: aaf221a665434992a7e8bcf5ab1f118f
+msgid "The simulator implements essential x86 instructions:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:79
+#: 67b4e807d07a4cee87134d4e984624fd
+msgid "**Data Movement Instructions**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:81
+#: 8e011871a89343c7aee9f8e09d3a7b02
+msgid "Data Movement Instructions"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:85
+#: ../../source/user-guide/tools/assembly-simulator.rst:110
+#: ../../source/user-guide/tools/assembly-simulator.rst:138
+#: ../../source/user-guide/tools/assembly-simulator.rst:166
+#: ../../source/user-guide/tools/assembly-simulator.rst:197
+#: ../../source/user-guide/tools/assembly-simulator.rst:573
+#: 952d5482c4da4b01ab3a437968473a23 b4c64d38baad4c7d89a8c9b7a10cb036
+#: bb74704222f142e59a252dcc0638f745 bd65aef22562414a9e2a043c0e486736
+#: c41cfe544b8e418198a8f8053f37cfee f1d3be76f976446ab658259cdf0cf5a5
+msgid "Instruction"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:86
+#: ../../source/user-guide/tools/assembly-simulator.rst:111
+#: ../../source/user-guide/tools/assembly-simulator.rst:139
+#: ../../source/user-guide/tools/assembly-simulator.rst:167
+#: ../../source/user-guide/tools/assembly-simulator.rst:198
+#: 2cac2b4a9da04fc5acce74ebb066e399 74a79738dbc84d6cb2eb9571ff7a9fec
+#: 757692ed459d4ce99c0a7c676b94da2f 7f5f99b9296d46178dfa05d811af9b66
+#: fbab5c3161364c7ea2cfe679114c704e
+msgid "Syntax"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:87
+#: ../../source/user-guide/tools/assembly-simulator.rst:112
+#: ../../source/user-guide/tools/assembly-simulator.rst:140
+#: ../../source/user-guide/tools/assembly-simulator.rst:168
+#: ../../source/user-guide/tools/assembly-simulator.rst:199
+#: 2c63105ddda248a4b5276f5c8862c894 2c78eef6b8774b88842d30e0d978226c
+#: 4a8b15615f0844969e986e27a0b8c0aa 5bf5a68949ae4d89a50ba872f686ddd0
+#: 6382a9f352c64de9901d04c742a86820
+msgid "Purpose"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:88
+#: 0ce9e8ccb3ab4f159d13b20d2ac6a4c9
+msgid "MOV"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:89
+#: 4d4ac4627c5a4cc1a08dbaa99ab6214c
+msgid "MOV dest, src"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:90
+#: 7ca900614690459e943512d0a77c1e93
+msgid "Copy data between registers/memory"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:91
+#: a1b53edd9f024401b37227e792a2cf2b
+msgid "PUSH"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:92
+#: 99148c6361414bc186c75a77df063c2f
+msgid "PUSH src"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:93
+#: c868af80e42f4c7e95790a8dbd390e80
+msgid "Push value onto stack"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:94
+#: 1a1721c85826433eb40f5ef68a1cb42a
+msgid "POP"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:95
+#: 63542f54726843d1989de1b4b7a310c6
+msgid "POP dest"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:96
+#: ed277303e2324004aa0da85241c95bcc
+msgid "Pop value from stack"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:97
+#: b605b294732a46968ede34ce64e5dbd4
+msgid "LEA"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:98
+#: d5201832688641c98188fab0a7e05605
+msgid "LEA reg, [addr]"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:99
+#: 75a05758ca314d7ea52609e0997a0def
+msgid "Load effective address"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:100
+#: 18aeeb20f4c5475da65b94b49d247403
+msgid "XCHG"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:101
+#: d00ed55f9bbf4689b4848e0afd6a3edb
+msgid "XCHG op1, op2"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:102
+#: c0bfc54d66ec435caf47178b662d1476
+msgid "Exchange two operands"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:104
+#: de74378fbd2949b78b5ce15d77e148de
+msgid "**Arithmetic Instructions**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:106
+#: 7f273b04be9b41028962c768d973aea5
+msgid "Arithmetic Instructions"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:113
+#: 95290b37020c4fe7bba9f0ed2fda2005
+msgid "ADD"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:114
+#: 53330bbb496a47248f35d921e100062a
+msgid "ADD dest, src"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:115
+#: 4847dbdc6ab14efa80173c538f83b9ed
+msgid "Addition operation"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:116
+#: 0adf721eec954ad5983a3b4e8616cc14
+msgid "SUB"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:117
+#: 5114ac7ec5f746acaf6e4b9b5320406b
+msgid "SUB dest, src"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:118
+#: e74bd71585e1478f9b2f716e2af1483e
+msgid "Subtraction operation"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:119
+#: c15f7425cb144b9c97e412a77a623b39
+msgid "MUL"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:120
+#: dbd930a2be28471594e777695256ce41
+msgid "MUL src"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:121
+#: f6cf405a1e85491ca2a6afd695a202e7
+msgid "Unsigned multiplication"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:122
+#: 6c5348956cd74f9390b26dee3420c8ff
+msgid "DIV"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:123
+#: 56710c549cdb498ab9ae22eec243330d
+msgid "DIV src"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:124
+#: 45c4b9d879174c128270e5fcb7a0ac6d
+msgid "Unsigned division"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:125
+#: 9be424a5221244b695776368b30e3233
+msgid "INC"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:126
+#: 6db7dd4c5a0a46b787e13ad41cafb1c9
+msgid "INC dest"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:127
+#: 113061ba0b0b45c8b567a215f45ae109
+msgid "Increment by 1"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:128
+#: 3d1514d62f914cd5a0d8e89a20b4a93c
+msgid "DEC"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:129
+#: 1f69eb54652c49aeab85e0bbfb15e9e9
+msgid "DEC dest"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:130
+#: eb8ece2a054e4c0d87c719a22ab508c1
+msgid "Decrement by 1"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:132
+#: ef16da1663294bc0b88b4dd8fe5a48e3
+msgid "**Logical Instructions**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:134
+#: c8eaae4a70b146cba1a2be40492fc32e
+msgid "Logical Instructions"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:141
+#: 3e9525ae22e94bde99f683851e74c6bf
+msgid "AND"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:142
+#: 0bb4df6190be481d953c191a47c278d9
+msgid "AND dest, src"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:143
+#: 203e56e8c63d49b3b11dd96afcb46d38
+msgid "Bitwise AND operation"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:144
+#: c60e7f0b74b74ae5b171e152951d7151
+msgid "OR"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:145
+#: d2cc98cdbdad4372a370c0a7644470a2
+msgid "OR dest, src"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:146
+#: 54bc9ec64ef64edda2716310cc63fd1f
+msgid "Bitwise OR operation"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:147
+#: 6ef387e8237c405ab0256e530a6b490c
+msgid "XOR"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:148
+#: cd8f6099beae4917a06b3dff3531f56f
+msgid "XOR dest, src"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:149
+#: becc3db06e3c4d74a36a271122d223ad
+msgid "Bitwise XOR operation"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:150
+#: 32b978b664d447b1b2fb4d9572ddc0ff
+msgid "NOT"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:151
+#: b5f40e8966d64219bd420a30d70bb8a9
+msgid "NOT dest"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:152
+#: 4a8e472ee494484eb064e4fbc64ef674
+msgid "Bitwise complement"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:153
+#: 9d8f50f9a55a4b8592aecb8396ae89b0
+msgid "SHL"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:154
+#: edf27cc65095459e973ad09077dafe60
+msgid "SHL dest, count"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:155
+#: 6b83352edc1f49478e43c290619851af
+msgid "Shift left logical"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:156
+#: 1d52df58abb648108fdfb8c1aea433ec
+msgid "SHR"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:157
+#: ef7addd10a1c4681aa89ea38a226ee25
+msgid "SHR dest, count"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:158
+#: f52c176236d843ef9bc2cc7895c7288d
+msgid "Shift right logical"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:160
+#: dae1dc3ffaf1486bb39ffd1d070e5b6d
+msgid "**Control Flow Instructions**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:162
+#: c6696b2952ad4bf4913e28cabcbef561
+msgid "Control Flow Instructions"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:169
+#: ../../source/user-guide/tools/assembly-simulator.rst:601
+#: bb9560da395d48b89aeec0d960d9c705 f82ddb7cc06d416ea8ee296ae7200c00
+msgid "JMP"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:170
+#: 4e7b908d137f4f638ce593a825ab525f
+msgid "JMP label"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:171
+#: a874d1becb68499984f865ced79de8ce
+msgid "Unconditional jump"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:172
+#: be97630c7ae645a2994588faeac94d87
+msgid "JE/JZ"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:173
+#: 9a1679d797f74e6ab4430379aef4a299
+msgid "JE label"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:174
+#: 432629dd9ce64a858364a319494020f1
+msgid "Jump if equal/zero"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:175
+#: 166fd85d149b4d859981697eb6f0c2f6
+msgid "JNE/JNZ"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:176
+#: 714ff280f86c4961a5358efdecc2548e
+msgid "JNE label"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:177
+#: 81da5b28f4c04b0f8eb3b92b5576563e
+msgid "Jump if not equal/zero"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:178
+#: 7c7b5b9b2d0442b99e7a07104d5d70bb
+msgid "JG/JNLE"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:179
+#: 203fd31650a044b8b7f5d0f0dd1a347c
+msgid "JG label"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:180
+#: 28d8a6b1c1e94f7abe15657f569431ba
+msgid "Jump if greater"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:181
+#: 3c06748f3eba4c1e9f1ef9a4468f039b
+msgid "JL/JNGE"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:182
+#: b287cacad2724775b6b46caec4586861
+msgid "JL label"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:183
+#: 5b046f34738c44c2a3e77fd8126a9f61
+msgid "Jump if less"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:184
+#: 43d63626f67a47479315aa436f1fecf4
+msgid "CALL"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:185
+#: d0d6a020f6d341e1bd7ea58d5d0b1f0f
+msgid "CALL label"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:186
+#: 6f4a47b2c55c4b9e98197e82eb8f60df
+msgid "Call subroutine"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:187
+#: ../../source/user-guide/tools/assembly-simulator.rst:188
+#: 0ed1ed2cb7864224bbad63a2b4dc0311 6ea5272db61f4523ac32320bbb163909
+msgid "RET"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:189
+#: 869e9a8f15754706a470ae24c0b6cfc0
+msgid "Return from subroutine"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:191
+#: 2192aba71f104a188d6725714441cdb9
+msgid "**String Instructions**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:193
+#: 91779acd4eaa442abcb32a27a1426d24
+msgid "String Processing Instructions"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:200
+#: ../../source/user-guide/tools/assembly-simulator.rst:201
+#: 4b3f87fbe7014758973c1b6d52ec7585 621a3c703f194436a812e442bf9c791e
+msgid "MOVS"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:202
+#: 348167cdfdb6449b93f71c15f4625913
+msgid "Move string data"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:203
+#: ../../source/user-guide/tools/assembly-simulator.rst:204
+#: 2a565ef4a02f4b43ab850eee337a65e1 5b7aec42439c4b3e8e2117106d3e4090
+msgid "CMPS"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:205
+#: 58cda75528024a6e9d0d1de62cdfbddc
+msgid "Compare strings"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:206
+#: ../../source/user-guide/tools/assembly-simulator.rst:207
+#: 20661de1b6084d659de3c34a8fd7397e cf6278a1d1674df6b1c460341f14c2d1
+msgid "SCAS"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:208
+#: 16fab2d94a284670a54774e478b3303c
+msgid "Scan string"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:209
+#: ../../source/user-guide/tools/assembly-simulator.rst:210
+#: c3ceffa1610c492b816e119b06675353 e90f721fc08d4fb4afdd24f5d412cb5f
+msgid "LODS"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:211
+#: b88eaa6f5edd4352a6650eaf2ab46a90
+msgid "Load string"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:212
+#: ../../source/user-guide/tools/assembly-simulator.rst:213
+#: 44121da571ff4710a2fd2db6ef75a534 f9e55a8832674389b5ca1b65a2711fd4
+msgid "STOS"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:214
+#: d1a5d7a084254fb5b8db738e7fb2405e
+msgid "Store string"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:217
+#: 02f2cc1ba4c84bb09d27f30c730f0380
+msgid "Register Architecture"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:219
+#: 96770b8e238b41b28be79a8f1ec875bc
+msgid "x86 register set simulation:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:249
+#: e80ee777a550499395f89fd8469b213f
+msgid "Arabic Text Processing in Assembly"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:252
+#: ea4f3ebcea4945178635a81f71d68152
+msgid "UTF-8 Character Processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:254
+#: a34052f1982e4366a9afac9d28eea0ca
+msgid "Assembly routines for UTF-8 manipulation:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:325
+#: 28d9ce148c4b4a7e92e28460f4b7d1d7
+msgid "Arabic Character Shaping"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:327
+#: e1871b5b5e6a4ec49cb6a0b51b73c766
+msgid "Assembly implementation of contextual Arabic shaping:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:405
+#: e685c454541b45f69e5026f6991d0a2a
+msgid "BiDi Algorithm Implementation"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:407
+#: 99ea088967974b61a1d7368e0662255f
+msgid "Assembly implementation of bidirectional text processing:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:472
+#: 8d25f819ff8640138fb32f6d88b64cc7
+msgid "Practical Exercises"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:475
+#: 3b485ae2c16f4e00925a1de42c71bc3d
+msgid "Exercise 1: Basic Assembly Programming"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:477
+#: 26ac2e4e233f492098dfec29e70a9652
+msgid "Learn fundamental assembly concepts:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:479
+#: 3952324f710c49e59c69ce40bba6425b
+msgid "**Program 1**: Simple arithmetic operations"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:493
+#: fbcea26e73624897aed60fc475478fd8
+msgid ""
+"**Expected outcomes**: * EAX final value: 90 * Understanding of register "
+"usage * Memory storage operations"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:499
+#: 893f25c8a3d4477798997948868577e3
+msgid "Exercise 2: String Manipulation"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:501
+#: a292193b8af64cadbe390c8afea9ba03
+msgid "Work with string processing:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:503
+#: b4ba7eac4caf4b248ece247d528b3157
+msgid "**Program 2**: Count characters in a string"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:522
+#: 37166205e6ba4929b50936c14ad6a2e5
+msgid "Exercise 3: Arabic Text Processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:524
+#: 2ff5dcc8d8374ee79dfa57c759361a04
+msgid "Implement Arabic-specific algorithms:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:526
+#: b655357689314b2da47cdfc3fd8223cc
+msgid "**Program 3**: UTF-8 Arabic character detection"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:562
+#: 3745b30bbc974cd5998d37dcd84426e3
+msgid "Performance Analysis"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:565
+#: 26086cefc1344ae3995e136926d614aa
+msgid "Instruction Timing"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:567
+#: b06ee0656b7645cd9d9c9fe914482906
+msgid "Understanding x86 instruction performance:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:569
+#: 5eab2d4204cc4705940c8865e787f3f4
+msgid "Instruction Cycle Counts"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:574
+#: e049e91025884aa6ab37e578d5684126
+msgid "Cycles"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:575
+#: 13203d7880b04387b75dc8a590fa7364
+msgid "Throughput"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:576
+#: 92275c3e7e184f6a9ffa1cfe47945b72
+msgid "Notes"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:577
+#: e6ca2e45e3ca432cbb7d46fad4b3ec61
+msgid "MOV reg, reg"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:578
+#: ../../source/user-guide/tools/assembly-simulator.rst:586
+#: ../../source/user-guide/tools/assembly-simulator.rst:602
+#: a0a49d898685462387f8df96249c6b5a a4ae3230336e491485dfd12d5fa6613a
+#: e27df59c79434bd8a2a2997f217b22b3
+msgid "1"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:579
+#: ../../source/user-guide/tools/assembly-simulator.rst:587
+#: ../../source/user-guide/tools/assembly-simulator.rst:591
+#: ../../source/user-guide/tools/assembly-simulator.rst:603
+#: 47a336a70f2c4b3fa16fb7060593bba0 8da34ba7a02c40eebc6750ce991a1869
+#: a3e97d9f07e44a4c8881d0d4090079b6 a75f7ab5adcd4e27a29f7193b475e84e
+msgid "1/cycle"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:580
+#: cf9a70ec749a4d468b8fb709bc1e3e5d
+msgid "Register to register"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:581
+#: 03764b4354064417b1211553e7ff37e1
+msgid "MOV reg, mem"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:582
+#: ../../source/user-guide/tools/assembly-simulator.rst:590
+#: 47b6d2dc00fa45ccaaed672fcd0c3668 ffc33b3a8a20461c8193b05c524e3c2c
+msgid "3-4"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:583
+#: ../../source/user-guide/tools/assembly-simulator.rst:599
+#: 555592c17ee34e0ba62a0011f2dbf726 a4d38cd71766458ba575f9c4aba7acff
+msgid "1/2 cycles"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:584
+#: 646470ce78994c028a905568372d8dca
+msgid "Memory read penalty"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:585
+#: 0c557ebe0d4c4001b284a8c6a6f1138b
+msgid "ADD reg, reg"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:588
+#: 61cd152ca7ce46b3b82b94d2b816e50c
+msgid "Fast arithmetic"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:589
+#: e386d2b2c10349ada7c4277212a22291
+msgid "MUL reg"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:592
+#: 492872f835744e28a7208dee037714b5
+msgid "Modern CPU optimization"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:593
+#: 39bb447adcbb4c3ab9087a4689101949
+msgid "DIV reg"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:594
+#: 4a7aed670aa045689dcf69badcafdacb
+msgid "20-30"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:595
+#: 97dca7f77a1d434381ce3c894c5560b6
+msgid "1/20 cycles"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:596
+#: 74896a5eb6cb41ee83cb614319c11662
+msgid "Expensive operation"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:597
+#: b8f48e0f196d4e5aac26e244c95ae159
+msgid "CALL/RET"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:598
+#: d296a42d92d946128c1a2600e47608e6
+msgid "2-3"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:600
+#: 251eb37bb72847e487de4f835a572ef6
+msgid "Stack operations"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:604
+#: b2ad2a33f7c245ee90a4194f78e66539
+msgid "Predicted branches"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:607
+#: 45454f8bd91c42c49b818215f64058a7
+msgid "Memory Access Patterns"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:609
+#: 7776445a203a486181e0f08f7b3dc549
+msgid "Optimizing memory usage in assembly:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:611
+#: 8e6889809d4841648280acda10764a24
+msgid "**Sequential Access** (Cache-friendly):"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:624
+#: 352929afba96421882fa4414e021f06d
+msgid "**Random Access** (Cache-unfriendly):"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:640
+#: 5b7013531d3a49b2a54d6842ffa53cf9
+msgid "Optimization Techniques"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:643
+#: dff54ec4e8e84e8090f7bb10360ae0ca
+msgid "Register Allocation"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:645
+#: 1aff69a0ec394900acc2967f05c12142
+msgid "Efficient use of CPU registers:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:647
+#: ab94b1785590460b9b7db5531f9c66d5
+msgid "**Good Register Usage**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:664
+#: 97e8c0f9a8f446c3936782a758a2e5db
+msgid "**Poor Register Usage**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:680
+#: eafa9b8e717a48c38122c4b74ea4c5e8
+msgid "Loop Optimization"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:682
+#: 8e61ad795e7a4d01b2f364f3019bbb3f
+msgid "Optimizing loop structures:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:684
+#: 76bad0b6249b41afa94615ab96f43883
+msgid "**Loop Unrolling**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:724
+#: 154ee8d1e6984a0088098a14d102828a
+msgid "Debugging Assembly Code"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:727
+#: deb746f9940a4e6783e320d2c4e2789e
+msgid "Common Assembly Errors"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:729
+#: e4609d8f0ffb403593fcee85597b03fe
+msgid "Typical mistakes and how to avoid them:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:731
+#: 14b6def972244b35a433a73cacfe7281
+msgid "**Stack Imbalance**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:752
+#: 2f423dc27f5045b9b42d5f52dbf7b6b8
+msgid "**Register Corruption**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:771
+#: 737d87da4be44daab074ae60c89e208f
+msgid "Assembly Debugging Techniques"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:773
+#: 010357f40add4c08a58e189472c0a52f
+msgid "Systematic debugging approach:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:775
+#: 6d40b71735e84ce4a546b77ce737db3c
+msgid "**Breakpoint Strategy**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:797
+#: b3aa36bc442c4dff804763aab214da44
+msgid "**Register Monitoring**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:816
+#: e45e43155a734e9fa60f0bc3d9dbe203
+msgid "Real-World Applications"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:819
+#: b49729222c9842dea35e8cce096dbb13
+msgid "Operating System Development"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:821
+#: df46ae5f1e994074b12103dbc9ff9b8e
+msgid "Assembly programming in OS development:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:823
+#: 3bd8e456c79647ee996e7ec5d0f450bf
+msgid "**Kernel Boot Code**: Initial system startup routines"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:824
+#: 7108332208064580944622c28637d692
+msgid "**Interrupt Handlers**: Hardware interrupt processing"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:825
+#: 873e36b463c146c0872d5aee1802fed2
+msgid "**Context Switching**: Process state save/restore"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:826
+#: 7b435829ac994d55a73ff39364b81f02
+msgid "**Memory Management**: Page table manipulation"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:827
+#: 0372e8308ef444b8a518bae933a86109
+msgid "**Device Drivers**: Hardware-specific assembly code"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:830
+#: 4bff262f2ebf467da765a0051a54255a
+msgid "Performance-Critical Applications"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:832
+#: 38db6e6c15b241559aa090fe31124897
+msgid "Where assembly optimization matters:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:834
+#: 2f3df5e9146948998444600156c92e27
+msgid "**Text Processing Engines**: Arabic shaping algorithms"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:835
+#: 450abc84ec15462d87228d4c2ca535be
+msgid "**Graphics Rendering**: Font rendering and BiDi display"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:836
+#: e5ba3df9b8d441008d9594f0466b1de1
+msgid "**Compression Algorithms**: UTF-8 encoding/decoding"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:837
+#: f298f58a3df44c3c8a79c286b5aecbb2
+msgid "**Cryptographic Functions**: Security-sensitive operations"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:838
+#: b9823c76e589439aa6d25001a6510acd
+msgid "**Real-time Systems**: Deterministic timing requirements"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:841
+#: a0ca31ba37d347eb99411542e4989b12
+msgid "Educational Applications"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:843
+#: b6dd42aecc884745837ed36c4a34a2f8
+msgid "Teaching computer architecture:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:845
+#: 5fe6067ef220456d8db37db5879b8468
+msgid "**Computer Science Education**: Understanding CPU operation"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:846
+#: 5a2234c5d14c4658a7ded4d332eb8056
+msgid "**Systems Programming**: Low-level programming concepts"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:847
+#: eef326c50949481bb08e5fba20ac957f
+msgid "**Embedded Systems**: Microcontroller programming"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:848
+#: 6df66eaa5bd24fcba461c30f8b928601
+msgid "**Reverse Engineering**: Analyzing compiled code"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:851
+#: 8b671d7eb03b48dab7f7bc3ac39e1561
+msgid "Integration with Arabic OS"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:854
+#: 58579d3314d94988a08408607f46107a
+msgid "System Integration"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:856
+#: e1801c36cbf845619c948b6798791d0c
+msgid "Assembly code integration points:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:858
+#: e6abae883beb4abd936aac8b65151153
+msgid "**Kernel Modules**: Critical kernel functions in assembly"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:859
+#: 8bb2026defa5408b91c91e13877b3caa
+msgid "**Optimized Libraries**: Performance-critical Arabic text functions"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:860
+#: 8f2262155bc04b469214555b5345eac3
+msgid "**Boot Loader**: System initialization assembly code"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:861
+#: 046eef484dc44972ab3c64b58641fa25
+msgid "**Device Drivers**: Hardware-specific assembly routines"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:864
+#: 1d8b9693ec5e4b3b8839324f954bd280
+msgid "Development Tools"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:866
+#: 3399c2402a654c6cbe16974a12f7a209
+msgid "Assembly development environment:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:868
+#: 2d3beefb52ad43ce81eecb132d3fc7b3
+msgid "**Assembler**: NASM/MASM integration with Arabic OS"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:869
+#: 654abd73f2744122b1290ad41791f1f9
+msgid "**Debugger**: Assembly-level debugging capabilities"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:870
+#: 1cfec9a523ab4c9b8e70bc2f3dcac541
+msgid "**Profiler**: Performance analysis of assembly code"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:871
+#: 1881c33c838649a7a341f08bb551848d
+msgid "**Cross-compiler**: Generate assembly from high-level languages"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:874
+#: 0293703b9f714ccf880a691d719c2d06
+msgid "API Reference"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:876
+#: d15f171ba3cd415c958c0c9587230a6f
+msgid "For developers working with assembly:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:878
+#: b64c2b3e69a04fc1b1fb66d1194a25ae
+msgid "**Assembly Simulator API**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:907
+#: 6aab450fc4854901a1abf68b0d184c68
+msgid "**JavaScript Simulator Interface**:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:947
+#: 1f8f322d91b445b9bff6837490a8ad5b
+msgid "Integration with Other Tools"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:949
+#: 197541d9c28f4a0592ce5370f1ee2e13
+msgid "The Assembly Simulator complements other Arabic OS components:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:951
+#: f058c245a5454a308dbe5e3c86f5c744
+msgid "Use :doc:`kernel-debugger` for kernel-level assembly debugging"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:952
+#: f131ad54c2cf4d059362077a03713160
+msgid "Apply :doc:`memory-layout` knowledge for memory management assembly"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:953
+#: f475bccf9f2a4c988d333551286bb524
+msgid "Reference :doc:`utf8-visualizer` for text processing assembly optimization"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:954
+#: 82d82051ef614cecbb98e89fec374d95
+msgid "Connect to :doc:`font-renderer` for graphics assembly programming"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:956
+#: f9144dc9719a4a3894d2f71c36ee53ef
+msgid ""
+"Understanding assembly programming is essential for system-level "
+"development, performance optimization, and deep comprehension of computer"
+" architecture."
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:959
+#: 51372276103849289ae05b071bcc4fa2
+msgid "Further Learning"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:961
+#: 6a409d274b5140f39ade2bcd70f365fd
+msgid "Continue your assembly programming journey with:"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:963
+#: 420dbdb692e2494a90a0dd0d35d3e74e
+msgid ":doc:`kernel-debugger` - Debug assembly code at the kernel level"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:964
+#: fc29e2212f7f413fa66306e9a767947f
+msgid ":doc:`memory-layout` - Understand memory management in assembly"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:965
+#: 8e13115a99744a3296aa046d197e660d
+msgid ""
+":doc:`../../../tutorials/advanced/assembly-optimization` - Advanced "
+"assembly optimization techniques"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:966
+#: 9184bbb7d72346a68735142e805fe908
+msgid ""
+":doc:`../../../developer-guide/api/low-level-programming` - System "
+"programming with assembly"
+msgstr ""
+
+#: ../../source/user-guide/tools/assembly-simulator.rst:968
+#: d69bb46988da43ada21b630f4846f848
+msgid ""
+"Master assembly programming to unlock the full potential of computer "
+"hardware and create highly optimized Arabic computing systems."
+msgstr ""
+
